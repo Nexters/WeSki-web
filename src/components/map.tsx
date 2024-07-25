@@ -1,9 +1,10 @@
+import {Popover, PopoverContent, PopoverTrigger} from "@radix-ui/react-popover";
 import Image from "next/image";
 import React from "react";
-import konjiam from "@public/map/map-konjiam.jpg";
-import CameraLabel from "./camera-button";
-import {Popover, PopoverContent, PopoverTrigger} from "@radix-ui/react-popover";
+
 import {cn} from "@/lib/utils";
+
+import CameraLabel from "./camera-button";
 
 interface Spot {
   tag: string;
@@ -64,8 +65,8 @@ const Map = () => {
   };
 
   return (
-    <div className="w-[666px] h-[629px] relative">
-      <Image src={konjiam} alt="map-konjiam" />
+    <div className="relative h-[629px] w-[666px]">
+      <Image width={666} height={629} src="/map/konjiam.jpg" alt="map-konjiam" />
       {SPOT_LIST.map(spot => (
         <Popover key={spot.tag}>
           <PopoverTrigger
@@ -84,8 +85,8 @@ const Map = () => {
             className={cn("flex justify-center items-center z-10 bg-black rounded-2xl p-5 m-2 w-80 h-[200px]")}
           >
             {loadingStates[spot.tag] && (
-              <div className="flex justify-center items-center">
-                <div className="animate-spin rounded-full h-8 w-8 border-t-2 border-b-2 border-white"></div>
+              <div className="flex items-center justify-center">
+                <div className="size-8 animate-spin rounded-full border-y-2 border-white"></div>
               </div>
             )}
             <video
