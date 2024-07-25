@@ -4,7 +4,7 @@ import Map from "@/components/map";
 
 export default function Home() {
   return (
-    <main className="flex h-screen justify-center items-center gap-2 p-10">
+    <main className="flex h-screen items-center justify-center gap-2 p-10">
       <Map />
     </main>
   );
