@@ -22,9 +22,8 @@ const TabList = [
 
 const NavBar = ({className}: {className?: string}) => {
   const pathname = usePathname();
-  console.log(pathname);
   return (
-    <nav className={cn("w-full h-[62px]", className)}>
+    <nav className={cn("w-full h-[62px] bg-white", className)}>
       <ul className={cn("flex justify-evenly size-full")}>
         {TabList.map(tab => (
           <li

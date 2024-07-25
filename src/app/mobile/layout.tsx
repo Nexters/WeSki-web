@@ -9,7 +9,7 @@ export default function Layout({children}: {children: React.ReactNode}) {
         <StatusBar />
         <div className={cn("h-12 flex justify-center items-center font-bold text-2xl")}>WeSki</div>
         {children}
-        <NavBar className={cn("absolute bottom-0")} />
+        <NavBar className={cn("absolute bottom-0 z-10")} />
       </div>
     </div>
   );
