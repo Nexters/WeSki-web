@@ -1,5 +1,7 @@
 {
-  "tailwindCSS.experimental.classRegex": [
-    ["cn\\(['\"]([^'\"]*)['\"]", "'([^']*)'"]
-  ]
+  "tailwindCSS.experimental.classRegex": [["cn\\(['\"]([^'\"]*)['\"]", "'([^']*)'"]],
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  }
 }
