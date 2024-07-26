@@ -1,6 +1,6 @@
 {
+  "extends": ["next", "prettier"],
   "plugins": ["unused-imports", "simple-import-sort"],
-  "extends": ["next/core-web-vitals", "plugin:tailwindcss/recommended"],
 
   "rules": {
     "unused-imports/no-unused-imports": "error",
