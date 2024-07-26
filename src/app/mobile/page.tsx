@@ -21,7 +21,10 @@ const Page = () => {
               'flex shrink-0 cursor-pointer items-center justify-center border-b-4 p-3 pb-2 font-bold',
               selectedTab.name === tab.name ? 'border-black' : 'border-white opacity-20'
             )}
-            onClick={() => setSelectedTab(tab)}
+            onClick={() => {
+              setSelectedTab(tab);
+              setSelectedSpot(null);
+            }}
           >
             {tab.name}
           </div>
@@ -33,7 +36,7 @@ const Page = () => {
           className={cn('object-cover')}
           width={376}
           height={200}
-          src={`/map/${selectedTab.tag}.jpg`}
+          src={`/map/${selectedTab.map}`}
           alt={`${selectedTab.name}`}
         />
         {selectedSpot && (
