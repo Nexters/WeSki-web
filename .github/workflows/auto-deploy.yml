@@ -19,7 +19,7 @@ jobs:
 
       - name: add remote-url
         run: |
-          git remote add forked-repo https://github.com/Najeong-Kim/WeSki-web:${{ secrets.FORKED_REPO_TOKEN }}@github.com/Najeong-Kim/WeSki-web
+          git remote add forked-repo https://Najeong-Kim:${{ secrets.FORKED_REPO_TOKEN }}@github.com/Najeong-Kim/WeSki-web
           git config user.name Najeong-Kim
           git config user.email atpeoe1023@gmail.com
 
