@@ -1,0 +1,32 @@
+name: push to forked repo
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  sync:
+    name: push to forked repo
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: checkout main
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.FORKED_REPO_TOKEN }}
+          fetch-depth: 0
+          ref: main
+
+      - name: add remote-url
+        run: |
+          git remote add forked-repo https://github.com/Najeong-Kim/WeSki-web:${{ secrets.FORKED_REPO_TOKEN }}@github.com/Najeong-Kim/WeSki-web
+          git config user.name Najeong-Kim
+          git config user.email atpeoe1023@gmail.com
+
+      - name: push changes to forked-repo
+        run: |
+          git push -f forked-repo main
+
+      - name: clean up
+        run: |
+          git remote remove forked-repo
