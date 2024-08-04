@@ -10,13 +10,17 @@
   },
   "dependencies": {
     "@radix-ui/react-popover": "^1.1.1",
+    "@react-spring/web": "^9.7.4",
+    "@use-gesture/react": "^10.3.1",
     "autoprefixer": "^10.4.19",
     "class-variance-authority": "^0.7.0",
     "next": "14.2.5",
     "react": "^18",
     "react-dom": "^18",
     "tailwind-scrollbar-hide": "^1.1.7",
-    "tailwindcss-animate": "^1.0.7"
+    "tailwindcss-animate": "^1.0.7",
+    "ts-pattern": "^5.2.0",
+    "zod": "^3.23.8"
   },
   "devDependencies": {
     "@types/node": "^20",

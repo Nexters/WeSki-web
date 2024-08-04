@@ -66,4 +66,8 @@
   body {
     @apply bg-background text-foreground;
   }
+  html,
+  body {
+    touch-action: none;
+  }
 }
