@@ -1,6 +1,5 @@
-import NavBar from '@/components/ui/nav-bar';
-import StatusBar from '@/components/ui/status-bar';
-import { cn } from '@/lib/utils';
+import { cn } from '@/shared/lib/cn';
+import { NavBar, StatusBar } from '@/widgets/header/ui';
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
