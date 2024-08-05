@@ -1,13 +1,12 @@
 {
   "parser": "@typescript-eslint/parser",
-  "extends": ["next", "prettier", "plugin:@typescript-eslint/recommended"],
-  "plugins": ["@typescript-eslint", "unused-imports", "simple-import-sort"],
+  "extends": ["next", "prettier", "plugin:@typescript-eslint/recommended", "@feature-sliced"],
+  "plugins": ["@typescript-eslint", "unused-imports"],
 
   "rules": {
     "unused-imports/no-unused-imports": "error", // 사용하지 않는 import 제거
-    "simple-import-sort/imports": "error", // import 정렬
-    "simple-import-sort/exports": "error", // export 정렬
     "@typescript-eslint/consistent-type-imports": "error", // type 가져오기 경우 import type { Type } from 'module' 사용
-    "@typescript-eslint/no-unused-expressions": "off" // 사용하지 않는 표현식 허용
+    "@typescript-eslint/no-unused-expressions": "off", // 사용하지 않는 표현식 허용
+    "import/no-internal-modules": "off" // 내부 모듈 사용 허용 (fsd index 파일을 사용하기 위함)
   }
 }

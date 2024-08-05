@@ -5,10 +5,10 @@ import { createUseGesture, dragAction, pinchAction } from '@use-gesture/react';
 import Image from 'next/image';
 import React from 'react';
 
+import Summary from '@/widgets/weather/ui/summary';
 import type { Spot } from '@/entities/resort/model';
 import { ResortList } from '@/entities/resort/model';
 import { cn, getBoundedPositions } from '@/shared/lib';
-import Summary from '@/widgets/weather/ui/summary';
 
 const useGesture = createUseGesture([pinchAction, dragAction]);
 
