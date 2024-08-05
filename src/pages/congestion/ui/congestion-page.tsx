@@ -1,6 +1,6 @@
 import Image from 'next/image';
 
-import { cn } from '@/shared/lib/cn';
+import { cn } from '@/shared/lib';
 
 const CongestionPage = () => {
   return (

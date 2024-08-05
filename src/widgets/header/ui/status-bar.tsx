@@ -1,6 +1,6 @@
 import BatteryIcon from '@/shared/icons/battery';
 import WifiIcon from '@/shared/icons/wifi';
-import { cn } from '@/shared/lib/cn';
+import { cn } from '@/shared/lib';
 
 const StatusBar = () => {
   return (

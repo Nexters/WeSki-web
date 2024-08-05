@@ -1,4 +1,4 @@
-import { cn } from '@/shared/lib/cn';
+import { cn } from '@/shared/lib';
 import { NavBar, StatusBar } from '@/widgets/header/ui';
 
 export default function Layout({ children }: { children: React.ReactNode }) {

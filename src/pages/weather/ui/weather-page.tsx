@@ -1,4 +1,4 @@
-import { cn } from '@/shared/lib/cn';
+import { cn } from '@/shared/lib';
 import WeatherCard from '@/widgets/weather/ui/weather-card';
 
 const WeatherPage = () => {

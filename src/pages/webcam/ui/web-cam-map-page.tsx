@@ -6,9 +6,9 @@ import Image from 'next/image';
 import React from 'react';
 
 import { ResortList, Spot } from '@/entities/resort/model';
-import { cn } from '@/shared/lib/cn';
+import { cn, getBoundedPositions } from '@/shared/lib';
 
-import Summary from './summary';
+import Summary from '../../../widgets/weather/ui/summary';
 
 const useGesture = createUseGesture([pinchAction, dragAction]);
 
@@ -57,35 +57,6 @@ const WebCamMapPage = () => {
       pinch: { scaleBounds: { min: 1, max: 6 }, rubberband: true },
     }
   );
-
-  const getBoundedPositions = (x: number, y: number, scale: number): [number, number] => {
-    const CONTAINER = { width: 376, height: 200 };
-    const IMAGE = { width: 376, height: 357 };
-    const OFFSET_Y = IMAGE.height - CONTAINER.height;
-
-    const scaledSize = {
-      width: IMAGE.width * scale,
-      height: IMAGE.height * scale,
-    };
-
-    const bounds = {
-      x: {
-        min: (CONTAINER.width - scaledSize.width) / 2,
-        max: -(CONTAINER.width - scaledSize.width) / 2,
-      },
-      y: {
-        min: -((scaledSize.height - CONTAINER.height + OFFSET_Y) / 2),
-        max: Math.max((scaledSize.height - CONTAINER.height - OFFSET_Y) / 2, 0),
-      },
-    };
-
-    const boundedPosition = {
-      x: Math.max(bounds.x.min, Math.min(bounds.x.max, x)),
-      y: Math.max(bounds.y.min, Math.min(bounds.y.max, y)),
-    };
-
-    return [boundedPosition.x, boundedPosition.y];
-  };
 
   return (
     <div className={cn('size-full')}>
