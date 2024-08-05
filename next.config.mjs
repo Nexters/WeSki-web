@@ -1,8 +1,4 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
-  eslint: {
-    dirs: ['app', 'src'],
-  },
-};
+const nextConfig = {};
 
 export default nextConfig;
