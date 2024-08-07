@@ -1,21 +1,4 @@
-interface Resort {
-  name: string;
-  tag?: string;
-  map: string;
-  weather: number;
-  temperature: number;
-  congestion: string;
-  spots?: Spot[];
-}
-
-export interface Spot {
-  tag: string;
-  name: string;
-  level: string;
-  isAvailable: boolean;
-}
-
-export const ResortList: Resort[] = [
+export const ResortList = [
   {
     name: '곤지암리조트 스키장',
     tag: 'konjiam',
