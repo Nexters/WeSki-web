@@ -9,7 +9,7 @@ interface SummaryProps {
 
 const Summary = ({ name, weather, temperature, congestion }: SummaryProps) => {
   return (
-    <div className={cn('flex items-center justify-between bg-gray-100 p-6')}>
+    <div className={cn('bg-gray-10 flex items-center justify-between p-6')}>
       <div>
         <p className="mb-1 font-bold">{name}</p>
         <div className={cn('flex items-end')}>
