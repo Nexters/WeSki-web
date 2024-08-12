@@ -79,10 +79,9 @@ const config = {
           2: 'var(--sub-2)',
           1: 'var(--sub-1)',
         },
-
-        fontSize: {
-          '3xl': '2rem',
-        },
+      },
+      fontSize: {
+        '3xl': '2rem',
       },
 
       borderRadius: {
