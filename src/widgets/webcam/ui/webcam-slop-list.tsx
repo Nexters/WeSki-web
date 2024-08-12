@@ -7,7 +7,7 @@ import Divider from '@/shared/ui/divider';
 interface WebcamSlopListProps {
   list: {
     id: string;
-    text: string;
+    name: string;
     level: Level;
     isOpen: boolean;
   }[];
@@ -24,7 +24,7 @@ const WebcamSlopList = ({ list }: WebcamSlopListProps) => {
               !item.isOpen && 'opacity-30'
             )}
           >
-            <p className={cn('title3-semibold')}>{item.text}</p>
+            <p className={cn('title3-semibold')}>{item.name}</p>
             <LevelChip level={item.level} />
           </li>
           <Divider />
