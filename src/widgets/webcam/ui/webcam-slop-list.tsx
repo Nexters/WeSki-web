@@ -2,6 +2,7 @@ import React from 'react';
 import type { Level } from '@/entities/slop/model/model';
 import LevelChip from '@/entities/slop/ui/level-chip';
 import { cn } from '@/shared/lib';
+import CameraButton from '@/shared/ui/cam-button';
 import Divider from '@/shared/ui/divider';
 
 interface WebcamSlopListProps {
@@ -10,6 +11,7 @@ interface WebcamSlopListProps {
     name: string;
     level: Level;
     isOpen: boolean;
+    isWebcam: boolean;
   }[];
 }
 
@@ -24,7 +26,10 @@ const WebcamSlopList = ({ list }: WebcamSlopListProps) => {
               !item.isOpen && 'opacity-30'
             )}
           >
-            <p className={cn('title3-semibold')}>{item.name}</p>
+            <div className={cn('flex items-center gap-2')}>
+              <p className={cn('title3-semibold')}>{item.name}</p>
+              {item.isWebcam && <CameraButton />}
+            </div>
             <LevelChip level={item.level} />
           </li>
           <Divider />
