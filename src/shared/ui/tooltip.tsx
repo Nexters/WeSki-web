@@ -38,8 +38,6 @@ export const Tooltip = ({ trigger, children, isOpen }: TooltipProps) => {
     isOpen && setTooltipOpen(isOpen);
   }, [isOpen]);
 
-  console.log(isOpen, tooltipOpen);
-
   return (
     <Popover
       open={tooltipOpen}
