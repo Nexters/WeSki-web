@@ -1,63 +1,20 @@
 'use client';
 
-import { animated, useSpring } from '@react-spring/web';
-import { createUseGesture, dragAction, pinchAction } from '@use-gesture/react';
+import { animated } from '@react-spring/web';
 import Image from 'next/image';
 import React from 'react';
 
 import Summary from '@/widgets/weather/ui/summary';
+import useMapPinch from '@/widgets/webcam/hooks/useMapPinch';
 import type { Spot } from '@/entities/resort/model';
 import { ResortList } from '@/entities/resort/model';
-import { cn, getBoundedPositions } from '@/shared/lib';
+import { cn } from '@/shared/lib';
 import LevelChip from '@/shared/ui/level-chip';
-
-const useGesture = createUseGesture([pinchAction, dragAction]);
 
 const WebCamMapPage = () => {
   const [selectedTab, setSelectedTab] = React.useState(ResortList[0]);
   const [selectedSpot, setSelectedSpot] = React.useState<Spot | null>(null);
-  const [style, api] = useSpring(() => ({ scale: 1, x: 0, y: 0 }));
-  const ref = React.useRef<HTMLDivElement>(null);
-
-  useGesture(
-    {
-      onPinch: ({ origin: [ox, oy], first, movement: [ms], offset: [s], memo }) => {
-        if (first) {
-          const { width, height, x, y } = ref.current!.getBoundingClientRect();
-          const tx = ox - (x + width / 2);
-          const ty = oy - (y + height / 2);
-          memo = [style.x.get(), style.y.get(), tx, ty];
-        }
-
-        const x = memo[0] - (ms - 1) * memo[2];
-        const y = memo[1] - (ms - 1) * memo[3];
-        api.start({ scale: s, x, y });
-        return memo;
-      },
-      onPinchEnd: () => {
-        if (style.scale.get() < 1) {
-          api.start({ scale: 1, x: 0, y: 0 });
-        }
-      },
-      onDrag: ({ pinching, cancel, offset: [x, y] }) => {
-        if (pinching) return cancel();
-        api.start({ x, y });
-      },
-      onDragEnd: () => {
-        const [boundedX, boundedY] = getBoundedPositions(
-          style.x.get(),
-          style.y.get(),
-          style.scale.get()
-        );
-        api.start({ x: boundedX, y: boundedY });
-      },
-    },
-    {
-      target: ref,
-      drag: { from: () => [style.x.get(), style.y.get()] },
-      pinch: { scaleBounds: { min: 1, max: 6 }, rubberband: true },
-    }
-  );
+  const { ref, style } = useMapPinch();
 
   return (
     <div className={cn('size-full')}>
