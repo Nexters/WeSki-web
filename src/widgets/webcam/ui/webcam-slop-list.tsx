@@ -13,9 +13,13 @@ interface WebcamSlopListProps {
     isOpen: boolean;
     isWebcam: boolean;
   }[];
+  setSelectedSlop: React.Dispatch<React.SetStateAction<string | null>>;
 }
 
-const WebcamSlopList = ({ list }: WebcamSlopListProps) => {
+const WebcamSlopList = ({ list, setSelectedSlop }: WebcamSlopListProps) => {
+  const handleSlopClick = ({ id }: { id: string }) => {
+    setSelectedSlop(id);
+  };
   return (
     <ul className={cn('w-full')}>
       {list.map((item) => (
@@ -25,6 +29,7 @@ const WebcamSlopList = ({ list }: WebcamSlopListProps) => {
               'flex h-[66px] items-center justify-between bg-gray-10 pl-[24px] pr-[24px]',
               !item.isOpen && 'opacity-30'
             )}
+            onClick={() => handleSlopClick({ id: item.id })}
           >
             <div className={cn('flex items-center gap-2')}>
               <p className={cn('title3-semibold')}>{item.name}</p>

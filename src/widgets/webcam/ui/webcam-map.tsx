@@ -8,15 +8,13 @@ import { cn } from '@/shared/lib';
 import CameraButton from '@/shared/ui/cam-button';
 import useMapPinch from '../hooks/useMapPinch';
 
-interface ElementProps {
-  className?: string;
-}
-
 interface WebcamMapProps {
   slops: {
     id: string;
     level: Level;
-    Element: ComponentType<ElementProps>;
+    Element: ComponentType<{
+      color?: string;
+    }>;
     webcam: {
       position: {
         top: string;
@@ -25,9 +23,10 @@ interface WebcamMapProps {
     } | null;
   }[];
   mapSrc: StaticImageData;
+  selectedSlop: string | null;
 }
 
-const WebcamMap = ({ slops, mapSrc }: WebcamMapProps) => {
+const WebcamMap = ({ slops, mapSrc, selectedSlop }: WebcamMapProps) => {
   const containerRef = React.useRef<HTMLElement>(null);
   const { ref, style } = useMapPinch(containerRef);
 
@@ -48,7 +47,11 @@ const WebcamMap = ({ slops, mapSrc }: WebcamMapProps) => {
           return (
             <React.Fragment key={slop.id}>
               <div className={cn('absolute top-0 w-full')}>
-                <slop.Element />
+                <slop.Element
+                  color={
+                    selectedSlop !== slop.id && selectedSlop !== null ? 'fill-gray-40' : undefined
+                  }
+                />
               </div>
               {slop.webcam && (
                 <CameraButton

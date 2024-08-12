@@ -39,7 +39,7 @@ export const JISAN: ResortInfo = {
           left: 'left-[29%]',
         },
       },
-      isOpen: false,
+      isOpen: true,
     },
     {
       id: 'orange3-lift',
@@ -52,7 +52,7 @@ export const JISAN: ResortInfo = {
           left: 'left-[38%]',
         },
       },
-      isOpen: false,
+      isOpen: true,
     },
     {
       id: 'new-orange-lift',
@@ -73,7 +73,7 @@ export const JISAN: ResortInfo = {
           left: 'left-[56%]',
         },
       },
-      isOpen: false,
+      isOpen: true,
     },
     {
       id: 'silver6-lift',
