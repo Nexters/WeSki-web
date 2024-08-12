@@ -1,1 +1,1 @@
-export { default } from '@/pages/webcam/ui/webcam-map-page';
+export { default } from '@/pages/webcam/ui/webcam-mobile-map-page';

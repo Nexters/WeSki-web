@@ -8,8 +8,8 @@ import Summary from '@/widgets/weather/ui/summary';
 import useMapPinch from '@/widgets/webcam/hooks/useMapPinch';
 import type { Spot } from '@/entities/resort/model';
 import { ResortList } from '@/entities/resort/model';
+import LevelChip from '@/entities/slop/ui/level-chip';
 import { cn } from '@/shared/lib';
-import LevelChip from '@/shared/ui/level-chip';
 
 const WebCamMapPage = () => {
   const [selectedTab, setSelectedTab] = React.useState(ResortList[0]);
