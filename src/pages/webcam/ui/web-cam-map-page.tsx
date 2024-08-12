@@ -9,6 +9,7 @@ import Summary from '@/widgets/weather/ui/summary';
 import type { Spot } from '@/entities/resort/model';
 import { ResortList } from '@/entities/resort/model';
 import { cn, getBoundedPositions } from '@/shared/lib';
+import LevelChip from '@/shared/ui/level-chip';
 
 const useGesture = createUseGesture([pinchAction, dragAction]);
 
@@ -60,6 +61,7 @@ const WebCamMapPage = () => {
 
   return (
     <div className={cn('size-full')}>
+      <LevelChip level="UPPER_BEGINNER" />
       <div className={cn('mb-1 flex w-full overflow-scroll scrollbar-hide')}>
         {ResortList.map((tab) => (
           <div
