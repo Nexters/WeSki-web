@@ -2,10 +2,12 @@ import { animated } from '@react-spring/web';
 import type { StaticImageData } from 'next/image';
 import Image from 'next/image';
 import type { ComponentType } from 'react';
-import React from 'react';
+import React, { useRef } from 'react';
 import type { Level } from '@/entities/slop/model/model';
 import { cn } from '@/shared/lib';
 import CameraButton from '@/shared/ui/cam-button';
+
+import { Tooltip } from '@/shared/ui/tooltip';
 import useMapPinch from '../hooks/useMapPinch';
 
 interface WebcamMapProps {
@@ -16,6 +18,8 @@ interface WebcamMapProps {
       color?: string;
     }>;
     webcam: {
+      id: string;
+      name: string;
       position: {
         top: string;
         left: string;
@@ -27,7 +31,7 @@ interface WebcamMapProps {
 }
 
 const WebcamMap = ({ slops, mapSrc, selectedSlop }: WebcamMapProps) => {
-  const containerRef = React.useRef<HTMLElement>(null);
+  const containerRef = useRef<HTMLElement>(null);
   const { ref, style } = useMapPinch(containerRef);
 
   return (
@@ -54,13 +58,17 @@ const WebcamMap = ({ slops, mapSrc, selectedSlop }: WebcamMapProps) => {
                 />
               </div>
               {slop.webcam && (
-                <CameraButton
+                <div
                   className={cn(
                     'absolute z-10',
                     slop.webcam.position.top,
                     slop.webcam.position.left
                   )}
-                />
+                >
+                  <Tooltip trigger={<CameraButton />} isOpen={selectedSlop === slop.id}>
+                    <p className={cn('body3-medium')}>{slop.webcam.name}</p>
+                  </Tooltip>
+                </div>
               )}
             </React.Fragment>
           );

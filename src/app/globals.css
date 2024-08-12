@@ -186,15 +186,15 @@
   }
 
   .body3 {
-    @apply text-xs font-bold leading-[1.6rem] tracking-[0.02rem];
+    @apply text-xs font-bold tracking-[0.02rem];
   }
   .body3-semibold {
-    @apply text-xs font-semibold leading-[1.6rem] tracking-[0.02rem];
+    @apply text-xs font-semibold tracking-[0.02rem];
   }
   .body3-medium {
-    @apply text-xs font-medium leading-[1.6rem] tracking-[0.02rem];
+    @apply text-xs font-medium tracking-[0.02rem];
   }
   .body3-regular {
-    @apply text-xs font-normal leading-[1.6rem] tracking-[0.02rem];
+    @apply text-xs font-normal tracking-[0.02rem];
   }
 }

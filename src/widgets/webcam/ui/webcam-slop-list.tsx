@@ -17,7 +17,8 @@ interface WebcamSlopListProps {
 }
 
 const WebcamSlopList = ({ list, setSelectedSlop }: WebcamSlopListProps) => {
-  const handleSlopClick = ({ id }: { id: string }) => {
+  const handleSlopClick = ({ id, isOpen }: { id: string; isOpen: boolean }) => {
+    if (!isOpen) return;
     setSelectedSlop(id);
   };
   return (
@@ -29,7 +30,7 @@ const WebcamSlopList = ({ list, setSelectedSlop }: WebcamSlopListProps) => {
               'flex h-[66px] items-center justify-between bg-gray-10 pl-[24px] pr-[24px]',
               !item.isOpen && 'opacity-30'
             )}
-            onClick={() => handleSlopClick({ id: item.id })}
+            onClick={() => handleSlopClick(item)}
           >
             <div className={cn('flex items-center gap-2')}>
               <p className={cn('title3-semibold')}>{item.name}</p>

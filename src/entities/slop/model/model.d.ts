@@ -15,6 +15,8 @@ export type ResortInfo = {
     Element: React.FC;
     isOpen: boolean;
     webcam: {
+      id: string;
+      name: string;
       position: {
         top: string;
         left: string;

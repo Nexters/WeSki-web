@@ -34,6 +34,8 @@ export const JISAN: ResortInfo = {
       name: '오렌지 리프트 2',
       Element: Orange2LiftPath,
       webcam: {
+        id: 'orange-station',
+        name: '오렌지 탑승장',
         position: {
           top: 'top-[69%]',
           left: 'left-[29%]',
@@ -47,6 +49,8 @@ export const JISAN: ResortInfo = {
       name: '오렌지 리프트 3',
       Element: Orange3LiftPath,
       webcam: {
+        id: 'new-orange-station',
+        name: '뉴오렌지 탑승장',
         position: {
           top: 'top-[64%]',
           left: 'left-[38%]',
@@ -68,6 +72,8 @@ export const JISAN: ResortInfo = {
       name: '블루 리프트 5',
       Element: BlueLiftPath,
       webcam: {
+        id: 'blue-station',
+        name: '블루 탑승장',
         position: {
           top: 'top-[69%]',
           left: 'left-[56%]',
