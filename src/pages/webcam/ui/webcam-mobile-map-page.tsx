@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { WebcamMap, WebcamSlopList } from '@/widgets/webcam/ui';
+import { JISAN } from '@/entities/resort/model';
 import { cn } from '@/shared/lib';
 
 const WebCamMobileMapPage = () => {
@@ -19,9 +20,11 @@ const WebCamMobileMapPage = () => {
       isOpen: false,
     },
   ];
+
+  const DUMMY2 = JISAN;
   return (
     <main className={cn('w-full')}>
-      <WebcamMap />
+      <WebcamMap slops={DUMMY2.slops} mapSrc={DUMMY2.map} />
       <WebcamSlopList list={DUMMY} />
     </main>
   );
