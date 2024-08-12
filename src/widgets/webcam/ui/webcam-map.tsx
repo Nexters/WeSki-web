@@ -27,9 +27,11 @@ interface WebcamMapProps {
 }
 
 const WebcamMap = ({ slops, mapSrc }: WebcamMapProps) => {
-  const { ref, style } = useMapPinch();
+  const containerRef = React.useRef<HTMLElement>(null);
+  const { ref, style } = useMapPinch(containerRef);
+
   return (
-    <section className={cn('relative aspect-[25/14] overflow-hidden')}>
+    <section className={cn('relative aspect-[25/14] overflow-hidden')} ref={containerRef}>
       <animated.div
         ref={ref}
         style={{
