@@ -1,0 +1,7 @@
+export type Level =
+  | 'BEGINNER'
+  | 'UPPER_BEGINNER'
+  | 'INTERMEDIATE'
+  | 'UPPER_INTERMEDIATE'
+  | 'ADVANCED'
+  | 'EXPERT';

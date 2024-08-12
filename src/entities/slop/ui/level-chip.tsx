@@ -1,7 +1,8 @@
 import React from 'react';
-import { cn } from '../lib';
+import { cn } from '../../../shared/lib';
+import type { Level } from '../model/model';
 
-const LEVEL = {
+const LEVEL: Record<Level, { text: string; color: string }> = {
   BEGINNER: {
     text: '초급',
     color: 'bg-sub-2',
@@ -29,7 +30,7 @@ const LEVEL = {
 };
 
 interface LevelChipProps {
-  level: keyof typeof LEVEL;
+  level: Level;
 }
 
 const LevelChip = ({ level }: LevelChipProps) => {
