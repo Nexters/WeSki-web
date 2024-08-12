@@ -16,9 +16,10 @@ export type ResortInfo = {
     isOpen: boolean;
     webcam: {
       position: {
-        top: number;
-        left: number;
+        top: string;
+        left: string;
       };
+      src?: string;
     } | null;
   }[];
 };

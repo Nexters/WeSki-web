@@ -10,7 +10,12 @@ const WebCamMobileMapPage = () => {
   return (
     <main className={cn('w-full')}>
       <WebcamMap slops={DUMMY2.slops} mapSrc={DUMMY2.map} />
-      <WebcamSlopList list={DUMMY2.slops} />
+      <WebcamSlopList
+        list={DUMMY2.slops.map((item) => ({
+          ...item,
+          isWebcam: !!item.webcam,
+        }))}
+      />
     </main>
   );
 };

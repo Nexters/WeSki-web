@@ -33,7 +33,12 @@ export const JISAN: ResortInfo = {
       level: 'INTERMEDIATE',
       name: '오렌지 리프트 2',
       Element: Orange2LiftPath,
-      webcam: null,
+      webcam: {
+        position: {
+          top: 'top-[69%]',
+          left: 'left-[29%]',
+        },
+      },
       isOpen: false,
     },
     {
@@ -41,7 +46,12 @@ export const JISAN: ResortInfo = {
       level: 'INTERMEDIATE',
       name: '오렌지 리프트 3',
       Element: Orange3LiftPath,
-      webcam: null,
+      webcam: {
+        position: {
+          top: 'top-[64%]',
+          left: 'left-[38%]',
+        },
+      },
       isOpen: false,
     },
     {
@@ -57,7 +67,12 @@ export const JISAN: ResortInfo = {
       level: 'ADVANCED',
       name: '블루 리프트 5',
       Element: BlueLiftPath,
-      webcam: null,
+      webcam: {
+        position: {
+          top: 'top-[69%]',
+          left: 'left-[56%]',
+        },
+      },
       isOpen: false,
     },
     {
