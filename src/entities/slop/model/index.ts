@@ -1,0 +1,1 @@
+export { JISAN } from './jisan';

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Silver7Liftpath = () => {
+const Silver7LiftPath = () => {
   return (
     <svg
       width="100%"
@@ -17,4 +17,4 @@ const Silver7Liftpath = () => {
   );
 };
 
-export default Silver7Liftpath;
+export default Silver7LiftPath;
