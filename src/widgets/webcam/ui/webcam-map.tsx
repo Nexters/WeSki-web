@@ -20,6 +20,7 @@ interface WebcamMapProps {
         top: string;
         left: string;
       };
+      src?: string;
     } | null;
   }[];
   mapSrc: StaticImageData;
@@ -52,6 +53,7 @@ const WebcamMap = ({ slops, mapSrc, selectedSlop }: WebcamMapProps) => {
               name={webcam.name}
               position={webcam.position}
               isOpen={selectedSlop === id}
+              videoSrc={webcam.src}
             />
           ))}
       </SlopMap>

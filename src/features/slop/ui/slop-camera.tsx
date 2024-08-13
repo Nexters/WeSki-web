@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { cn } from '@/shared/lib';
 import CameraButton from '@/shared/ui/cam-button';
 import { Tooltip } from '@/shared/ui/tooltip';
+import SlopVideo from './slop-video';
 
 interface SlopWebcamProps {
   id: string;
@@ -10,16 +11,30 @@ interface SlopWebcamProps {
     top: string;
     left: string;
   };
+  videoSrc?: string;
   isOpen: boolean;
 }
 
-const SlopCamera = ({ name, position, isOpen }: SlopWebcamProps) => {
+const SlopCamera = ({ name, position, isOpen, videoSrc }: SlopWebcamProps) => {
+  const [isVideoOpen, setIsVideoOpen] = useState(false);
+
+  const toggleVideo = () => {
+    setIsVideoOpen((pre) => !pre);
+  };
+
   return (
-    <div className={cn('absolute z-10', position.top, position.left)}>
-      <Tooltip trigger={<CameraButton />} isOpen={isOpen}>
-        <p className={cn('body3-medium')}>{name}</p>
-      </Tooltip>
-    </div>
+    <>
+      <div className={cn('absolute z-10', position.top, position.left)}>
+        <div className={cn('relative')}>
+          <Tooltip trigger={<CameraButton />} isOpen={isOpen}>
+            <p className={cn('body3-medium')} onClick={toggleVideo}>
+              {name}
+            </p>
+          </Tooltip>
+        </div>
+      </div>
+      {isVideoOpen && videoSrc && <SlopVideo src={videoSrc} closeVideo={toggleVideo} />}
+    </>
   );
 };
 
