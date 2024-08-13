@@ -93,6 +93,13 @@
   body {
     touch-action: none;
   }
+  body.video-active * {
+    pointer-events: none;
+  }
+
+  body.video-active .video-close {
+    pointer-events: auto;
+  }
 }
 
 @layer typography {
