@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { createPortal } from 'react-dom';
 import { cn } from '@/shared/lib';
 import CameraButton from '@/shared/ui/cam-button';
 import { Tooltip } from '@/shared/ui/tooltip';
@@ -13,9 +14,10 @@ interface SlopWebcamProps {
   };
   videoSrc?: string;
   isOpen: boolean;
+  renderTarget: React.RefObject<HTMLElement>;
 }
 
-const SlopCamera = ({ name, position, isOpen, videoSrc }: SlopWebcamProps) => {
+const SlopCamera = ({ name, position, isOpen, videoSrc, renderTarget }: SlopWebcamProps) => {
   const [isVideoOpen, setIsVideoOpen] = useState(false);
 
   const toggleVideo = () => {
@@ -33,7 +35,10 @@ const SlopCamera = ({ name, position, isOpen, videoSrc }: SlopWebcamProps) => {
           </Tooltip>
         </div>
       </div>
-      {isVideoOpen && videoSrc && <SlopVideo src={videoSrc} closeVideo={toggleVideo} />}
+      {renderTarget?.current &&
+        isVideoOpen &&
+        videoSrc &&
+        createPortal(<SlopVideo src={videoSrc} closeVideo={toggleVideo} />, renderTarget.current)}
     </>
   );
 };

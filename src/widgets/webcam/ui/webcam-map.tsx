@@ -53,6 +53,7 @@ const WebcamMap = ({ slops, mapSrc, selectedSlop }: WebcamMapProps) => {
               name={webcam.name}
               position={webcam.position}
               isOpen={selectedSlop === id}
+              renderTarget={containerRef}
               videoSrc={webcam.src}
             />
           ))}
