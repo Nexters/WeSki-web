@@ -43,7 +43,7 @@ const LevelChip = ({ level, className }: LevelChipProps) => {
         className && className
       )}
     >
-      <p className="body1 text-white">{LEVEL[level].text}</p>
+      <p className="body1-semibold text-white">{LEVEL[level].text}</p>
     </div>
   );
 };

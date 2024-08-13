@@ -6,7 +6,7 @@ import { cn } from '@/shared/lib';
 const SlopStatusPage = () => {
   const DUMMY = JISAN;
   return (
-    <main className={cn('w-full')}>
+    <main className={cn('w-full px-[20px]')}>
       <SlopStatusHeader />
 
       <SlopStatusList list={DUMMY.slops} />
