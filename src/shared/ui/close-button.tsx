@@ -15,7 +15,7 @@ const CloseButton = forwardRef<HTMLButtonElement, CloseButtonProps>(
         )}
         {...args}
       >
-        <CloseIcon />
+        <CloseIcon className={cn('text-white')} />
       </button>
     );
   }

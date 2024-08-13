@@ -30,15 +30,17 @@ const LEVEL: Record<Level, { text: string; color: string }> = {
 };
 
 interface LevelChipProps {
+  className?: string;
   level: Level;
 }
 
-const LevelChip = ({ level }: LevelChipProps) => {
+const LevelChip = ({ level, className }: LevelChipProps) => {
   return (
     <div
       className={cn(
         'flex h-[25px] w-[56px] items-center justify-center rounded-[6px] border-[1px] border-white border-opacity-10',
-        LEVEL[level].color
+        LEVEL[level].color,
+        className && className
       )}
     >
       <p className="body1 text-white">{LEVEL[level].text}</p>
