@@ -23,7 +23,7 @@ const SlopStatusList = ({ list, setSelectedSlop, selectedSlop }: SlopStatusListP
     setSelectedSlop(id);
   };
   return (
-    <table className={cn('w-full')}>
+    <table className={cn('mt-[24px] w-full')}>
       <colgroup>
         <col className="w-[40%]" /> {/* 슬로프명 */}
         <col className="w-[20%]" /> {/* 난이도 */}
@@ -59,7 +59,7 @@ const SlopStatusList = ({ list, setSelectedSlop, selectedSlop }: SlopStatusListP
             <td className={cn('text-center')}>
               <StatusIcon isOpen={item.isNightOpen} className={cn('m-auto')} />
             </td>
-            <td className={cn('text-center pr-5')}>
+            <td className={cn('pr-5 text-center')}>
               <StatusIcon isOpen={item.isLateNightOpen} className={cn('m-auto')} />
             </td>
           </tr>
