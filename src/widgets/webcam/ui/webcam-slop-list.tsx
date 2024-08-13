@@ -13,12 +13,17 @@ interface WebcamSlopListProps {
     isOpen: boolean;
     isWebcam: boolean;
   }[];
+  selectedSlop: string | null;
   setSelectedSlop: React.Dispatch<React.SetStateAction<string | null>>;
 }
 
-const WebcamSlopList = ({ list, setSelectedSlop }: WebcamSlopListProps) => {
+const WebcamSlopList = ({ list, selectedSlop, setSelectedSlop }: WebcamSlopListProps) => {
   const handleSlopClick = ({ id, isOpen }: { id: string; isOpen: boolean }) => {
     if (!isOpen) return;
+    if (selectedSlop === id) {
+      setSelectedSlop(null);
+      return;
+    }
     setSelectedSlop(id);
   };
   return (
@@ -28,7 +33,8 @@ const WebcamSlopList = ({ list, setSelectedSlop }: WebcamSlopListProps) => {
           <li
             className={cn(
               'flex h-[66px] items-center justify-between bg-gray-10 pl-[24px] pr-[24px]',
-              !item.isOpen && 'opacity-30'
+              !item.isOpen && 'opacity-30',
+              selectedSlop === item.id && 'bg-main-5'
             )}
             onClick={() => handleSlopClick(item)}
           >

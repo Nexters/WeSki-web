@@ -16,6 +16,7 @@ const WebCamMobileMapPage = () => {
           ...item,
           isWebcam: !!item.webcam,
         }))}
+        selectedSlop={selectedSlop}
         setSelectedSlop={setSelectedSlop}
       />
     </main>
