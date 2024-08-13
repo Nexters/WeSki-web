@@ -9,7 +9,7 @@ import useMapPinch from '../hooks/useMapPinch';
 
 interface SlopMapProps {
   containerRef: React.RefObject<HTMLElement>;
-  children: React.ReactNode;
+  children?: React.ReactNode;
   mapSrc: StaticImageData;
 
   slops: {
