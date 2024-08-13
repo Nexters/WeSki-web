@@ -37,20 +37,23 @@ const WebcamMap = ({ slops, mapSrc, selectedSlop }: WebcamMapProps) => {
         slops={slops}
         selectedSlop={selectedSlop}
       >
-        {slops.map((slop) => {
-          return (
-            <React.Fragment key={slop.id}>
-              {slop.webcam && (
-                <SlopCamera
-                  id={slop.webcam.id}
-                  name={slop.webcam.name}
-                  position={slop.webcam.position}
-                  isOpen={selectedSlop === slop.id}
-                />
-              )}
-            </React.Fragment>
-          );
-        })}
+        {slops
+          .filter(
+            (
+              slop
+            ): slop is WebcamMapProps['slops'][number] & {
+              webcam: NonNullable<WebcamMapProps['slops'][number]['webcam']>;
+            } => slop.webcam !== null
+          )
+          .map(({ id, webcam }) => (
+            <SlopCamera
+              key={id}
+              id={webcam.id}
+              name={webcam.name}
+              position={webcam.position}
+              isOpen={selectedSlop === id}
+            />
+          ))}
       </SlopMap>
     </section>
   );
