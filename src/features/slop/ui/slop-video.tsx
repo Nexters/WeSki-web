@@ -1,7 +1,9 @@
+import dynamic from 'next/dynamic';
 import React, { useEffect } from 'react';
-import ReactHlsPlayer from 'react-hls-player';
 import { cn } from '@/shared/lib';
 import CloseButton from '@/shared/ui/close-button';
+
+const ReactHlsPlayer = dynamic(() => import('react-hls-player'), { ssr: false });
 
 interface SlopVideoProps {
   src: string;
