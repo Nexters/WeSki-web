@@ -1,5 +1,5 @@
 import Header from '@/widgets/header/ui/header';
-import WeatherList from '@/features/discovery/ui/weather-list';
+import WeatherList from '@/widgets/weather/ui/weather-list';
 import { cn } from '@/shared/lib';
 
 const Page = () => {
