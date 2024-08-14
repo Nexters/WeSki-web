@@ -32,10 +32,8 @@ const useMapPinch = (containerRef: RefObject<HTMLElement>) => {
       },
       onDrag: ({ pinching, cancel, offset: [x, y] }) => {
         if (pinching) return cancel();
-        api.start({ x, y });
-      },
-      onDragEnd: () => {
-        const [boundedX, boundedY] = getBoundedPositions(
+
+        const [{ min: minX, max: maxX }, { min: minY, max: maxY }] = getBoundedPositions(
           {
             x: style.x.get(),
             y: style.y.get(),
@@ -46,6 +44,10 @@ const useMapPinch = (containerRef: RefObject<HTMLElement>) => {
             height: containerRef.current!.getBoundingClientRect().height,
           }
         );
+
+        const boundedX = Math.min(Math.max(x, minX), maxX);
+        const boundedY = Math.min(Math.max(y, minY), maxY);
+
         api.start({ x: boundedX, y: boundedY });
       },
     },

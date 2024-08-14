@@ -1,3 +1,5 @@
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -91,11 +93,19 @@
   }
   html,
   body {
+    @apply font-sans;
     touch-action: none;
+  }
+  body.video-active * {
+    pointer-events: none;
+  }
+
+  body.video-active .video-close {
+    pointer-events: auto;
   }
 }
 
-@layer typography {
+@layer base {
   /* Headings */
   .h1 {
     @apply text-3xl font-bold leading-[1.6rem] tracking-[0.02rem];

@@ -46,9 +46,11 @@ export const Tooltip = ({ trigger, children, isOpen }: TooltipProps) => {
       }}
     >
       <PopoverTrigger asChild>{trigger}</PopoverTrigger>
-      <PopoverContent side="top">
-        {children} <PopoverArrow className="PopoverArrow" />
-      </PopoverContent>
+      <PopoverPrimitive.PopoverPortal>
+        <PopoverContent side="top">
+          {children} <PopoverArrow className="PopoverArrow" />
+        </PopoverContent>
+      </PopoverPrimitive.PopoverPortal>
     </Popover>
   );
 };

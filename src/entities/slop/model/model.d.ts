@@ -14,6 +14,10 @@ export type ResortInfo = {
     name: string;
     Element: React.FC;
     isOpen: boolean;
+    isDayOpen: boolean;
+    isNightOpen: boolean;
+    isLateNightOpen: boolean;
+
     webcam: {
       id: string;
       name: string;

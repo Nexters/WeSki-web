@@ -24,12 +24,7 @@ const getBoundedPositions = (
     },
   };
 
-  const boundedPosition = {
-    x: Math.max(bounds.x.min, Math.min(bounds.x.max, position.x)),
-    y: Math.max(bounds.y.min, Math.min(bounds.y.max, position.y)),
-  };
-
-  return [boundedPosition.x, boundedPosition.y];
+  return [bounds.x, bounds.y];
 };
 
 export default getBoundedPositions;
