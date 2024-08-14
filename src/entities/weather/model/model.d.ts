@@ -1,4 +1,4 @@
-export type Weather = 'sun' | 'cloud';
+export type Weather = 'sun' | 'cloud' | 'rain' | 'snow';
 
 export type WeatherItem = {
   day: string;

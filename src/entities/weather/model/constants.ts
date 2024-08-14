@@ -11,7 +11,7 @@ export const WeeklyWeather: WeatherItem[] = [
   },
   {
     day: '화',
-    weather: 'cloud',
+    weather: 'snow',
     temperature: {
       lowest: '-3°',
       average: '-6°',
@@ -35,7 +35,7 @@ export const WeeklyWeather: WeatherItem[] = [
   },
   {
     day: '금',
-    weather: 'sun',
+    weather: 'cloud',
     temperature: {
       lowest: '-1°',
       average: '-4°',
@@ -43,7 +43,7 @@ export const WeeklyWeather: WeatherItem[] = [
   },
   {
     day: '토',
-    weather: 'cloud',
+    weather: 'rain',
     temperature: {
       lowest: '-3°',
       average: '-6°',
