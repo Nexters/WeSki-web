@@ -45,12 +45,10 @@ const useMapPinch = (containerRef: RefObject<HTMLElement>) => {
           }
         );
 
-        if (x < minX) x = minX;
-        if (x > maxX) x = maxX;
-        if (y < minY) y = minY;
-        if (y > maxY) y = maxY;
+        const boundedX = Math.min(Math.max(x, minX), maxX);
+        const boundedY = Math.min(Math.max(y, minY), maxY);
 
-        api.start({ x, y });
+        api.start({ x: boundedX, y: boundedY });
       },
     },
     {

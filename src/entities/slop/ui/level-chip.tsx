@@ -40,7 +40,7 @@ const LevelChip = ({ level, className }: LevelChipProps) => {
       className={cn(
         'flex h-[25px] w-[56px] items-center justify-center rounded-[6px] border-[1px] border-white border-opacity-10',
         LEVEL[level].color,
-        className && className
+        className
       )}
     >
       <p className="body1-semibold text-white">{LEVEL[level].text}</p>
