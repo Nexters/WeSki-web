@@ -1,7 +1,7 @@
 'use client';
 
-import DiscoveryContent from '@/widgets/discovery/ui/discovery-content';
-import DiscoverySummary from '@/widgets/discovery/ui/discovery-summary';
+import DiscoveryContent from '@/widgets/discovery-detail/ui/discovery-content';
+import DiscoverySummary from '@/widgets/discovery-detail/ui/discovery-summary';
 import { Header } from '@/widgets/header/ui';
 import { DiscoveryData } from '@/entities/discovery';
 import { cn } from '@/shared/lib';

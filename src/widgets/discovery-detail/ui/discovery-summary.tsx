@@ -2,7 +2,8 @@ import type { Discovery } from '@/entities/discovery';
 import SnowIcon from '@/shared/icons/snow';
 import { cn } from '@/shared/lib';
 import Card from '@/shared/ui/card';
-import WeatherIcon from './weather-icon';
+// eslint-disable-next-line boundaries/element-types
+import WeatherIcon from '../../discovery/ui/weather-icon';
 
 const DiscoverySummary = ({ name, slope, weather }: Discovery) => {
   return (
