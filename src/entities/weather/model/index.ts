@@ -1,2 +1,2 @@
-export { WeeklyWeather } from './constants';
-export type { Weather, WeatherItem } from './model';
+export { DiscoveryData } from './constants';
+export type { Weather, WeeklyWeather } from './model';

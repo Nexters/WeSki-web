@@ -1,12 +1,12 @@
-import type { WeatherItem } from '@/entities/weather/model';
+import type { WeeklyWeather } from '@/entities/weather/model/model';
 import { cn } from '@/shared/lib';
 import WeatherIcon from './weather-icon';
 
-interface WeatherCardItemProps extends WeatherItem {
+interface WeeklyWeatherProps extends WeeklyWeather {
   isToday: boolean;
 }
 
-const WeatherCardItem = ({ day, weather, temperature, isToday }: WeatherCardItemProps) => {
+const WeeklyWeather = ({ day, weather, temperature, isToday }: WeeklyWeatherProps) => {
   return (
     <li
       className={cn(
@@ -26,4 +26,4 @@ const WeatherCardItem = ({ day, weather, temperature, isToday }: WeatherCardItem
   );
 };
 
-export default WeatherCardItem;
+export default WeeklyWeather;
