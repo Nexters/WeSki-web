@@ -58,4 +58,4 @@ export class ApiClient {
   }
 }
 
-export const apiClient = new ApiClient(API_URL!);
+export const apiClient = new ApiClient(API_URL);
