@@ -17,7 +17,7 @@ const DiscoveryDetailPage = ({ params }: { params: { resortId: number } }) => {
 
   return (
     <div className={cn('size-full')}>
-      <Header />
+      <Header hasBackButton hasShareButton />
       <DiscoveryDetailSummary {...discovery} />
       <WebcamMap slops={DUMMY2.slops} mapSrc={DUMMY2.map} selectedSlop={selectedSlop} />
       <WebcamSlopList

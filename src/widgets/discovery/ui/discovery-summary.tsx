@@ -9,7 +9,7 @@ const DiscoverySummary = ({ name, slope, weather }: Discovery) => {
     <div
       className={cn('flex w-full flex-col gap-[26px] px-[30px] pb-[34px] pt-[10px] sm:flex-row')}
     >
-      <Card className={cn('flex h-[123px] items-center justify-between pl-5 pr-4 sm:flex-1')}>
+      <Card className={cn('flex h-[123px] items-center justify-between pl-[30px] pr-6 sm:flex-1')}>
         <div className={cn('flex flex-col gap-[5px]')}>
           <p className={cn('title1 text-gray-90')}>{name}</p>
           <p className={cn('body1-medium text-gray-60')}>운행중인 슬로프 {slope ?? '-'}개</p>
