@@ -7,11 +7,7 @@ import { DiscoveryData } from '@/entities/discovery';
 import { cn } from '@/shared/lib';
 
 const DiscoveryDetailPage = ({ params }: { params: { resortId: number } }) => {
-  if (typeof window === 'undefined') {
-    return null;
-  }
-
-  const discovery = DiscoveryData.find((discovery) => discovery.id === +params.resortId);
+  const discovery = DiscoveryData.find((discovery) => discovery.id === +params?.resortId);
   if (!discovery) return null;
 
   return (
