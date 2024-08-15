@@ -1,14 +1,13 @@
-import { keepPreviousData, queryOptions } from '@tanstack/react-query';
+import { queryOptions } from '@tanstack/react-query';
 import { getDiscoveries } from './get-discoveries';
 
 export const discoveryQueries = {
-  all: () => ['discoveries'],
+  all: () => ['discovery'],
 
-  lists: () => [...discoveryQueries.all(), 'list'],
+  listQueryKey: () => [...discoveryQueries.all(), 'list'],
   list: () =>
     queryOptions({
-      queryKey: [...discoveryQueries.lists()],
+      queryKey: [...discoveryQueries.listQueryKey()],
       queryFn: () => getDiscoveries(),
-      placeholderData: keepPreviousData,
     }),
 };

@@ -6,8 +6,17 @@ import Header from '@/widgets/header/ui/header';
 import { discoveryApi } from '@/entities/discovery';
 import { cn } from '@/shared/lib';
 
-const Page = () => {
+const DiscoveryPage = () => {
+  if (typeof window === 'undefined') {
+    return null;
+  }
+
+  return <DiscoveryPageContent />;
+};
+
+const DiscoveryPageContent = () => {
   const { data: discoveryData } = useQuery(discoveryApi.discoveryQueries.list());
+
   if (!discoveryData) return null;
 
   return (
@@ -20,4 +29,4 @@ const Page = () => {
   );
 };
 
-export default Page;
+export default DiscoveryPage;
