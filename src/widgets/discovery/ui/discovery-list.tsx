@@ -1,4 +1,4 @@
-import type { Discovery } from '@/entities/weather';
+import type { Discovery } from '@/entities/discovery';
 import { cn } from '@/shared/lib';
 import DiscoveryCard from './discovery-card';
 

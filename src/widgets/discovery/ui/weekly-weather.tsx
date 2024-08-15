@@ -1,4 +1,4 @@
-import type { WeeklyWeather } from '@/entities/weather/model/model';
+import type { WeeklyWeather } from '@/entities/discovery/model/model';
 import { cn } from '@/shared/lib';
 import WeatherIcon from './weather-icon';
 

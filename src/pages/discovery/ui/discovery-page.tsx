@@ -1,9 +1,9 @@
 'use client';
 
 import { useQuery } from '@tanstack/react-query';
+import DiscoveryList from '@/widgets/discovery/ui/discovery-list';
 import Header from '@/widgets/header/ui/header';
-import DiscoveryList from '@/widgets/weather/ui/discovery-list';
-import { discoveryApi } from '@/entities/weather';
+import { discoveryApi } from '@/entities/discovery';
 import { cn } from '@/shared/lib';
 
 const Page = () => {

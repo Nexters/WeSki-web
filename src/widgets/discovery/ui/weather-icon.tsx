@@ -1,4 +1,4 @@
-import type { Weather } from '@/entities/weather/model';
+import type { Weather } from '@/entities/discovery/model';
 import CloudIcon from '@/shared/icons/cloud';
 import RainIcon from '@/shared/icons/rain';
 import SnowIcon from '@/shared/icons/snow';
