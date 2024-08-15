@@ -21,9 +21,9 @@ const CameraIcon = () => {
           width="10.0996"
           height="9.19995"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feGaussianBlur in="BackgroundImageFix" stdDeviation="0.5" />
           <feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_693_2934" />
           <feBlend
