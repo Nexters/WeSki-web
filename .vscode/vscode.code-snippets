@@ -1,0 +1,8 @@
+{
+  "Add className={cn('')}": {
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "prefix": "tw-cn",
+    "body": ["className={cn('${1}')}"],
+    "description": "className={cn('${1}')}",
+  },
+}
