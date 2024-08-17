@@ -46,10 +46,7 @@ const WebCamMobileMapPage = () => {
         updateCameraPosition={updateCameraPosition}
       />
       <WebcamSlopList
-        list={DUMMY2.slops.map((item) => ({
-          ...item,
-          isWebcam: !!item.webcam,
-        }))}
+        list={DUMMY2.slops}
         selectedSlop={selectedSlop}
         setSelectedSlop={setSelectedSlop}
         onItemClick={handleFocusSlopCamClick}

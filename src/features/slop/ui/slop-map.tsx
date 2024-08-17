@@ -34,9 +34,7 @@ const SlopMap = forwardRef<HTMLDivElement, SlopMapProps>(
           ...style,
         }}
       >
-        <div>
-          <MapComponent />
-        </div>
+        <MapComponent />
         {slops.map((slop) => (
           <div key={slop.id} className={cn('absolute top-0 w-full')}>
             <slop.Element
