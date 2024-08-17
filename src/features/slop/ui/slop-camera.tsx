@@ -4,8 +4,8 @@ import type { Position, Webcam } from '@/entities/slop/model/model';
 import { cn } from '@/shared/lib';
 import CameraButton from '@/shared/ui/cam-button';
 import { Tooltip } from '@/shared/ui/tooltip';
-import SlopVideo from './slop-video';
 import useSlopStore from '../hooks/useSlopStore';
+import SlopVideo from './slop-video';
 
 interface SlopWebcamProps {
   webcam: Webcam;
@@ -27,6 +27,7 @@ const SlopCamera = ({
   const cameraRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    console.log(updateCameraPosition);
     cameraRef.current &&
       updateCameraPosition(id, {
         x: cameraRef.current.getBoundingClientRect().x,
@@ -38,7 +39,7 @@ const SlopCamera = ({
     setIsVideoOpen((pre) => !pre);
   };
 
-  const { selectedSlop, setSelectedSlop } = useSlopStore();
+  const { setSelectedSlop } = useSlopStore();
 
   return (
     <>

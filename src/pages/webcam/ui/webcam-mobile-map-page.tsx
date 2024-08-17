@@ -7,7 +7,6 @@ import calculateWebcamPosition from '@/features/slop/lib/calculateWebcamPosition
 import { JISAN } from '@/entities/slop/model';
 import type { Position } from '@/entities/slop/model/model';
 import { cn } from '@/shared/lib';
-import useSlopStore from '@/features/slop/hooks/useSlopStore';
 
 const WebCamMobileMapPage = () => {
   const DUMMY2 = JISAN;

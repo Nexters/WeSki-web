@@ -1,10 +1,10 @@
 import type { SpringValue } from '@react-spring/web';
 import React, { forwardRef } from 'react';
+import useSlopStore from '@/features/slop/hooks/useSlopStore';
 import SlopCamera from '@/features/slop/ui/slop-camera';
 import SlopMap from '@/features/slop/ui/slop-map';
 import type { Position, ResortInfo } from '@/entities/slop/model/model';
 import { cn } from '@/shared/lib';
-import useSlopStore from '@/features/slop/hooks/useSlopStore';
 
 interface WebcamMapProps extends ResortInfo {
   containerRef: React.RefObject<HTMLElement>;

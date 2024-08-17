@@ -4,6 +4,7 @@ import LevelChip from '@/entities/slop/ui/level-chip';
 import CheckIcon from '@/shared/icons/check';
 import CloseIcon from '@/shared/icons/close';
 import { cn } from '@/shared/lib';
+import useSlopStore from '../hooks/useSlopStore';
 
 interface SlopStatusListProps {
   list: {
@@ -14,11 +15,11 @@ interface SlopStatusListProps {
     isNightOpen: boolean;
     isLateNightOpen: boolean;
   }[];
-  selectedSlop: string | null;
-  setSelectedSlop: React.Dispatch<React.SetStateAction<string | null>>;
 }
 
-const SlopStatusList = ({ list, setSelectedSlop, selectedSlop }: SlopStatusListProps) => {
+const SlopStatusList = ({ list }: SlopStatusListProps) => {
+  const { selectedSlop, setSelectedSlop } = useSlopStore();
+
   const handleSlopClick = ({ id }: { id: string }) => {
     setSelectedSlop(id);
   };
