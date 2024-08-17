@@ -14,6 +14,7 @@ interface WebcamSlopListProps {
     isOpen: boolean;
     isWebcam: boolean;
   }[];
+  type?: 'website' | 'app';
   selectedSlop: string | null;
   setSelectedSlop: React.Dispatch<React.SetStateAction<string | null>>;
 }
@@ -21,6 +22,7 @@ interface WebcamSlopListProps {
 const WebcamSlopList = ({
   className,
   list,
+  type = 'app',
   selectedSlop,
   setSelectedSlop,
 }: WebcamSlopListProps) => {
@@ -32,6 +34,31 @@ const WebcamSlopList = ({
     }
     setSelectedSlop(id);
   };
+  if (type === 'website') {
+    return (
+      <ul className={cn('w-full xs:grid xs:grid-cols-2', className)}>
+        {list.map((item) => (
+          <li
+            key={item.id}
+            className={cn(
+              'flex h-[66px] items-center justify-between bg-gray-10 px-6',
+              'border-b border-gray-30 xs:odd:border-r',
+              item.isOpen ? 'cursor-pointer' : 'cursor-default',
+              selectedSlop === item.id && 'bg-main-5'
+            )}
+            onClick={() => handleSlopClick(item)}
+          >
+            <div className={cn('flex items-center gap-2')}>
+              <p className={cn('title3-semibold', !item.isOpen && 'opacity-30')}>{item.name}</p>
+              {item.isWebcam && <CameraButton />}
+            </div>
+            <LevelChip className={cn(!item.isOpen && 'opacity-30')} level={item.level} />
+          </li>
+        ))}
+      </ul>
+    );
+  }
+
   return (
     <ul className={cn('w-full', className)}>
       {list.map((item) => (
