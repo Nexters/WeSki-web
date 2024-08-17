@@ -8,6 +8,7 @@ import { cn } from '@/shared/lib';
 const WebCamMobileMapPage = () => {
   const DUMMY2 = JISAN;
   const [selectedSlop, setSelectedSlop] = useState<string | null>(null);
+
   return (
     <main className={cn('w-full')}>
       <WebcamMap

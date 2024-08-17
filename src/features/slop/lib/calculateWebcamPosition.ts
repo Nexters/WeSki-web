@@ -1,5 +1,4 @@
 import { getBoundedPositions } from '@/shared/lib';
-import React from 'react';
 
 interface calculateWebcamPositionProps {
   containerPosition: {

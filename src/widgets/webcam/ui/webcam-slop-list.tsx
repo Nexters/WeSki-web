@@ -30,6 +30,7 @@ const WebcamSlopList = ({
       setSelectedSlop(null);
       return;
     }
+
     setSelectedSlop(id);
   };
   return (

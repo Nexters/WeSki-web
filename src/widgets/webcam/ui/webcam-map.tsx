@@ -4,7 +4,6 @@ import SlopCamera from '@/features/slop/ui/slop-camera';
 import SlopMap from '@/features/slop/ui/slop-map';
 import type { ResortInfo } from '@/entities/slop/model/model';
 import { cn } from '@/shared/lib';
-import calculateWebcamPosition from '../lib/calculateWebcamPosition';
 
 interface WebcamMapProps extends ResortInfo {
   selectedSlop: string | null;
@@ -37,17 +36,9 @@ const WebcamMap = ({ slops, MapComponent, selectedSlop, setSelectedSlop }: Webca
               key={id}
               webcam={webcam}
               isOpen={selectedSlop === id}
-              renderTarget={containerRef}
-              onCameraClick={(event: React.MouseEvent<HTMLDivElement>) => {
-                const { left, top, width, height } = containerRef.current!.getBoundingClientRect();
-                const { boundedX, boundedY } = calculateWebcamPosition({
-                  containerPosition: { left, top, width, height },
-                  position: { x: event.clientX, y: event.clientY },
-                  scale: webcam.scale,
-                });
-                setSelectedSlop(null);
-                api.start({ scale: webcam.scale, x: boundedX, y: boundedY });
-              }}
+              containerRef={containerRef}
+              api={api}
+              setSelectedSlop={setSelectedSlop}
             />
           ))}
       </SlopMap>
