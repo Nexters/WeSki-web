@@ -1,4 +1,3 @@
-import SnowIcon from '@/shared/icons/snow';
 import { cn } from '@/shared/lib';
 
 interface DiscoverySummaryActionProps {

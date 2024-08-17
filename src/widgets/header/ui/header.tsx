@@ -1,7 +1,6 @@
 import { useRouter } from 'next/navigation';
-import ChevronLeftIcon from '@/shared/icons/chevron-left';
-import ShareIcon from '@/shared/icons/share';
 import { cn } from '@/shared/lib';
+import { ChevronLeftIcon, ShareIcon } from '@/shared/icons';
 
 interface HeaderProps {
   hasBackButton?: boolean;

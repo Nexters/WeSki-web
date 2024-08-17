@@ -1,8 +1,5 @@
 import type { Weather } from '@/entities/discovery/model';
-import CloudIcon from '@/shared/icons/cloud';
-import RainIcon from '@/shared/icons/rain';
-import SnowIcon from '@/shared/icons/snow';
-import SunIcon from '@/shared/icons/sun';
+import { CloudIcon, RainIcon, SnowIcon, SunIcon } from '@/shared/icons';
 
 interface WeatherIconProps {
   className?: string;
