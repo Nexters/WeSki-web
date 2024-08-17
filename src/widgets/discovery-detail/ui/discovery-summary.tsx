@@ -1,12 +1,12 @@
 import { useCallback } from 'react';
+import WeatherIcon from '@/features/discovery/ui/weather-icon';
 import type { Discovery } from '@/entities/discovery';
+import { BusIcon, LiftIcon, VoteIcon } from '@/shared/icons';
 import { cn } from '@/shared/lib';
 import Card from '@/shared/ui/card';
 import { DiscoverySummaryActionList } from '../model/constants';
 import DiscoverySummaryAction from './discovery-summary-action';
 import VoteDialog from './vote-dialog';
-import WeatherIcon from '@/features/discovery/ui/weather-icon';
-import { BusIcon, LiftIcon, VoteIcon } from '@/shared/icons';
 
 const DiscoverySummary = ({ name, slope, weather }: Discovery) => {
   const handleAction = useCallback(
@@ -29,9 +29,9 @@ const DiscoverySummary = ({ name, slope, weather }: Discovery) => {
 
   return (
     <div
-      className={cn('xs:flex-row flex w-full flex-col gap-[26px] px-[30px] pb-[34px] pt-[10px]')}
+      className={cn('flex w-full flex-col gap-[26px] px-[30px] pb-[34px] pt-[10px] xs:flex-row')}
     >
-      <Card className={cn('xs:flex-1 flex h-[123px] items-center justify-between pl-[30px] pr-6')}>
+      <Card className={cn('flex h-[123px] items-center justify-between pl-[30px] pr-6 xs:flex-1')}>
         <div className={cn('flex flex-col gap-[5px]')}>
           <p className={cn('title1 text-gray-90')}>{name}</p>
           <p className={cn('body1-medium text-gray-60')}>운행중인 슬로프 {slope ?? '-'}개</p>

@@ -1,4 +1,5 @@
 import { useCallback, useState } from 'react';
+import { CheckIcon } from '@/shared/icons';
 import { cn } from '@/shared/lib';
 import {
   Dialog,
@@ -10,7 +11,6 @@ import {
   DialogTitle,
   DialogTrigger,
 } from '@/shared/ui/dialog';
-import { CheckIcon } from '@/shared/icons';
 
 interface VoteDialogProps {
   trigger: React.ReactNode;
