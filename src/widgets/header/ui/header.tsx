@@ -28,9 +28,9 @@ const Header = ({ resortName, hasBackButton, hasShareButton }: HeaderProps) => {
       {hasShareButton && (
         <ShareDialog
           trigger={
-            <button className={cn('absolute right-7 top-1/2 -translate-y-1/2')}>
+            <div className={cn('absolute right-7 top-1/2 -translate-y-1/2')}>
               <ShareIcon />
-            </button>
+            </div>
           }
           name={resortName}
         />
