@@ -9,7 +9,6 @@ const DUMMY2 = JISAN;
 
 const DiscoveryContent = () => {
   const [selectedTab, setSelectedTab] = useState('webcam');
-  const [selectedSlop, setSelectedSlop] = useState<string | null>(null);
 
   return (
     <>
@@ -29,21 +28,13 @@ const DiscoveryContent = () => {
       </ul>
       {selectedTab === 'webcam' && (
         <>
-          <WebcamMap
-            slops={DUMMY2.slops}
-            MapComponent={DUMMY2.MapComponent}
-            selectedSlop={selectedSlop}
-            setSelectedSlop={setSelectedSlop}
-          />
+          <WebcamMap slops={DUMMY2.slops} MapComponent={DUMMY2.MapComponent} />
           <WebcamSlopList
             className={cn('bg-white')}
-            type="website"
             list={DUMMY2.slops.map((item) => ({
               ...item,
               isWebcam: !!item.webcam,
             }))}
-            selectedSlop={selectedSlop}
-            setSelectedSlop={setSelectedSlop}
           />
         </>
       )}

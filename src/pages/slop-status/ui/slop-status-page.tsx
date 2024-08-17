@@ -1,13 +1,11 @@
 'use client';
 
-import { useRef, useState } from 'react';
 import SlopStatusHeader from '@/widgets/header/ui/slop-status-header';
 import useMapPinch from '@/features/slop/hooks/useMapPinch';
 import SlopMap from '@/features/slop/ui/slop-map';
 import SlopStatusList from '@/features/slop/ui/slop-status-list';
 import { JISAN } from '@/entities/slop/model';
 import { cn } from '@/shared/lib';
-import useSlopStore from '@/features/slop/hooks/useSlopStore';
 
 const SlopStatusPage = () => {
   const DUMMY = JISAN;

@@ -1,19 +1,17 @@
 import React from 'react';
+import useSlopStore from '@/features/slop/hooks/useSlopStore';
 import type { Slop } from '@/entities/slop/model/model';
 import LevelChip from '@/entities/slop/ui/level-chip';
 import { cn } from '@/shared/lib';
 import CameraButton from '@/shared/ui/cam-button';
-import Divider from '@/shared/ui/divider';
-import useSlopStore from '@/features/slop/hooks/useSlopStore';
 
 interface WebcamSlopListProps {
   className?: string;
   list: Slop[];
-  type?: 'website' | 'app';
   onItemClick: ({ scale, id }: { scale: number; id: string }) => void;
 }
 
-const WebcamSlopList = ({ className, list, type = 'app', onItemClick }: WebcamSlopListProps) => {
+const WebcamSlopList = ({ className, list, onItemClick }: WebcamSlopListProps) => {
   const { selectedSlop, setSelectedSlop } = useSlopStore();
 
   return (
