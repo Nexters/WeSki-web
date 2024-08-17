@@ -28,10 +28,8 @@ const DiscoverySummary = ({ name, slope, weather }: Discovery) => {
   );
 
   return (
-    <div
-      className={cn('flex w-full flex-col gap-[26px] px-[30px] pb-[34px] pt-[10px] xs:flex-row')}
-    >
-      <Card className={cn('flex h-[123px] items-center justify-between pl-[30px] pr-6 xs:flex-1')}>
+    <div className={cn('flex w-full gap-[26px] px-[30px] pb-[34px] pt-[10px]')}>
+      <Card className={cn('flex h-[123px] flex-1 items-center justify-between pl-[30px] pr-6')}>
         <div className={cn('flex flex-col gap-[5px]')}>
           <p className={cn('title1 text-gray-90')}>{name}</p>
           <p className={cn('body1-medium text-gray-60')}>운행중인 슬로프 {slope ?? '-'}개</p>
@@ -44,7 +42,7 @@ const DiscoverySummary = ({ name, slope, weather }: Discovery) => {
           <p className={cn('body1-semibold text-gray-60')}>{weather.description}</p>
         </div>
       </Card>
-      <Card className={cn('flex h-[123px] items-center justify-center gap-[30px] px-5')}>
+      <Card className={cn('hidden h-[123px] items-center justify-center gap-[30px] px-5 xs:flex')}>
         {DiscoverySummaryActionList.map((action) => {
           if (action.name === 'vote') {
             return (
