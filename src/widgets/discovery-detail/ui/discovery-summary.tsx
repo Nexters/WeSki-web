@@ -1,4 +1,4 @@
-import { useCallback } from 'react';
+import { act, useCallback } from 'react';
 import type { Discovery } from '@/entities/discovery';
 import { cn } from '@/shared/lib';
 import Card from '@/shared/ui/card';
@@ -7,6 +7,9 @@ import WeatherIcon from '../../discovery/ui/weather-icon';
 import { DiscoverySummaryActionList } from '../model/constants';
 import DiscoverySummaryAction from './discovery-summary-action';
 import VoteDialog from './vote-dialog';
+import VoteIcon from '@/shared/icons/vote';
+import BusIcon from '@/shared/icons/bus';
+import LiftIcon from '@/shared/icons/lift';
 
 const DiscoverySummary = ({ name, slope, weather }: Discovery) => {
   const handleAction = useCallback(
@@ -51,11 +54,7 @@ const DiscoverySummary = ({ name, slope, weather }: Discovery) => {
               <VoteDialog
                 key={action.name}
                 trigger={
-                  <DiscoverySummaryAction
-                    key={action.name}
-                    {...action}
-                    onClick={() => handleAction(action.name)}
-                  />
+                  <DiscoverySummaryAction key={action.name} {...action} icon={<VoteIcon />} />
                 }
                 count={{ total: 100, voted: 50 }}
               />
@@ -65,6 +64,7 @@ const DiscoverySummary = ({ name, slope, weather }: Discovery) => {
               <DiscoverySummaryAction
                 key={action.name}
                 {...action}
+                icon={action.name === 'bus' ? <BusIcon /> : <LiftIcon />}
                 onClick={() => handleAction(action.name)}
               />
             );
