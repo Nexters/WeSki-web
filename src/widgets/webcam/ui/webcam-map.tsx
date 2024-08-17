@@ -1,65 +1,53 @@
-import type { StaticImageData } from 'next/image';
-import type { ComponentType } from 'react';
-import React, { useRef } from 'react';
+import type { SpringValue } from '@react-spring/web';
+import React, { forwardRef } from 'react';
 import SlopCamera from '@/features/slop/ui/slop-camera';
 import SlopMap from '@/features/slop/ui/slop-map';
-import type { Level } from '@/entities/slop/model/model';
+import type { Position, ResortInfo } from '@/entities/slop/model/model';
 import { cn } from '@/shared/lib';
+import useSlopStore from '@/features/slop/hooks/useSlopStore';
 
-interface WebcamMapProps {
-  slops: {
-    id: string;
-    level: Level;
-    Element: ComponentType<{
-      color?: string;
-    }>;
-    webcam: {
-      id: string;
-      name: string;
-      position: {
-        top: string;
-        left: string;
-      };
-      src?: string;
-    } | null;
-  }[];
-  mapSrc: StaticImageData;
-  selectedSlop: string | null;
+interface WebcamMapProps extends ResortInfo {
+  containerRef: React.RefObject<HTMLElement>;
+  onCameraClick: ({ scale, id }: { scale: number; id: string }) => void;
+  style: {
+    scale: SpringValue<number>;
+    x: SpringValue<number>;
+    y: SpringValue<number>;
+  };
+  updateCameraPosition: (id: string, position: Position) => void;
 }
 
-const WebcamMap = ({ slops, mapSrc, selectedSlop }: WebcamMapProps) => {
-  const containerRef = useRef<HTMLElement>(null);
+const WebcamMap = forwardRef<HTMLDivElement, WebcamMapProps>(
+  ({ slops, style, MapComponent, onCameraClick, containerRef, updateCameraPosition }, ref) => {
+    const { selectedSlop } = useSlopStore();
 
-  return (
-    <section className={cn('relative aspect-[25/14] w-full overflow-hidden')} ref={containerRef}>
-      <SlopMap
-        mapSrc={mapSrc}
-        containerRef={containerRef}
-        slops={slops}
-        selectedSlop={selectedSlop}
-      >
-        {slops
-          .filter(
-            (
-              slop
-            ): slop is WebcamMapProps['slops'][number] & {
-              webcam: NonNullable<WebcamMapProps['slops'][number]['webcam']>;
-            } => slop.webcam !== null
-          )
-          .map(({ id, webcam }) => (
-            <SlopCamera
-              key={id}
-              id={webcam.id}
-              name={webcam.name}
-              position={webcam.position}
-              isOpen={selectedSlop === id}
-              renderTarget={containerRef}
-              videoSrc={webcam.src}
-            />
-          ))}
-      </SlopMap>
-    </section>
-  );
-};
+    return (
+      <section className={cn('relative aspect-[25/14] w-full overflow-hidden')} ref={containerRef}>
+        <SlopMap MapComponent={MapComponent} ref={ref} slops={slops} style={style}>
+          {slops
+            .filter(
+              (
+                slop
+              ): slop is WebcamMapProps['slops'][number] & {
+                webcam: NonNullable<WebcamMapProps['slops'][number]['webcam']>;
+              } => slop.webcam !== null
+            )
+            .map(({ id, webcam }) => (
+              <SlopCamera
+                key={id}
+                webcam={webcam}
+                isOpen={selectedSlop === id}
+                containerRef={containerRef}
+                onCameraClick={onCameraClick}
+                updateCameraPosition={updateCameraPosition}
+              />
+            ))}
+        </SlopMap>
+      </section>
+    );
+  }
+);
+
+WebcamMap.displayName = 'WebcamMap';
 
 export default WebcamMap;

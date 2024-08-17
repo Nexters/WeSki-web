@@ -29,7 +29,12 @@ const DiscoveryContent = () => {
       </ul>
       {selectedTab === 'webcam' && (
         <>
-          <WebcamMap slops={DUMMY2.slops} mapSrc={DUMMY2.map} selectedSlop={selectedSlop} />
+          <WebcamMap
+            slops={DUMMY2.slops}
+            MapComponent={DUMMY2.MapComponent}
+            selectedSlop={selectedSlop}
+            setSelectedSlop={setSelectedSlop}
+          />
           <WebcamSlopList
             className={cn('bg-white')}
             type="website"

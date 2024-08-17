@@ -7,25 +7,35 @@ export type Level =
   | 'EXPERT';
 
 export type ResortInfo = {
-  map: mapSrc;
-  slops: {
-    id: string;
-    level: Level;
-    name: string;
-    Element: React.FC;
-    isOpen: boolean;
-    isDayOpen: boolean;
-    isNightOpen: boolean;
-    isLateNightOpen: boolean;
+  MapComponent: ComponentType;
+  slops: Slop[];
+};
 
-    webcam: {
-      id: string;
-      name: string;
-      position: {
-        top: string;
-        left: string;
-      };
-      src?: string;
-    } | null;
-  }[];
+export type Webcam = {
+  id: string;
+  name: string;
+  scale: number;
+  position: {
+    top: string;
+    left: string;
+  };
+  src?: string;
+};
+
+export type Slop = {
+  id: string;
+  level: Level;
+  name: string;
+  Element: React.FC;
+  isOpen: boolean;
+  isDayOpen: boolean;
+  isNightOpen: boolean;
+  isLateNightOpen: boolean;
+
+  webcam: Webcam | null;
+};
+
+export type Position = {
+  x: number;
+  y: number;
 };
