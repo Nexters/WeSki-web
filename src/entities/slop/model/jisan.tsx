@@ -1,3 +1,5 @@
+'use client';
+
 import BlueLiftPath from '../image/jisan/blue-lift-path';
 import Lemon1Sub1LiftPath from '../image/jisan/lemon1-1-lift-path';
 import Lemon1LiftPath from '../image/jisan/lemon1-lift-path';
