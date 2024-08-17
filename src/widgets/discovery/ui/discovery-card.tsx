@@ -10,7 +10,10 @@ const DiscoveryCard = ({ id, name, slope, weather, weeklyWeather }: Discovery) =
 
   return (
     <Card
-      className={cn('flex cursor-pointer flex-col gap-[15px] pb-[26px] pt-10')}
+      className={cn(
+        'flex cursor-pointer flex-col gap-[15px] pb-[26px] pt-10',
+        'transition-all hover:scale-[1.02] hover:border-2 hover:border-main-1'
+      )}
       onClick={() => router.push(`/${id}`)}
     >
       <div className={cn('mx-[42px] flex items-center justify-between py-1')}>
