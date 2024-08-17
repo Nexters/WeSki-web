@@ -3,38 +3,21 @@ import type { ComponentType } from 'react';
 import React, { useRef } from 'react';
 import SlopCamera from '@/features/slop/ui/slop-camera';
 import SlopMap from '@/features/slop/ui/slop-map';
-import type { Level } from '@/entities/slop/model/model';
-import { cn } from '@/shared/lib';
+import type { Level, ResortInfo } from '@/entities/slop/model/model';
+import { cn, getBoundedPositions } from '@/shared/lib';
 import useMapPinch from '@/features/slop/hooks/useMapPinch';
 
-interface WebcamMapProps {
-  slops: {
-    id: string;
-    level: Level;
-    Element: ComponentType<{
-      color?: string;
-    }>;
-    webcam: {
-      id: string;
-      name: string;
-      position: {
-        top: string;
-        left: string;
-      };
-      src?: string;
-    } | null;
-  }[];
-  mapSrc: StaticImageData;
+interface WebcamMapProps extends ResortInfo {
   selectedSlop: string | null;
 }
 
-const WebcamMap = ({ slops, mapSrc, selectedSlop }: WebcamMapProps) => {
+const WebcamMap = ({ slops, map, selectedSlop }: WebcamMapProps) => {
   const containerRef = useRef<HTMLElement>(null);
-  const { ref, style } = useMapPinch(containerRef);
+  const { ref, style, api } = useMapPinch(containerRef);
 
   return (
     <section className={cn('relative aspect-[25/14] w-full overflow-hidden')} ref={containerRef}>
-      <SlopMap mapSrc={mapSrc} ref={ref} slops={slops} selectedSlop={selectedSlop} style={style}>
+      <SlopMap mapSrc={map} ref={ref} slops={slops} selectedSlop={selectedSlop} style={style}>
         {slops
           .filter(
             (
@@ -52,6 +35,30 @@ const WebcamMap = ({ slops, mapSrc, selectedSlop }: WebcamMapProps) => {
               isOpen={selectedSlop === id}
               renderTarget={containerRef}
               videoSrc={webcam.src}
+              onCameraClick={(event: React.MouseEvent<HTMLDivElement>) => {
+                const { left, top, width, height } = ref.current!.getBoundingClientRect();
+                const clickX = event.clientX - left;
+                const clickY = event.clientY - top;
+
+                const scaledWidth = width * webcam.scale;
+                const scaledHeight = height * webcam.scale;
+
+                const x = (width / 2 - clickX) * webcam.scale;
+                const y = (height / 2 - clickY) * webcam.scale;
+
+                const [{ min: minX, max: maxX }, { min: minY, max: maxY }] = getBoundedPositions(
+                  { x, y, scale: webcam.scale },
+                  {
+                    width: containerRef.current!.getBoundingClientRect().width,
+                    height: containerRef.current!.getBoundingClientRect().height,
+                  }
+                );
+
+                const boundedX = Math.min(Math.max(x, minX), maxX);
+                const boundedY = Math.min(Math.max(y, minY), maxY);
+
+                api.start({ scale: webcam.scale, x: boundedX, y: boundedY });
+              }}
             />
           ))}
       </SlopMap>

@@ -10,7 +10,7 @@ const WebCamMobileMapPage = () => {
   const [selectedSlop, setSelectedSlop] = useState<string | null>(null);
   return (
     <main className={cn('w-full')}>
-      <WebcamMap slops={DUMMY2.slops} mapSrc={DUMMY2.map} selectedSlop={selectedSlop} />
+      <WebcamMap slops={DUMMY2.slops} map={DUMMY2.map} selectedSlop={selectedSlop} />
       <WebcamSlopList
         list={DUMMY2.slops.map((item) => ({
           ...item,
