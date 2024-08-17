@@ -29,9 +29,17 @@ interface TooltipProps {
   isOpen?: boolean;
   trigger: React.ReactNode;
   children: React.ReactNode;
+  side?: 'top' | 'bottom' | 'left' | 'right';
+  align?: 'start' | 'center' | 'end';
 }
 
-export const Tooltip = ({ trigger, children, isOpen }: TooltipProps) => {
+export const Tooltip = ({
+  trigger,
+  children,
+  isOpen,
+  side = 'top',
+  align = 'center',
+}: TooltipProps) => {
   const [tooltipOpen, setTooltipOpen] = React.useState(false);
 
   useEffect(() => {
@@ -47,7 +55,7 @@ export const Tooltip = ({ trigger, children, isOpen }: TooltipProps) => {
     >
       <PopoverTrigger asChild>{trigger}</PopoverTrigger>
       <PopoverPrimitive.PopoverPortal>
-        <PopoverContent side="top">
+        <PopoverContent side={side} align={align}>
           {children} <PopoverArrow className="PopoverArrow" />
         </PopoverContent>
       </PopoverPrimitive.PopoverPortal>
