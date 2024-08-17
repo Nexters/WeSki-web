@@ -2,14 +2,13 @@ import { act, useCallback } from 'react';
 import type { Discovery } from '@/entities/discovery';
 import { cn } from '@/shared/lib';
 import Card from '@/shared/ui/card';
-// eslint-disable-next-line boundaries/element-types
-import WeatherIcon from '../../discovery/ui/weather-icon';
 import { DiscoverySummaryActionList } from '../model/constants';
 import DiscoverySummaryAction from './discovery-summary-action';
 import VoteDialog from './vote-dialog';
 import VoteIcon from '@/shared/icons/vote';
 import BusIcon from '@/shared/icons/bus';
 import LiftIcon from '@/shared/icons/lift';
+import WeatherIcon from '@/features/discovery/ui/weather-icon';
 
 const DiscoverySummary = ({ name, slope, weather }: Discovery) => {
   const handleAction = useCallback(

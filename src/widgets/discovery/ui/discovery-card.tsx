@@ -2,8 +2,8 @@ import { useRouter } from 'next/navigation';
 import type { Discovery } from '@/entities/discovery';
 import { cn } from '@/shared/lib';
 import Card from '@/shared/ui/card';
-import WeatherIcon from './weather-icon';
 import WeeklyWeather from './weekly-weather';
+import WeatherIcon from '@/features/discovery/ui/weather-icon';
 
 const DiscoveryCard = ({ id, name, slope, weather, weeklyWeather }: Discovery) => {
   const router = useRouter();
