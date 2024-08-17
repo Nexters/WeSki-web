@@ -7,7 +7,14 @@ import share3 from '@public/shares/share_03.png';
 import share4 from '@public/shares/share_04.png';
 import { CloseIcon } from '@/shared/icons';
 import { cn } from '@/shared/lib';
-import { Dialog, DialogClose, DialogContent, DialogTrigger } from '@/shared/ui/dialog';
+import {
+  Dialog,
+  DialogClose,
+  DialogContent,
+  DialogDescription,
+  DialogTitle,
+  DialogTrigger,
+} from '@/shared/ui/dialog';
 
 interface ShareDialogProps {
   trigger: React.ReactNode;
@@ -18,17 +25,18 @@ const ShareDialog = ({ trigger, name }: ShareDialogProps) => {
   return (
     <Dialog>
       <DialogTrigger>{trigger}</DialogTrigger>
+
       <DialogContent
         className={cn(
           'w-[321px] gap-0 overflow-hidden rounded-[7px] bg-white px-[30px] pb-[30px] pt-[27px]'
         )}
       >
+        <DialogTitle className={cn('hidden')} />
+        <DialogDescription className={cn('hidden')} />
         <Image
           src={snow}
           alt="snow"
-          width={191}
-          height={196}
-          className={cn('absolute right-[-41px] top-0')}
+          className={cn('absolute right-[-41px] top-0 h-[196px] w-[191px]')}
         />
         <DialogClose>
           <CloseIcon className={cn('absolute right-6 top-6 size-6 cursor-pointer text-gray-50')} />

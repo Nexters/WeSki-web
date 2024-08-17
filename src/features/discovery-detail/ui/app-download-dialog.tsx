@@ -22,9 +22,7 @@ const AppDownloadDialog = ({ className, onClose }: AppDownloadDialogProps) => {
       <Image
         src={snow}
         alt="snow"
-        width={191}
-        height={196}
-        className={cn('absolute right-[-21px] top-0')}
+        className={cn('absolute right-[-21px] top-0 h-[196px] w-[191px]')}
       />
       <CloseIcon className={cn('absolute right-6 top-6 size-6 cursor-pointer')} onClick={onClose} />
       <Image src={logo} alt="logo" />
