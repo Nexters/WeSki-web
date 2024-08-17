@@ -132,5 +132,14 @@ export const JISAN: ResortInfo = {
         left: 'left-[38%]',
       },
     },
+    {
+      id: 'jisan-overview',
+      name: '지산 전경',
+      scale: 1,
+      position: {
+        top: 'top-[38%]',
+        left: 'left-[52%]',
+      },
+    },
   ],
 };
