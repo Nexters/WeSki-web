@@ -9,6 +9,7 @@ export type Level =
 export type ResortInfo = {
   MapComponent: ComponentType;
   slops: Slop[];
+  webcams: Webcam[];
 };
 
 export type Webcam = {
@@ -27,12 +28,8 @@ export type Slop = {
   level: Level;
   name: string;
   Element: React.FC;
+  webcamId?: string;
   isOpen: boolean;
-  isDayOpen: boolean;
-  isNightOpen: boolean;
-  isLateNightOpen: boolean;
-
-  webcam: Webcam | null;
 };
 
 export type Position = {

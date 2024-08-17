@@ -27,13 +27,12 @@ const SlopCamera = ({
   const cameraRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    console.log(updateCameraPosition);
     cameraRef.current &&
       updateCameraPosition(id, {
         x: cameraRef.current.getBoundingClientRect().x,
         y: cameraRef.current.getBoundingClientRect().y,
       });
-  }, [id, updateCameraPosition]);
+  }, [id, updateCameraPosition, cameraRef]);
 
   const toggleVideo = () => {
     setIsVideoOpen((pre) => !pre);
