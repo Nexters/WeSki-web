@@ -8,9 +8,10 @@ import calculateWebcamPosition from '../lib/calculateWebcamPosition';
 
 interface WebcamMapProps extends ResortInfo {
   selectedSlop: string | null;
+  setSelectedSlop: React.Dispatch<React.SetStateAction<string | null>>;
 }
 
-const WebcamMap = ({ slops, MapComponent, selectedSlop }: WebcamMapProps) => {
+const WebcamMap = ({ slops, MapComponent, selectedSlop, setSelectedSlop }: WebcamMapProps) => {
   const containerRef = useRef<HTMLElement>(null);
   const { ref, style, api } = useMapPinch(containerRef);
 
@@ -44,7 +45,7 @@ const WebcamMap = ({ slops, MapComponent, selectedSlop }: WebcamMapProps) => {
                   position: { x: event.clientX, y: event.clientY },
                   scale: webcam.scale,
                 });
-
+                setSelectedSlop(null);
                 api.start({ scale: webcam.scale, x: boundedX, y: boundedY });
               }}
             />

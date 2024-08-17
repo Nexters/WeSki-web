@@ -14,6 +14,7 @@ const WebCamMobileMapPage = () => {
         slops={DUMMY2.slops}
         MapComponent={DUMMY2.MapComponent}
         selectedSlop={selectedSlop}
+        setSelectedSlop={setSelectedSlop}
       />
       <WebcamSlopList
         list={DUMMY2.slops.map((item) => ({
