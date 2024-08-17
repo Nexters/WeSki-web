@@ -1,6 +1,6 @@
-import React, { useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
-import type { Webcam } from '@/entities/slop/model/model';
+import type { Position, Webcam } from '@/entities/slop/model/model';
 import { cn } from '@/shared/lib';
 import CameraButton from '@/shared/ui/cam-button';
 import { Tooltip } from '@/shared/ui/tooltip';
@@ -10,26 +10,28 @@ interface SlopWebcamProps {
   webcam: Webcam;
   isOpen: boolean;
   containerRef: React.RefObject<HTMLElement>;
-  onCameraClick: (
-    event: React.MouseEvent<HTMLDivElement>,
-    {
-      scale,
-      id,
-    }: {
-      scale: number;
-      id: string;
-    }
-  ) => void;
+  onCameraClick: ({ scale, id }: { scale: number; id: string }) => void;
+  updateCameraPosition: (id: string, position: Position) => void;
 }
 
 const SlopCamera = ({
-  webcam: { scale, name, position, src },
+  webcam: { scale, name, position, src, id },
   isOpen,
   containerRef,
   onCameraClick,
+  updateCameraPosition,
 }: SlopWebcamProps) => {
   const [isVideoOpen, setIsVideoOpen] = useState(false);
-  const ref = useRef<HTMLDivElement>(null);
+
+  const cameraRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    cameraRef.current &&
+      updateCameraPosition(id, {
+        x: cameraRef.current.getBoundingClientRect().x,
+        y: cameraRef.current.getBoundingClientRect().y,
+      });
+  }, [id, updateCameraPosition]);
 
   const toggleVideo = () => {
     setIsVideoOpen((pre) => !pre);
@@ -38,9 +40,9 @@ const SlopCamera = ({
   return (
     <>
       <div
+        ref={cameraRef}
         className={cn('absolute z-10', position.top, position.left)}
-        ref={ref}
-        onClick={(e) => onCameraClick(e, { scale, id: name })}
+        onClick={() => onCameraClick({ scale, id: id })}
       >
         <div className={cn('relative')}>
           <Tooltip trigger={<CameraButton />} isOpen={isOpen}>

@@ -2,31 +2,26 @@ import type { SpringValue } from '@react-spring/web';
 import React, { forwardRef } from 'react';
 import SlopCamera from '@/features/slop/ui/slop-camera';
 import SlopMap from '@/features/slop/ui/slop-map';
-import type { ResortInfo } from '@/entities/slop/model/model';
+import type { Position, ResortInfo } from '@/entities/slop/model/model';
 import { cn } from '@/shared/lib';
 
 interface WebcamMapProps extends ResortInfo {
   selectedSlop: string | null;
   containerRef: React.RefObject<HTMLElement>;
-  onCameraClick: (
-    event: React.MouseEvent<HTMLElement>,
-    {
-      scale,
-      id,
-    }: {
-      scale: number;
-      id: string;
-    }
-  ) => void;
+  onCameraClick: ({ scale, id }: { scale: number; id: string }) => void;
   style: {
     scale: SpringValue<number>;
     x: SpringValue<number>;
     y: SpringValue<number>;
   };
+  updateCameraPosition: (id: string, position: Position) => void;
 }
 
 const WebcamMap = forwardRef<HTMLDivElement, WebcamMapProps>(
-  ({ slops, style, MapComponent, selectedSlop, onCameraClick, containerRef }, ref) => {
+  (
+    { slops, style, MapComponent, selectedSlop, onCameraClick, containerRef, updateCameraPosition },
+    ref
+  ) => {
     return (
       <section className={cn('relative aspect-[25/14] w-full overflow-hidden')} ref={containerRef}>
         <SlopMap
@@ -51,6 +46,7 @@ const WebcamMap = forwardRef<HTMLDivElement, WebcamMapProps>(
                 isOpen={selectedSlop === id}
                 containerRef={containerRef}
                 onCameraClick={onCameraClick}
+                updateCameraPosition={updateCameraPosition}
               />
             ))}
         </SlopMap>

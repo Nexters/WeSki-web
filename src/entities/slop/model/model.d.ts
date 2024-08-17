@@ -34,3 +34,8 @@ export type Slop = {
 
   webcam: Webcam | null;
 };
+
+export type Position = {
+  x: number;
+  y: number;
+};

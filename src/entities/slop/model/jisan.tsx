@@ -101,7 +101,7 @@ export const JISAN: ResortInfo = {
       webcam: {
         id: 'blue-station',
         name: '블루 탑승장',
-        scale: 1,
+        scale: 2,
         position: {
           top: 'top-[69%]',
           left: 'left-[56%]',

@@ -10,19 +10,16 @@ interface WebcamSlopListProps {
   list: Slop[];
   selectedSlop: string | null;
   setSelectedSlop: React.Dispatch<React.SetStateAction<string | null>>;
-  onItemClick: (
-    event: React.MouseEvent<HTMLLIElement>,
-    {
-      scale,
-      id,
-    }: {
-      scale: number;
-      id: string;
-    }
-  ) => void;
+  onItemClick: ({ scale, id }: { scale: number; id: string }) => void;
 }
 
-const WebcamSlopList = ({ className, list, selectedSlop, onItemClick }: WebcamSlopListProps) => {
+const WebcamSlopList = ({
+  className,
+  list,
+  selectedSlop,
+  onItemClick,
+  setSelectedSlop,
+}: WebcamSlopListProps) => {
   return (
     <ul className={cn('w-full', className)}>
       {list.map((item) => (
@@ -33,13 +30,18 @@ const WebcamSlopList = ({ className, list, selectedSlop, onItemClick }: WebcamSl
               !item.isOpen && 'opacity-30',
               selectedSlop === item.id && 'bg-main-5'
             )}
-            onClick={(e) =>
+            onClick={() => {
+              if (selectedSlop === item.id) {
+                setSelectedSlop(null);
+              } else {
+                setSelectedSlop(item.id);
+              }
               item.webcam &&
-              onItemClick(e, {
-                scale: item.webcam.scale,
-                id: item.id,
-              })
-            }
+                onItemClick({
+                  scale: item.webcam.scale,
+                  id: item.webcam.id,
+                });
+            }}
           >
             <div className={cn('flex items-center gap-2')}>
               <p className={cn('title3-semibold')}>{item.name}</p>
