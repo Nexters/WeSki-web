@@ -46,6 +46,7 @@ export const JISAN: ResortInfo = {
           top: 'top-[69%]',
           left: 'left-[29%]',
         },
+        scale: 1,
         src: 'http://konjiam.live.cdn.cloudn.co.kr/konjiam/cam01.stream/playlist.m3u8',
       },
       isOpen: true,
@@ -65,6 +66,7 @@ export const JISAN: ResortInfo = {
           top: 'top-[64%]',
           left: 'left-[38%]',
         },
+        scale: 2,
         src: 'http://konjiam.live.cdn.cloudn.co.kr/konjiam/cam01.stream/playlist.m3u8',
       },
       isOpen: true,
@@ -91,6 +93,7 @@ export const JISAN: ResortInfo = {
       webcam: {
         id: 'blue-station',
         name: '블루 탑승장',
+        scale: 1,
         position: {
           top: 'top-[69%]',
           left: 'left-[56%]',

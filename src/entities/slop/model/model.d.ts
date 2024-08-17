@@ -21,6 +21,7 @@ export type ResortInfo = {
     webcam: {
       id: string;
       name: string;
+      scale: number;
       position: {
         top: string;
         left: string;

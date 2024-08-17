@@ -15,9 +15,17 @@ interface SlopWebcamProps {
   videoSrc?: string;
   isOpen: boolean;
   renderTarget: React.RefObject<HTMLElement>;
+  onCameraClick: (e: React.MouseEvent<HTMLDivElement>) => void;
 }
 
-const SlopCamera = ({ name, position, isOpen, videoSrc, renderTarget }: SlopWebcamProps) => {
+const SlopCamera = ({
+  name,
+  position,
+  isOpen,
+  videoSrc,
+  renderTarget,
+  onCameraClick,
+}: SlopWebcamProps) => {
   const [isVideoOpen, setIsVideoOpen] = useState(false);
 
   const toggleVideo = () => {
@@ -26,7 +34,7 @@ const SlopCamera = ({ name, position, isOpen, videoSrc, renderTarget }: SlopWebc
 
   return (
     <>
-      <div className={cn('absolute z-10', position.top, position.left)}>
+      <div className={cn('absolute z-10', position.top, position.left)} onClick={onCameraClick}>
         <div className={cn('relative')}>
           <Tooltip trigger={<CameraButton />} isOpen={isOpen}>
             <p className={cn('body3-medium')} onClick={toggleVideo}>
