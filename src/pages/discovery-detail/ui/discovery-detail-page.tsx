@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { useCallback } from 'react';
 import { DiscoveryContentTabList } from '@/widgets/discovery-detail/model/constants';
+import AppDownloadDialog from '@/widgets/discovery-detail/ui/app-download-dialog';
 import DiscoverySummary from '@/widgets/discovery-detail/ui/discovery-summary';
 import { Header } from '@/widgets/header/ui';
 import { WebcamMap, WebcamSlopList } from '@/widgets/webcam/ui';
@@ -18,6 +19,7 @@ const DUMMY2 = JISAN;
 const DiscoveryDetailPage = ({ params }: { params: { resortId: number } }) => {
   const discovery = DiscoveryData.find((discovery) => discovery.id === +params?.resortId);
   const [selectedTab, setSelectedTab] = useState('webcam');
+  const [showAppDownloadDialog, setShowAppDownloadDialog] = useState(true);
 
   const [cameraPositions, setCameraPositions] = useState<{
     [key: string]: Position;
@@ -55,7 +57,10 @@ const DiscoveryDetailPage = ({ params }: { params: { resortId: number } }) => {
               'title3-semibold flex h-[51px] flex-1 cursor-pointer items-center justify-center text-gray-90',
               selectedTab === tab.name ? 'box-content border-b-2 border-gray-90' : 'text-gray-40'
             )}
-            onClick={() => setSelectedTab(tab.name)}
+            onClick={() => {
+              setSelectedTab(tab.name);
+              setShowAppDownloadDialog(true);
+            }}
           >
             {tab.title}
           </li>
@@ -82,8 +87,30 @@ const DiscoveryDetailPage = ({ params }: { params: { resortId: number } }) => {
           />
         </>
       )}
-      {selectedTab === 'weather' && <div>날씨</div>}
-      {selectedTab === 'slop' && <div>슬로프</div>}
+      {selectedTab === 'weather' && (
+        <div className={cn('relative bg-white')}>
+          {showAppDownloadDialog && (
+            <AppDownloadDialog
+              className={cn('absolute left-1/2 top-[87px] -translate-x-1/2')}
+              onClose={() => {
+                setShowAppDownloadDialog(false);
+              }}
+            />
+          )}
+        </div>
+      )}
+      {selectedTab === 'slop' && (
+        <div className={cn('relative bg-white')}>
+          {showAppDownloadDialog && (
+            <AppDownloadDialog
+              className={cn('absolute left-1/2 top-[87px] -translate-x-1/2')}
+              onClose={() => {
+                setShowAppDownloadDialog(false);
+              }}
+            />
+          )}
+        </div>
+      )}
     </div>
   );
 };
