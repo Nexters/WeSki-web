@@ -4,25 +4,18 @@ import { cn } from '@/shared/lib';
 import CameraButton from '@/shared/ui/cam-button';
 import { Tooltip } from '@/shared/ui/tooltip';
 import SlopVideo from './slop-video';
+import { Webcam } from '@/entities/slop/model/model';
 
 interface SlopWebcamProps {
-  id: string;
-  name: string;
-  position: {
-    top: string;
-    left: string;
-  };
-  videoSrc?: string;
+  webcam: Webcam;
   isOpen: boolean;
   renderTarget: React.RefObject<HTMLElement>;
   onCameraClick: (e: React.MouseEvent<HTMLDivElement>) => void;
 }
 
 const SlopCamera = ({
-  name,
-  position,
+  webcam: { id, name, position, src },
   isOpen,
-  videoSrc,
   renderTarget,
   onCameraClick,
 }: SlopWebcamProps) => {
@@ -45,8 +38,8 @@ const SlopCamera = ({
       </div>
       {renderTarget?.current &&
         isVideoOpen &&
-        videoSrc &&
-        createPortal(<SlopVideo src={videoSrc} closeVideo={toggleVideo} />, renderTarget.current)}
+        src &&
+        createPortal(<SlopVideo src={src} closeVideo={toggleVideo} />, renderTarget.current)}
     </>
   );
 };

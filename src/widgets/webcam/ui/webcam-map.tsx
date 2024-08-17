@@ -6,6 +6,7 @@ import SlopMap from '@/features/slop/ui/slop-map';
 import type { Level, ResortInfo } from '@/entities/slop/model/model';
 import { cn, getBoundedPositions } from '@/shared/lib';
 import useMapPinch from '@/features/slop/hooks/useMapPinch';
+import calculateWebcamPosition from '../lib/calculateWebcamPosition';
 
 interface WebcamMapProps extends ResortInfo {
   selectedSlop: string | null;
@@ -29,33 +30,16 @@ const WebcamMap = ({ slops, map, selectedSlop }: WebcamMapProps) => {
           .map(({ id, webcam }) => (
             <SlopCamera
               key={id}
-              id={webcam.id}
-              name={webcam.name}
-              position={webcam.position}
+              webcam={webcam}
               isOpen={selectedSlop === id}
               renderTarget={containerRef}
-              videoSrc={webcam.src}
               onCameraClick={(event: React.MouseEvent<HTMLDivElement>) => {
-                const { left, top, width, height } = ref.current!.getBoundingClientRect();
-                const clickX = event.clientX - left;
-                const clickY = event.clientY - top;
-
-                const scaledWidth = width * webcam.scale;
-                const scaledHeight = height * webcam.scale;
-
-                const x = (width / 2 - clickX) * webcam.scale;
-                const y = (height / 2 - clickY) * webcam.scale;
-
-                const [{ min: minX, max: maxX }, { min: minY, max: maxY }] = getBoundedPositions(
-                  { x, y, scale: webcam.scale },
-                  {
-                    width: containerRef.current!.getBoundingClientRect().width,
-                    height: containerRef.current!.getBoundingClientRect().height,
-                  }
-                );
-
-                const boundedX = Math.min(Math.max(x, minX), maxX);
-                const boundedY = Math.min(Math.max(y, minY), maxY);
+                const { left, top, width, height } = containerRef.current!.getBoundingClientRect();
+                const { boundedX, boundedY } = calculateWebcamPosition({
+                  containerPosition: { left, top, width, height },
+                  position: { x: event.clientX, y: event.clientY },
+                  scale: webcam.scale,
+                });
 
                 api.start({ scale: webcam.scale, x: boundedX, y: boundedY });
               }}
