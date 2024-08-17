@@ -1,8 +1,15 @@
 import React from 'react';
 
-const CloudIcon = () => {
+const CloudIcon = ({ className }: { className?: string }) => {
   return (
-    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg
+      width="32"
+      height="32"
+      viewBox="0 0 32 32"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+    >
       <path
         d="M26.3162 11.6821C26.3162 13.6906 24.6881 15.3189 22.6798 15.3189C20.6715 15.3189 19.0435 13.6906 19.0435 11.6821C19.0435 9.67353 20.6715 8.04529 22.6798 8.04529C24.6881 8.04529 26.3162 9.67353 26.3162 11.6821Z"
         fill="#FF9928"

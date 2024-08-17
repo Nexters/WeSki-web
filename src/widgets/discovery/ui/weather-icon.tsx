@@ -4,16 +4,21 @@ import RainIcon from '@/shared/icons/rain';
 import SnowIcon from '@/shared/icons/snow';
 import SunIcon from '@/shared/icons/sun';
 
-const WeatherIcon = ({ weather }: { weather: Weather }) => {
+interface WeatherIconProps {
+  className?: string;
+  weather: Weather;
+}
+
+const WeatherIcon = ({ className, weather }: WeatherIconProps) => {
   switch (weather) {
     case 'sun':
-      return <SunIcon />;
+      return <SunIcon className={className} />;
     case 'cloud':
-      return <CloudIcon />;
+      return <CloudIcon className={className} />;
     case 'rain':
-      return <RainIcon />;
+      return <RainIcon className={className} />;
     case 'snow':
-      return <SnowIcon />;
+      return <SnowIcon className={className} />;
     default:
       return null;
   }

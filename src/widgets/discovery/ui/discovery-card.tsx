@@ -20,7 +20,7 @@ const DiscoveryCard = ({ id, name, slope, weather, weeklyWeather }: Discovery) =
         </div>
         <div className={cn('flex flex-col items-end gap-2')}>
           <div className={cn('flex gap-2')}>
-            <WeatherIcon weather={weather.weather} />
+            <WeatherIcon className={cn('origin-right scale-[1.17]')} weather={weather.weather} />
             <p className={cn('h1-semibold text-[30px]')}>{weather.temperature}</p>
           </div>
           <p className={cn('body1-semibold text-gray-60')}>{weather.description}</p>
