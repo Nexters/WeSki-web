@@ -28,7 +28,7 @@ const AppDownloadDialog = ({ className, onClose }: AppDownloadDialogProps) => {
       />
       <CloseIcon className={cn('absolute right-6 top-6 size-6 cursor-pointer')} onClick={onClose} />
       <Image src={logo} alt="logo" />
-      <p className={cn('title1 mb-[39px] mt-[35px] whitespace-pre-wrap font-bold')}>
+      <p className={cn('title1 mb-[39px] mt-[35px] whitespace-pre-wrap')}>
         {'지금 앱 다운로드하고\n블라인드된 정보를\n매일 확인해보세요'}
       </p>
       <div className={cn('flex gap-3')}>

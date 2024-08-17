@@ -49,7 +49,7 @@ const DiscoveryDetailPage = ({ params }: { params: { resortId: number } }) => {
 
   return (
     <div className={cn('size-full')}>
-      <Header hasBackButton hasShareButton />
+      <Header resortName={discovery.name} hasBackButton hasShareButton />
       <DiscoverySummary {...discovery} />
       <ul className={cn('flex size-full h-[53px] bg-white')}>
         {DiscoveryContentTabList.map((tab) => (

@@ -1,13 +1,16 @@
 import { useRouter } from 'next/navigation';
+// eslint-disable-next-line boundaries/element-types
+import ShareDialog from '@/widgets/discovery-detail/ui/share-dialog';
 import { ChevronLeftIcon, ShareIcon } from '@/shared/icons';
 import { cn } from '@/shared/lib';
 
 interface HeaderProps {
+  resortName?: string;
   hasBackButton?: boolean;
   hasShareButton?: boolean;
 }
 
-const Header = ({ hasBackButton, hasShareButton }: HeaderProps) => {
+const Header = ({ resortName, hasBackButton, hasShareButton }: HeaderProps) => {
   const router = useRouter();
 
   return (
@@ -24,9 +27,14 @@ const Header = ({ hasBackButton, hasShareButton }: HeaderProps) => {
         WeSki
       </h2>
       {hasShareButton && (
-        <button className={cn('absolute right-7 top-1/2 -translate-y-1/2')}>
-          <ShareIcon />
-        </button>
+        <ShareDialog
+          trigger={
+            <button className={cn('absolute right-7 top-1/2 -translate-y-1/2')}>
+              <ShareIcon />
+            </button>
+          }
+          name={resortName}
+        />
       )}
     </div>
   );
