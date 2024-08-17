@@ -1,14 +1,17 @@
+import { useRouter } from 'next/navigation';
 import type { Discovery } from '@/entities/discovery';
 import { cn } from '@/shared/lib';
+import Card from '@/shared/ui/card';
 import WeatherIcon from './weather-icon';
 import WeeklyWeather from './weekly-weather';
 
-const DiscoveryCard = ({ name, slope, weather, weeklyWeather }: Discovery) => {
+const DiscoveryCard = ({ id, name, slope, weather, weeklyWeather }: Discovery) => {
+  const router = useRouter();
+
   return (
-    <div
-      className={cn(
-        'flex flex-col gap-[15px] rounded-[15px] border border-white bg-gradient-to-br from-white/90 to-white/60 pb-[26px] pt-10 shadow-[2px_10px_29px_0px_rgba(47,49,65,0.02)] backdrop-blur-[25px]'
-      )}
+    <Card
+      className={cn('flex cursor-pointer flex-col gap-[15px] pb-[26px] pt-10')}
+      onClick={() => router.push(`/${id}`)}
     >
       <div className={cn('mx-[42px] flex items-center justify-between py-1')}>
         <div className={cn('flex flex-col gap-[5px] py-1')}>
@@ -37,7 +40,7 @@ const DiscoveryCard = ({ name, slope, weather, weeklyWeather }: Discovery) => {
           />
         ))}
       </ul>
-    </div>
+    </Card>
   );
 };
 export default DiscoveryCard;

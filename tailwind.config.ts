@@ -19,6 +19,9 @@ const config = {
     },
 
     extend: {
+      screens: {
+        xs: '600px',
+      },
       fontFamily: {
         sans: ['Pretendard', 'sans-serif'],
       },

@@ -6,6 +6,7 @@ import CameraButton from '@/shared/ui/cam-button';
 import Divider from '@/shared/ui/divider';
 
 interface WebcamSlopListProps {
+  className?: string;
   list: {
     id: string;
     name: string;
@@ -17,7 +18,12 @@ interface WebcamSlopListProps {
   setSelectedSlop: React.Dispatch<React.SetStateAction<string | null>>;
 }
 
-const WebcamSlopList = ({ list, selectedSlop, setSelectedSlop }: WebcamSlopListProps) => {
+const WebcamSlopList = ({
+  className,
+  list,
+  selectedSlop,
+  setSelectedSlop,
+}: WebcamSlopListProps) => {
   const handleSlopClick = ({ id, isOpen }: { id: string; isOpen: boolean }) => {
     if (!isOpen) return;
     if (selectedSlop === id) {
@@ -27,7 +33,7 @@ const WebcamSlopList = ({ list, selectedSlop, setSelectedSlop }: WebcamSlopListP
     setSelectedSlop(id);
   };
   return (
-    <ul className={cn('w-full')}>
+    <ul className={cn('w-full', className)}>
       {list.map((item) => (
         <React.Fragment key={item.id}>
           <li

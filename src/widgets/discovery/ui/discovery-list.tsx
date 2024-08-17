@@ -5,7 +5,7 @@ import DiscoveryCard from './discovery-card';
 const DiscoveryList = ({ discoveryData }: { discoveryData: Discovery[] }) => (
   <div className={cn('flex flex-col gap-4 px-8 py-4')}>
     {discoveryData.map((discovery) => (
-      <DiscoveryCard key={discovery.name} {...discovery} />
+      <DiscoveryCard key={discovery.id} {...discovery} />
     ))}
   </div>
 );

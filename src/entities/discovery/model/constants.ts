@@ -69,6 +69,7 @@ export const WeeklyWeatherData: WeeklyWeather[] = [
 
 export const DiscoveryData: Discovery[] = [
   {
+    id: 1,
     name: '용평스키장 모나',
     slope: null,
     weather: {
@@ -79,6 +80,7 @@ export const DiscoveryData: Discovery[] = [
     weeklyWeather: WeeklyWeatherData,
   },
   {
+    id: 2,
     name: '휘닉스파크',
     slope: 8,
     weather: {
@@ -89,6 +91,7 @@ export const DiscoveryData: Discovery[] = [
     weeklyWeather: WeeklyWeatherData,
   },
   {
+    id: 3,
     name: '하이원스키장',
     slope: 10,
     weather: {
@@ -99,6 +102,7 @@ export const DiscoveryData: Discovery[] = [
     weeklyWeather: WeeklyWeatherData,
   },
   {
+    id: 4,
     name: '비발디파크',
     slope: 14,
     weather: {
@@ -109,6 +113,7 @@ export const DiscoveryData: Discovery[] = [
     weeklyWeather: WeeklyWeatherData,
   },
   {
+    id: 5,
     name: '곤지암스키장',
     slope: 8,
     weather: {

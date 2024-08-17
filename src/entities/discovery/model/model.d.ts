@@ -10,6 +10,7 @@ export type WeeklyWeather = {
 };
 
 export type Discovery = {
+  id: number;
   name: string;
   slope: number | null;
   weather: {
