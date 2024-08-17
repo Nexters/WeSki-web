@@ -1,4 +1,6 @@
 import Image from 'next/image';
+import { useCallback } from 'react';
+import { toast } from 'sonner';
 import logo from '@public/assets/logo.svg';
 import snow from '@public/assets/snow.png';
 import share1 from '@public/shares/share_01.png';
@@ -22,6 +24,18 @@ interface ShareDialogProps {
 }
 
 const ShareDialog = ({ trigger, name }: ShareDialogProps) => {
+  const handleCopyUrl = useCallback(() => {
+    const currentUrl = window.location.href;
+    navigator.clipboard
+      .writeText(currentUrl)
+      .then(() => {
+        toast('클립보드에 복사되었습니다');
+      })
+      .catch((error) => {
+        console.error('클립보드 복사 실패!', error);
+      });
+  }, []);
+
   return (
     <Dialog>
       <DialogTrigger>{trigger}</DialogTrigger>
@@ -46,7 +60,7 @@ const ShareDialog = ({ trigger, name }: ShareDialogProps) => {
           <p>{name}을</p>
           <p>공유해보세요!</p>
         </div>
-        <div className={cn('body3-medium flex justify-between gap-3 text-gray-70')}>
+        <div className={cn('body3-medium z-10 flex justify-between gap-3 text-gray-70')}>
           <div className={cn('flex flex-col items-center gap-[6px]')}>
             <button>
               <Image src={share1} alt="kakao-talk" width={46} height={46} />
@@ -66,7 +80,7 @@ const ShareDialog = ({ trigger, name }: ShareDialogProps) => {
             <p>스레드</p>
           </div>
           <div className={cn('flex flex-col items-center gap-[6px]')}>
-            <button>
+            <button onClick={handleCopyUrl}>
               <Image src={share4} alt="link" width={46} height={46} />
             </button>
             <p>링크 공유</p>
