@@ -4,6 +4,7 @@ import React, { forwardRef } from 'react';
 import type { Level } from '@/entities/slop/model/model';
 import { cn } from '@/shared/lib';
 import type useMapPinch from '../hooks/useMapPinch';
+import useSlopStore from '../hooks/useSlopStore';
 
 interface SlopMapProps {
   children?: React.ReactNode;
@@ -17,12 +18,13 @@ interface SlopMapProps {
     }>;
   }[];
 
-  selectedSlop: string | null;
   style: ReturnType<typeof useMapPinch>['style'];
 }
 
 const SlopMap = forwardRef<HTMLDivElement, SlopMapProps>(
-  ({ children, MapComponent, slops, selectedSlop, style }, ref) => {
+  ({ children, MapComponent, slops, style }, ref) => {
+    const { selectedSlop } = useSlopStore();
+
     return (
       <animated.div
         ref={ref}

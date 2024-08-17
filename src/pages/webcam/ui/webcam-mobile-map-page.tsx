@@ -7,10 +7,11 @@ import calculateWebcamPosition from '@/features/slop/lib/calculateWebcamPosition
 import { JISAN } from '@/entities/slop/model';
 import type { Position } from '@/entities/slop/model/model';
 import { cn } from '@/shared/lib';
+import useSlopStore from '@/features/slop/hooks/useSlopStore';
 
 const WebCamMobileMapPage = () => {
   const DUMMY2 = JISAN;
-  const [selectedSlop, setSelectedSlop] = useState<string | null>(null);
+
   const [cameraPositions, setCameraPositions] = useState<{
     [key: string]: Position;
   }>({});
@@ -41,16 +42,10 @@ const WebCamMobileMapPage = () => {
         containerRef={containerRef}
         slops={DUMMY2.slops}
         MapComponent={DUMMY2.MapComponent}
-        selectedSlop={selectedSlop}
         onCameraClick={handleFocusSlopCamClick}
         updateCameraPosition={updateCameraPosition}
       />
-      <WebcamSlopList
-        list={DUMMY2.slops}
-        selectedSlop={selectedSlop}
-        setSelectedSlop={setSelectedSlop}
-        onItemClick={handleFocusSlopCamClick}
-      />
+      <WebcamSlopList list={DUMMY2.slops} onItemClick={handleFocusSlopCamClick} />
     </main>
   );
 };

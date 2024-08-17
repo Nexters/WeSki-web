@@ -42,7 +42,9 @@ const SlopCamera = ({
       <div
         ref={cameraRef}
         className={cn('absolute z-10', position.top, position.left)}
-        onClick={() => onCameraClick({ scale, id: id })}
+        onClick={() => {
+          onCameraClick({ scale, id: id });
+        }}
       >
         <div className={cn('relative')}>
           <Tooltip trigger={<CameraButton />} isOpen={isOpen}>
