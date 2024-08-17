@@ -1,24 +1,28 @@
-import type { StaticImageData } from 'next/image';
-import type { ComponentType } from 'react';
 import React, { useRef } from 'react';
+import useMapPinch from '@/features/slop/hooks/useMapPinch';
 import SlopCamera from '@/features/slop/ui/slop-camera';
 import SlopMap from '@/features/slop/ui/slop-map';
-import type { Level, ResortInfo } from '@/entities/slop/model/model';
-import { cn, getBoundedPositions } from '@/shared/lib';
-import useMapPinch from '@/features/slop/hooks/useMapPinch';
+import type { ResortInfo } from '@/entities/slop/model/model';
+import { cn } from '@/shared/lib';
 import calculateWebcamPosition from '../lib/calculateWebcamPosition';
 
 interface WebcamMapProps extends ResortInfo {
   selectedSlop: string | null;
 }
 
-const WebcamMap = ({ slops, map, selectedSlop }: WebcamMapProps) => {
+const WebcamMap = ({ slops, MapComponent, selectedSlop }: WebcamMapProps) => {
   const containerRef = useRef<HTMLElement>(null);
   const { ref, style, api } = useMapPinch(containerRef);
 
   return (
     <section className={cn('relative aspect-[25/14] w-full overflow-hidden')} ref={containerRef}>
-      <SlopMap mapSrc={map} ref={ref} slops={slops} selectedSlop={selectedSlop} style={style}>
+      <SlopMap
+        MapComponent={MapComponent}
+        ref={ref}
+        slops={slops}
+        selectedSlop={selectedSlop}
+        style={style}
+      >
         {slops
           .filter(
             (

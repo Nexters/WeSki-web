@@ -7,7 +7,7 @@ export type Level =
   | 'EXPERT';
 
 export type ResortInfo = {
-  map: mapSrc;
+  MapComponent: ComponentType;
   slops: Slop[];
 };
 

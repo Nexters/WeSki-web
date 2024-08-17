@@ -1,7 +1,7 @@
 import BlueLiftPath from '../image/jisan/blue-lift-path';
 import Lemon1Sub1LiftPath from '../image/jisan/lemon1-1-lift-path';
 import Lemon1LiftPath from '../image/jisan/lemon1-lift-path';
-import mapSrc from '../image/jisan/map.png';
+import MapImage from '../image/jisan/map';
 import NewOrangeLiftPath from '../image/jisan/new-orange-lift-path';
 import Orange2LiftPath from '../image/jisan/orange2-lift-path';
 import Orange3LiftPath from '../image/jisan/orange3-lift-path';
@@ -10,7 +10,7 @@ import Silver7LiftPath from '../image/jisan/silver7-lift-path';
 import type { ResortInfo } from './model';
 
 export const JISAN: ResortInfo = {
-  map: mapSrc,
+  MapComponent: MapImage,
   slops: [
     {
       id: 'lemon1-lift',

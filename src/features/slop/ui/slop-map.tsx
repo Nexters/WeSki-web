@@ -1,15 +1,13 @@
 import { animated } from '@react-spring/web';
-import type { StaticImageData } from 'next/image';
-import Image from 'next/image';
 import type { ComponentType } from 'react';
 import React, { forwardRef } from 'react';
 import type { Level } from '@/entities/slop/model/model';
 import { cn } from '@/shared/lib';
-import useMapPinch from '../hooks/useMapPinch';
+import type useMapPinch from '../hooks/useMapPinch';
 
 interface SlopMapProps {
   children?: React.ReactNode;
-  mapSrc: StaticImageData;
+  MapComponent: ComponentType;
 
   slops: {
     id: string;
@@ -24,7 +22,7 @@ interface SlopMapProps {
 }
 
 const SlopMap = forwardRef<HTMLDivElement, SlopMapProps>(
-  ({ children, mapSrc, slops, selectedSlop, style }, ref) => {
+  ({ children, MapComponent, slops, selectedSlop, style }, ref) => {
     return (
       <animated.div
         ref={ref}
@@ -36,8 +34,9 @@ const SlopMap = forwardRef<HTMLDivElement, SlopMapProps>(
           ...style,
         }}
       >
-        <Image src={mapSrc} alt="이미지" width={420} height={750} />
-
+        <div>
+          <MapComponent />
+        </div>
         {slops.map((slop) => (
           <div key={slop.id} className={cn('absolute top-0 w-full')}>
             <slop.Element
@@ -51,5 +50,7 @@ const SlopMap = forwardRef<HTMLDivElement, SlopMapProps>(
     );
   }
 );
+
+SlopMap.displayName = 'SlopMap';
 
 export default SlopMap;
