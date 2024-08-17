@@ -22,7 +22,7 @@ const WebcamSlopList = ({ className, list, onItemClick }: WebcamSlopListProps) =
           className={cn(
             'flex h-[66px] items-center justify-between bg-gray-10 px-6',
             'border-b border-gray-30 xs:odd:border-r',
-            item.isOpen ? 'cursor-pointer' : 'cursor-default',
+            item.isOpen ? 'cursor-pointer hover:bg-main-5' : 'cursor-not-allowed',
             selectedSlop === item.id && 'bg-main-5'
           )}
           onClick={() => {

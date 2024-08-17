@@ -32,7 +32,7 @@ const DiscoveryDetailPage = ({ params }: { params: { resortId: number } }) => {
     setCameraPositions((prev) => ({ ...prev, [id]: position }));
   }, []);
 
-  const handleFocusSlopCamClick = ({ id, scale }: { id: string; scale: number }) => {
+  const handleFocusSlopCamClick = ({ id }: { id: string }) => {
     const { left, top, width, height } = containerRef.current!.getBoundingClientRect();
     const { boundedX, boundedY } = calculateWebcamPosition({
       containerPosition: { left, top, width, height },
@@ -40,9 +40,9 @@ const DiscoveryDetailPage = ({ params }: { params: { resortId: number } }) => {
         x: cameraPositions[id].x,
         y: cameraPositions[id].y,
       },
-      scale: scale,
+      scale: 1,
     });
-    api.start({ scale: scale, x: boundedX, y: boundedY });
+    api.start({ scale: 1, x: boundedX, y: boundedY });
   };
 
   if (!discovery) return;
