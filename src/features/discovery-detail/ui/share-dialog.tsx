@@ -8,7 +8,7 @@ import share2 from '@public/shares/share_02.png';
 import share3 from '@public/shares/share_03.png';
 import share4 from '@public/shares/share_04.png';
 import { CloseIcon } from '@/shared/icons';
-import { cn } from '@/shared/lib';
+import { cn, getPostposition } from '@/shared/lib';
 import {
   Dialog,
   DialogClose,
@@ -57,7 +57,7 @@ const ShareDialog = ({ trigger, name }: ShareDialogProps) => {
         </DialogClose>
         <Image src={logo} alt="logo" />
         <div className={cn('h3-semibold mb-[31px] mt-[38px] flex h-16 flex-col justify-evenly')}>
-          <p>{name}을</p>
+          <p>{getPostposition(name || '')}</p>
           <p>공유해보세요!</p>
         </div>
         <div className={cn('body3-medium z-10 flex justify-between gap-3 text-gray-70')}>
