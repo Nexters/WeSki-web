@@ -27,6 +27,7 @@ const SlopCamera = ({
   const cameraRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    console.log(updateCameraPosition);
     cameraRef.current &&
       updateCameraPosition(id, {
         x: cameraRef.current.getBoundingClientRect().x,
