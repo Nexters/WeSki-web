@@ -3,12 +3,12 @@
 import Image from 'next/image';
 import { useState } from 'react';
 import { useCallback } from 'react';
-import blind1 from '@public/blind_01.png';
+import blind1 from '@public/blinds/blind_01.png';
 import { DiscoveryContentTabList } from '@/widgets/discovery-detail/model/constants';
-import AppDownloadDialog from '@/widgets/discovery-detail/ui/app-download-dialog';
 import DiscoverySummary from '@/widgets/discovery-detail/ui/discovery-summary';
 import { Header } from '@/widgets/header/ui';
 import { WebcamMap, WebcamSlopList } from '@/widgets/webcam/ui';
+import AppDownloadDialog from '@/features/discovery-detail/ui/app-download-dialog';
 import useMapPinch from '@/features/slop/hooks/useMapPinch';
 import calculateWebcamPosition from '@/features/slop/lib/calculateWebcamPosition';
 import { DiscoveryData } from '@/entities/discovery';
@@ -49,7 +49,7 @@ const DiscoveryDetailPage = ({ params }: { params: { resortId: number } }) => {
 
   return (
     <div className={cn('size-full')}>
-      <Header hasBackButton hasShareButton />
+      <Header resortName={discovery.name} hasBackButton hasShareButton />
       <DiscoverySummary {...discovery} />
       <ul className={cn('flex size-full h-[53px] bg-white')}>
         {DiscoveryContentTabList.map((tab) => (
@@ -99,8 +99,8 @@ const DiscoveryDetailPage = ({ params }: { params: { resortId: number } }) => {
           <p className={cn('title3-semibold mb-6 pl-6 pt-8 xs:pl-10')}>주간 예보</p>
           <div
             className={cn(
-              'h-[372px] bg-[url("/blind_02-1.png")] bg-contain bg-no-repeat',
-              'xs:h-[180px] xs:bg-[url("/blind_02.png")]'
+              'h-[372px] bg-[url("/blinds/blind_02-1.png")] bg-contain bg-no-repeat',
+              'xs:h-[180px] xs:bg-[url("/blinds/blind_02.png")]'
             )}
           />
           {showAppDownloadDialog && (
@@ -118,16 +118,16 @@ const DiscoveryDetailPage = ({ params }: { params: { resortId: number } }) => {
           <p className={cn('title3-semibold mb-6 pl-6 pt-8 xs:pl-10 xs:pt-10')}>인기 시간대</p>
           <div
             className={cn(
-              'aspect-[2.86] w-full bg-[url("/blind_03-1.png")] bg-cover',
-              'xs:aspect-[2.62] xs:bg-[url("/blind_03.png")]'
+              'aspect-[2.86] w-full bg-[url("/blinds/blind_03-1.png")] bg-cover',
+              'xs:aspect-[2.62] xs:bg-[url("/blinds/blind_03.png")]'
             )}
           />
           <div className={cn('mt-10 h-[6px] w-full bg-gray-20')} />
           <p className={cn('title3-semibold mb-6 pl-6 pt-8 xs:pl-10')}>슬로프 운행 현황</p>
           <div
             className={cn(
-              'aspect-[0.71] w-full bg-[url("/blind_04-1.png")] bg-cover',
-              'aspect-[0.88] xs:bg-[url("/blind_04.png")]'
+              'aspect-[0.71] w-full bg-[url("/blinds/blind_04-1.png")] bg-cover',
+              'aspect-[0.88] xs:bg-[url("/blinds/blind_04.png")]'
             )}
           />
           {showAppDownloadDialog && (
