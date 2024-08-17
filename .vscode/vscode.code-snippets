@@ -5,4 +5,21 @@
     "body": ["className={cn('${1}')}"],
     "description": "className={cn('${1}')}",
   },
+  "add icon file with custom color": {
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "prefix": "ic",
+    "body": [
+      "import React from 'react';",
+      "import { cn } from '@/shared/lib';",
+      "",
+      "const ${1:$TM_FILENAME_BASE} = ({ color }: { color?: string }) => {",
+      "  return (",
+      "    $0",
+      "  );",
+      "};",
+      "",
+      "export default ${1:$TM_FILENAME_BASE};",
+    ],
+    "description": "add icon file with custom color",
+  },
 }
