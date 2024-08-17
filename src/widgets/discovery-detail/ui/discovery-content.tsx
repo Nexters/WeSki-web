@@ -37,6 +37,7 @@ const DiscoveryContent = () => {
           />
           <WebcamSlopList
             className={cn('bg-white')}
+            type="website"
             list={DUMMY2.slops.map((item) => ({
               ...item,
               isWebcam: !!item.webcam,

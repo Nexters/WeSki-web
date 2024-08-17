@@ -1,5 +1,5 @@
 import { useCallback, useState } from 'react';
-import CheckIcon from '@/shared/icons/check';
+import { CheckIcon } from '@/shared/icons';
 import { cn } from '@/shared/lib';
 import {
   Dialog,

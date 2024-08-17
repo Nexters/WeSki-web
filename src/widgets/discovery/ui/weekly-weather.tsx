@@ -1,6 +1,6 @@
+import WeatherIcon from '@/features/discovery/ui/weather-icon';
 import type { WeeklyWeather } from '@/entities/discovery/model/model';
 import { cn } from '@/shared/lib';
-import WeatherIcon from './weather-icon';
 
 interface WeeklyWeatherProps extends WeeklyWeather {
   isToday: boolean;

@@ -20,7 +20,7 @@ const DiscoveryPageContent = () => {
   if (!discoveryData) return null;
 
   return (
-    <div className={cn('size-full bg-gradient-to-b from-[#8DA3DD/20] to-transparent')}>
+    <div className={cn('size-full bg-gradient-to-b from-[rgba(141,163,221,0.2)] to-transparent')}>
       <Header />
       <DiscoveryList discoveryData={discoveryData} />
     </div>
