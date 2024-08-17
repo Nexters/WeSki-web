@@ -32,6 +32,7 @@ const DiscoveryContent = () => {
           <WebcamMap slops={DUMMY2.slops} mapSrc={DUMMY2.map} selectedSlop={selectedSlop} />
           <WebcamSlopList
             className={cn('bg-white')}
+            type="website"
             list={DUMMY2.slops.map((item) => ({
               ...item,
               isWebcam: !!item.webcam,

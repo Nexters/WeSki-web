@@ -1,8 +1,15 @@
 import React from 'react';
 
-const RainIcon = () => {
+const RainIcon = ({ className }: { className?: string }) => {
   return (
-    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg
+      width="32"
+      height="32"
+      viewBox="0 0 32 32"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+    >
       <path
         d="M9.69617 17.9848C10.0204 17.4409 10.7384 17.2546 11.3 17.5686C11.8615 17.8826 12.0539 18.578 11.7297 19.1219L7.62049 26.0152C7.29628 26.5591 6.57823 26.7454 6.01669 26.4314C5.45514 26.1174 5.26274 25.422 5.58695 24.8781L9.69617 17.9848Z"
         fill="#4D44FF"

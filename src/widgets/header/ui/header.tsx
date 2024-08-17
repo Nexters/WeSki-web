@@ -1,6 +1,5 @@
 import { useRouter } from 'next/navigation';
-import ChevronLeftIcon from '@/shared/icons/chevron-left';
-import ShareIcon from '@/shared/icons/share';
+import { ChevronLeftIcon, ShareIcon } from '@/shared/icons';
 import { cn } from '@/shared/lib';
 
 interface HeaderProps {
