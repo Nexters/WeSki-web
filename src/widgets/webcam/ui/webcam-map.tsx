@@ -5,6 +5,7 @@ import SlopCamera from '@/features/slop/ui/slop-camera';
 import SlopMap from '@/features/slop/ui/slop-map';
 import type { Level } from '@/entities/slop/model/model';
 import { cn } from '@/shared/lib';
+import useMapPinch from '@/features/slop/hooks/useMapPinch';
 
 interface WebcamMapProps {
   slops: {
@@ -29,15 +30,11 @@ interface WebcamMapProps {
 
 const WebcamMap = ({ slops, mapSrc, selectedSlop }: WebcamMapProps) => {
   const containerRef = useRef<HTMLElement>(null);
+  const { ref, style } = useMapPinch(containerRef);
 
   return (
     <section className={cn('relative aspect-[25/14] w-full overflow-hidden')} ref={containerRef}>
-      <SlopMap
-        mapSrc={mapSrc}
-        containerRef={containerRef}
-        slops={slops}
-        selectedSlop={selectedSlop}
-      >
+      <SlopMap mapSrc={mapSrc} ref={ref} slops={slops} selectedSlop={selectedSlop} style={style}>
         {slops
           .filter(
             (
