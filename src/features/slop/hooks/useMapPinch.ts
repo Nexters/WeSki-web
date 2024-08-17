@@ -1,14 +1,14 @@
 import { useSpring } from '@react-spring/web';
 import { createUseGesture, dragAction, pinchAction } from '@use-gesture/react';
-import type { RefObject } from 'react';
 import { useRef } from 'react';
 import { getBoundedPositions } from '@/shared/lib';
 
 const useGesture = createUseGesture([pinchAction, dragAction]);
 
-const useMapPinch = (containerRef: RefObject<HTMLElement>) => {
+const useMapPinch = () => {
   const [style, api] = useSpring(() => ({ scale: 1, x: 0, y: 0 }));
   const ref = useRef<HTMLDivElement>(null);
+  const containerRef = useRef<HTMLElement>(null);
 
   useGesture(
     {
@@ -58,7 +58,7 @@ const useMapPinch = (containerRef: RefObject<HTMLElement>) => {
     }
   );
 
-  return { ref, style, api };
+  return { ref, style, api, containerRef };
 };
 
 export default useMapPinch;

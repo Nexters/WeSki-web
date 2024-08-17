@@ -1,5 +1,5 @@
 import React from 'react';
-import type { Level } from '@/entities/slop/model/model';
+import type { Slop } from '@/entities/slop/model/model';
 import LevelChip from '@/entities/slop/ui/level-chip';
 import { cn } from '@/shared/lib';
 import CameraButton from '@/shared/ui/cam-button';
@@ -7,32 +7,22 @@ import Divider from '@/shared/ui/divider';
 
 interface WebcamSlopListProps {
   className?: string;
-  list: {
-    id: string;
-    name: string;
-    level: Level;
-    isOpen: boolean;
-    isWebcam: boolean;
-  }[];
+  list: Slop[];
   selectedSlop: string | null;
   setSelectedSlop: React.Dispatch<React.SetStateAction<string | null>>;
+  onItemClick: (
+    event: React.MouseEvent<HTMLLIElement>,
+    {
+      scale,
+      id,
+    }: {
+      scale: number;
+      id: string;
+    }
+  ) => void;
 }
 
-const WebcamSlopList = ({
-  className,
-  list,
-  selectedSlop,
-  setSelectedSlop,
-}: WebcamSlopListProps) => {
-  const handleSlopClick = ({ id, isOpen }: { id: string; isOpen: boolean }) => {
-    if (!isOpen) return;
-    if (selectedSlop === id) {
-      setSelectedSlop(null);
-      return;
-    }
-
-    setSelectedSlop(id);
-  };
+const WebcamSlopList = ({ className, list, selectedSlop, onItemClick }: WebcamSlopListProps) => {
   return (
     <ul className={cn('w-full', className)}>
       {list.map((item) => (
@@ -43,11 +33,17 @@ const WebcamSlopList = ({
               !item.isOpen && 'opacity-30',
               selectedSlop === item.id && 'bg-main-5'
             )}
-            onClick={() => handleSlopClick(item)}
+            onClick={(e) =>
+              item.webcam &&
+              onItemClick(e, {
+                scale: item.webcam.scale,
+                id: item.id,
+              })
+            }
           >
             <div className={cn('flex items-center gap-2')}>
               <p className={cn('title3-semibold')}>{item.name}</p>
-              {item.isWebcam && <CameraButton />}
+              {item.webcam && <CameraButton />}
             </div>
             <LevelChip level={item.level} />
           </li>

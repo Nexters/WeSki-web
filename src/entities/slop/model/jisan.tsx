@@ -24,7 +24,7 @@ export const JISAN: ResortInfo = {
           top: 'top-[84%]',
           left: 'left-[20%]',
         },
-        scale: 1,
+        scale: 2,
       },
       isOpen: true,
       isDayOpen: false,
