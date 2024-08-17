@@ -5,6 +5,7 @@ import { cn } from '@/shared/lib';
 import CameraButton from '@/shared/ui/cam-button';
 import { Tooltip } from '@/shared/ui/tooltip';
 import SlopVideo from './slop-video';
+import useSlopStore from '../hooks/useSlopStore';
 
 interface SlopWebcamProps {
   webcam: Webcam;
@@ -37,12 +38,15 @@ const SlopCamera = ({
     setIsVideoOpen((pre) => !pre);
   };
 
+  const { selectedSlop, setSelectedSlop } = useSlopStore();
+
   return (
     <>
       <div
         ref={cameraRef}
         className={cn('absolute z-10', position.top, position.left)}
         onClick={() => {
+          setSelectedSlop(null);
           onCameraClick({ scale, id: id });
         }}
       >
