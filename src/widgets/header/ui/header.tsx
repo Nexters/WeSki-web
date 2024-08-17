@@ -1,6 +1,5 @@
 import { useRouter } from 'next/navigation';
-// eslint-disable-next-line boundaries/element-types
-import ShareDialog from '@/widgets/discovery-detail/ui/share-dialog';
+import ShareDialog from '@/features/discovery-detail/ui/share-dialog';
 import { ChevronLeftIcon, ShareIcon } from '@/shared/icons';
 import { cn } from '@/shared/lib';
 

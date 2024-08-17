@@ -1,12 +1,12 @@
 import { useCallback } from 'react';
 import WeatherIcon from '@/features/discovery/ui/weather-icon';
+import VoteDialog from '@/features/discovery-detail/ui/vote-dialog';
 import type { Discovery } from '@/entities/discovery';
 import { BusIcon, LiftIcon, VoteIcon } from '@/shared/icons';
 import { cn } from '@/shared/lib';
 import Card from '@/shared/ui/card';
 import { DiscoverySummaryActionList } from '../model/constants';
 import DiscoverySummaryAction from './discovery-summary-action';
-import VoteDialog from './vote-dialog';
 
 const DiscoverySummary = ({ name, slope, weather }: Discovery) => {
   const handleAction = useCallback(

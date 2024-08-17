@@ -1,10 +1,10 @@
 import Image from 'next/image';
-import logo from '@public/logo.svg';
-import share1 from '@public/share_01.png';
-import share2 from '@public/share_02.png';
-import share3 from '@public/share_03.png';
-import share4 from '@public/share_04.png';
-import snow from '@public/snow.png';
+import logo from '@public/assets/logo.svg';
+import snow from '@public/assets/snow.png';
+import share1 from '@public/shares/share_01.png';
+import share2 from '@public/shares/share_02.png';
+import share3 from '@public/shares/share_03.png';
+import share4 from '@public/shares/share_04.png';
 import { CloseIcon } from '@/shared/icons';
 import { cn } from '@/shared/lib';
 import { Dialog, DialogClose, DialogContent, DialogTrigger } from '@/shared/ui/dialog';

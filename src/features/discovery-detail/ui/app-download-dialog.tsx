@@ -1,8 +1,8 @@
 import Image from 'next/image';
-import android from '@public/android.png';
-import ios from '@public/ios.png';
-import logo from '@public/logo.svg';
-import snow from '@public/snow.png';
+import logo from '@public/assets/logo.svg';
+import snow from '@public/assets/snow.png';
+import android from '@public/downloads/android.png';
+import ios from '@public/downloads/ios.png';
 import { CloseIcon } from '@/shared/icons';
 import { cn } from '@/shared/lib';
 
