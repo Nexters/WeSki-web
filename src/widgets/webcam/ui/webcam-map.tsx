@@ -18,30 +18,29 @@ interface WebcamMapProps extends ResortInfo {
 }
 
 const WebcamMap = forwardRef<HTMLDivElement, WebcamMapProps>(
-  ({ slops, style, MapComponent, onCameraClick, containerRef, updateCameraPosition }, ref) => {
+  (
+    { slops, webcams, style, MapComponent, onCameraClick, containerRef, updateCameraPosition },
+    ref
+  ) => {
     const { selectedSlop } = useSlopStore();
 
     return (
       <section className={cn('relative aspect-[25/14] w-full overflow-hidden')} ref={containerRef}>
         <SlopMap MapComponent={MapComponent} ref={ref} slops={slops} style={style}>
-          {slops
-            .filter(
-              (
-                slop
-              ): slop is WebcamMapProps['slops'][number] & {
-                webcam: NonNullable<WebcamMapProps['slops'][number]['webcam']>;
-              } => slop.webcam !== null
-            )
-            .map(({ id, webcam }) => (
+          {webcams.map((webcam) => {
+            const slop = slops.find((slop) => slop.webcamId === webcam.id);
+
+            return (
               <SlopCamera
-                key={id}
+                key={webcam.id}
                 webcam={webcam}
-                isOpen={selectedSlop === id}
+                isOpen={slop?.id === selectedSlop}
                 containerRef={containerRef}
                 onCameraClick={onCameraClick}
                 updateCameraPosition={updateCameraPosition}
               />
-            ))}
+            );
+          })}
         </SlopMap>
       </section>
     );

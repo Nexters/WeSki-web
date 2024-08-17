@@ -1,6 +1,6 @@
 import React from 'react';
 import useSlopStore from '@/features/slop/hooks/useSlopStore';
-import type { Slop } from '@/entities/slop/model/model';
+import type { Slop, Webcam } from '@/entities/slop/model/model';
 import LevelChip from '@/entities/slop/ui/level-chip';
 import { cn } from '@/shared/lib';
 import CameraButton from '@/shared/ui/cam-button';
@@ -8,10 +8,11 @@ import CameraButton from '@/shared/ui/cam-button';
 interface WebcamSlopListProps {
   className?: string;
   list: Slop[];
+  webcams: Webcam[];
   onItemClick: ({ scale, id }: { scale: number; id: string }) => void;
 }
 
-const WebcamSlopList = ({ className, list, onItemClick }: WebcamSlopListProps) => {
+const WebcamSlopList = ({ className, list, webcams, onItemClick }: WebcamSlopListProps) => {
   const { selectedSlop, setSelectedSlop } = useSlopStore();
 
   return (
@@ -31,17 +32,19 @@ const WebcamSlopList = ({ className, list, onItemClick }: WebcamSlopListProps) =
             } else {
               setSelectedSlop(item.id);
             }
-            if (item.webcam) {
+            if (item.webcamId) {
+              const webcam = webcams.find((webcam) => webcam.id === item.webcamId);
+              if (!webcam) return;
               onItemClick({
-                scale: item.webcam.scale,
-                id: item.webcam.id,
+                scale: webcam.scale,
+                id: webcam.id,
               });
             }
           }}
         >
           <div className={cn('flex items-center gap-2')}>
             <p className={cn('title3-semibold', !item.isOpen && 'opacity-30')}>{item.name}</p>
-            {item.webcam && <CameraButton />}
+            {item.webcamId && <CameraButton />}
           </div>
           <LevelChip className={cn(!item.isOpen && 'opacity-30')} level={item.level} />
         </li>

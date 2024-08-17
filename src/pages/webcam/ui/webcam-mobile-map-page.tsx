@@ -40,11 +40,16 @@ const WebCamMobileMapPage = () => {
         style={style}
         containerRef={containerRef}
         slops={DUMMY2.slops}
+        webcams={DUMMY2.webcams}
         MapComponent={DUMMY2.MapComponent}
         onCameraClick={handleFocusSlopCamClick}
         updateCameraPosition={updateCameraPosition}
       />
-      <WebcamSlopList list={DUMMY2.slops} onItemClick={handleFocusSlopCamClick} />
+      <WebcamSlopList
+        webcams={DUMMY2.webcams}
+        list={DUMMY2.slops}
+        onItemClick={handleFocusSlopCamClick}
+      />
     </main>
   );
 };
