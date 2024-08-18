@@ -6,6 +6,7 @@ import ELYSIAN_GANGCHON from '@/entities/slop/model/elysian-gangchon';
 import GONJIAM from '@/entities/slop/model/gonjiam';
 import HIGH1 from '@/entities/slop/model/high1';
 import VIVALDIPARK from '@/entities/slop/model/vivaldipark';
+import { EDEN, JISAN, YONGPYONG } from '@/entities/slop/model';
 
 const domainMap = {
   jisan: JISAN,
@@ -13,6 +14,8 @@ const domainMap = {
   gonjiam: GONJIAM,
   vivaldipark: VIVALDIPARK,
   'elysian-gangchon': ELYSIAN_GANGCHON,
+  yongpyong: YONGPYONG,
+  eden: EDEN,
 };
 
 const Page = ({ params }: { params: { key: string } }) => {

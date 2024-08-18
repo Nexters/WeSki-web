@@ -71,6 +71,7 @@ export const DiscoveryData: Discovery[] = [
   {
     id: 1,
     name: '용평스키장 모나',
+    map: 'yongpyong',
     slope: null,
     weather: {
       weather: 'sun',
@@ -81,7 +82,8 @@ export const DiscoveryData: Discovery[] = [
   },
   {
     id: 2,
-    name: '휘닉스파크',
+    name: '지산 리조트',
+    map: 'jisan',
     slope: 8,
     weather: {
       weather: 'cloud',
@@ -92,34 +94,13 @@ export const DiscoveryData: Discovery[] = [
   },
   {
     id: 3,
-    name: '하이원스키장',
+    name: '에덴밸리 리조트',
+    map: 'eden',
     slope: 10,
     weather: {
       weather: 'rain',
       temperature: -4,
       description: '비',
-    },
-    weeklyWeather: WeeklyWeatherData,
-  },
-  {
-    id: 4,
-    name: '비발디파크',
-    slope: 14,
-    weather: {
-      weather: 'snow',
-      temperature: -6,
-      description: '눈',
-    },
-    weeklyWeather: WeeklyWeatherData,
-  },
-  {
-    id: 5,
-    name: '곤지암스키장',
-    slope: 8,
-    weather: {
-      weather: 'cloud',
-      temperature: -3,
-      description: '흐리고 비',
     },
     weeklyWeather: WeeklyWeatherData,
   },
