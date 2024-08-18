@@ -17,6 +17,7 @@ import Rainbow4Path from '../image/yongpyong/rainbow4-path';
 import RedParadisePath from '../image/yongpyong/red-paradise-path';
 import RedSlopePath from '../image/yongpyong/red-slope-path';
 import SilverParadisePath from '../image/yongpyong/silver-paradise-path';
+import SilverSlopePath from '../image/yongpyong/silver-slope-path';
 import SummitLandTheGreenPath from '../image/yongpyong/summit-land-the-green-path';
 import YellowSlopePath from '../image/yongpyong/yellow-slope-path';
 import type { ResortInfo } from './model';
@@ -106,6 +107,13 @@ export const YONGPYONG: ResortInfo = {
       name: '뉴 옐로우 슬로프',
       Element: NewYellowSlopePath,
       webcamId: 'yellow-slope',
+      isOpen: true,
+    },
+    {
+      id: 'silver-slope',
+      level: 'INTERMEDIATE',
+      name: '실버 슬로프',
+      Element: SilverSlopePath,
       isOpen: true,
     },
     {
