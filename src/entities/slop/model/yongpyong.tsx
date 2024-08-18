@@ -191,8 +191,8 @@ export const YONGPYONG: ResortInfo = {
       id: 'gold-slope-foreground',
       name: '골드 슬로프 전경',
       position: {
-        top: 'top-[60%]',
-        left: 'left-[18%]',
+        top: 'top-[56%]',
+        left: 'left-[17%]',
       },
       scale: 1,
     },
@@ -200,7 +200,7 @@ export const YONGPYONG: ResortInfo = {
       id: 'red-slope',
       name: '레드 슬로프',
       position: {
-        top: 'top-[58%]',
+        top: 'top-[57%]',
         left: 'left-[29%]',
       },
       scale: 1,
@@ -218,8 +218,8 @@ export const YONGPYONG: ResortInfo = {
       id: 'yellow-slope',
       name: '옐로우 슬로프',
       position: {
-        top: 'top-[72%]',
-        left: 'left-[38%]',
+        top: 'top-[71%]',
+        left: 'left-[37%]',
       },
       scale: 1,
     },
@@ -227,8 +227,8 @@ export const YONGPYONG: ResortInfo = {
       id: 'rainbow-top',
       name: '레인보우 정상',
       position: {
-        top: 'top-[5%]',
-        left: 'left-[63%]',
+        top: 'top-[2%]',
+        left: 'left-[61%]',
       },
       scale: 1,
     },
@@ -236,8 +236,8 @@ export const YONGPYONG: ResortInfo = {
       id: 'rainbow-foreground',
       name: '레인보우 전경',
       position: {
-        top: 'top-[43%]',
-        left: 'left-[81%]',
+        top: 'top-[41%]',
+        left: 'left-[79%]',
       },
       scale: 1,
     },
@@ -245,8 +245,8 @@ export const YONGPYONG: ResortInfo = {
       id: 'mega-green-slope',
       name: '메가 그린 슬로프',
       position: {
-        top: 'top-[60%]',
-        left: 'left-[57%]',
+        top: 'top-[59%]',
+        left: 'left-[56%]',
       },
       scale: 1,
     },

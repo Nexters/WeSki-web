@@ -1,10 +1,12 @@
 import { redirect } from 'next/navigation';
 import React from 'react';
 import WebcamMobileMapPage from '@/pages/webcam/ui/webcam-mobile-map-page';
-import { JISAN } from '@/entities/slop/model';
+import { EDEN, JISAN, YONGPYONG } from '@/entities/slop/model';
 
 const domainMap = {
   jisan: JISAN,
+  yongpyong: YONGPYONG,
+  eden: EDEN,
 };
 
 const Page = ({ params }: { params: { key: string } }) => {
