@@ -12,14 +12,18 @@ import AppDownloadDialog from '@/features/discovery-detail/ui/app-download-dialo
 import useMapPinch from '@/features/slop/hooks/useMapPinch';
 import calculateWebcamPosition from '@/features/slop/lib/calculateWebcamPosition';
 import { DiscoveryData } from '@/entities/discovery';
-import { JISAN } from '@/entities/slop/model';
+import { EDEN, JISAN, YONGPYONG } from '@/entities/slop/model';
 import type { Position } from '@/entities/slop/model/model';
 import { cn } from '@/shared/lib';
 
-const DUMMY2 = JISAN;
-
+const domainMap = {
+  jisan: JISAN,
+  yongpyong: YONGPYONG,
+  eden: EDEN,
+};
 const DiscoveryDetailPage = ({ params }: { params: { resortId: number } }) => {
   const discovery = DiscoveryData.find((discovery) => discovery.id === +params?.resortId);
+  const data = domainMap[discovery?.map as keyof typeof domainMap];
   const [selectedTab, setSelectedTab] = useState('webcam');
   const [showAppDownloadDialog, setShowAppDownloadDialog] = useState(true);
 
@@ -71,20 +75,19 @@ const DiscoveryDetailPage = ({ params }: { params: { resortId: number } }) => {
       {selectedTab === 'webcam' && (
         <>
           <WebcamMap
-            slops={DUMMY2.slops}
-            MapComponent={DUMMY2.MapComponent}
-            containerRef={containerRef}
-            style={style}
             ref={ref}
-            updateCameraPosition={updateCameraPosition}
+            style={style}
+            containerRef={containerRef}
+            slops={data.slops}
+            webcams={data.webcams}
+            MapComponent={data.MapComponent}
             onCameraClick={handleFocusSlopCamClick}
+            updateCameraPosition={updateCameraPosition}
           />
           <WebcamSlopList
             className={cn('bg-white')}
-            list={DUMMY2.slops.map((item) => ({
-              ...item,
-              isWebcam: !!item.webcam,
-            }))}
+            webcams={data.webcams}
+            list={data.slops}
             onItemClick={handleFocusSlopCamClick}
           />
         </>
