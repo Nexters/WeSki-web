@@ -4,11 +4,13 @@ import WebcamMobileMapPage from '@/pages/webcam/ui/webcam-mobile-map-page';
 import { JISAN } from '@/entities/slop/model';
 import GONJIAM from '@/entities/slop/model/gonjiam';
 import HIGH1 from '@/entities/slop/model/high1';
+import VIVALDIPARK from '@/entities/slop/model/vivaldipark';
 
 const domainMap = {
   jisan: JISAN,
   high1: HIGH1,
   gonjiam: GONJIAM,
+  vivaldipark: VIVALDIPARK,
 };
 
 const Page = ({ params }: { params: { key: string } }) => {
