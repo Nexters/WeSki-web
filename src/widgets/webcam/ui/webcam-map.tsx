@@ -28,13 +28,18 @@ const WebcamMap = forwardRef<HTMLDivElement, WebcamMapProps>(
       <section className={cn('relative aspect-[25/14] w-full overflow-hidden')} ref={containerRef}>
         <SlopMap MapComponent={MapComponent} ref={ref} slops={slops} style={style}>
           {webcams.map((webcam) => {
-            const slop = slops.find((slop) => slop.webcamId === webcam.id);
+            const slop = slops.filter((slop) => slop.webcamId === webcam.id);
+            console.log(
+              slop,
+              selectedSlop,
+              slop.some((item) => item.id === selectedSlop)
+            );
 
             return (
               <SlopCamera
                 key={webcam.id}
                 webcam={webcam}
-                isOpen={slop?.id === selectedSlop}
+                isOpen={slop.some((item) => item.id === selectedSlop)}
                 containerRef={containerRef}
                 onCameraClick={onCameraClick}
                 updateCameraPosition={updateCameraPosition}
