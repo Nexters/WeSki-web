@@ -49,7 +49,7 @@ const SlopStatusList = ({ list }: SlopStatusListProps) => {
       <tbody>
         {list.map((item, index) => (
           <tr
-            key={index}
+            key={item.key}
             className={cn(selectedSlop === item.key && 'bg-main-5')}
             onClick={() => handleSlopClick({ id: item.key })}
           >
