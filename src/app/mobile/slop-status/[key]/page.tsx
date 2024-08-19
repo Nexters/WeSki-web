@@ -6,7 +6,7 @@ import { RESORT_DOMAIN } from '@/entities/slop/model';
 const isValidKey = (key: string): key is keyof typeof RESORT_DOMAIN => key in RESORT_DOMAIN;
 
 const Page = ({ params }: { params: { key: string } }) => {
-  if (!isValidKey(params.key)) {
+  if (!isValidKey(params?.key)) {
     redirect('/not-found');
   }
 

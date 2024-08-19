@@ -10,9 +10,17 @@ import { RESORT_DOMAIN } from '@/entities/slop/model';
 import { cn } from '@/shared/lib';
 
 const SlopStatusPage = ({ params }: { params: { key: keyof typeof RESORT_DOMAIN } }) => {
+  if (typeof window === 'undefined') {
+    return null;
+  }
+
+  return <SlopStatusPageContent key={params?.key} />;
+};
+
+const SlopStatusPageContent = ({ key }: { key: keyof typeof RESORT_DOMAIN }) => {
   const { ref, style, containerRef } = useMapPinch();
 
-  const { data } = useQuery(slopQueries.list(params.key));
+  const { data } = useQuery(slopQueries.list(key));
 
   if (!data) return;
   return (

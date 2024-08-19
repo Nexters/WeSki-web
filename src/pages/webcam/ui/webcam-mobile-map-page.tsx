@@ -30,6 +30,8 @@ const WebCamMobileMapPage = ({ data }: { data: ResortInfo }) => {
     api.start({ scale: scale, x: boundedX, y: boundedY });
   };
 
+  if (!data) return;
+
   return (
     <main className={cn('w-full')}>
       <WebcamMap
