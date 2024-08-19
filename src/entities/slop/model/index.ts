@@ -1,18 +1,20 @@
-import { EDEN } from './eden';
-import { ELYSIAN_GANGCHON } from './elysian-gangchon';
-import { GONJIAM } from './gonjiam';
-import { HIGH1 } from './high1';
 import { JISAN } from './jisan';
+import { HIGH1 } from './high1';
+import { GONJIAM } from './gonjiam';
 import { VIVALDIPARK } from './vivaldipark';
+import { ELYSIAN_GANGCHON } from './elysian-gangchon';
 import { YONGPYONG } from './yongpyong';
+import { EDEN } from './eden';
+import { WELLIHILLI } from './wellihilli';
 
 export { JISAN } from './jisan';
+export { HIGH1 } from './high1';
+export { GONJIAM } from './gonjiam';
+export { VIVALDIPARK } from './vivaldipark';
+export { ELYSIAN_GANGCHON } from './elysian-gangchon';
 export { YONGPYONG } from './yongpyong';
 export { EDEN } from './eden';
-export { ELYSIAN_GANGCHON } from './elysian-gangchon';
-export { GONJIAM } from './gonjiam';
-export { HIGH1 } from './high1';
-export { VIVALDIPARK } from './vivaldipark';
+export { WELLIHILLI } from './wellihilli';
 
 export const RESORT_DOMAIN = {
   jisan: JISAN,
@@ -22,4 +24,5 @@ export const RESORT_DOMAIN = {
   'elysian-gangchon': ELYSIAN_GANGCHON,
   yongpyong: YONGPYONG,
   eden: EDEN,
+  wellihilli: WELLIHILLI,
 };

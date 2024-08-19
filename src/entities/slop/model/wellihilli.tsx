@@ -1,0 +1,224 @@
+import AlphaSlope1Path from '../image/wellihilli/alpha-slope1-path';
+import AlphaSlope2Path from '../image/wellihilli/alpha-slope2-path';
+import AlphaSlope3Path from '../image/wellihilli/alpha-slope3-path';
+import BravoSlope1Path from '../image/wellihilli/bravo-slope1-path';
+import BravoSlope2Path from '../image/wellihilli/bravo-slope2-path';
+import ChallengeSlope1Path from '../image/wellihilli/challenge-slope1-path';
+import ChallengeSlope2Path from '../image/wellihilli/challenge-slope2-path';
+import ChallengeSlope3Path from '../image/wellihilli/challenge-slope3-path';
+import ChallengeSlope4Path from '../image/wellihilli/challenge-slope4-path';
+import ChallengeSlope5Path from '../image/wellihilli/challenge-slope5-path';
+import DeltaSlopePlusPath from '../image/wellihilli/delta-slope-plus-path';
+import DeltaSlope1Path from '../image/wellihilli/delta-slope1-path';
+import DeltaSlope2Path from '../image/wellihilli/delta-slope2-path';
+import EchoSlopePlusPath from '../image/wellihilli/echo-slope-plus-path';
+import EchoSlope1Path from '../image/wellihilli/echo-slope1-path';
+import EchoSlope2Path from '../image/wellihilli/echo-slope2-path';
+import EchoSlope3Path from '../image/wellihilli/echo-slope3-path';
+import HalfPipePath from '../image/wellihilli/half-pipe-path';
+import WellihilliMap from '../image/wellihilli/map';
+import StarExpress1Path from '../image/wellihilli/star-express1-path';
+import StarExpress2Path from '../image/wellihilli/star-express2-path';
+import type { ResortInfo } from './model';
+
+export const WELLIHILLI: ResortInfo = {
+  MapComponent: WellihilliMap,
+  slops: [
+    {
+      id: 'alpha-slope1',
+      level: 'BEGINNER',
+      name: '알파슬로프 1',
+      Element: AlphaSlope1Path,
+      webcamId: 'a1/a3-slope',
+      isOpen: true,
+    },
+    {
+      id: 'alpha-slope2',
+      level: 'BEGINNER',
+      name: '알파슬로프 2',
+      Element: AlphaSlope2Path,
+      webcamId: 'outdoor-square',
+      isOpen: true,
+    },
+    {
+      id: 'alpha-slope3',
+      level: 'BEGINNER',
+      name: '알파슬로프 3',
+      Element: AlphaSlope3Path,
+      webcamId: 'outdoor-square',
+      isOpen: true,
+    },
+    {
+      id: 'bravo-slope1',
+      level: 'INTERMEDIATE',
+      name: '브라보슬로프 1',
+      Element: BravoSlope1Path,
+      isOpen: true,
+    },
+    {
+      id: 'bravo-slope2',
+      level: 'INTERMEDIATE',
+      name: '브라보슬로프 2',
+      Element: BravoSlope2Path,
+      isOpen: true,
+    },
+    {
+      id: 'delta-slope1',
+      level: 'BEGINNER',
+      name: '델타슬로프 1',
+      Element: DeltaSlope1Path,
+      webcamId: 'family-slope',
+      isOpen: true,
+    },
+    {
+      id: 'delta-slope2',
+      level: 'BEGINNER',
+      name: '델타슬로프 2',
+      Element: DeltaSlope2Path,
+      webcamId: 'top-square',
+      isOpen: true,
+    },
+    {
+      id: 'delta-slope-plus',
+      level: 'BEGINNER',
+      name: '델타슬로프 +',
+      Element: DeltaSlopePlusPath,
+      isOpen: true,
+    },
+    {
+      id: 'echo-slope1',
+      level: 'EXPERT',
+      name: '에코슬로프 1',
+      Element: EchoSlope1Path,
+      isOpen: true,
+    },
+    {
+      id: 'echo-slope2',
+      level: 'ADVANCED',
+      name: '에코슬로프 2',
+      Element: EchoSlope2Path,
+      isOpen: true,
+    },
+    {
+      id: 'echo-slope3',
+      level: 'EXPERT',
+      name: '에코슬로프 3',
+      Element: EchoSlope3Path,
+      isOpen: true,
+    },
+    {
+      id: 'echo-slope-plus',
+      level: 'EXPERT',
+      name: '에코슬로프 +',
+      Element: EchoSlopePlusPath,
+      isOpen: true,
+    },
+    {
+      id: 'challenge-slope1',
+      level: 'ADVANCED',
+      name: '첼린지슬로프 1',
+      Element: ChallengeSlope1Path,
+      isOpen: true,
+    },
+    {
+      id: 'challenge-slope2',
+      level: 'ADVANCED',
+      name: '첼린지슬로프 2',
+      Element: ChallengeSlope2Path,
+      isOpen: true,
+    },
+    {
+      id: 'challenge-slope3',
+      level: 'EXPERT',
+      name: '첼린지슬로프 3',
+      Element: ChallengeSlope3Path,
+      isOpen: true,
+    },
+    {
+      id: 'challenge-slope4',
+      level: 'ADVANCED',
+      name: '첼린지슬로프 4',
+      Element: ChallengeSlope4Path,
+      isOpen: true,
+    },
+    {
+      id: 'challenge-slope5',
+      level: 'ADVANCED',
+      name: '첼린지슬로프 5',
+      Element: ChallengeSlope5Path,
+      isOpen: true,
+    },
+    {
+      id: 'star-express1',
+      level: 'INTERMEDIATE',
+      name: '스타 익스프레스1',
+      Element: StarExpress1Path,
+      isOpen: true,
+    },
+    {
+      id: 'star-express2',
+      level: 'BEGINNER',
+      name: '스타 익스프레스2',
+      Element: StarExpress2Path,
+      webcamId: 'top-square',
+      isOpen: true,
+    },
+    {
+      id: 'half-pipe',
+      level: 'BEGINNER',
+      name: '하프파이프',
+      Element: HalfPipePath,
+      webcamId: 'half-pipe',
+      isOpen: true,
+    },
+  ],
+  webcams: [
+    {
+      id: 'a1/a3-slope',
+      name: 'A1/A3 슬로프',
+      position: {
+        top: 'top-[24%]',
+        left: 'left-[48%]',
+      },
+      scale: 1,
+    },
+    {
+      id: 'outdoor-square',
+      name: '야외광장',
+      position: {
+        top: 'top-[30%]',
+        left: 'left-[60%]',
+      },
+      scale: 1,
+    },
+    {
+      id: 'family-slope',
+      name: '패밀리슬로프',
+      position: {
+        top: 'top-[40%]',
+        left: 'left-[40%]',
+      },
+      scale: 1,
+    },
+    {
+      id: 'top-square',
+      name: '정상광장',
+      position: {
+        top: 'top-[10%]',
+        left: 'left-[50%]',
+      },
+      scale: 1,
+    },
+    {
+      id: 'half-pipe',
+      name: '하프파이프',
+      position: {
+        top: 'top-[60%]',
+        left: 'left-[30%]',
+      },
+      scale: 1,
+    },
+  ],
+};
+
+export default WELLIHILLI;
