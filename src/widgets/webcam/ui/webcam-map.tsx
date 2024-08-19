@@ -29,11 +29,6 @@ const WebcamMap = forwardRef<HTMLDivElement, WebcamMapProps>(
         <SlopMap MapComponent={MapComponent} ref={ref} slops={slops} style={style}>
           {webcams.map((webcam) => {
             const slop = slops.filter((slop) => slop.webcamId === webcam.id);
-            console.log(
-              slop,
-              selectedSlop,
-              slop.some((item) => item.id === selectedSlop)
-            );
 
             return (
               <SlopCamera

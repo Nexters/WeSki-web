@@ -16,16 +16,16 @@ const HorseSlopPath = ({ color }: { color?: string }) => {
       <path
         className={cn('stroke-current', strokeColorClass)}
         d="M130 50C128.667 50.6667 123.8 54.4 127 62C131 71.5 143.5 88 145 93.5C146.5 99 152.5 107 157 108"
-        stroke-width="1.5"
-        stroke-linejoin="round"
-        stroke-dasharray="3 3"
+        strokeWidth="1.5"
+        strokeLinejoin="round"
+        strokeDasharray="3 3"
       />
       <path
         className={cn('stroke-current', strokeColorClass)}
         d="M112.5 30.5L130.5 49.5"
-        stroke-width="1.5"
-        stroke-linejoin="round"
-        stroke-dasharray="3 3"
+        strokeWidth="1.5"
+        strokeLinejoin="round"
+        strokeDasharray="3 3"
       />
     </svg>
   );

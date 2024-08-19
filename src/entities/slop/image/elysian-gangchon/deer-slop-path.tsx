@@ -15,9 +15,9 @@ const DeerSlopPath = ({ color }: { color?: string }) => {
       <path
         className={cn('stroke-current', strokeColorClass)}
         d="M130 50.1142C132.387 49.4629 141.456 51.2864 158.64 63.7898C164.703 68.2014 169.217 72.2239 173 76"
-        stroke-width="1.5"
-        stroke-linejoin="round"
-        stroke-dasharray="3 3"
+        strokeWidth="1.5"
+        strokeLinejoin="round"
+        strokeDasharray="3 3"
       />
       <path
         className={cn('fill-current', color ? color : 'fill-[#447EFF]')}
@@ -26,9 +26,9 @@ const DeerSlopPath = ({ color }: { color?: string }) => {
       <path
         className={cn('stroke-current', strokeColorClass)}
         d="M199.375 51.885C187.542 50.7183 167.175 49.785 180.375 55.385C193.575 60.985 187.209 62.7185 182.375 62.8853C177.542 62.8853 166.9 65.8 172.5 75"
-        stroke-width="1.5"
-        stroke-linejoin="round"
-        stroke-dasharray="3 3"
+        strokeWidth="1.5"
+        strokeLinejoin="round"
+        strokeDasharray="3 3"
       />
     </svg>
   );
