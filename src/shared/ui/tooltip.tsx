@@ -2,7 +2,6 @@
 
 import * as PopoverPrimitive from '@radix-ui/react-popover';
 import * as React from 'react';
-import { useEffect } from 'react';
 import { cn } from '../lib';
 
 const Popover = PopoverPrimitive.Root;
@@ -40,15 +39,11 @@ export const Tooltip = ({
   side = 'top',
   align = 'center',
 }: TooltipProps) => {
-  const [tooltipOpen, setTooltipOpen] = React.useState(false);
-
-  useEffect(() => {
-    isOpen && setTooltipOpen(isOpen);
-  }, [isOpen]);
+  const [tooltipOpen, setTooltipOpen] = React.useState(isOpen);
 
   return (
     <Popover
-      open={tooltipOpen}
+      open={tooltipOpen || isOpen}
       onOpenChange={(open) => {
         setTooltipOpen(open);
       }}
