@@ -26,11 +26,16 @@ const SlopStatusList = ({ list }: SlopStatusListProps) => {
   return (
     <table className={cn('mt-[24px] w-full')}>
       <colgroup>
-        <col className="w-[40%]" /> {/* 슬로프명 */}
-        <col className="w-[20%]" /> {/* 난이도 */}
-        <col className="w-[13.33%]" /> {/* 주간 */}
-        <col className="w-[13.33%]" /> {/* 야간 */}
-        <col className="w-[13.33%]" /> {/* 심야 */}
+        <col className="w-[40%]" />
+        {/* 슬로프명 */}
+        <col className="w-[20%]" />
+        {/* 난이도 */}
+        <col className="w-[13.33%]" />
+        {/* 주간 */}
+        <col className="w-[13.33%]" />
+        {/* 야간 */}
+        <col className="w-[13.33%]" />
+        {/* 심야 */}
       </colgroup>
       <thead>
         <tr>
