@@ -1,20 +1,20 @@
-import MapImage from '../image/phoenix/map';
-import type { ResortInfo } from './model';
-import SparrowPath from '../image/phoenix/sparrow-path';
-import PenguinSlopePath from '../image/phoenix/penguin-slope-path';
-import HawkSlope1Path from '../image/phoenix/hawk-slope1-path';
-import KiwiSlopePath from '../image/phoenix/kiwi-slope-path';
-import PanoramaPath from '../image/phoenix/panorama-path';
-import ValleySlopePath from '../image/phoenix/valley-slope-path';
-import HawkSlope2Path from '../image/phoenix/hawk-slope2-path';
-import DukeSlopePath from '../image/phoenix/duke-slope-path';
-import SlopeStylePath from '../image/phoenix/slope-style-path';
 import ChampionSlopePath from '../image/phoenix/champion-slope-path';
-import FantasySlopePath from '../image/phoenix/fantasy-slope-path';
 import DiggySlopePath from '../image/phoenix/diggy-slope-path';
-import MogulSlopePath from '../image/phoenix/mogul-slope-path';
-import ParadisePath from '../image/phoenix/paradise-path';
+import DukeSlopePath from '../image/phoenix/duke-slope-path';
 import ExtremeParkPath from '../image/phoenix/extreme-park-path';
+import FantasySlopePath from '../image/phoenix/fantasy-slope-path';
+import HawkSlope1Path from '../image/phoenix/hawk-slope1-path';
+import HawkSlope2Path from '../image/phoenix/hawk-slope2-path';
+import KiwiSlopePath from '../image/phoenix/kiwi-slope-path';
+import MapImage from '../image/phoenix/map';
+import MogulSlopePath from '../image/phoenix/mogul-slope-path';
+import PanoramaPath from '../image/phoenix/panorama-path';
+import ParadisePath from '../image/phoenix/paradise-path';
+import PenguinSlopePath from '../image/phoenix/penguin-slope-path';
+import SlopeStylePath from '../image/phoenix/slope-style-path';
+import SparrowPath from '../image/phoenix/sparrow-path';
+import ValleySlopePath from '../image/phoenix/valley-slope-path';
+import type { ResortInfo } from './model';
 
 export const PHOENIX: ResortInfo = {
   MapComponent: MapImage,

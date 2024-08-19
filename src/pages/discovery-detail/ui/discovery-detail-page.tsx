@@ -12,31 +12,13 @@ import AppDownloadDialog from '@/features/discovery-detail/ui/app-download-dialo
 import useMapPinch from '@/features/slop/hooks/useMapPinch';
 import calculateWebcamPosition from '@/features/slop/lib/calculateWebcamPosition';
 import { DiscoveryData } from '@/entities/discovery';
-import { EDEN, JISAN, YONGPYONG, WELLIHILLI } from '@/entities/slop/model';
-import ELYSIAN_GANGCHON from '@/entities/slop/model/elysian-gangchon';
-import GONJIAM from '@/entities/slop/model/gonjiam';
-import HIGH1 from '@/entities/slop/model/high1';
+import { RESORT_DOMAIN } from '@/entities/slop/model';
 import type { Position } from '@/entities/slop/model/model';
-import VIVALDIPARK from '@/entities/slop/model/vivaldipark';
 import { cn } from '@/shared/lib';
-import MUJU from '@/entities/slop/model/muju';
-import { PHOENIX } from '@/entities/slop/model/phoenix';
 
-const domainMap = {
-  jisan: JISAN,
-  yongpyong: YONGPYONG,
-  eden: EDEN,
-  high1: HIGH1,
-  gonjiam: GONJIAM,
-  vivaldipark: VIVALDIPARK,
-  'elysian-gangchon': ELYSIAN_GANGCHON,
-  wellihilli: WELLIHILLI,
-  muju: MUJU,
-  phoenix: PHOENIX,
-};
 const DiscoveryDetailPage = ({ params }: { params: { resortId: number } }) => {
   const discovery = DiscoveryData.find((discovery) => discovery.id === +params?.resortId);
-  const data = domainMap[discovery?.map as keyof typeof domainMap];
+  const data = RESORT_DOMAIN[discovery?.map as keyof typeof RESORT_DOMAIN];
   const [selectedTab, setSelectedTab] = useState('webcam');
   const [showAppDownloadDialog, setShowAppDownloadDialog] = useState(true);
 
