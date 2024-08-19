@@ -18,7 +18,7 @@ import Zeus3Sub1SlopPath from '../image/high1/zeus3-1-slop-path';
 import Zeus3SlopPath from '../image/high1/zeus3-slop-path';
 import type { ResortInfo } from './model';
 
-const HIGH1: ResortInfo = {
+export const HIGH1: ResortInfo = {
   MapComponent: High1Map,
   slops: [
     {
@@ -336,5 +336,3 @@ const HIGH1: ResortInfo = {
     },
   ],
 };
-
-export default HIGH1;

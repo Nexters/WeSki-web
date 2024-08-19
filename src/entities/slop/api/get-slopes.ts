@@ -1,15 +1,9 @@
-import { EDEN, JISAN, YONGPYONG } from '../model';
+import { RESORT_DOMAIN } from '../model';
 
-const domainMap = {
-  jisan: JISAN,
-  yongpyong: YONGPYONG,
-  eden: EDEN,
-};
-
-export const getSlopes = async ({ key }: { key: keyof typeof domainMap }) => {
+export const getSlopes = async ({ key }: { key: keyof typeof RESORT_DOMAIN }) => {
   const result = {
     key: key,
-    slopes: domainMap[key].slops.map((slop) => ({
+    slopes: RESORT_DOMAIN[key].slops.map((slop) => ({
       key: slop.id,
       level: slop.level,
       name: slop.name,

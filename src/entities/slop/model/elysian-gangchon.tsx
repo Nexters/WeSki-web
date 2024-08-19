@@ -11,7 +11,7 @@ import RabbitSlopPath from '../image/elysian-gangchon/rabbit-slop-path';
 import ZebraSlopPath from '../image/elysian-gangchon/zebra-slop-path';
 import type { ResortInfo } from './model';
 
-const ELYSIAN_GANGCHON: ResortInfo = {
+export const ELYSIAN_GANGCHON: ResortInfo = {
   MapComponent: ElysianGangchonMap,
   slops: [
     {
@@ -124,5 +124,3 @@ const ELYSIAN_GANGCHON: ResortInfo = {
     },
   ],
 };
-
-export default ELYSIAN_GANGCHON;
