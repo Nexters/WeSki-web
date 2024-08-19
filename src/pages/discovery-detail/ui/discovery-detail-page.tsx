@@ -12,18 +12,13 @@ import AppDownloadDialog from '@/features/discovery-detail/ui/app-download-dialo
 import useMapPinch from '@/features/slop/hooks/useMapPinch';
 import calculateWebcamPosition from '@/features/slop/lib/calculateWebcamPosition';
 import { DiscoveryData } from '@/entities/discovery';
-import { EDEN, JISAN, YONGPYONG } from '@/entities/slop/model';
+import { RESORT_DOMAIN } from '@/entities/slop/model';
 import type { Position } from '@/entities/slop/model/model';
 import { cn } from '@/shared/lib';
 
-const domainMap = {
-  jisan: JISAN,
-  yongpyong: YONGPYONG,
-  eden: EDEN,
-};
 const DiscoveryDetailPage = ({ params }: { params: { resortId: number } }) => {
   const discovery = DiscoveryData.find((discovery) => discovery.id === +params?.resortId);
-  const data = domainMap[discovery?.map as keyof typeof domainMap];
+  const data = RESORT_DOMAIN[discovery?.map as keyof typeof RESORT_DOMAIN];
   const [selectedTab, setSelectedTab] = useState('webcam');
   const [showAppDownloadDialog, setShowAppDownloadDialog] = useState(true);
 

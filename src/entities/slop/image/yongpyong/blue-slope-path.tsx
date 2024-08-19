@@ -2,6 +2,8 @@ import React from 'react';
 import { cn } from '@/shared/lib';
 
 const BlueSlopePath = ({ color }: { color?: string }) => {
+  const defaultStrokeColor = 'stroke-[#303A45]';
+  const strokeColorClass = color ? color.replace('fill-', 'stroke-') : defaultStrokeColor;
   return (
     <svg
       width="100%"
@@ -11,7 +13,7 @@ const BlueSlopePath = ({ color }: { color?: string }) => {
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
-        className={cn('stroke-current', color ? color : 'stroke-[#303A45]')}
+        className={cn('stroke-current', strokeColorClass)}
         d="M140 135C142.327 135.933 148.378 137.96 153.963 138.6C160.944 139.4 177.4 142.2 175.904 157"
         strokeWidth="1.5"
         strokeLinecap="round"

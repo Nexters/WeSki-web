@@ -47,7 +47,7 @@ const SlopStatusList = ({ list }: SlopStatusListProps) => {
         </tr>
       </thead>
       <tbody>
-        {list.map((item, index) => (
+        {list.map((item) => (
           <tr
             key={item.key}
             className={cn(selectedSlop === item.key && 'bg-main-5')}

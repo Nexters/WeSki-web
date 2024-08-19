@@ -2,6 +2,8 @@ import React from 'react';
 import { cn } from '@/shared/lib';
 
 const SummitLandTheGreenPath = ({ color }: { color?: string }) => {
+  const defaultStrokeColor = 'stroke-[#303A45]';
+  const strokeColorClass = color ? color.replace('fill-', 'stroke-') : defaultStrokeColor;
   return (
     <svg
       width="100%"
@@ -11,7 +13,7 @@ const SummitLandTheGreenPath = ({ color }: { color?: string }) => {
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
-        className={cn('stroke-current', color ? color : 'stroke-[#303A45]')}
+        className={cn('stroke-current', strokeColorClass)}
         d="M294.5 59.5C304.5 61.3333 323.1 72.2 317.5 101"
         strokeWidth="1.5"
         strokeLinecap="round"
