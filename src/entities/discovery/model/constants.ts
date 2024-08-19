@@ -104,4 +104,16 @@ export const DiscoveryData: Discovery[] = [
     },
     weeklyWeather: WeeklyWeatherData,
   },
+  {
+    id: 4,
+    name: '웰리힐리파크',
+    map: 'wellihilli',
+    slope: 10,
+    weather: {
+      weather: 'rain',
+      temperature: -4,
+      description: '비',
+    },
+    weeklyWeather: WeeklyWeatherData,
+  },
 ];
