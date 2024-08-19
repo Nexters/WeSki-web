@@ -2,6 +2,8 @@ import React from 'react';
 import { cn } from '@/shared/lib';
 
 const Rainbow1Path = ({ color }: { color?: string }) => {
+  const defaultStrokeColor = 'stroke-[#303A45]';
+  const strokeColorClass = color ? color.replace('fill-', 'stroke-') : defaultStrokeColor;
   return (
     <svg
       width="100%"
@@ -11,7 +13,7 @@ const Rainbow1Path = ({ color }: { color?: string }) => {
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
-        className={cn('stroke-current', color ? color : 'stroke-[#303A45]')}
+        className={cn('stroke-current', strokeColorClass)}
         d="M263.209 44C260.376 48.7541 256.127 60.2295 261.792 68.0984C268.874 77.9344 291.061 100.066 309 104"
         strokeWidth="1.5"
         strokeLinecap="round"

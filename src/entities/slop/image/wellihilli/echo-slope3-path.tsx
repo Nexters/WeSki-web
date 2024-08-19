@@ -15,7 +15,6 @@ const EchoSlope3Path = ({ color }: { color?: string }) => {
       <path
         className={cn('stroke-current', strokeColorClass)}
         d="M253 58C258.833 65 271.6 81.9 276 93.5C281.5 108 288 122 291.5 126.5C295 131 294 143.5 283.5 155"
-        stroke="#171D23"
         strokeWidth="1.5"
         strokeLinecap="round"
         strokeDasharray="3 3"

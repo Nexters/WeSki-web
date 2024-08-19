@@ -2,6 +2,9 @@ import React from 'react';
 import { cn } from '@/shared/lib';
 
 const GoldParadisePath = ({ color }: { color?: string }) => {
+  const defaultStrokeColor = 'stroke-[#447EFF]';
+  const strokeColorClass = color ? color.replace('fill-', 'stroke-') : defaultStrokeColor;
+
   return (
     <svg
       width="100%"
@@ -11,7 +14,7 @@ const GoldParadisePath = ({ color }: { color?: string }) => {
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
-        className={cn('stroke-current', color ? color : 'stroke-[#447EFF]')}
+        className={cn('stroke-current', strokeColorClass)}
         d="M117.501 62.5005C120.834 61.8338 127.901 62.3005 129.501 69.5005C131.501 78.5005 135.501 77.0005 131.001 82.5005C126.501 88.0005 129.001 95.5005 119.501 103.5C110.001 111.5 123.001 107.5 127.001 110"
         strokeWidth="1.5"
         strokeLinecap="round"
