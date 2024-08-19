@@ -8,12 +8,12 @@ import useSlopStore from '../hooks/useSlopStore';
 
 interface SlopStatusListProps {
   list: {
-    id: string;
+    key: string;
     name: string;
     level: Level;
-    isDayOpen: boolean;
-    isNightOpen: boolean;
-    isLateNightOpen: boolean;
+    isOpenDuringDay: boolean;
+    isOpenDuringWeek: boolean;
+    isOpenDuringNight: boolean;
   }[];
 }
 
@@ -45,8 +45,8 @@ const SlopStatusList = ({ list }: SlopStatusListProps) => {
         {list.map((item, index) => (
           <tr
             key={index}
-            className={cn(selectedSlop === item.id && 'bg-main-5')}
-            onClick={() => handleSlopClick({ id: item.id })}
+            className={cn(selectedSlop === item.key && 'bg-main-5')}
+            onClick={() => handleSlopClick({ id: item.key })}
           >
             <td className={cn('body1-semibold py-[12px] pl-5 text-left text-gray-80')}>
               {item.name}
@@ -55,13 +55,13 @@ const SlopStatusList = ({ list }: SlopStatusListProps) => {
               <LevelChip level={item.level} className={cn('m-auto')} />
             </td>
             <td className={cn('text-center')}>
-              <StatusIcon isOpen={item.isDayOpen} className={cn('m-auto')} />
+              <StatusIcon isOpen={item.isOpenDuringDay} className={cn('m-auto')} />
             </td>
             <td className={cn('text-center')}>
-              <StatusIcon isOpen={item.isNightOpen} className={cn('m-auto')} />
+              <StatusIcon isOpen={item.isOpenDuringWeek} className={cn('m-auto')} />
             </td>
             <td className={cn('pr-5 text-center')}>
-              <StatusIcon isOpen={item.isLateNightOpen} className={cn('m-auto')} />
+              <StatusIcon isOpen={item.isOpenDuringNight} className={cn('m-auto')} />
             </td>
           </tr>
         ))}
