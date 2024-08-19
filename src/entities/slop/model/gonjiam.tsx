@@ -13,7 +13,7 @@ import WhisenSlopPath from '../image/gonjiam/whisen-slop-path';
 import WhynotSlopPath from '../image/gonjiam/whynot-slop-path';
 import type { ResortInfo } from './model';
 
-const GONJIAM: ResortInfo = {
+export const GONJIAM: ResortInfo = {
   MapComponent: GonjiamMap,
   slops: [
     {
@@ -129,5 +129,3 @@ const GONJIAM: ResortInfo = {
     },
   ],
 };
-
-export default GONJIAM;

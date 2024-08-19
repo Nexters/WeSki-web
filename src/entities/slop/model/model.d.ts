@@ -1,3 +1,5 @@
+import type { RESORT_DOMAIN } from '.';
+
 export type Level =
   | 'BEGINNER'
   | 'UPPER_BEGINNER'
@@ -24,7 +26,7 @@ export type Webcam = {
 };
 
 export type Slop = {
-  id: string;
+  id: keyof typeof RESORT_DOMAIN;
   level: Level;
   name: string;
   Element: React.FC;

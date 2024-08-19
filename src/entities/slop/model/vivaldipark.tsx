@@ -12,7 +12,7 @@ import RockSlopPath from '../image/vivaldipark/rock-slop-path';
 import TechnoSlopPath from '../image/vivaldipark/techno-slop-path';
 import type { ResortInfo } from './model';
 
-const VIVALDIPARK: ResortInfo = {
+export const VIVALDIPARK: ResortInfo = {
   MapComponent: VivaldiparkMap,
   slops: [
     {
@@ -179,5 +179,3 @@ const VIVALDIPARK: ResortInfo = {
     },
   ],
 };
-
-export default VIVALDIPARK;
