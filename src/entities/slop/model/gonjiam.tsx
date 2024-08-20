@@ -21,6 +21,7 @@ export const GONJIAM: ResortInfo = {
       level: 'UPPER_BEGINNER',
       name: '와이낫슬로프',
       Element: WhynotSlopPath,
+      webcamId: 'upper-base',
       isOpen: true,
     },
     {
@@ -87,7 +88,7 @@ export const GONJIAM: ResortInfo = {
       level: 'BEGINNER',
       name: '휘센슬로프',
       Element: WhisenSlopPath,
-      webcamId: 'upper-base',
+      webcamId: 'whisen-base',
       isOpen: true,
     },
   ],
