@@ -95,7 +95,6 @@ export const JISAN: ResortInfo = {
         left: 'left-[29%]',
       },
       scale: 1,
-      src: 'http://konjiam.live.cdn.cloudn.co.kr/konjiam/cam01.stream/playlist.m3u8',
     },
     {
       id: 'blue-station',

@@ -100,6 +100,7 @@ export const GONJIAM: ResortInfo = {
         top: 'top-[82%]',
         left: 'left-[51%]',
       },
+      src: '/api/webcam?url=http://konjiam.live.cdn.cloudn.co.kr/konjiam/cam03.stream/playlist.m3u8',
       scale: 1,
     },
     {
@@ -109,6 +110,7 @@ export const GONJIAM: ResortInfo = {
         top: 'top-[85%]',
         left: 'left-[43%]',
       },
+      src: '/api/webcam?url=http://konjiam.live.cdn.cloudn.co.kr/konjiam/cam04.stream/playlist.m3u8',
       scale: 1,
     },
     {
@@ -119,6 +121,27 @@ export const GONJIAM: ResortInfo = {
         left: 'left-[21%]',
       },
       scale: 1,
+      src: '/api/webcam?url=http://konjiam.live.cdn.cloudn.co.kr/konjiam/cam02.stream/playlist.m3u8',
+    },
+    {
+      id: 'top-rest-area',
+      name: '정상 휴게소',
+      position: {
+        top: 'top-[5%]',
+        left: 'left-[19%]',
+      },
+      scale: 1,
+      src: '/api/webcam?url=http://konjiam.live.cdn.cloudn.co.kr/konjiam/cam01.stream/playlist.m3u8',
+    },
+    {
+      id: 'middle-slope',
+      name: '중간 슬로프',
+      position: {
+        top: 'top-[60%]',
+        left: 'left-[43%]',
+      },
+      scale: 1,
+      src: '/api/webcam?url=http://konjiam.live.cdn.cloudn.co.kr/konjiam/cam05.stream/playlist.m3u8',
     },
   ],
 };
