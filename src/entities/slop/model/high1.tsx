@@ -2,6 +2,7 @@
 
 import Apollo1SlopPath from '../image/high1/apollo1-slop-path';
 import Apollo2SlopPath from '../image/high1/apollo2-slop-path';
+import Apollo3SlopPath from '../image/high1/apollo3-slop-path';
 import Apollo4SlopPath from '../image/high1/apollo4-slop-path';
 import Apollo6SlopPath from '../image/high1/apollo6-slop-path';
 import Athena2SlopPath from '../image/high1/athena2-slop-path';
@@ -67,14 +68,6 @@ export const HIGH1: ResortInfo = {
       isOpen: true,
     },
     {
-      id: 'victoria3-slop',
-      level: 'EXPERT',
-      name: '빅토리아슬로프 3',
-      Element: () => <></>,
-      webcamId: 'victoria-top',
-      isOpen: true,
-    },
-    {
       id: 'hera1-slop',
       level: 'INTERMEDIATE',
       name: '헤라슬로프 1',
@@ -114,7 +107,7 @@ export const HIGH1: ResortInfo = {
       id: 'apollo3-slop',
       level: 'ADVANCED',
       name: '아폴로슬로프 3',
-      Element: () => <></>,
+      Element: Apollo3SlopPath,
       isOpen: true,
     },
     {
@@ -126,26 +119,10 @@ export const HIGH1: ResortInfo = {
       isOpen: true,
     },
     {
-      id: 'apollo5-slop',
-      level: 'EXPERT',
-      name: '아폴로슬로프 5',
-      Element: () => <></>,
-      isOpen: true,
-    },
-    {
       id: 'apollo6-slop',
       level: 'ADVANCED',
       name: '아폴로슬로프 6',
       Element: Apollo6SlopPath,
-      isOpen: true,
-    },
-    {
-      id: 'athena1-slop',
-      name: '아테나슬로프 1',
-      level: 'BEGINNER',
-      //TODO: 확인 필요
-      Element: () => <></>,
-      webcamId: 'athena1-entry',
       isOpen: true,
     },
     {
@@ -161,13 +138,6 @@ export const HIGH1: ResortInfo = {
       level: 'BEGINNER',
       name: '아테나슬로프 3',
       Element: Athena3SlopPath,
-      isOpen: true,
-    },
-    {
-      id: 'athena3-1-slop',
-      level: 'BEGINNER',
-      name: '아테나슬로프 3-1',
-      Element: () => <></>,
       isOpen: true,
     },
   ],

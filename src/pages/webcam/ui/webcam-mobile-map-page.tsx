@@ -18,9 +18,9 @@ const WebCamMobileMapPage = ({ data }: { data: ResortInfo }) => {
   }, []);
 
   const handleFocusSlopCamClick = ({ id, scale }: { id: string; scale: number }) => {
-    const { left, top, width, height } = containerRef.current!.getBoundingClientRect();
+    const { width, height } = containerRef.current!.getBoundingClientRect();
     const { boundedX, boundedY } = calculateWebcamPosition({
-      containerPosition: { left, top, width, height },
+      containerPosition: { left: 0, top: 0, width, height },
       position: {
         x: cameraPositions[id].x,
         y: cameraPositions[id].y,

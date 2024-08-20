@@ -32,9 +32,9 @@ const DiscoveryDetailPage = ({ params }: { params: { resortId: number } }) => {
   }, []);
 
   const handleFocusSlopCamClick = ({ id }: { id: string }) => {
-    const { left, top, width, height } = containerRef.current!.getBoundingClientRect();
+    const { width, height } = containerRef.current!.getBoundingClientRect();
     const { boundedX, boundedY } = calculateWebcamPosition({
-      containerPosition: { left, top, width, height },
+      containerPosition: { left: 0, top: 0, width, height },
       position: {
         x: cameraPositions[id].x,
         y: cameraPositions[id].y,
