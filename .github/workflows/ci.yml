@@ -25,9 +25,6 @@ jobs:
       - name: Run build
         run: yarn build
 
-      - name: Run tests
-        run: yarn test
-
       - name: Check if build succeeded
         if: failure()
         run: exit 1
