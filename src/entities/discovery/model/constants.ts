@@ -73,6 +73,10 @@ export const DiscoveryData: Discovery[] = [
     name: '용평스키장 모나',
     map: 'yongpyong',
     slope: null,
+    url: {
+      bus: 'https://skibus.purplebus.co.kr/Yp/',
+      homepage: 'https://www.yongpyong.co.kr/kor/skiNboard/introduce.do',
+    },
     weather: {
       weather: 'sun',
       temperature: -5,
@@ -85,6 +89,10 @@ export const DiscoveryData: Discovery[] = [
     name: '지산 리조트',
     map: 'jisan',
     slope: 8,
+    url: {
+      bus: 'https://www.jisanresort.co.kr/w/reservation/shuttle/reservation.asp',
+      homepage: 'https://www.jisanresort.co.kr/m/ski/',
+    },
     weather: {
       weather: 'cloud',
       temperature: -3,
@@ -97,6 +105,10 @@ export const DiscoveryData: Discovery[] = [
     name: '에덴밸리 리조트',
     map: 'eden',
     slope: 10,
+    url: {
+      bus: 'http://m.newbusantour.co.kr/goods/goods_detail.asp?g_cd=2183',
+      homepage: 'https://www.edenvalley.co.kr/ski/View.asp?location=01',
+    },
     weather: {
       weather: 'rain',
       temperature: -4,
@@ -109,6 +121,10 @@ export const DiscoveryData: Discovery[] = [
     name: '웰리힐리파크',
     map: 'wellihilli',
     slope: 10,
+    url: {
+      bus: 'https://www.wellihillipark.com/home/guide/map/shuttle',
+      homepage: 'https://www.wellihillipark.com/snowpark',
+    },
     weather: {
       weather: 'rain',
       temperature: -4,
@@ -121,6 +137,10 @@ export const DiscoveryData: Discovery[] = [
     name: '하이원스키장',
     map: 'high1',
     slope: 10,
+    url: {
+      bus: 'https://skibus.purplebus.co.kr/Hi/',
+      homepage: 'https://www.high1.com/ski/index.do',
+    },
     weather: {
       weather: 'rain',
       temperature: -4,
@@ -133,6 +153,10 @@ export const DiscoveryData: Discovery[] = [
     name: '곤지암스키장',
     map: 'gonjiam',
     slope: 10,
+    url: {
+      bus: 'https://m.konjiamresort.co.kr/ski/pickupService.dev',
+      homepage: 'https://www.konjiamresort.co.kr/main.dev',
+    },
     weather: {
       weather: 'rain',
       temperature: -4,
@@ -145,6 +169,10 @@ export const DiscoveryData: Discovery[] = [
     name: '비발디파크',
     map: 'vivaldipark',
     slope: 10,
+    url: {
+      bus: 'https://www.busline.co.kr/busline_22K28/reservation_input.html?title=%EB%85%B8%EC%84%A0%EC%84%A0%ED%83%9D%20%EB%B0%8F%20%EC%9D%B4%EC%9A%A9%EC%9E%90%EB%93%B1%EB%A1%9D',
+      homepage: 'https://www.sonohotelsresorts.com/complex_vp',
+    },
     weather: {
       weather: 'rain',
       temperature: -4,
@@ -157,6 +185,10 @@ export const DiscoveryData: Discovery[] = [
     name: '엘리시안 강촌',
     map: 'elysian-gangchon',
     slope: 10,
+    url: {
+      bus: 'https://gs.elysian.co.kr/gangchon/enjoyElysian/roadMap_free_230210_pop.asp',
+      homepage: 'https://www.elysian.co.kr/',
+    },
     weather: {
       weather: 'rain',
       temperature: -4,
@@ -169,6 +201,10 @@ export const DiscoveryData: Discovery[] = [
     name: '무주리조트 덕유산',
     map: 'muju',
     slope: 10,
+    url: {
+      bus: 'https://www.mdysresort.com/guide/shuttle_bus.asp',
+      homepage: 'https://www.mdysresort.com/index.asp',
+    },
     weather: {
       weather: 'rain',
       temperature: -4,
@@ -181,6 +217,10 @@ export const DiscoveryData: Discovery[] = [
     name: '휘닉스파크',
     map: 'phoenix',
     slope: 10,
+    url: {
+      bus: 'https://skibus.purplebus.co.kr/Pp/',
+      homepage: 'https://phoenixhnr.co.kr/page/main/pyeongchang?q%5BhmpgDivCd%5D=PP&page=1&size=4',
+    },
     weather: {
       weather: 'rain',
       temperature: -4,
