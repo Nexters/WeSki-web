@@ -12,24 +12,30 @@ const RainIcon = ({ className }: { className?: string }) => {
     >
       <path
         d="M9.69617 17.9848C10.0204 17.4409 10.7384 17.2546 11.3 17.5686C11.8615 17.8826 12.0539 18.578 11.7297 19.1219L7.62049 26.0152C7.29628 26.5591 6.57823 26.7454 6.01669 26.4314C5.45514 26.1174 5.26274 25.422 5.58695 24.8781L9.69617 17.9848Z"
-        fill="#4D44FF"
+        fill="#7280FF"
       />
       <path
         d="M15.6845 17.9848C16.0087 17.4409 16.7267 17.2546 17.2883 17.5686C17.8498 17.8826 18.0422 18.578 17.718 19.1219L13.6088 26.0152C13.2846 26.5591 12.5665 26.7454 12.005 26.4314C11.4434 26.1174 11.251 25.422 11.5752 24.8781L15.6845 17.9848Z"
-        fill="#4D44FF"
+        fill="#7280FF"
       />
       <path
         d="M22.3798 17.9848C22.704 17.4409 23.422 17.2546 23.9836 17.5686C24.5451 17.8826 24.7375 18.578 24.4133 19.1219L20.3041 26.0152C19.9799 26.5591 19.2618 26.7454 18.7003 26.4314C18.1387 26.1174 17.9463 25.422 18.2705 24.8781L22.3798 17.9848Z"
-        fill="#4D44FF"
+        fill="#7280FF"
       />
-      <g filter="url(#filter0_b_478_11236)">
+      <g filter="url(#filter0_b_971_82075)">
         <path
           d="M25.797 21.9997C28.6756 21.9694 31 19.576 31 16.628C31 13.6611 28.6458 11.256 25.7417 11.256C25.5611 11.256 25.3826 11.2653 25.2067 11.2834C24.5488 9.29475 22.7074 7.8631 20.5387 7.8631C19.9863 7.8631 19.4552 7.95599 18.9594 8.12732C18.477 5.21666 15.9974 3 13.0111 3C9.67902 3 6.97786 5.75958 6.97786 9.16369C6.97786 9.37367 6.98814 9.58121 7.00821 9.78579C6.9981 9.78574 6.98798 9.78571 6.97786 9.78571C3.67638 9.78571 1 12.52 1 15.8929C1 19.2657 3.67638 22 6.97786 22H25.797V21.9997Z"
-          fill="url(#paint0_linear_478_11236)"
+          fill="url(#paint0_linear_971_82075)"
           fillOpacity="0.3"
         />
+        <path
+          d="M25.7944 21.7497L25.768 21.75H6.97786C3.81947 21.75 1.25 19.1327 1.25 15.8929C1.25 12.653 3.81947 10.0357 6.97786 10.0357L7.00694 10.0358L7.28407 10.0372L7.25701 9.76138C7.23774 9.5649 7.22786 9.36551 7.22786 9.16369C7.22786 5.89258 9.82211 3.25 13.0111 3.25C15.8693 3.25 18.2494 5.37232 18.7127 8.16819L18.7611 8.46033L19.041 8.36361C19.5109 8.20122 20.0145 8.1131 20.5387 8.1131C22.5935 8.1131 24.3433 9.46976 24.9693 11.3619L25.0325 11.5527L25.2324 11.5321C25.3998 11.5148 25.5697 11.506 25.7417 11.506C28.5027 11.506 30.75 13.7941 30.75 16.628C30.75 19.4438 28.5312 21.7209 25.7944 21.7497Z"
+          stroke="white"
+          strokeOpacity="0.1"
+          strokeWidth="0.5"
+        />
       </g>
-      <g filter="url(#filter1_b_478_11236)">
+      <g filter="url(#filter1_b_971_82075)">
         <path
           fillRule="evenodd"
           clipRule="evenodd"
@@ -40,7 +46,7 @@ const RainIcon = ({ className }: { className?: string }) => {
       </g>
       <defs>
         <filter
-          id="filter0_b_478_11236"
+          id="filter0_b_971_82075"
           x="-1"
           y="1"
           width="34"
@@ -50,16 +56,16 @@ const RainIcon = ({ className }: { className?: string }) => {
         >
           <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feGaussianBlur in="BackgroundImageFix" stdDeviation="1" />
-          <feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_478_11236" />
+          <feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_971_82075" />
           <feBlend
             mode="normal"
             in="SourceGraphic"
-            in2="effect1_backgroundBlur_478_11236"
+            in2="effect1_backgroundBlur_971_82075"
             result="shape"
           />
         </filter>
         <filter
-          id="filter1_b_478_11236"
+          id="filter1_b_971_82075"
           x="-1"
           y="1"
           width="34"
@@ -69,25 +75,25 @@ const RainIcon = ({ className }: { className?: string }) => {
         >
           <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feGaussianBlur in="BackgroundImageFix" stdDeviation="1" />
-          <feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_478_11236" />
+          <feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_971_82075" />
           <feBlend
             mode="normal"
             in="SourceGraphic"
-            in2="effect1_backgroundBlur_478_11236"
+            in2="effect1_backgroundBlur_971_82075"
             result="shape"
           />
         </filter>
         <linearGradient
-          id="paint0_linear_478_11236"
+          id="paint0_linear_971_82075"
           x1="4.21033"
           y1="4.75298"
           x2="28.8222"
           y2="24.8746"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stopColor="#4D44FF" />
-          <stop offset="0.447036" stopColor="#4D44FF" stopOpacity="0.955296" />
-          <stop offset="1" stopColor="#4D44FF" stopOpacity="0.9" />
+          <stop stopColor="#3A4DF9" />
+          <stop offset="0.447036" stopColor="#9BA5FF" stopOpacity="0.955296" />
+          <stop offset="1" stopColor="#3A4DF9" stopOpacity="0.9" />
         </linearGradient>
       </defs>
     </svg>
