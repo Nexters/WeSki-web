@@ -14,15 +14,16 @@ const SlopStatusPage = ({ params }: { params: { key: keyof typeof RESORT_DOMAIN 
     return null;
   }
 
-  return <SlopStatusPageContent key={params?.key} />;
+  return <SlopStatusPageContent params={params} />;
 };
 
-const SlopStatusPageContent = ({ key }: { key: keyof typeof RESORT_DOMAIN }) => {
+const SlopStatusPageContent = ({ params }: { params: { key: keyof typeof RESORT_DOMAIN } }) => {
   const { ref, style, containerRef } = useMapPinch();
 
-  const { data } = useQuery(slopQueries.list(key));
+  const { data } = useQuery(slopQueries.list(params.key));
 
   if (!data) return;
+
   return (
     <main className={cn('w-full')}>
       <SlopStatusHeader />
