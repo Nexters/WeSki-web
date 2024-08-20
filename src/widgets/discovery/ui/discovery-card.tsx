@@ -11,8 +11,8 @@ const DiscoveryCard = ({ id, name, slope, weather, weeklyWeather }: Discovery) =
   return (
     <Card
       className={cn(
-        'flex cursor-pointer flex-col gap-[15px] pb-[26px] pt-10',
-        'transition-all hover:scale-[1.02] hover:border-2 hover:border-main-1'
+        'box-border flex cursor-pointer flex-col gap-[15px] pb-[26px] pt-10',
+        'transition-all hover:scale-[1.02] hover:border-2 hover:border-main-1 hover:pb-[25px] hover:pt-[39px]'
       )}
       onClick={() => router.push(`/${id}`)}
     >
