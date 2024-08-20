@@ -22,7 +22,7 @@ export class ApiClient {
     endpoint: string,
     queryParams?: Record<string, string | number>
   ): Promise<TResult> {
-    const url = new URL('/api' + endpoint, window.location.origin);
+    const url = new URL('/weski/api' + endpoint, this.baseUrl);
 
     if (queryParams) {
       Object.entries(queryParams).forEach(([key, value]) => {
@@ -44,7 +44,7 @@ export class ApiClient {
     endpoint: string,
     body: TData
   ): Promise<TResult> {
-    const url = new URL('/api' + endpoint, window.location.origin);
+    const url = new URL('/weski/api' + endpoint, this.baseUrl);
 
     const response = await fetch(url.toString(), {
       method: 'POST',
@@ -58,4 +58,4 @@ export class ApiClient {
   }
 }
 
-export const apiClient = new ApiClient('');
+export const apiClient = new ApiClient(window.location.origin);
