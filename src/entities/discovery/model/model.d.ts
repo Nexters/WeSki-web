@@ -30,3 +30,7 @@ export type Vote = {
   totalNum: number;
   likeNum: number;
 };
+
+export type PostVoteRequest = {
+  isLike: boolean;
+};

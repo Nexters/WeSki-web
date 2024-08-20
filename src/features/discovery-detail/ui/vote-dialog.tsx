@@ -1,4 +1,8 @@
+import { useQuery } from '@tanstack/react-query';
 import { useCallback, useState } from 'react';
+import { toast } from 'sonner';
+import { discoveryApi } from '@/entities/discovery';
+import { usePostVote } from '@/entities/discovery/api/use-post-vote';
 import { CheckIcon } from '@/shared/icons';
 import { cn } from '@/shared/lib';
 import {
@@ -13,19 +17,25 @@ import {
 } from '@/shared/ui/dialog';
 
 interface VoteDialogProps {
+  id: number;
   trigger: React.ReactNode;
-  count: {
-    total: number;
-    voted: number;
-  };
 }
 
-const VoteDialog = ({ trigger, count }: VoteDialogProps) => {
+const VoteDialog = ({ id, trigger }: VoteDialogProps) => {
   const [isGood, setIsGood] = useState<boolean>(true);
+  const { data: voteData } = useQuery(discoveryApi.discoveryQueries.vote(id.toString()));
 
-  const handleVote = useCallback(() => {
-    console.log(isGood);
-  }, [isGood]);
+  const { mutateAsync } = usePostVote(id.toString());
+
+  const handleVote = useCallback(async () => {
+    try {
+      await mutateAsync({ isLike: isGood });
+    } catch (error) {
+      console.log(error);
+    } finally {
+      toast.success('투표가 완료되었습니다.');
+    }
+  }, [isGood, mutateAsync]);
 
   return (
     <Dialog>
@@ -36,8 +46,9 @@ const VoteDialog = ({ trigger, count }: VoteDialogProps) => {
           <div className={cn('flex flex-col gap-1')}>
             <DialogTitle>상태가 좋아요</DialogTitle>
             <p className={cn('body1-semibold text-gray-60')}>
-              {count.total}명 중 <span className={cn('body1-bold text-main-1')}>{count.voted}</span>
-              명이 설질에 대해 투표했어요
+              {voteData?.totalNum}명 중{' '}
+              <span className={cn('body1-bold text-main-1')}>{voteData?.likeNum}</span>
+              명이 긍정적으로 투표했어요.
             </p>
           </div>
           <DialogDescription>오늘같은 현장은 설질 괜찮을까요?</DialogDescription>

@@ -44,7 +44,9 @@ export class ApiClient {
     endpoint: string,
     body: TData
   ): Promise<TResult> {
-    const response = await fetch(`${this.baseUrl}${endpoint}`, {
+    const url = new URL('/api' + endpoint, window.location.origin);
+
+    const response = await fetch(url.toString(), {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -56,4 +58,4 @@ export class ApiClient {
   }
 }
 
-export const apiClient = new ApiClient('/api');
+export const apiClient = new ApiClient('');
