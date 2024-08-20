@@ -25,3 +25,8 @@ export type Discovery = {
   };
   weeklyWeather: WeeklyWeather[];
 };
+
+export type Vote = {
+  totalNum: number;
+  likeNum: number;
+};

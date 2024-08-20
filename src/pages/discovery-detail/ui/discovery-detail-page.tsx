@@ -1,8 +1,8 @@
 'use client';
 
+import { useQuery } from '@tanstack/react-query';
 import Image from 'next/image';
-import { useState } from 'react';
-import { useCallback } from 'react';
+import { useState, useCallback } from 'react';
 import blind1 from '@public/blinds/blind_01.png';
 import { DiscoveryContentTabList } from '@/widgets/discovery-detail/model/constants';
 import DiscoverySummary from '@/widgets/discovery-detail/ui/discovery-summary';
@@ -11,13 +11,14 @@ import { WebcamMap, WebcamSlopList } from '@/widgets/webcam/ui';
 import AppDownloadDialog from '@/features/discovery-detail/ui/app-download-dialog';
 import useMapPinch from '@/features/slop/hooks/useMapPinch';
 import calculateWebcamPosition from '@/features/slop/lib/calculateWebcamPosition';
-import { DiscoveryData } from '@/entities/discovery';
+import { discoveryApi, DiscoveryData } from '@/entities/discovery';
 import { RESORT_DOMAIN } from '@/entities/slop/model';
 import type { Position } from '@/entities/slop/model/model';
 import { cn } from '@/shared/lib';
 
 const DiscoveryDetailPage = ({ params }: { params: { resortId: number } }) => {
   const discovery = DiscoveryData.find((discovery) => discovery.id === +params?.resortId);
+  const { data: voteData } = useQuery(discoveryApi.discoveryQueries.vote(discovery!.id.toString()));
   const data = RESORT_DOMAIN[discovery?.map as keyof typeof RESORT_DOMAIN];
   const [selectedTab, setSelectedTab] = useState('webcam');
   const [showAppDownloadDialog, setShowAppDownloadDialog] = useState(true);
@@ -44,12 +45,12 @@ const DiscoveryDetailPage = ({ params }: { params: { resortId: number } }) => {
     api.start({ scale: 1, x: boundedX, y: boundedY });
   };
 
-  if (!discovery) return;
+  if (!discovery || !voteData) return;
 
   return (
     <div className={cn('size-full')}>
       <Header resortName={discovery.name} hasBackButton hasShareButton />
-      <DiscoverySummary {...discovery} />
+      <DiscoverySummary {...discovery} {...voteData} />
       <ul className={cn('flex size-full h-[53px] bg-white')}>
         {DiscoveryContentTabList.map((tab) => (
           <li

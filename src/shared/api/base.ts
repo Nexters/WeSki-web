@@ -1,5 +1,3 @@
-import { API_URL } from '@/shared/config';
-
 export class ApiClient {
   private baseUrl: string;
 
@@ -24,7 +22,7 @@ export class ApiClient {
     endpoint: string,
     queryParams?: Record<string, string | number>
   ): Promise<TResult> {
-    const url = new URL(endpoint, this.baseUrl);
+    const url = new URL('/api' + endpoint, window.location.origin);
 
     if (queryParams) {
       Object.entries(queryParams).forEach(([key, value]) => {
@@ -58,4 +56,4 @@ export class ApiClient {
   }
 }
 
-export const apiClient = new ApiClient(API_URL);
+export const apiClient = new ApiClient('/api');
