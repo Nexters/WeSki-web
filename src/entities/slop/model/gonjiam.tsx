@@ -110,7 +110,8 @@ export const GONJIAM: ResortInfo = {
         top: 'top-[85%]',
         left: 'left-[43%]',
       },
-      src: '/api/webcam?url=http://konjiam.live.cdn.cloudn.co.kr/konjiam/cam04.stream/playlist.m3u8',
+      //TODO: 해당 URL만 작동 안함
+      // src: '/api/webcam?url=http://konjiam.live.cdn.cloudn.co.kr/konjiam/cam04.stream/playlist.m3u8',
       scale: 1,
     },
     {
