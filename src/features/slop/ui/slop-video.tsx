@@ -32,13 +32,13 @@ const SlopVideo = ({ src, closeVideo }: SlopVideoProps) => {
   return (
     <>
       <ReactHlsPlayer
-        className={cn('absolute top-0 z-30 h-full w-full')}
+        className={cn('absolute top-0 z-50 h-full w-full')}
         playerRef={playerRef}
         src={src}
         autoPlay={true}
         controls={false}
       />
-      <CloseButton className="video-close absolute right-4 top-4 z-[33]" onClick={closeVideo} />
+      <CloseButton className="video-close absolute right-4 top-4 z-[51]" onClick={closeVideo} />
     </>
   );
 };

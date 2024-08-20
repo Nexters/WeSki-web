@@ -245,6 +245,7 @@ export const MUJU: ResortInfo = {
         top: 'top-[78%]',
         left: 'left-[47%]',
       },
+      src: '/api/webcam?url=http://muju.live.cdn.cloudn.co.kr/mujuresort/_definst_/cam01.stream/playlist.m3u8',
       scale: 1,
     },
     {
@@ -254,6 +255,7 @@ export const MUJU: ResortInfo = {
         top: 'top-[45%]',
         left: 'left-[70%]',
       },
+      src: '/api/webcam?url=http://muju.live.cdn.cloudn.co.kr/mujuresort/_definst_/cam03.stream/playlist.m3u8',
       scale: 1,
     },
     {
@@ -263,6 +265,7 @@ export const MUJU: ResortInfo = {
         top: 'top-[74%]',
         left: 'left-[28%]',
       },
+      src: '/api/webcam?url=http://muju.live.cdn.cloudn.co.kr/mujuresort/_definst_/cam05.stream/playlist.m3u8',
       scale: 1,
     },
     {
@@ -272,6 +275,7 @@ export const MUJU: ResortInfo = {
         top: 'top-[65%]',
         left: 'left-[68%]',
       },
+      src: '/api/webcam?url=http://muju.live.cdn.cloudn.co.kr/mujuresort/_definst_/cam04.stream/playlist.m3u8',
       scale: 1,
     },
     {
@@ -281,6 +285,7 @@ export const MUJU: ResortInfo = {
         top: 'top-[10%]',
         left: 'left-[36%]',
       },
+      src: '/api/webcam?url=http://muju.live.cdn.cloudn.co.kr/mujuresort/_definst_/cam07.stream/playlist.m3u8',
       scale: 1,
     },
     {
@@ -290,6 +295,7 @@ export const MUJU: ResortInfo = {
         top: 'top-[30%]',
         left: 'left-[27%]',
       },
+      src: '/api/webcam?url=http://muju.live.cdn.cloudn.co.kr/mujuresort/_definst_/cam08.stream/playlist.m3u8',
       scale: 1,
     },
     {
@@ -299,6 +305,7 @@ export const MUJU: ResortInfo = {
         top: 'top-[15%]',
         left: 'left-[23%]',
       },
+      src: '/api/webcam?url=http://muju.live.cdn.cloudn.co.kr/mujuresort/_definst_/cam06.stream/playlist.m3u8',
       scale: 1,
     },
     {
@@ -308,6 +315,7 @@ export const MUJU: ResortInfo = {
         top: 'top-[30%]',
         left: 'left-[53%]',
       },
+      src: '/api/webcam?url=http://muju.live.cdn.cloudn.co.kr/mujuresort/_definst_/cam02.stream/playlist.m3u8',
       scale: 1,
     },
   ],

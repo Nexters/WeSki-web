@@ -196,6 +196,7 @@ export const YONGPYONG: ResortInfo = {
         top: 'top-[56%]',
         left: 'left-[17%]',
       },
+      src: '/api/webcam?url=https://live.yongpyong.co.kr/Ycam1/cam15.stream/chunklist.m3u8',
       scale: 1,
     },
     {
@@ -205,6 +206,7 @@ export const YONGPYONG: ResortInfo = {
         top: 'top-[57%]',
         left: 'left-[29%]',
       },
+      src: '/api/webcam?url=https://live.yongpyong.co.kr/Ycam1/cam03.stream/chunklist.m3u8',
       scale: 1,
     },
     {
@@ -232,6 +234,7 @@ export const YONGPYONG: ResortInfo = {
         top: 'top-[2%]',
         left: 'left-[61%]',
       },
+      src: '/api/webcam?url=https://live.yongpyong.co.kr/Ycam1/cam05.stream/chunklist.m3u8',
       scale: 1,
     },
     {
@@ -241,6 +244,7 @@ export const YONGPYONG: ResortInfo = {
         top: 'top-[41%]',
         left: 'left-[79%]',
       },
+      src: '/api/webcam?url=https://live.yongpyong.co.kr/Ycam1/cam10.stream/chunklist.m3u8',
       scale: 1,
     },
     {
@@ -249,6 +253,34 @@ export const YONGPYONG: ResortInfo = {
       position: {
         top: 'top-[59%]',
         left: 'left-[56%]',
+      },
+      src: '/api/webcam?url=https://live.yongpyong.co.kr/Ycam1/cam07.stream/chunklist.m3u8',
+      scale: 1,
+    },
+    {
+      id: 'base-foreground',
+      name: '베이스 전경',
+      position: {
+        top: 'top-[84%]',
+        left: 'left-[34%]',
+      },
+      scale: 1,
+    },
+    {
+      id: 'access-road',
+      name: '용평 진입로',
+      position: {
+        top: 'top-[86%]',
+        left: 'left-[26%]',
+      },
+      scale: 1,
+    },
+    {
+      id: 'slope-top',
+      name: '슬로프 정상',
+      position: {
+        top: 'top-[26%]',
+        left: 'left-[30%]',
       },
       scale: 1,
     },
