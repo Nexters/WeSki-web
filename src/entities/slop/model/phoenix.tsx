@@ -1,3 +1,5 @@
+'use client';
+
 import ChampionSlopePath from '../image/phoenix/champion-slope-path';
 import DiggySlopePath from '../image/phoenix/diggy-slope-path';
 import DukeSlopePath from '../image/phoenix/duke-slope-path';

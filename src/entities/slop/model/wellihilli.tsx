@@ -1,3 +1,5 @@
+'use client';
+
 import AlphaSlope1Path from '../image/wellihilli/alpha-slope1-path';
 import AlphaSlope2Path from '../image/wellihilli/alpha-slope2-path';
 import AlphaSlope3Path from '../image/wellihilli/alpha-slope3-path';

@@ -1,3 +1,5 @@
+'use client';
+
 import BlueSlopePath from '../image/yongpyong/blue-slope-path';
 import DragonParkPath from '../image/yongpyong/dragon-park-path';
 import GoldFantasticPath from '../image/yongpyong/gold-fantastic-path';

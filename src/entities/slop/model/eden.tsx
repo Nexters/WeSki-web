@@ -1,3 +1,5 @@
+'use client';
+
 import BasicSlopePath from '../image/eden/basic-slope-path';
 import JupiterSlopePath from '../image/eden/jupiter-slope-path';
 import MainSlopePath from '../image/eden/main-slope-path';

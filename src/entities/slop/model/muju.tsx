@@ -1,3 +1,5 @@
+'use client';
+
 import AllegroPath from '../image/muju/allegro-path';
 import CadenzaSlopePath from '../image/muju/cadenza-slope-path';
 import ConnectionSlopePath from '../image/muju/connection-slope-path';
