@@ -38,14 +38,6 @@ export const GONJIAM: ResortInfo = {
       isOpen: true,
     },
     {
-      id: 'whynot1-slop',
-      level: 'UPPER_BEGINNER',
-      name: '와이낫슬로프 1',
-      Element: () => <></>,
-      webcamId: 'upper-base',
-      isOpen: true,
-    },
-    {
       id: 'cnp1-slop',
       level: 'UPPER_BEGINNER',
       name: 'CNP슬로프 1',

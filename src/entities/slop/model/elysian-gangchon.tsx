@@ -7,6 +7,8 @@ import JaguarSlopPath from '../image/elysian-gangchon/jaguar-slop-path';
 import LeopardSlopPath from '../image/elysian-gangchon/leopard-slop-path';
 import ElysianGangchonMap from '../image/elysian-gangchon/map';
 import PandaSlopPath from '../image/elysian-gangchon/panda-slop-path';
+import PegasusSlopPath from '../image/elysian-gangchon/pegasus-slop-path';
+import PumaSlopPath from '../image/elysian-gangchon/puma-slop-path';
 import RabbitSlopPath from '../image/elysian-gangchon/rabbit-slop-path';
 import ZebraSlopPath from '../image/elysian-gangchon/zebra-slop-path';
 import type { ResortInfo } from './model';
@@ -50,7 +52,7 @@ export const ELYSIAN_GANGCHON: ResortInfo = {
       id: 'pegasus-slop',
       level: 'INTERMEDIATE',
       name: '페가수스슬로프',
-      Element: () => <></>,
+      Element: PegasusSlopPath,
       webcamId: 'ski-house',
       isOpen: true,
     },
@@ -73,7 +75,7 @@ export const ELYSIAN_GANGCHON: ResortInfo = {
       id: 'puma-slop',
       level: 'INTERMEDIATE',
       name: '퓨마슬로프',
-      Element: () => <></>,
+      Element: PumaSlopPath,
       webcamId: 'alp-house',
       isOpen: true,
     },
