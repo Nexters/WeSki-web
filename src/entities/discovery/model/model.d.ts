@@ -14,6 +14,10 @@ export type Discovery = {
   name: string;
   map: string;
   slope: number | null;
+  url: {
+    bus: string;
+    homepage: string;
+  };
   weather: {
     weather: Weather;
     temperature: number;
