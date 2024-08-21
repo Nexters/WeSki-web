@@ -1,5 +1,3 @@
-import { API_URL } from '@/shared/config';
-
 export class ApiClient {
   private baseUrl: string;
 
@@ -24,7 +22,7 @@ export class ApiClient {
     endpoint: string,
     queryParams?: Record<string, string | number>
   ): Promise<TResult> {
-    const url = new URL(endpoint, this.baseUrl);
+    const url = new URL('/api/weski' + endpoint, window.location.origin);
 
     if (queryParams) {
       Object.entries(queryParams).forEach(([key, value]) => {
@@ -46,7 +44,9 @@ export class ApiClient {
     endpoint: string,
     body: TData
   ): Promise<TResult> {
-    const response = await fetch(`${this.baseUrl}${endpoint}`, {
+    const url = new URL('/api/weski' + endpoint, window.location.origin);
+
+    const response = await fetch(url.toString(), {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -58,4 +58,4 @@ export class ApiClient {
   }
 }
 
-export const apiClient = new ApiClient(API_URL);
+export const apiClient = new ApiClient('');

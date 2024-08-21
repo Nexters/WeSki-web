@@ -8,7 +8,7 @@ import Card from '@/shared/ui/card';
 import { DiscoverySummaryActionList } from '../model/constants';
 import DiscoverySummaryAction from './discovery-summary-action';
 
-const DiscoverySummary = ({ name, slope, url, weather }: Discovery) => {
+const DiscoverySummary = ({ id, name, slope, url, weather }: Discovery) => {
   return (
     <div className={cn('flex w-full gap-[26px] px-[30px] pb-[34px] pt-[10px]')}>
       <Card className={cn('flex h-[123px] flex-1 items-center justify-between pl-[30px] pr-6')}>
@@ -30,10 +30,10 @@ const DiscoverySummary = ({ name, slope, url, weather }: Discovery) => {
             return (
               <VoteDialog
                 key={action.name}
+                id={id}
                 trigger={
                   <DiscoverySummaryAction key={action.name} {...action} icon={<VoteIcon />} />
                 }
-                count={{ total: 100, voted: 50 }}
               />
             );
           } else {

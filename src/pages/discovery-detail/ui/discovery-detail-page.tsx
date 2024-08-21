@@ -1,8 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import { useState } from 'react';
-import { useCallback } from 'react';
+import { useState, useCallback } from 'react';
 import blind1 from '@public/blinds/blind_01.png';
 import { DiscoveryContentTabList } from '@/widgets/discovery-detail/model/constants';
 import DiscoverySummary from '@/widgets/discovery-detail/ui/discovery-summary';
