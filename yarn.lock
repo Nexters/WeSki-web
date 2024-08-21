@@ -1674,7 +1674,7 @@ fs.realpath@^1.0.0:
   resolved "https://registry.yarnpkg.com/fs.realpath/-/fs.realpath-1.0.0.tgz#1504ad2523158caa40db4a2787cb01411994ea4f"
   integrity sha512-OO0pH2lK6a0hZnAdau5ItzHPI6pUlvI7jMVnxUQRtw4owF2wk8lOSabtGDCTP4Ggrg2MbGnWO9X8K1t4+fGMDw==
 
-fsevents@~2.3.2:
+fsevents@^2.3.2, fsevents@~2.3.2:
   version "2.3.3"
   resolved "https://registry.yarnpkg.com/fsevents/-/fsevents-2.3.3.tgz#cac6407785d03675a2a5e1a5305c697b347d90d6"
   integrity sha512-5xoDfX+fL7faATnagmWPpbFtwh/R77WmMMqqHGS65C3vvB0YHrgF+B1YmZ3441tMj5n63k0212XNoJwzlhffQw==
@@ -2364,6 +2364,13 @@ next@14.2.5:
     "@next/swc-win32-arm64-msvc" "14.2.5"
     "@next/swc-win32-ia32-msvc" "14.2.5"
     "@next/swc-win32-x64-msvc" "14.2.5"
+
+nextjs-google-analytics@^2.3.7:
+  version "2.3.7"
+  resolved "https://registry.yarnpkg.com/nextjs-google-analytics/-/nextjs-google-analytics-2.3.7.tgz#f66450f67768a3bc8404cd90862d0d2f06ee53dd"
+  integrity sha512-kuE5OcqmAg1qh9J6LskoDLybj8WmLyfxD+KsVGGvRe5zZg6bGQ/QM/1/7TdJq/u7hIeVqFqcloadD0pcosRXUw==
+  optionalDependencies:
+    fsevents "^2.3.2"
 
 node-releases@^2.0.14:
   version "2.0.17"
