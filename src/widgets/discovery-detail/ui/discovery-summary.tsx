@@ -24,7 +24,7 @@ const DiscoverySummary = ({ id, name, slope, url, weather }: Discovery) => {
           <p className={cn('body1-semibold text-gray-60')}>{weather.description}</p>
         </div>
       </Card>
-      <Card className={cn('hidden h-[123px] items-center justify-center gap-[30px] px-5 xs:flex')}>
+      <Card className={cn('hidden h-[123px] items-center justify-center gap-[30px] px-5 md:flex')}>
         {DiscoverySummaryActionList.map((action) => {
           if (action.name === 'vote') {
             return (

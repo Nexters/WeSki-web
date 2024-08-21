@@ -14,14 +14,14 @@ const config = {
       center: true,
       padding: '2rem',
       screens: {
+        sm: '360px',
+        md: '670px',
+        lg: '1100px',
         '2xl': '1400px',
       },
     },
 
     extend: {
-      screens: {
-        xs: '600px',
-      },
       fontFamily: {
         sans: ['Pretendard', 'sans-serif'],
       },

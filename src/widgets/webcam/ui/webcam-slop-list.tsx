@@ -18,14 +18,14 @@ const WebcamSlopList = ({ className, list, webcams, onItemClick }: WebcamSlopLis
   const { selectedSlop, setSelectedSlop } = useSlopStore();
 
   return (
-    <ul className={cn('w-full xs:grid xs:grid-cols-2', className)}>
+    <ul className={cn('w-full md:grid md:grid-cols-2', className)}>
       {list.map((item) => {
         return (
           <li
             key={item.id}
             className={cn(
               'flex h-[66px] items-center justify-between bg-gray-10 px-6',
-              'border-b border-gray-30 xs:odd:border-r',
+              'border-b border-gray-30 md:odd:border-r',
               item.isOpen ? 'cursor-pointer hover:bg-main-5' : 'cursor-not-allowed',
               selectedSlop === item.id ? 'bg-main-5' : 'bg-inherit hover:bg-inherit'
             )}

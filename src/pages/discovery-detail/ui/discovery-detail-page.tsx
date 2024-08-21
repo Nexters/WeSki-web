@@ -88,16 +88,16 @@ const DiscoveryDetailPage = ({ params }: { params: { resortId: number } }) => {
       )}
       {selectedTab === 'weather' && (
         <div className={cn('relative bg-white pb-10')}>
-          <p className={cn('title3-semibold mb-6 pl-6 pt-8 xs:pl-10 xs:pt-10')}>실시간 날씨</p>
-          <div className={cn('relative h-[337px] xs:ml-4')}>
+          <p className={cn('title3-semibold mb-6 pl-6 pt-8 md:pl-10 md:pt-10')}>실시간 날씨</p>
+          <div className={cn('relative h-[337px] md:ml-4')}>
             <Image src={blind1} alt="blind1" fill className={cn('object-cover object-left')} />
           </div>
           <div className={cn('mt-10 h-[6px] w-full bg-gray-20')} />
-          <p className={cn('title3-semibold mb-6 pl-6 pt-8 xs:pl-10')}>주간 예보</p>
+          <p className={cn('title3-semibold mb-6 pl-6 pt-8 md:pl-10')}>주간 예보</p>
           <div
             className={cn(
               'h-[372px] bg-[url("/blinds/blind_02-1.png")] bg-contain bg-no-repeat',
-              'xs:h-[180px] xs:bg-[url("/blinds/blind_02.png")]'
+              'md:h-[180px] md:bg-[url("/blinds/blind_02.png")]'
             )}
           />
           {showAppDownloadDialog && (
@@ -112,19 +112,19 @@ const DiscoveryDetailPage = ({ params }: { params: { resortId: number } }) => {
       )}
       {selectedTab === 'slop' && (
         <div className={cn('relative bg-white pb-4')}>
-          <p className={cn('title3-semibold mb-6 pl-6 pt-8 xs:pl-10 xs:pt-10')}>인기 시간대</p>
+          <p className={cn('title3-semibold mb-6 pl-6 pt-8 md:pl-10 md:pt-10')}>인기 시간대</p>
           <div
             className={cn(
               'aspect-[2.86] w-full bg-[url("/blinds/blind_03-1.png")] bg-cover',
-              'xs:aspect-[2.62] xs:bg-[url("/blinds/blind_03.png")]'
+              'md:aspect-[2.62] md:bg-[url("/blinds/blind_03.png")]'
             )}
           />
           <div className={cn('mt-10 h-[6px] w-full bg-gray-20')} />
-          <p className={cn('title3-semibold mb-6 pl-6 pt-8 xs:pl-10')}>슬로프 운행 현황</p>
+          <p className={cn('title3-semibold mb-6 pl-6 pt-8 md:pl-10')}>슬로프 운행 현황</p>
           <div
             className={cn(
               'aspect-[0.71] w-full bg-[url("/blinds/blind_04-1.png")] bg-cover',
-              'aspect-[0.88] xs:bg-[url("/blinds/blind_04.png")]'
+              'aspect-[0.88] md:bg-[url("/blinds/blind_04.png")]'
             )}
           />
           {showAppDownloadDialog && (
