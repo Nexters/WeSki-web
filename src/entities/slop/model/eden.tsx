@@ -82,7 +82,7 @@ export const EDEN: ResortInfo = {
       id: 'jupiter-slope',
       name: '쥬피터 슬로프',
       position: {
-        top: 'top-[17%]',
+        top: 'top-[16%]',
         left: 'left-[50%]',
       },
       scale: 1,
@@ -91,8 +91,8 @@ export const EDEN: ResortInfo = {
       id: 'uranus-slope',
       name: '우라누스 슬로프',
       position: {
-        top: 'top-[34%]',
-        left: 'left-[75%]',
+        top: 'top-[32%]',
+        left: 'left-[77%]',
       },
       scale: 1,
     },

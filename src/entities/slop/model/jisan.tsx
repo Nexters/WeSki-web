@@ -91,8 +91,8 @@ export const JISAN: ResortInfo = {
       id: 'orange-station',
       name: '오렌지 탑승장',
       position: {
-        top: 'top-[69%]',
-        left: 'left-[29%]',
+        top: 'top-[74%]',
+        left: 'left-[31%]',
       },
       scale: 1,
     },

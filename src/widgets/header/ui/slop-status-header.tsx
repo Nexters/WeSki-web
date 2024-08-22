@@ -2,6 +2,7 @@ import React from 'react';
 import CircleInfo from '@/shared/icons/circle-info';
 import { cn } from '@/shared/lib';
 import { Tooltip } from '@/shared/ui/tooltip';
+import { getFormattedYesterday } from '../lib/getFormattedYesterday';
 
 const SlopStatusHeader = () => {
   return (
@@ -19,7 +20,7 @@ const SlopStatusHeader = () => {
           <p className={cn('body3-medium')}>매일 스키장 홈페이지에 고지된 정보를 가져와요.</p>
         </Tooltip>
       </div>
-      <p className={cn('body1-medium text-gray-50')}>10월 21일 23:00 업데이트</p>
+      <p className={cn('body1-medium text-gray-50')}>{getFormattedYesterday()} 23:00 업데이트</p>
     </div>
   );
 };
