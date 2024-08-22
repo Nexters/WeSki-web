@@ -24,6 +24,14 @@ interface ShareDialogProps {
 }
 
 const ShareDialog = ({ trigger, name }: ShareDialogProps) => {
+  const handleShareToKakao = useCallback(() => {
+    const { Kakao, location } = window;
+    Kakao.Share.sendScrap({
+      requestUrl: location.href,
+      templateId: 111416,
+    });
+  }, []);
+
   const handleCopyUrl = useCallback(() => {
     const currentUrl = window.location.href;
     navigator.clipboard
@@ -62,7 +70,7 @@ const ShareDialog = ({ trigger, name }: ShareDialogProps) => {
         </div>
         <div className={cn('body3-medium z-10 flex justify-between gap-3 text-gray-70')}>
           <div className={cn('flex flex-col items-center gap-[6px]')}>
-            <button>
+            <button onClick={handleShareToKakao}>
               <Image src={share1} alt="kakao-talk" width={46} height={46} />
             </button>
             <p>카카오톡</p>

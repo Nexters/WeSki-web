@@ -1,6 +1,7 @@
 import '@/app/globals.css';
 
 import type { Metadata } from 'next';
+import KakaoScript from '@/shared/lib/kakao-script';
 import { Toaster } from '@/shared/ui/toaster';
 import Providers from './_providers';
 
@@ -24,6 +25,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body>
         <Providers>{children}</Providers>
         <Toaster position="bottom-center" />
+        <KakaoScript />
       </body>
     </html>
   );
