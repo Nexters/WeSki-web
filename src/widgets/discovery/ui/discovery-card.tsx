@@ -4,6 +4,7 @@ import type { Discovery } from '@/entities/discovery';
 import { cn } from '@/shared/lib';
 import Card from '@/shared/ui/card';
 import WeeklyWeather from './weekly-weather';
+import { getTargetDateWeekday } from '../lib/getTargetDateWeekday';
 
 const DiscoveryCard = ({ id, name, slope, weather, weeklyWeather }: Discovery) => {
   const router = useRouter();
@@ -39,7 +40,8 @@ const DiscoveryCard = ({ id, name, slope, weather, weeklyWeather }: Discovery) =
           <WeeklyWeather
             key={index}
             {...weather}
-            isToday={index <= 6 && new Date().getDay() === index + 1}
+            day={getTargetDateWeekday(index)}
+            isToday={index === 0}
           />
         ))}
       </ul>
