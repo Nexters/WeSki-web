@@ -12,20 +12,20 @@ const DiscoveryCard = ({ id, name, slope, weather, weeklyWeather }: Discovery) =
   return (
     <Card
       className={cn(
-        'box-border flex cursor-pointer flex-col gap-[15px] pb-[26px] pt-10',
-        'transition-all hover:scale-[1.02] hover:border-2 hover:border-main-1 hover:pb-[25px] hover:pt-[39px]'
+        'box-border flex cursor-pointer flex-col gap-[15px] pb-4 pt-[34px] md:pb-[26px] md:pt-10',
+        'transition-all hover:scale-[1.02] hover:border-2 hover:border-main-1 hover:pb-[15px] hover:pt-[33px] hover:md:pb-[25px] hover:md:pt-[39px]'
       )}
       onClick={() => router.push(`/${id}`)}
     >
-      <div className={cn('mx-[42px] flex items-center justify-between py-1')}>
+      <div className={cn('mx-[30px] flex items-center justify-between py-1 md:mx-[42px]')}>
         <div className={cn('flex flex-col gap-[5px] py-1')}>
-          <h2 className={cn('h2 text-gray-90')}>{name}</h2>
-          <p className={cn('body1-regular text-gray-60')}>운행중인 슬로프 {slope ?? 0}개</p>
+          <h2 className={cn('title1 md:h2 text-gray-90')}>{name}</h2>
+          <p className={cn('body1-medium text-gray-60')}>운행중인 슬로프 {slope ?? 0}개</p>
         </div>
         <div className={cn('flex flex-col items-end gap-2')}>
           <div className={cn('flex gap-2')}>
             <WeatherIcon className={cn('origin-right scale-[1.17]')} weather={weather.weather} />
-            <p className={cn('h1-semibold text-[30px]')}>{weather.temperature}</p>
+            <p className={cn('h1-semibold text-[30px]')}>{weather.temperature}°</p>
           </div>
           <p className={cn('body1-semibold text-gray-60')}>{weather.description}</p>
         </div>

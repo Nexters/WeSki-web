@@ -534,6 +534,13 @@
   dependencies:
     "@tsparticles/engine" "^3.5.0"
 
+"@tsparticles/shape-image@^3.5.0":
+  version "3.5.0"
+  resolved "https://registry.yarnpkg.com/@tsparticles/shape-image/-/shape-image-3.5.0.tgz#9a66358592cc5ebbf3a366bcadf8f6495e36b6a7"
+  integrity sha512-lWYg7DTv74dSOnXy+4dr7t1/OSuUmxDpIo12Lbxgx/QBN7A5I/HoqbKcs13TSA0RS1hcuMgtti07BcDTEYW3Dw==
+  dependencies:
+    "@tsparticles/engine" "^3.5.0"
+
 "@tsparticles/updater-color@^3.5.0":
   version "3.5.0"
   resolved "https://registry.yarnpkg.com/@tsparticles/updater-color/-/updater-color-3.5.0.tgz#a1bfbfc54e1ca56b71bfbfd773fe54ccd5ce60d9"

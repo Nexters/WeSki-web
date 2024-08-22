@@ -4,8 +4,6 @@ import { toast } from 'sonner';
 import logo from '@public/assets/logo.svg';
 import snow from '@public/assets/snow.png';
 import share1 from '@public/shares/share_01.png';
-import share2 from '@public/shares/share_02.png';
-import share3 from '@public/shares/share_03.png';
 import share4 from '@public/shares/share_04.png';
 import { CloseIcon } from '@/shared/icons';
 import { cn, getPostposition } from '@/shared/lib';
@@ -24,6 +22,14 @@ interface ShareDialogProps {
 }
 
 const ShareDialog = ({ trigger, name }: ShareDialogProps) => {
+  const handleShareToKakao = useCallback(() => {
+    const { Kakao, location } = window;
+    Kakao.Share.sendScrap({
+      requestUrl: location.href,
+      templateId: 111416,
+    });
+  }, []);
+
   const handleCopyUrl = useCallback(() => {
     const currentUrl = window.location.href;
     navigator.clipboard
@@ -39,7 +45,6 @@ const ShareDialog = ({ trigger, name }: ShareDialogProps) => {
   return (
     <Dialog>
       <DialogTrigger>{trigger}</DialogTrigger>
-
       <DialogContent
         className={cn(
           'w-[321px] gap-0 overflow-hidden rounded-[7px] bg-white px-[30px] pb-[30px] pt-[27px]'
@@ -55,36 +60,23 @@ const ShareDialog = ({ trigger, name }: ShareDialogProps) => {
         <DialogClose>
           <CloseIcon className={cn('absolute right-6 top-6 size-6 cursor-pointer text-gray-50')} />
         </DialogClose>
-        <Image src={logo} alt="logo" />
+        <Image src={logo} alt="logo" width={56} />
         <div className={cn('h3-semibold mb-[31px] mt-[38px] flex h-16 flex-col justify-evenly')}>
           <p>{getPostposition(name || '')}</p>
           <p>공유해보세요!</p>
         </div>
-        <div className={cn('body3-medium z-10 flex justify-between gap-3 text-gray-70')}>
-          <div className={cn('flex flex-col items-center gap-[6px]')}>
-            <button>
-              <Image src={share1} alt="kakao-talk" width={46} height={46} />
-            </button>
+        <div className={cn('body2-medium z-10 flex gap-[14px] text-gray-70')}>
+          <button
+            className={cn('flex w-[120px] items-center gap-[10px]')}
+            onClick={handleShareToKakao}
+          >
+            <Image src={share1} alt="kakao-talk" width={46} height={46} />
             <p>카카오톡</p>
-          </div>
-          <div className={cn('flex flex-col items-center gap-[6px]')}>
-            <button>
-              <Image src={share2} alt="instagram" width={46} height={46} />
-            </button>
-            <p>인스타그램</p>
-          </div>
-          <div className={cn('flex flex-col items-center gap-[6px]')}>
-            <button>
-              <Image src={share3} alt="thread" width={46} height={46} />
-            </button>
-            <p>스레드</p>
-          </div>
-          <div className={cn('flex flex-col items-center gap-[6px]')}>
-            <button onClick={handleCopyUrl}>
-              <Image src={share4} alt="link" width={46} height={46} />
-            </button>
-            <p>링크 공유</p>
-          </div>
+          </button>
+          <button className={cn('flex w-[120px] items-center gap-[10px]')} onClick={handleCopyUrl}>
+            <Image src={share4} alt="link" width={46} height={46} />
+            <p>링크 복사</p>
+          </button>
         </div>
       </DialogContent>
     </Dialog>

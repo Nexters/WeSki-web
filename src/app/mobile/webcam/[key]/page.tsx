@@ -1,6 +1,6 @@
 import { redirect } from 'next/navigation';
 import React from 'react';
-import WebcamMobileMapPage from '@/pages/webcam/ui/webcam-mobile-map-page';
+import WebcamMobileMapPage from '@/views/webcam/ui/webcam-mobile-map-page';
 import { RESORT_DOMAIN } from '@/entities/slop/model';
 
 const Page = ({ params }: { params: { key: string } }) => {

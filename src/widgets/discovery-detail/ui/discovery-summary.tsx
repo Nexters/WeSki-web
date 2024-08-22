@@ -10,8 +10,12 @@ import DiscoverySummaryAction from './discovery-summary-action';
 
 const DiscoverySummary = ({ id, name, slope, url, weather }: Discovery) => {
   return (
-    <div className={cn('flex w-full gap-[26px] px-[30px] pb-[34px] pt-[10px]')}>
-      <Card className={cn('flex h-[123px] flex-1 items-center justify-between pl-[30px] pr-6')}>
+    <div className={cn('flex w-full gap-[26px] px-5 pb-[34px] pt-[10px] md:px-[30px]')}>
+      <Card
+        className={cn(
+          'flex h-[134px] flex-1 items-center justify-between pl-[30px] pr-6 md:h-[123px]'
+        )}
+      >
         <div className={cn('flex flex-col gap-[5px]')}>
           <p className={cn('title1 text-gray-90')}>{name}</p>
           <p className={cn('body1-medium text-gray-60')}>운행중인 슬로프 {slope ?? 0}개</p>

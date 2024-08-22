@@ -1,6 +1,6 @@
 import { redirect } from 'next/navigation';
 import React from 'react';
-import WebcamMobileMapPage from '@/pages/slop-status/ui/slop-status-page';
+import WebcamMobileMapPage from '@/views/slop-status/ui/slop-status-page';
 import { RESORT_DOMAIN } from '@/entities/slop/model';
 
 const isValidKey = (key: string): key is keyof typeof RESORT_DOMAIN => key in RESORT_DOMAIN;
