@@ -282,8 +282,8 @@ export const MUJU: ResortInfo = {
       id: 'seolcheonbong-summit',
       name: '설천봉 정상',
       position: {
-        top: 'top-[10%]',
-        left: 'left-[36%]',
+        top: 'top-[12%]',
+        left: 'left-[37%]',
       },
       src: '/api/webcam?url=http://muju.live.cdn.cloudn.co.kr/mujuresort/_definst_/cam07.stream/playlist.m3u8',
       scale: 1,
@@ -302,7 +302,7 @@ export const MUJU: ResortInfo = {
       id: 'seolcheon-top-slope',
       name: '설천상단 슬로프',
       position: {
-        top: 'top-[15%]',
+        top: 'top-[16%]',
         left: 'left-[23%]',
       },
       src: '/api/webcam?url=http://muju.live.cdn.cloudn.co.kr/mujuresort/_definst_/cam06.stream/playlist.m3u8',
@@ -312,8 +312,8 @@ export const MUJU: ResortInfo = {
       id: 'mansunbong-summit',
       name: '만선봉 정상',
       position: {
-        top: 'top-[30%]',
-        left: 'left-[53%]',
+        top: 'top-[32%]',
+        left: 'left-[51%]',
       },
       src: '/api/webcam?url=http://muju.live.cdn.cloudn.co.kr/mujuresort/_definst_/cam02.stream/playlist.m3u8',
       scale: 1,
