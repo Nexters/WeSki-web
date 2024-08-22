@@ -3,7 +3,7 @@ import { useCallback, useState } from 'react';
 import { toast } from 'sonner';
 import { discoveryApi } from '@/entities/discovery';
 import { usePostVote } from '@/entities/discovery/api/use-post-vote';
-import { CheckIcon } from '@/shared/icons';
+import { CheckIcon, CloseIcon } from '@/shared/icons';
 import { cn } from '@/shared/lib';
 import {
   Dialog,
@@ -42,6 +42,9 @@ const VoteDialog = ({ id, trigger }: VoteDialogProps) => {
     <Dialog>
       <DialogTrigger>{trigger}</DialogTrigger>
       <DialogContent>
+        <DialogClose className={cn('absolute right-6 top-6 size-6 cursor-pointer')}>
+          <CloseIcon />
+        </DialogClose>
         <DialogHeader>
           <p className={cn('title3-semibold')}>오늘의 설질</p>
           <div className={cn('flex flex-col gap-1')}>
@@ -77,14 +80,14 @@ const VoteDialog = ({ id, trigger }: VoteDialogProps) => {
               {!isGood && <CheckIcon className={cn('text-main-1')} />}
             </button>
           </div>
-          <DialogClose
+          <button
             className={cn(
               'title3-semibold flex h-[52px] items-center justify-center rounded-[8px] bg-main-1 text-gray-10'
             )}
             onClick={handleVote}
           >
             투표하기
-          </DialogClose>
+          </button>
         </DialogFooter>
       </DialogContent>
     </Dialog>
