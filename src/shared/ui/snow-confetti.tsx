@@ -1,6 +1,6 @@
-import { useEffect, useState } from 'react';
-import Particles, { initParticlesEngine } from '@tsparticles/react';
 import { loadSnowPreset } from '@tsparticles/preset-snow';
+import Particles, { initParticlesEngine } from '@tsparticles/react';
+import { useEffect, useState } from 'react';
 import { cn } from '../lib';
 
 export const SnowConfetti = () => {

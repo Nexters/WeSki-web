@@ -1,35 +1,43 @@
 'use client';
 
+import { useQuery } from '@tanstack/react-query';
 import Image from 'next/image';
 import { useState, useCallback } from 'react';
+import { toast } from 'sonner';
 import blind1 from '@public/blinds/blind_01.png';
 import { DiscoveryContentTabList } from '@/widgets/discovery-detail/model/constants';
 import DiscoverySummary from '@/widgets/discovery-detail/ui/discovery-summary';
 import { Header } from '@/widgets/header/ui';
 import { WebcamMap, WebcamSlopList } from '@/widgets/webcam/ui';
+import { getVoteText } from '@/features/discovery-detail/lib/getVoteText';
 import AppDownloadDialog from '@/features/discovery-detail/ui/app-download-dialog';
 import useMapPinch from '@/features/slop/hooks/useMapPinch';
 import calculateWebcamPosition from '@/features/slop/lib/calculateWebcamPosition';
-import { Discovery, DiscoveryData } from '@/entities/discovery';
+import { type Discovery, DiscoveryData } from '@/entities/discovery';
+import { discoveryApi } from '@/entities/discovery';
+import { usePostVote } from '@/entities/discovery/api/use-post-vote';
 import { RESORT_DOMAIN } from '@/entities/slop/model';
 import type { Position } from '@/entities/slop/model/model';
-import { cn } from '@/shared/lib';
-import { discoveryApi } from '@/entities/discovery/index';
-import { usePostVote } from '@/entities/discovery/api/use-post-vote';
-import { toast } from 'sonner';
 import CheckIcon from '@/shared/icons/check';
-import { useQuery } from '@tanstack/react-query';
-import { getVoteText } from '@/features/discovery-detail/lib/getVoteText';
+import { cn } from '@/shared/lib';
 
 const DiscoveryDetailPage = ({ params }: { params: { resortId: string } }) => {
+  if (typeof window === 'undefined') {
+    return null;
+  }
+
+  return <DiscoveryDetailPageContent params={params} />;
+};
+
+const DiscoveryDetailPageContent = ({ params }: { params: { resortId: string } }) => {
   const discovery = DiscoveryData.find(
     (discovery) => discovery.id === +params?.resortId
   ) as Discovery;
-  const { data: voteData } = useQuery(discoveryApi.discoveryQueries.vote(params.resortId));
+  const { data: voteData } = useQuery(discoveryApi.discoveryQueries.vote(params?.resortId));
   const data = RESORT_DOMAIN[discovery.map as keyof typeof RESORT_DOMAIN];
   const [selectedTab, setSelectedTab] = useState('webcam');
   const [showAppDownloadDialog, setShowAppDownloadDialog] = useState(true);
-  const { mutateAsync } = usePostVote(params.resortId);
+  const { mutateAsync } = usePostVote(params?.resortId);
 
   const [isGood, setIsGood] = useState<boolean>(true);
   const [cameraPositions, setCameraPositions] = useState<{
@@ -62,7 +70,7 @@ const DiscoveryDetailPage = ({ params }: { params: { resortId: string } }) => {
     } finally {
       toast.success('고마워요! 투표의 결과가 반영되었어요');
     }
-  }, [isGood]);
+  }, [isGood, mutateAsync]);
 
   if (!discovery) return;
 
