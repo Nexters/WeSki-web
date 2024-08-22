@@ -14,7 +14,7 @@ const DiscoverySummary = ({ id, name, slope, url, weather }: Discovery) => {
       <Card className={cn('flex h-[123px] flex-1 items-center justify-between pl-[30px] pr-6')}>
         <div className={cn('flex flex-col gap-[5px]')}>
           <p className={cn('title1 text-gray-90')}>{name}</p>
-          <p className={cn('body1-medium text-gray-60')}>운행중인 슬로프 {slope ?? '-'}개</p>
+          <p className={cn('body1-medium text-gray-60')}>운행중인 슬로프 {slope ?? 0}개</p>
         </div>
         <div className={cn('flex flex-col items-end gap-2')}>
           <div className={cn('flex gap-2')}>
