@@ -20,7 +20,7 @@ const LEVEL: Record<Level, { text: string; color: string }> = {
     color: 'bg-sub-4',
   },
   ADVANCED: {
-    text: '고급',
+    text: '상급',
     color: 'bg-gray-70',
   },
   EXPERT: {
