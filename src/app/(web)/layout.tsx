@@ -7,11 +7,13 @@ import android from '@public/downloads/right-android.png';
 import ios from '@public/downloads/right-ios.png';
 import text from '@public/downloads/right-text.png';
 import { cn } from '@/shared/lib';
+import { SnowConfetti } from '@/shared/ui/snow-confetti';
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <>
       <GoogleAnalytics trackPageViews />
+      <SnowConfetti />
       <div
         className={cn(
           'flex size-full min-w-[360px] items-center justify-evenly bg-main-5 antialiased'
