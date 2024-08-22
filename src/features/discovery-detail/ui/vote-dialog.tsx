@@ -51,7 +51,7 @@ const VoteDialog = ({ id, trigger }: VoteDialogProps) => {
               명이 긍정적으로 투표했어요.
             </p>
           </div>
-          <DialogDescription>오늘같은 현장은 설질 괜찮을까요?</DialogDescription>
+          <DialogDescription>오늘의 현장은 설질 괜찮을까요?</DialogDescription>
         </DialogHeader>
         <DialogFooter>
           <div className={cn('flex flex-col gap-3')}>
