@@ -1,1 +1,1 @@
-export { default } from '@/pages/discovery-detail/ui/discovery-detail-page';
+export { default } from '@/views/discovery-detail/ui/discovery-detail-page';

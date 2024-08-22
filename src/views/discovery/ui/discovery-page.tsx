@@ -7,14 +7,6 @@ import { discoveryApi } from '@/entities/discovery';
 import { cn } from '@/shared/lib';
 
 const DiscoveryPage = () => {
-  if (typeof window === 'undefined') {
-    return null;
-  }
-
-  return <DiscoveryPageContent />;
-};
-
-const DiscoveryPageContent = () => {
   const { data: discoveryData } = useQuery(discoveryApi.discoveryQueries.list());
 
   if (!discoveryData) return null;

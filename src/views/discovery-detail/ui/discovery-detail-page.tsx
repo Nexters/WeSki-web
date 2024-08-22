@@ -22,14 +22,6 @@ import CheckIcon from '@/shared/icons/check';
 import { cn } from '@/shared/lib';
 
 const DiscoveryDetailPage = ({ params }: { params: { resortId: string } }) => {
-  if (typeof window === 'undefined') {
-    return null;
-  }
-
-  return <DiscoveryDetailPageContent params={params} />;
-};
-
-const DiscoveryDetailPageContent = ({ params }: { params: { resortId: string } }) => {
   const discovery = DiscoveryData.find(
     (discovery) => discovery.id === +params?.resortId
   ) as Discovery;
