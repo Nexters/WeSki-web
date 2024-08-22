@@ -33,7 +33,7 @@ const VoteDialog = ({ id, trigger }: VoteDialogProps) => {
     } catch (error) {
       console.log(error);
     } finally {
-      toast.success('투표가 완료되었습니다.');
+      toast.success('고마워요! 투표의 결과가 반영되었어요');
     }
   }, [isGood, mutateAsync]);
 
