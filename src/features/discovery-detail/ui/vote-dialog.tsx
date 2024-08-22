@@ -3,7 +3,7 @@ import { useCallback, useState } from 'react';
 import { toast } from 'sonner';
 import { discoveryApi } from '@/entities/discovery';
 import { usePostVote } from '@/entities/discovery/api/use-post-vote';
-import { CheckIcon } from '@/shared/icons';
+import { CheckIcon, CloseIcon } from '@/shared/icons';
 import { cn } from '@/shared/lib';
 import {
   Dialog,
@@ -15,6 +15,7 @@ import {
   DialogTitle,
   DialogTrigger,
 } from '@/shared/ui/dialog';
+import { getVoteText } from '../lib/getVoteText';
 
 interface VoteDialogProps {
   id: number;
@@ -33,7 +34,7 @@ const VoteDialog = ({ id, trigger }: VoteDialogProps) => {
     } catch (error) {
       console.log(error);
     } finally {
-      toast.success('투표가 완료되었습니다.');
+      toast.success('고마워요! 투표의 결과가 반영되었어요');
     }
   }, [isGood, mutateAsync]);
 
@@ -41,17 +42,20 @@ const VoteDialog = ({ id, trigger }: VoteDialogProps) => {
     <Dialog>
       <DialogTrigger>{trigger}</DialogTrigger>
       <DialogContent>
+        <DialogClose className={cn('absolute right-6 top-6 size-6 cursor-pointer')}>
+          <CloseIcon />
+        </DialogClose>
         <DialogHeader>
           <p className={cn('title3-semibold')}>오늘의 설질</p>
           <div className={cn('flex flex-col gap-1')}>
-            <DialogTitle>상태가 좋아요</DialogTitle>
+            <DialogTitle>{getVoteText(voteData?.totalNum, voteData?.likeNum)}</DialogTitle>
             <p className={cn('body1-semibold text-gray-60')}>
               {voteData?.totalNum}명 중{' '}
               <span className={cn('body1-bold text-main-1')}>{voteData?.likeNum}</span>
               명이 긍정적으로 투표했어요.
             </p>
           </div>
-          <DialogDescription>오늘같은 현장은 설질 괜찮을까요?</DialogDescription>
+          <DialogDescription>오늘의 현장은 설질 괜찮을까요?</DialogDescription>
         </DialogHeader>
         <DialogFooter>
           <div className={cn('flex flex-col gap-3')}>
@@ -76,14 +80,14 @@ const VoteDialog = ({ id, trigger }: VoteDialogProps) => {
               {!isGood && <CheckIcon className={cn('text-main-1')} />}
             </button>
           </div>
-          <DialogClose
+          <button
             className={cn(
               'title3-semibold flex h-[52px] items-center justify-center rounded-[8px] bg-main-1 text-gray-10'
             )}
             onClick={handleVote}
           >
             투표하기
-          </DialogClose>
+          </button>
         </DialogFooter>
       </DialogContent>
     </Dialog>

@@ -1,8 +1,9 @@
 import WeatherIcon from '@/features/discovery/ui/weather-icon';
-import type { WeeklyWeather } from '@/entities/discovery/model/model';
+import type { WeeklyWeather as WeeklyWeatherType } from '@/entities/discovery/model/model';
 import { cn } from '@/shared/lib';
 
-interface WeeklyWeatherProps extends WeeklyWeather {
+interface WeeklyWeatherProps extends WeeklyWeatherType {
+  day: string;
   isToday: boolean;
 }
 
@@ -15,7 +16,7 @@ const WeeklyWeather = ({ day, weather, temperature, isToday }: WeeklyWeatherProp
       )}
     >
       <div className={cn('flex flex-col items-center gap-[7px]')}>
-        <div className={cn('body3-regular text-gray-60')}>{day}요일</div>
+        <div className={cn('body3-regular text-gray-60')}>{day}</div>
         <WeatherIcon weather={weather} />
       </div>
       <div className={cn('flex flex-col items-center')}>

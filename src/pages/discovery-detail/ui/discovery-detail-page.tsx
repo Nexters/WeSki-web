@@ -1,26 +1,45 @@
 'use client';
 
+import { useQuery } from '@tanstack/react-query';
 import Image from 'next/image';
 import { useState, useCallback } from 'react';
+import { toast } from 'sonner';
 import blind1 from '@public/blinds/blind_01.png';
 import { DiscoveryContentTabList } from '@/widgets/discovery-detail/model/constants';
 import DiscoverySummary from '@/widgets/discovery-detail/ui/discovery-summary';
 import { Header } from '@/widgets/header/ui';
 import { WebcamMap, WebcamSlopList } from '@/widgets/webcam/ui';
+import { getVoteText } from '@/features/discovery-detail/lib/getVoteText';
 import AppDownloadDialog from '@/features/discovery-detail/ui/app-download-dialog';
 import useMapPinch from '@/features/slop/hooks/useMapPinch';
 import calculateWebcamPosition from '@/features/slop/lib/calculateWebcamPosition';
-import { DiscoveryData } from '@/entities/discovery';
+import { type Discovery, DiscoveryData } from '@/entities/discovery';
+import { discoveryApi } from '@/entities/discovery';
+import { usePostVote } from '@/entities/discovery/api/use-post-vote';
 import { RESORT_DOMAIN } from '@/entities/slop/model';
 import type { Position } from '@/entities/slop/model/model';
+import CheckIcon from '@/shared/icons/check';
 import { cn } from '@/shared/lib';
 
-const DiscoveryDetailPage = ({ params }: { params: { resortId: number } }) => {
-  const discovery = DiscoveryData.find((discovery) => discovery.id === +params?.resortId);
-  const data = RESORT_DOMAIN[discovery?.map as keyof typeof RESORT_DOMAIN];
+const DiscoveryDetailPage = ({ params }: { params: { resortId: string } }) => {
+  if (typeof window === 'undefined') {
+    return null;
+  }
+
+  return <DiscoveryDetailPageContent params={params} />;
+};
+
+const DiscoveryDetailPageContent = ({ params }: { params: { resortId: string } }) => {
+  const discovery = DiscoveryData.find(
+    (discovery) => discovery.id === +params?.resortId
+  ) as Discovery;
+  const { data: voteData } = useQuery(discoveryApi.discoveryQueries.vote(params?.resortId));
+  const data = RESORT_DOMAIN[discovery.map as keyof typeof RESORT_DOMAIN];
   const [selectedTab, setSelectedTab] = useState('webcam');
   const [showAppDownloadDialog, setShowAppDownloadDialog] = useState(true);
+  const { mutateAsync } = usePostVote(params?.resortId);
 
+  const [isGood, setIsGood] = useState<boolean>(true);
   const [cameraPositions, setCameraPositions] = useState<{
     [key: string]: Position;
   }>({});
@@ -42,6 +61,16 @@ const DiscoveryDetailPage = ({ params }: { params: { resortId: number } }) => {
     });
     api.start({ scale: 1, x: boundedX, y: boundedY });
   };
+
+  const handleVote = useCallback(async () => {
+    try {
+      await mutateAsync({ isLike: isGood });
+    } catch (error) {
+      console.log(error);
+    } finally {
+      toast.success('고마워요! 투표의 결과가 반영되었어요');
+    }
+  }, [isGood, mutateAsync]);
 
   if (!discovery) return;
 
@@ -84,20 +113,69 @@ const DiscoveryDetailPage = ({ params }: { params: { resortId: number } }) => {
             list={data.slops}
             onItemClick={handleFocusSlopCamClick}
           />
+          <div className={cn('h-[6px] w-full bg-gray-20 md:hidden')} />
+          <div className={cn('flex flex-col gap-5 bg-white px-6 py-8 md:hidden')}>
+            <div className={cn('flex flex-col gap-6')}>
+              <p className={cn('title3-semibold')}>오늘의 설질</p>
+              <div className={cn('flex flex-col gap-1')}>
+                <p className={cn('h3-semibold')}>
+                  {getVoteText(voteData?.totalNum, voteData?.likeNum)}
+                </p>
+                <p className={cn('body1-semibold text-gray-60')}>
+                  {voteData?.totalNum}명 중{' '}
+                  <span className={cn('body1-bold text-main-1')}>{voteData?.likeNum}</span>
+                  명이 긍정적으로 투표했어요.
+                </p>
+              </div>
+            </div>
+            <p className={cn('title3-semibold')}>오늘의 현장은 설질 괜찮을까요?</p>
+            <div className={cn('flex flex-col gap-5')}>
+              <div className={cn('flex flex-col gap-3')}>
+                <button
+                  className={cn(
+                    'flex h-10 w-full items-center justify-between rounded-[8px] border border-main-1 pl-4 pr-3',
+                    !isGood && 'border-gray-30'
+                  )}
+                  onClick={() => setIsGood(true)}
+                >
+                  <p className={cn('body1-regular text-gray-60')}>괜찮을 것 같아요</p>
+                  {isGood && <CheckIcon className={cn('text-main-1')} />}
+                </button>
+                <button
+                  className={cn(
+                    'flex h-10 items-center justify-between rounded-[8px] border border-main-1 pl-4 pr-3',
+                    isGood && 'border-gray-30'
+                  )}
+                  onClick={() => setIsGood(false)}
+                >
+                  <p className={cn('body1-regular text-gray-60')}>별로일 것 같아요</p>
+                  {!isGood && <CheckIcon className={cn('text-main-1')} />}
+                </button>
+              </div>
+              <button
+                className={cn(
+                  'title3-semibold flex h-[52px] items-center justify-center rounded-[8px] bg-main-1 text-gray-10'
+                )}
+                onClick={handleVote}
+              >
+                투표하기
+              </button>
+            </div>
+          </div>
         </>
       )}
       {selectedTab === 'weather' && (
         <div className={cn('relative bg-white pb-10')}>
-          <p className={cn('title3-semibold mb-6 pl-6 pt-8 xs:pl-10 xs:pt-10')}>실시간 날씨</p>
-          <div className={cn('relative h-[337px] xs:ml-4')}>
+          <p className={cn('title3-semibold mb-6 pl-6 pt-8 md:pl-10 md:pt-10')}>실시간 날씨</p>
+          <div className={cn('relative h-[337px] md:ml-4')}>
             <Image src={blind1} alt="blind1" fill className={cn('object-cover object-left')} />
           </div>
           <div className={cn('mt-10 h-[6px] w-full bg-gray-20')} />
-          <p className={cn('title3-semibold mb-6 pl-6 pt-8 xs:pl-10')}>주간 예보</p>
+          <p className={cn('title3-semibold mb-6 pl-6 pt-8 md:pl-10')}>주간 예보</p>
           <div
             className={cn(
               'h-[372px] bg-[url("/blinds/blind_02-1.png")] bg-contain bg-no-repeat',
-              'xs:h-[180px] xs:bg-[url("/blinds/blind_02.png")]'
+              'md:h-[180px] md:bg-[url("/blinds/blind_02.png")]'
             )}
           />
           {showAppDownloadDialog && (
@@ -112,19 +190,19 @@ const DiscoveryDetailPage = ({ params }: { params: { resortId: number } }) => {
       )}
       {selectedTab === 'slop' && (
         <div className={cn('relative bg-white pb-4')}>
-          <p className={cn('title3-semibold mb-6 pl-6 pt-8 xs:pl-10 xs:pt-10')}>인기 시간대</p>
+          <p className={cn('title3-semibold mb-6 pl-6 pt-8 md:pl-10 md:pt-10')}>인기 시간대</p>
           <div
             className={cn(
               'aspect-[2.86] w-full bg-[url("/blinds/blind_03-1.png")] bg-cover',
-              'xs:aspect-[2.62] xs:bg-[url("/blinds/blind_03.png")]'
+              'md:aspect-[2.62] md:bg-[url("/blinds/blind_03.png")]'
             )}
           />
           <div className={cn('mt-10 h-[6px] w-full bg-gray-20')} />
-          <p className={cn('title3-semibold mb-6 pl-6 pt-8 xs:pl-10')}>슬로프 운행 현황</p>
+          <p className={cn('title3-semibold mb-6 pl-6 pt-8 md:pl-10')}>슬로프 운행 현황</p>
           <div
             className={cn(
               'aspect-[0.71] w-full bg-[url("/blinds/blind_04-1.png")] bg-cover',
-              'aspect-[0.88] xs:bg-[url("/blinds/blind_04.png")]'
+              'aspect-[0.88] md:bg-[url("/blinds/blind_04.png")]'
             )}
           />
           {showAppDownloadDialog && (

@@ -1,5 +1,5 @@
 import type { Weather } from '@/entities/discovery/model';
-import { CloudIcon, RainIcon, SnowIcon, SunIcon } from '@/shared/icons';
+import { CloudIcon, FogIcon, RainIcon, SnowIcon, SnowRainIcon, SunIcon } from '@/shared/icons';
 
 interface WeatherIconProps {
   className?: string;
@@ -16,6 +16,11 @@ const WeatherIcon = ({ className, weather }: WeatherIconProps) => {
       return <RainIcon className={className} />;
     case 'snow':
       return <SnowIcon className={className} />;
+    case 'fog':
+      return <FogIcon className={className} />;
+    case 'snow-rain':
+      return <SnowRainIcon className={className} />;
+
     default:
       return null;
   }

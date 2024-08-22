@@ -1,7 +1,6 @@
-export type Weather = 'sun' | 'cloud' | 'rain' | 'snow';
+export type Weather = 'sun' | 'cloud' | 'rain' | 'snow' | 'fog' | 'snow-rain';
 
 export type WeeklyWeather = {
-  day: string;
   weather: Weather;
   temperature: {
     lowest: string;

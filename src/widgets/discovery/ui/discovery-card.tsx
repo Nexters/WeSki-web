@@ -3,6 +3,7 @@ import WeatherIcon from '@/features/discovery/ui/weather-icon';
 import type { Discovery } from '@/entities/discovery';
 import { cn } from '@/shared/lib';
 import Card from '@/shared/ui/card';
+import { getTargetDateWeekday } from '../lib/getTargetDateWeekday';
 import WeeklyWeather from './weekly-weather';
 
 const DiscoveryCard = ({ id, name, slope, weather, weeklyWeather }: Discovery) => {
@@ -19,7 +20,7 @@ const DiscoveryCard = ({ id, name, slope, weather, weeklyWeather }: Discovery) =
       <div className={cn('mx-[42px] flex items-center justify-between py-1')}>
         <div className={cn('flex flex-col gap-[5px] py-1')}>
           <h2 className={cn('h2 text-gray-90')}>{name}</h2>
-          <p className={cn('body1-regular text-gray-60')}>운행중인 슬로프 {slope ?? '-'}개</p>
+          <p className={cn('body1-regular text-gray-60')}>운행중인 슬로프 {slope ?? 0}개</p>
         </div>
         <div className={cn('flex flex-col items-end gap-2')}>
           <div className={cn('flex gap-2')}>
@@ -39,7 +40,8 @@ const DiscoveryCard = ({ id, name, slope, weather, weeklyWeather }: Discovery) =
           <WeeklyWeather
             key={index}
             {...weather}
-            isToday={index <= 6 && new Date().getDay() === index + 1}
+            day={getTargetDateWeekday(index)}
+            isToday={index === 0}
           />
         ))}
       </ul>

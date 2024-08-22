@@ -1,4 +1,6 @@
+import Image from 'next/image';
 import { useRouter } from 'next/navigation';
+import logo from '@public/assets/logo.svg';
 import ShareDialog from '@/features/discovery-detail/ui/share-dialog';
 import { ChevronLeftIcon, ShareIcon } from '@/shared/icons';
 import { cn } from '@/shared/lib';
@@ -23,7 +25,7 @@ const Header = ({ resortName, hasBackButton, hasShareButton }: HeaderProps) => {
         </button>
       )}
       <h2 className={cn('h2 absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2')}>
-        WeSki
+        <Image src={logo} alt="logo" width={67} />
       </h2>
       {hasShareButton && (
         <ShareDialog
