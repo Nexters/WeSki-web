@@ -15,7 +15,7 @@ const Header = ({ resortName, hasBackButton, hasShareButton }: HeaderProps) => {
   const router = useRouter();
 
   return (
-    <div className={cn('relative h-20')}>
+    <div className={cn('relative h-16 md:h-20')}>
       {hasBackButton && (
         <button
           className={cn('absolute left-7 top-1/2 -translate-y-1/2')}
@@ -24,7 +24,7 @@ const Header = ({ resortName, hasBackButton, hasShareButton }: HeaderProps) => {
           <ChevronLeftIcon />
         </button>
       )}
-      <h2 className={cn('h2 absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2')}>
+      <h2 className={cn('absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2')}>
         <Image src={logo} alt="logo" width={67} />
       </h2>
       {hasShareButton && (
