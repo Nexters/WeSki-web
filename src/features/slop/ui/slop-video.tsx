@@ -2,6 +2,7 @@ import dynamic from 'next/dynamic';
 import React, { useEffect } from 'react';
 import { cn } from '@/shared/lib';
 import CloseButton from '@/shared/ui/close-button';
+import Loading from '@/shared/ui/loading';
 
 const ReactHlsPlayer = dynamic(() => import('react-hls-player'), { ssr: false });
 
@@ -30,7 +31,11 @@ const SlopVideo = ({ src, closeVideo }: SlopVideoProps) => {
   }, [playerRef]);
 
   return (
-    <div className={cn('absolute top-0 z-50 h-full w-full bg-black')}>
+    <div
+      className={cn('absolute top-0 z-50 flex h-full w-full items-center justify-center bg-black')}
+    >
+      <Loading />
+
       <ReactHlsPlayer
         className={cn('absolute top-0 z-50 h-full w-full')}
         playerRef={playerRef}

@@ -104,10 +104,45 @@ const config = {
           from: { height: 'var(--radix-accordion-content-height)' },
           to: { height: '0' },
         },
+        mulShdSpin: {
+          '0%, 100%': {
+            boxShadow:
+              '0 -3em 0 0.2em #fff, 2em -2em 0 0em #fff, 3em 0 0 -1em #fff, 2em 2em 0 -1em #fff, 0 3em 0 -1em #fff, -2em 2em 0 -1em #fff, -3em 0 0 -1em #fff, -2em -2em 0 0 #fff',
+          },
+          '12.5%': {
+            boxShadow:
+              '0 -3em 0 0 #fff, 2em -2em 0 0.2em #fff, 3em 0 0 0 #fff, 2em 2em 0 -1em #fff, 0 3em 0 -1em #fff, -2em 2em 0 -1em #fff, -3em 0 0 -1em #fff, -2em -2em 0 -1em #fff',
+          },
+          '25%': {
+            boxShadow:
+              '0 -3em 0 -0.5em #fff, 2em -2em 0 0 #fff, 3em 0 0 0.2em #fff, 2em 2em 0 0 #fff, 0 3em 0 -1em #fff, -2em 2em 0 -1em #fff, -3em 0 0 -1em #fff, -2em -2em 0 -1em #fff',
+          },
+          '37.5%': {
+            boxShadow:
+              '0 -3em 0 -1em #fff, 2em -2em 0 -1em #fff, 3em 0 0 0 #fff, 2em 2em 0 0.2em #fff, 0 3em 0 0 #fff, -2em 2em 0 -1em #fff, -3em 0 0 -1em #fff, -2em -2em 0 -1em #fff',
+          },
+          '50%': {
+            boxShadow:
+              '0 -3em 0 -1em #fff, 2em -2em 0 -1em #fff, 3em 0 0 -1em #fff, 2em 2em 0 0 #fff, 0 3em 0 0.2em #fff, -2em 2em 0 0 #fff, -3em 0 0 -1em #fff, -2em -2em 0 -1em #fff',
+          },
+          '62.5%': {
+            boxShadow:
+              '0 -3em 0 -1em #fff, 2em -2em 0 -1em #fff, 3em 0 0 -1em #fff, 2em 2em 0 -1em #fff, 0 3em 0 0 #fff, -2em 2em 0 0.2em #fff, -3em 0 0 0 #fff, -2em -2em 0 -1em #fff',
+          },
+          '75%': {
+            boxShadow:
+              '0 -3em 0 -1em #fff, 2em -2em 0 -1em #fff, 3em 0 0 -1em #fff, 2em 2em 0 -1em #fff, 0 3em 0 -1em #fff, -2em 2em 0 0 #fff, -3em 0 0 0.2em #fff, -2em -2em 0 0 #fff',
+          },
+          '87.5%': {
+            boxShadow:
+              '0 -3em 0 0 #fff, 2em -2em 0 -1em #fff, 3em 0 0 -1em #fff, 2em 2em 0 -1em #fff, 0 3em 0 -1em #fff, -2em 2em 0 0 #fff, -3em 0 0 0 #fff, -2em -2em 0 0.2em #fff',
+          },
+        },
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
+        mulShdSpin: 'mulShdSpin 1.3s infinite linear',
       },
     },
   },
