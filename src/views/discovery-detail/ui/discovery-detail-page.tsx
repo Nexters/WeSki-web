@@ -26,7 +26,7 @@ const DiscoveryDetailPage = ({ params }: { params: { resortId: string } }) => {
     (discovery) => discovery.id === +params?.resortId
   ) as Discovery;
   const { data: voteData } = useQuery(discoveryApi.discoveryQueries.vote(params?.resortId));
-  const data = RESORT_DOMAIN[discovery.map as keyof typeof RESORT_DOMAIN];
+  const data = RESORT_DOMAIN[discovery?.map as keyof typeof RESORT_DOMAIN];
   const [selectedTab, setSelectedTab] = useState('webcam');
   const [showAppDownloadDialog, setShowAppDownloadDialog] = useState(true);
   const { mutateAsync } = usePostVote(params?.resortId);
