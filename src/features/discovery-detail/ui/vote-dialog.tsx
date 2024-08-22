@@ -15,6 +15,7 @@ import {
   DialogTitle,
   DialogTrigger,
 } from '@/shared/ui/dialog';
+import { getVoteText } from '../lib/getVoteText';
 
 interface VoteDialogProps {
   id: number;
@@ -44,7 +45,7 @@ const VoteDialog = ({ id, trigger }: VoteDialogProps) => {
         <DialogHeader>
           <p className={cn('title3-semibold')}>오늘의 설질</p>
           <div className={cn('flex flex-col gap-1')}>
-            <DialogTitle>상태가 좋아요</DialogTitle>
+            <DialogTitle>{getVoteText(voteData?.totalNum, voteData?.likeNum)}</DialogTitle>
             <p className={cn('body1-semibold text-gray-60')}>
               {voteData?.totalNum}명 중{' '}
               <span className={cn('body1-bold text-main-1')}>{voteData?.likeNum}</span>

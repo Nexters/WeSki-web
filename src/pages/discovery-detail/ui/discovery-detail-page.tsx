@@ -19,6 +19,7 @@ import { usePostVote } from '@/entities/discovery/api/use-post-vote';
 import { toast } from 'sonner';
 import CheckIcon from '@/shared/icons/check';
 import { useQuery } from '@tanstack/react-query';
+import { getVoteText } from '@/features/discovery-detail/lib/getVoteText';
 
 const DiscoveryDetailPage = ({ params }: { params: { resortId: string } }) => {
   const discovery = DiscoveryData.find(
@@ -109,7 +110,9 @@ const DiscoveryDetailPage = ({ params }: { params: { resortId: string } }) => {
             <div className={cn('flex flex-col gap-6')}>
               <p className={cn('title3-semibold')}>오늘의 설질</p>
               <div className={cn('flex flex-col gap-1')}>
-                <p className={cn('h3-semibold')}>상태가 좋아요</p>
+                <p className={cn('h3-semibold')}>
+                  {getVoteText(voteData?.totalNum, voteData?.likeNum)}
+                </p>
                 <p className={cn('body1-semibold text-gray-60')}>
                   {voteData?.totalNum}명 중{' '}
                   <span className={cn('body1-bold text-main-1')}>{voteData?.likeNum}</span>
