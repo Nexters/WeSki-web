@@ -3,7 +3,9 @@
 import Image from 'next/image';
 import { GoogleAnalytics } from 'nextjs-google-analytics';
 import left from '@public/downloads/left.png';
-import right from '@public/downloads/right.png';
+import android from '@public/downloads/right-android.png';
+import ios from '@public/downloads/right-ios.png';
+import text from '@public/downloads/right-text.png';
 import { cn } from '@/shared/lib';
 
 export default function Layout({ children }: { children: React.ReactNode }) {
@@ -25,8 +27,16 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         >
           {children}
         </div>
-        <div className={cn('hidden lg:block')}>
-          <Image src={right} alt="right" width={270} height={320} />
+        <div
+          className={cn(
+            'hidden h-[320px] w-[270px] flex-col items-center justify-center gap-[34px] lg:flex'
+          )}
+        >
+          <Image src={text} alt="text" />
+          <div className={cn('flex w-[200px] justify-between')}>
+            <Image src={ios} alt="ios" width={95} />
+            <Image src={android} alt="android" width={95} />
+          </div>
         </div>
       </div>
     </>
