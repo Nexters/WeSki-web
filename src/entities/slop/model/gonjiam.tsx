@@ -128,8 +128,8 @@ export const GONJIAM: ResortInfo = {
       id: 'top-rest-area',
       name: '정상 휴게소',
       position: {
-        top: 'top-[5%]',
-        left: 'left-[19%]',
+        top: 'top-[7%]',
+        left: 'left-[20%]',
       },
       scale: 1,
       src: '/api/webcam?url=http://konjiam.live.cdn.cloudn.co.kr/konjiam/cam01.stream/playlist.m3u8',

@@ -102,7 +102,7 @@ export const ELYSIAN_GANGCHON: ResortInfo = {
       name: '서브하우스',
       position: {
         top: 'top-[86%]',
-        left: 'left-[18%]',
+        left: 'left-[19%]',
       },
       scale: 1,
     },
@@ -119,8 +119,8 @@ export const ELYSIAN_GANGCHON: ResortInfo = {
       id: 'ski-house',
       name: '스키하우스',
       position: {
-        top: 'top-[82%]',
-        left: 'left-[77%]',
+        top: 'top-[83%]',
+        left: 'left-[80%]',
       },
       scale: 1,
     },
