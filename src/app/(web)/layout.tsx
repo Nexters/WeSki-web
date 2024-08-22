@@ -32,7 +32,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             'hidden h-[320px] w-[270px] flex-col items-center justify-center gap-[34px] lg:flex'
           )}
         >
-          <Image src={text} alt="text" />
+          <Image src={text} alt="text" width={194} />
           <div className={cn('flex w-[200px] justify-between')}>
             <Image src={ios} alt="ios" width={95} />
             <Image src={android} alt="android" width={95} />
