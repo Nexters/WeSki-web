@@ -18,7 +18,7 @@ export const SnowConfetti = () => {
     <>
       {init && (
         <Particles
-          className={cn('fixed left-0 top-0 size-full')}
+          className={cn('pointer-events-none fixed left-0 top-0 size-full')}
           id="tsparticles"
           options={{
             preset: 'snow',
