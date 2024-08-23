@@ -182,6 +182,7 @@ export const WELLIHILLI: ResortInfo = {
         top: 'top-[62%]',
         left: 'left-[8%]',
       },
+      src: '/api/webcam?url=https://live.wellihillipark.com/wellihillipark/_definst_/cam07.stream/playlist.m3u8',
       scale: 1,
     },
     {
@@ -191,6 +192,7 @@ export const WELLIHILLI: ResortInfo = {
         top: 'top-[73%]',
         left: 'left-[19%]',
       },
+      src: '/api/webcam?url=https://live.wellihillipark.com/wellihillipark/_definst_/cam06.stream/playlist.m3u8',
       scale: 1,
     },
     {
@@ -200,6 +202,7 @@ export const WELLIHILLI: ResortInfo = {
         top: 'top-[85%]',
         left: 'left-[39%]',
       },
+      src: '/api/webcam?url=https://live.wellihillipark.com/wellihillipark/_definst_/cam05.stream/playlist.m3u8',
       scale: 1,
     },
     {
@@ -209,6 +212,7 @@ export const WELLIHILLI: ResortInfo = {
         top: 'top-[4%]',
         left: 'left-[56%]',
       },
+      src: '/api/webcam?url=https://live.wellihillipark.com/wellihillipark/_definst_/cam03.stream/playlist.m3u8',
       scale: 1,
     },
     {
@@ -218,6 +222,7 @@ export const WELLIHILLI: ResortInfo = {
         top: 'top-[81%]',
         left: 'left-[31%]',
       },
+      src: '/api/webcam?url=https://live.wellihillipark.com/wellihillipark/_definst_/cam04.stream/playlist.m3u8',
       scale: 1,
     },
   ],
