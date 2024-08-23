@@ -19,7 +19,7 @@ const Header = ({ resortName, hasBackButton, hasShareButton }: HeaderProps) => {
       {hasBackButton && (
         <button
           className={cn('absolute left-7 top-1/2 -translate-y-1/2')}
-          onClick={() => router.back()}
+          onClick={() => router.push('/')}
         >
           <ChevronLeftIcon />
         </button>
