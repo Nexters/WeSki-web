@@ -32,6 +32,11 @@ const SlopVideo = ({ src, closeVideo }: SlopVideoProps) => {
       hls.on(Hls.Events.FRAG_BUFFERED, () => {
         startTimer();
       });
+    } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+      video.src = src;
+      video.addEventListener('canplay', () => {
+        startTimer;
+      });
     }
   }, [src, startTimer]);
 
