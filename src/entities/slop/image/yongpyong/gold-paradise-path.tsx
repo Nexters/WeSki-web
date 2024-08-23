@@ -2,8 +2,8 @@ import React from 'react';
 import { cn } from '@/shared/lib';
 
 const GoldParadisePath = ({ color }: { color?: string }) => {
-  const defaultStrokeColor = 'stroke-[#447EFF]';
-  const strokeColorClass = color ? color.replace('fill-', 'stroke-') : defaultStrokeColor;
+  const defaultStrokeColor = 'text-[#447EFF]';
+  const strokeColorClass = color ? color.replace('fill-', 'text-') : defaultStrokeColor;
 
   return (
     <svg

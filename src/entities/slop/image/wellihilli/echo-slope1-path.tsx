@@ -2,8 +2,8 @@ import React from 'react';
 import { cn } from '@/shared/lib';
 
 const EchoSlope1Path = ({ color }: { color?: string }) => {
-  const defaultStrokeColor = 'stroke-[#FF9928]';
-  const strokeColorClass = color ? color.replace('fill-', 'stroke-') : defaultStrokeColor;
+  const defaultStrokeColor = 'text-[#FF9928]';
+  const strokeColorClass = color ? color.replace('fill-', 'text-') : defaultStrokeColor;
   return (
     <svg
       width="100%"
