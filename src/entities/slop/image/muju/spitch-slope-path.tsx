@@ -2,8 +2,8 @@ import React from 'react';
 import { cn } from '@/shared/lib';
 
 const SpitchSlopePath = ({ color }: { color?: string }) => {
-  const defaultStrokeColor = 'stroke-[#171D23]';
-  const strokeColorClass = color ? color.replace('fill-', 'stroke-') : defaultStrokeColor;
+  const defaultStrokeColor = 'text-[#171D23]';
+  const strokeColorClass = color ? color.replace('fill-', 'text-') : defaultStrokeColor;
   return (
     <svg
       width="100%"

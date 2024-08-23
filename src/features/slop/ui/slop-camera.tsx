@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { createPortal } from 'react-dom';
 import { toast } from 'sonner';
 import type { Position, Webcam } from '@/entities/slop/model/model';
@@ -25,7 +25,8 @@ const SlopCamera = ({
   onCameraClick,
   updateCameraPosition,
 }: SlopWebcamProps) => {
-  const [isVideoOpen, setIsVideoOpen] = useState(false);
+  const { setSelectedSlop, selectedCamera, setSelectedCamera, setOpenCamera, setCloseCamera } =
+    useSlopStore();
 
   const cameraRef = useRef<HTMLDivElement>(null);
 
@@ -37,8 +38,8 @@ const SlopCamera = ({
       });
   }, [id, updateCameraPosition, cameraRef]);
 
-  const toggleVideo = () => {
-    setIsVideoOpen((pre) => !pre);
+  const openVideo = () => {
+    setOpenCamera();
 
     if (!src) {
       toast(
@@ -49,22 +50,24 @@ const SlopCamera = ({
     }
   };
 
-  const { setSelectedSlop } = useSlopStore();
-
   return (
     <>
-      <div
-        ref={cameraRef}
-        className={cn('absolute z-10', position.top, position.left)}
-        onClick={() => {
-          setSelectedSlop(null);
-          onCameraClick({ scale, id: id });
-        }}
-      >
+      <div ref={cameraRef} className={cn('absolute z-10', position.top, position.left)}>
         <div className={cn('relative')}>
-          <Tooltip trigger={<CameraButton />} isOpen={isOpen}>
+          <Tooltip
+            trigger={
+              <CameraButton
+                onClick={() => {
+                  setSelectedSlop(null);
+                  setSelectedCamera(id);
+                  onCameraClick({ scale, id: id });
+                }}
+              />
+            }
+            isOpen={isOpen}
+          >
             <div className={cn('flex items-center')}>
-              <p className={cn('body3-medium')} onClick={toggleVideo}>
+              <p className={cn('body3-medium')} onClick={openVideo}>
                 {name}
               </p>
               <ArrowRightIcon />
@@ -73,9 +76,10 @@ const SlopCamera = ({
         </div>
       </div>
       {containerRef?.current &&
-        isVideoOpen &&
+        selectedCamera.isOpen &&
+        selectedCamera.id === id &&
         src &&
-        createPortal(<SlopVideo src={src} closeVideo={toggleVideo} />, containerRef.current)}
+        createPortal(<SlopVideo src={src} closeVideo={setCloseCamera} />, containerRef.current)}
     </>
   );
 };

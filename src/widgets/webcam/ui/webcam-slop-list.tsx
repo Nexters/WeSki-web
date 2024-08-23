@@ -15,7 +15,7 @@ interface WebcamSlopListProps {
 }
 
 const WebcamSlopList = ({ className, list, webcams, onItemClick }: WebcamSlopListProps) => {
-  const { selectedSlop, setSelectedSlop } = useSlopStore();
+  const { selectedSlop, setSelectedSlop, setSelectedCamera, setCloseCamera } = useSlopStore();
 
   return (
     <ul className={cn('w-full md:grid md:grid-cols-2', className)}>
@@ -32,9 +32,12 @@ const WebcamSlopList = ({ className, list, webcams, onItemClick }: WebcamSlopLis
             onClick={() => {
               if (selectedSlop === item.id) {
                 setSelectedSlop(null);
+                setSelectedCamera(null);
               } else {
                 setSelectedSlop(item.id);
+                setSelectedCamera(item.webcamId);
               }
+              setCloseCamera();
               if (item.webcamId) {
                 const webcam = webcams.find((webcam) => webcam.id === item.webcamId);
                 if (!webcam) return;
