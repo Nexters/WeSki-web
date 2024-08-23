@@ -13,7 +13,7 @@ export const DiscoveryData: Discovery[] = [
     weather: {
       weather: 'rain',
       temperature: 24,
-      description: '구름많고 소나기',
+      description: '소나기',
     },
     weeklyWeather: [
       {
@@ -159,7 +159,7 @@ export const DiscoveryData: Discovery[] = [
     weather: {
       weather: 'rain',
       temperature: 23,
-      description: '구름많고 소나기',
+      description: '소나기',
     },
     weeklyWeather: [
       {
@@ -232,7 +232,7 @@ export const DiscoveryData: Discovery[] = [
     weather: {
       weather: 'cloud',
       temperature: 24,
-      description: '흐림',
+      description: '구름많음',
     },
     weeklyWeather: [
       {
@@ -451,7 +451,7 @@ export const DiscoveryData: Discovery[] = [
     weather: {
       weather: 'rain',
       temperature: 22,
-      description: '흐리고 소나기',
+      description: '흐리고 비',
     },
     weeklyWeather: [
       {
@@ -524,7 +524,7 @@ export const DiscoveryData: Discovery[] = [
     weather: {
       weather: 'rain',
       temperature: 22,
-      description: '구름많고 소나기',
+      description: '소나기',
     },
     weeklyWeather: [
       {
@@ -597,7 +597,7 @@ export const DiscoveryData: Discovery[] = [
     weather: {
       weather: 'rain',
       temperature: 23,
-      description: '구름많고 소나기',
+      description: '소나기',
     },
     weeklyWeather: [
       {
