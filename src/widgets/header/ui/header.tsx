@@ -25,7 +25,7 @@ const Header = ({ resortName, hasBackButton, hasShareButton }: HeaderProps) => {
         </button>
       )}
       <h2 className={cn('absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2')}>
-        <Image src={logo} alt="logo" width={67} />
+        <Image src={logo} alt="logo" width={67} draggable={false} />
       </h2>
       {hasShareButton && (
         <ShareDialog

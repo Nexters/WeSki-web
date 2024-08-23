@@ -60,7 +60,7 @@ const ShareDialog = ({ trigger, name }: ShareDialogProps) => {
         <DialogClose>
           <CloseIcon className={cn('absolute right-6 top-6 size-6 cursor-pointer text-gray-50')} />
         </DialogClose>
-        <Image src={logo} alt="logo" width={56} />
+        <Image src={logo} alt="logo" width={56} draggable={false} />
         <div className={cn('h3-semibold mb-[31px] mt-[38px] flex h-16 flex-col justify-evenly')}>
           <p>{getPostposition(name || '')}</p>
           <p>공유해보세요!</p>
