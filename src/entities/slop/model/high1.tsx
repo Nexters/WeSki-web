@@ -149,6 +149,7 @@ export const HIGH1: ResortInfo = {
         top: 'top-[6%]',
         left: 'left-[45%]',
       },
+      src: '/api/webcam?url=http://59.30.12.195:1935/live/_definst_/ch1.stream/playlist.m3u8',
       scale: 2,
     },
     {
@@ -158,6 +159,7 @@ export const HIGH1: ResortInfo = {
         top: 'top-[10%]',
         left: 'left-[50%]',
       },
+      src: '/api/webcam?url=http://59.30.12.195:1935/live/_definst_/ch2.stream/playlist.m3u8',
       scale: 2,
     },
     {
@@ -167,6 +169,7 @@ export const HIGH1: ResortInfo = {
         top: 'top-[6%]',
         left: 'left-[54%]',
       },
+      src: '/api/webcam?url=http://59.30.12.195:1935/live/_definst_/ch3.stream/playlist.m3u8',
       scale: 2,
     },
     {
@@ -176,6 +179,7 @@ export const HIGH1: ResortInfo = {
         top: 'top-[30%]',
         left: 'left-[65%]',
       },
+      src: '/api/webcam?url=http://59.30.12.195:1935/live/_definst_/ch4.stream/playlist.m3u8',
       scale: 2,
     },
     {
@@ -185,6 +189,7 @@ export const HIGH1: ResortInfo = {
         top: 'top-[35%]',
         left: 'left-[61%]',
       },
+      src: '/api/webcam?url=http://59.30.12.195:1935/live/_definst_/ch5.stream/playlist.m3u8',
       scale: 2,
     },
     {
@@ -194,6 +199,7 @@ export const HIGH1: ResortInfo = {
         top: 'top-[40%]',
         left: 'left-[66%]',
       },
+      src: '/api/webcam?url=http://59.30.12.195:1935/live/_definst_/ch6.stream/playlist.m3u8',
       scale: 2,
     },
     {
@@ -203,6 +209,7 @@ export const HIGH1: ResortInfo = {
         top: 'top-[68%]',
         left: 'left-[78%]',
       },
+      src: '/api/webcam?url=http://59.30.12.195:1935/live/_definst_/ch7.stream/playlist.m3u8',
       scale: 2,
     },
     {
@@ -212,6 +219,7 @@ export const HIGH1: ResortInfo = {
         top: 'top-[76%]',
         left: 'left-[73%]',
       },
+      src: '/api/webcam?url=http://59.30.12.195:1935/live/_definst_/ch8.stream/playlist.m3u8',
       scale: 2,
     },
     {
@@ -221,6 +229,7 @@ export const HIGH1: ResortInfo = {
         top: 'top-[17%]',
         left: 'left-[17%]',
       },
+      src: '/api/webcam?url=http://59.30.12.195:1935/live/_definst_/ch9.stream/playlist.m3u8',
       scale: 2,
     },
     {
@@ -230,6 +239,7 @@ export const HIGH1: ResortInfo = {
         top: 'top-[34%]',
         left: 'left-[38%]',
       },
+      src: '/api/webcam?url=http://59.30.12.195:1935/live/_definst_/ch10.stream/playlist.m3u8',
       scale: 2,
     },
     {
@@ -239,6 +249,7 @@ export const HIGH1: ResortInfo = {
         top: 'top-[40%]',
         left: 'left-[40%]',
       },
+      src: '/api/webcam?url=http://59.30.12.195:1935/live/_definst_/ch11.stream/playlist.m3u8',
       scale: 2,
     },
     {
@@ -248,6 +259,7 @@ export const HIGH1: ResortInfo = {
         top: 'top-[48%]',
         left: 'left-[43%]',
       },
+      src: '/api/webcam?url=http://59.30.12.195:1935/live/_definst_/ch12.stream/playlist.m3u8',
       scale: 2,
     },
     {
@@ -257,6 +269,7 @@ export const HIGH1: ResortInfo = {
         top: 'top-[50%]',
         left: 'left-[36%]',
       },
+      src: '/api/webcam?url=http://59.30.12.195:1935/live/_definst_/ch13.stream/playlist.m3u8',
       scale: 2,
     },
     {
@@ -266,6 +279,7 @@ export const HIGH1: ResortInfo = {
         top: 'top-[58%]',
         left: 'left-[40%]',
       },
+      src: '/api/webcam?url=http://59.30.12.195:1935/live/_definst_/ch14.stream/playlist.m3u8',
       scale: 2,
     },
     {
@@ -275,6 +289,7 @@ export const HIGH1: ResortInfo = {
         top: 'top-[58%]',
         left: 'left-[52%]',
       },
+      src: '/api/webcam?url=http://59.30.12.195:1935/live/_definst_/ch15.stream/playlist.m3u8',
       scale: 2,
     },
     {
@@ -284,6 +299,7 @@ export const HIGH1: ResortInfo = {
         top: 'top-[71%]',
         left: 'left-[44%]',
       },
+      src: '/api/webcam?url=http://59.30.12.195:1935/live/_definst_/ch16.stream/playlist.m3u8',
       scale: 2,
     },
     {
@@ -293,6 +309,7 @@ export const HIGH1: ResortInfo = {
         top: 'top-[86%]',
         left: 'left-[46%]',
       },
+      src: '/api/webcam?url=http://59.30.12.195:1935/live/_definst_/ch17.stream/playlist.m3u8',
       scale: 2,
     },
     {
@@ -302,6 +319,7 @@ export const HIGH1: ResortInfo = {
         top: 'top-[86%]',
         left: 'left-[39%]',
       },
+      src: '/api/webcam?url=http://59.30.12.195:1935/live/_definst_/ch18.stream/playlist.m3u8',
       scale: 2,
     },
   ],
