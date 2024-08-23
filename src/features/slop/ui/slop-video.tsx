@@ -19,13 +19,11 @@ const SlopVideo = ({ src, closeVideo }: SlopVideoProps) => {
   });
 
   function fireOnVideoStart() {
-    // document.body.classList.add('video-active');
     playerRef?.current?.focus();
     startTimer();
   }
 
   const handleVideoClose = () => {
-    // document.body.classList.remove('video-active');
     closeVideo();
   };
 
