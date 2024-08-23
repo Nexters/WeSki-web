@@ -30,6 +30,7 @@ const WebcamSlopList = ({ className, list, webcams, onItemClick }: WebcamSlopLis
               selectedSlop === item.id ? 'bg-main-5' : 'bg-inherit hover:bg-inherit'
             )}
             onClick={() => {
+              if (!item.isOpen) return;
               if (selectedSlop === item.id) {
                 setSelectedSlop(null);
                 setSelectedCamera(null);

@@ -19,13 +19,13 @@ const Header = ({ resortName, hasBackButton, hasShareButton }: HeaderProps) => {
       {hasBackButton && (
         <button
           className={cn('absolute left-7 top-1/2 -translate-y-1/2')}
-          onClick={() => router.back()}
+          onClick={() => router.push('/')}
         >
           <ChevronLeftIcon />
         </button>
       )}
       <h2 className={cn('absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2')}>
-        <Image src={logo} alt="logo" width={67} />
+        <Image src={logo} alt="logo" width={67} draggable={false} />
       </h2>
       {hasShareButton && (
         <ShareDialog
