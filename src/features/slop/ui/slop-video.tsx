@@ -1,11 +1,9 @@
-import dynamic from 'next/dynamic';
-import React from 'react';
+import Hls from 'hls.js';
+import React, { useEffect } from 'react';
 import { cn } from '@/shared/lib';
 import CloseButton from '@/shared/ui/close-button';
 import Loading from '@/shared/ui/loading';
 import useTimer from '../hooks/useTimer';
-
-const ReactHlsPlayer = dynamic(() => import('react-hls-player'), { ssr: false });
 
 interface SlopVideoProps {
   src: string;
@@ -18,14 +16,24 @@ const SlopVideo = ({ src, closeVideo }: SlopVideoProps) => {
     handleVideoClose();
   });
 
-  function fireOnVideoStart() {
-    playerRef?.current?.focus();
-    startTimer();
-  }
-
   const handleVideoClose = () => {
     closeVideo();
   };
+
+  useEffect(() => {
+    const video = playerRef.current;
+    if (!video) return;
+    if (Hls.isSupported()) {
+      const hls = new Hls();
+
+      hls.loadSource(src);
+      hls.attachMedia(video);
+
+      hls.on(Hls.Events.FRAG_BUFFERED, () => {
+        startTimer();
+      });
+    }
+  }, [src, startTimer]);
 
   return (
     <div
@@ -33,15 +41,11 @@ const SlopVideo = ({ src, closeVideo }: SlopVideoProps) => {
     >
       <Loading />
 
-      <ReactHlsPlayer
+      <video
         className={cn('absolute top-0 z-50 h-full w-full')}
-        playerRef={playerRef}
-        src={src}
+        ref={playerRef}
         autoPlay={true}
         controls={false}
-        onPlay={() => {
-          fireOnVideoStart();
-        }}
       />
       {isRunning && (
         <div className="absolute bottom-0 z-[51] flex w-full justify-center bg-gray-100 bg-opacity-50 py-[9px] text-center">

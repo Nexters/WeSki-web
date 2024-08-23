@@ -33,12 +33,12 @@ const useTimer = (initialTime: number, onComplete?: () => void): UseTimerReturn 
     };
   }, [isRunning, timeLeft, onComplete]);
 
-  const startTimer = (newTime?: number) => {
+  const startTimer = useCallback((newTime?: number) => {
     if (newTime !== undefined) {
       setTimeLeft(newTime);
     }
     setIsRunning(true);
-  };
+  },[]);
 
   const pauseTimer = useCallback(() => setIsRunning(false), []);
 
