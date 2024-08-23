@@ -1,5 +1,5 @@
 import Hls from 'hls.js';
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { cn } from '@/shared/lib';
 import CloseButton from '@/shared/ui/close-button';
 import Loading from '@/shared/ui/loading';
@@ -12,6 +12,8 @@ interface SlopVideoProps {
 
 const SlopVideo = ({ src, closeVideo }: SlopVideoProps) => {
   const playerRef = React.useRef<HTMLVideoElement>(null);
+  const hlsRef = useRef<Hls | null>(null);
+
   const { isRunning, startTimer, timeLeft } = useTimer(30, () => {
     handleVideoClose();
   });
@@ -23,21 +25,36 @@ const SlopVideo = ({ src, closeVideo }: SlopVideoProps) => {
   useEffect(() => {
     const video = playerRef.current;
     if (!video) return;
+
+    const handleStart = () => {
+      startTimer();
+    };
+
     if (Hls.isSupported()) {
       const hls = new Hls();
+      hlsRef.current = hls;
 
       hls.loadSource(src);
       hls.attachMedia(video);
 
-      hls.on(Hls.Events.FRAG_BUFFERED, () => {
-        startTimer();
-      });
+      hls.on(Hls.Events.FRAG_BUFFERED, handleStart);
     } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
       video.src = src;
-      video.addEventListener('canplay', () => {
-        startTimer;
-      });
+      video.addEventListener('canplay', handleStart);
     }
+
+    return () => {
+      if (hlsRef.current) {
+        hlsRef.current.destroy();
+        hlsRef.current = null;
+      }
+      if (video) {
+        video.removeEventListener('canplay', handleStart);
+        video.pause();
+        video.src = '';
+        video.load();
+      }
+    };
   }, [src, startTimer]);
 
   return (
