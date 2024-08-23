@@ -2,79 +2,6 @@ import type { Discovery } from './model';
 
 export const DiscoveryData: Discovery[] = [
   {
-    id: 1,
-    name: '지산 포레스트 리조트',
-    map: 'jisan',
-    slope: 0,
-    url: {
-      bus: 'https://www.jisanresort.co.kr/w/reservation/shuttle/reservation.asp',
-      homepage: 'https://www.jisanresort.co.kr/m/ski/',
-    },
-    weather: {
-      weather: 'rain',
-      temperature: 24,
-      description: '소나기',
-    },
-    weeklyWeather: [
-      {
-        weather: 'rain',
-        temperature: {
-          lowest: '24°',
-          average: '33°',
-        },
-      },
-      {
-        weather: 'fog',
-        temperature: {
-          lowest: '23°',
-          average: '32°',
-        },
-      },
-      {
-        weather: 'sun',
-        temperature: {
-          lowest: '22°',
-          average: '33°',
-        },
-      },
-      {
-        weather: 'sun',
-        temperature: {
-          lowest: '23°',
-          average: '33°',
-        },
-      },
-      {
-        weather: 'sun',
-        temperature: {
-          lowest: '24°',
-          average: '32°',
-        },
-      },
-      {
-        weather: 'sun',
-        temperature: {
-          lowest: '23°',
-          average: '31°',
-        },
-      },
-      {
-        weather: 'cloud',
-        temperature: {
-          lowest: '23°',
-          average: '32°',
-        },
-      },
-      {
-        weather: 'fog',
-        temperature: {
-          lowest: '24°',
-          average: '32°',
-        },
-      },
-    ],
-  },
-  {
     id: 2,
     name: '곤지암리조트',
     map: 'gonjiam',
@@ -143,6 +70,371 @@ export const DiscoveryData: Discovery[] = [
         temperature: {
           lowest: '23°',
           average: '30°',
+        },
+      },
+    ],
+  },
+  {
+    id: 8,
+    name: '용평 모나 파크',
+    map: 'yongpyong',
+    slope: 0,
+    url: {
+      bus: 'https://skibus.purplebus.co.kr/Yp/',
+      homepage: 'https://www.yongpyong.co.kr/kor/skiNboard/introduce.do',
+    },
+    weather: {
+      weather: 'rain',
+      temperature: 22,
+      description: '소나기',
+    },
+    weeklyWeather: [
+      {
+        weather: 'rain',
+        temperature: {
+          lowest: '22°',
+          average: '32°',
+        },
+      },
+      {
+        weather: 'cloud',
+        temperature: {
+          lowest: '21°',
+          average: '31°',
+        },
+      },
+      {
+        weather: 'fog',
+        temperature: {
+          lowest: '20°',
+          average: '31°',
+        },
+      },
+      {
+        weather: 'fog',
+        temperature: {
+          lowest: '20°',
+          average: '31°',
+        },
+      },
+      {
+        weather: 'fog',
+        temperature: {
+          lowest: '19°',
+          average: '30°',
+        },
+      },
+      {
+        weather: 'fog',
+        temperature: {
+          lowest: '19°',
+          average: '30°',
+        },
+      },
+      {
+        weather: 'cloud',
+        temperature: {
+          lowest: '19°',
+          average: '30°',
+        },
+      },
+      {
+        weather: 'cloud',
+        temperature: {
+          lowest: '21°',
+          average: '28°',
+        },
+      },
+    ],
+  },
+  {
+    id: 5,
+    name: '웰리힐리파크',
+    map: 'wellihilli',
+    slope: 0,
+    url: {
+      bus: 'https://www.wellihillipark.com/home/guide/map/shuttle',
+      homepage: 'https://www.wellihillipark.com/snowpark',
+    },
+    weather: {
+      weather: 'rain',
+      temperature: 23,
+      description: '흐리고 비',
+    },
+    weeklyWeather: [
+      {
+        weather: 'rain',
+        temperature: {
+          lowest: '23°',
+          average: '33°',
+        },
+      },
+      {
+        weather: 'cloud',
+        temperature: {
+          lowest: '22°',
+          average: '32°',
+        },
+      },
+      {
+        weather: 'fog',
+        temperature: {
+          lowest: '23°',
+          average: '33°',
+        },
+      },
+      {
+        weather: 'fog',
+        temperature: {
+          lowest: '22°',
+          average: '32°',
+        },
+      },
+      {
+        weather: 'fog',
+        temperature: {
+          lowest: '21°',
+          average: '31°',
+        },
+      },
+      {
+        weather: 'fog',
+        temperature: {
+          lowest: '21°',
+          average: '32°',
+        },
+      },
+      {
+        weather: 'cloud',
+        temperature: {
+          lowest: '22°',
+          average: '30°',
+        },
+      },
+      {
+        weather: 'cloud',
+        temperature: {
+          lowest: '22°',
+          average: '30°',
+        },
+      },
+    ],
+  },
+  {
+    id: 7,
+    name: '하이원 리조트',
+    map: 'high1',
+    slope: 0,
+    url: {
+      bus: 'https://skibus.purplebus.co.kr/Hi/',
+      homepage: 'https://www.high1.com/ski/index.do',
+    },
+    weather: {
+      weather: 'rain',
+      temperature: 22,
+      description: '흐리고 비',
+    },
+    weeklyWeather: [
+      {
+        weather: 'rain',
+        temperature: {
+          lowest: '22°',
+          average: '33°',
+        },
+      },
+      {
+        weather: 'cloud',
+        temperature: {
+          lowest: '21°',
+          average: '32°',
+        },
+      },
+      {
+        weather: 'fog',
+        temperature: {
+          lowest: '20°',
+          average: '32°',
+        },
+      },
+      {
+        weather: 'fog',
+        temperature: {
+          lowest: '21°',
+          average: '31°',
+        },
+      },
+      {
+        weather: 'fog',
+        temperature: {
+          lowest: '20°',
+          average: '30°',
+        },
+      },
+      {
+        weather: 'fog',
+        temperature: {
+          lowest: '20°',
+          average: '30°',
+        },
+      },
+      {
+        weather: 'cloud',
+        temperature: {
+          lowest: '21°',
+          average: '29°',
+        },
+      },
+      {
+        weather: 'cloud',
+        temperature: {
+          lowest: '21°',
+          average: '29°',
+        },
+      },
+    ],
+  },
+  {
+    id: 9,
+    name: '무주 덕유산 리조트',
+    map: 'muju',
+    slope: 0,
+    url: {
+      bus: 'https://www.mdysresort.com/guide/shuttle_bus.asp',
+      homepage: 'https://www.mdysresort.com/index.asp',
+    },
+    weather: {
+      weather: 'rain',
+      temperature: 23,
+      description: '소나기',
+    },
+    weeklyWeather: [
+      {
+        weather: 'rain',
+        temperature: {
+          lowest: '23°',
+          average: '33°',
+        },
+      },
+      {
+        weather: 'fog',
+        temperature: {
+          lowest: '22°',
+          average: '32°',
+        },
+      },
+      {
+        weather: 'rain',
+        temperature: {
+          lowest: '21°',
+          average: '33°',
+        },
+      },
+      {
+        weather: 'fog',
+        temperature: {
+          lowest: '23°',
+          average: '33°',
+        },
+      },
+      {
+        weather: 'sun',
+        temperature: {
+          lowest: '24°',
+          average: '32°',
+        },
+      },
+      {
+        weather: 'sun',
+        temperature: {
+          lowest: '23°',
+          average: '32°',
+        },
+      },
+      {
+        weather: 'cloud',
+        temperature: {
+          lowest: '22°',
+          average: '31°',
+        },
+      },
+      {
+        weather: 'cloud',
+        temperature: {
+          lowest: '22°',
+          average: '31°',
+        },
+      },
+    ],
+  },
+  {
+    id: 1,
+    name: '지산 리조트',
+    map: 'jisan',
+    slope: 0,
+    url: {
+      bus: 'https://www.jisanresort.co.kr/w/reservation/shuttle/reservation.asp',
+      homepage: 'https://www.jisanresort.co.kr/m/ski/',
+    },
+    weather: {
+      weather: 'rain',
+      temperature: 24,
+      description: '소나기',
+    },
+    weeklyWeather: [
+      {
+        weather: 'rain',
+        temperature: {
+          lowest: '24°',
+          average: '33°',
+        },
+      },
+      {
+        weather: 'fog',
+        temperature: {
+          lowest: '23°',
+          average: '32°',
+        },
+      },
+      {
+        weather: 'sun',
+        temperature: {
+          lowest: '22°',
+          average: '33°',
+        },
+      },
+      {
+        weather: 'sun',
+        temperature: {
+          lowest: '23°',
+          average: '33°',
+        },
+      },
+      {
+        weather: 'sun',
+        temperature: {
+          lowest: '24°',
+          average: '32°',
+        },
+      },
+      {
+        weather: 'sun',
+        temperature: {
+          lowest: '23°',
+          average: '31°',
+        },
+      },
+      {
+        weather: 'cloud',
+        temperature: {
+          lowest: '23°',
+          average: '32°',
+        },
+      },
+      {
+        weather: 'fog',
+        temperature: {
+          lowest: '24°',
+          average: '32°',
         },
       },
     ],
@@ -294,79 +586,6 @@ export const DiscoveryData: Discovery[] = [
     ],
   },
   {
-    id: 5,
-    name: '웰리힐리파크',
-    map: 'wellihilli',
-    slope: 0,
-    url: {
-      bus: 'https://www.wellihillipark.com/home/guide/map/shuttle',
-      homepage: 'https://www.wellihillipark.com/snowpark',
-    },
-    weather: {
-      weather: 'rain',
-      temperature: 23,
-      description: '흐리고 비',
-    },
-    weeklyWeather: [
-      {
-        weather: 'rain',
-        temperature: {
-          lowest: '23°',
-          average: '33°',
-        },
-      },
-      {
-        weather: 'cloud',
-        temperature: {
-          lowest: '22°',
-          average: '32°',
-        },
-      },
-      {
-        weather: 'fog',
-        temperature: {
-          lowest: '23°',
-          average: '33°',
-        },
-      },
-      {
-        weather: 'fog',
-        temperature: {
-          lowest: '22°',
-          average: '32°',
-        },
-      },
-      {
-        weather: 'fog',
-        temperature: {
-          lowest: '21°',
-          average: '31°',
-        },
-      },
-      {
-        weather: 'fog',
-        temperature: {
-          lowest: '21°',
-          average: '32°',
-        },
-      },
-      {
-        weather: 'cloud',
-        temperature: {
-          lowest: '22°',
-          average: '30°',
-        },
-      },
-      {
-        weather: 'cloud',
-        temperature: {
-          lowest: '22°',
-          average: '30°',
-        },
-      },
-    ],
-  },
-  {
     id: 6,
     name: '휘닉스파크',
     map: 'phoenix',
@@ -435,225 +654,6 @@ export const DiscoveryData: Discovery[] = [
         temperature: {
           lowest: '20°',
           average: '29°',
-        },
-      },
-    ],
-  },
-  {
-    id: 7,
-    name: '하이원 리조트',
-    map: 'high1',
-    slope: 0,
-    url: {
-      bus: 'https://skibus.purplebus.co.kr/Hi/',
-      homepage: 'https://www.high1.com/ski/index.do',
-    },
-    weather: {
-      weather: 'rain',
-      temperature: 22,
-      description: '흐리고 비',
-    },
-    weeklyWeather: [
-      {
-        weather: 'rain',
-        temperature: {
-          lowest: '22°',
-          average: '33°',
-        },
-      },
-      {
-        weather: 'cloud',
-        temperature: {
-          lowest: '21°',
-          average: '32°',
-        },
-      },
-      {
-        weather: 'fog',
-        temperature: {
-          lowest: '20°',
-          average: '32°',
-        },
-      },
-      {
-        weather: 'fog',
-        temperature: {
-          lowest: '21°',
-          average: '31°',
-        },
-      },
-      {
-        weather: 'fog',
-        temperature: {
-          lowest: '20°',
-          average: '30°',
-        },
-      },
-      {
-        weather: 'fog',
-        temperature: {
-          lowest: '20°',
-          average: '30°',
-        },
-      },
-      {
-        weather: 'cloud',
-        temperature: {
-          lowest: '21°',
-          average: '29°',
-        },
-      },
-      {
-        weather: 'cloud',
-        temperature: {
-          lowest: '21°',
-          average: '29°',
-        },
-      },
-    ],
-  },
-  {
-    id: 8,
-    name: '용평 모나 파크',
-    map: 'yongpyong',
-    slope: 0,
-    url: {
-      bus: 'https://skibus.purplebus.co.kr/Yp/',
-      homepage: 'https://www.yongpyong.co.kr/kor/skiNboard/introduce.do',
-    },
-    weather: {
-      weather: 'rain',
-      temperature: 22,
-      description: '소나기',
-    },
-    weeklyWeather: [
-      {
-        weather: 'rain',
-        temperature: {
-          lowest: '22°',
-          average: '32°',
-        },
-      },
-      {
-        weather: 'cloud',
-        temperature: {
-          lowest: '21°',
-          average: '31°',
-        },
-      },
-      {
-        weather: 'fog',
-        temperature: {
-          lowest: '20°',
-          average: '31°',
-        },
-      },
-      {
-        weather: 'fog',
-        temperature: {
-          lowest: '20°',
-          average: '31°',
-        },
-      },
-      {
-        weather: 'fog',
-        temperature: {
-          lowest: '19°',
-          average: '30°',
-        },
-      },
-      {
-        weather: 'fog',
-        temperature: {
-          lowest: '19°',
-          average: '30°',
-        },
-      },
-      {
-        weather: 'cloud',
-        temperature: {
-          lowest: '19°',
-          average: '30°',
-        },
-      },
-      {
-        weather: 'cloud',
-        temperature: {
-          lowest: '21°',
-          average: '28°',
-        },
-      },
-    ],
-  },
-  {
-    id: 9,
-    name: '무주 덕유산 리조트',
-    map: 'muju',
-    slope: 0,
-    url: {
-      bus: 'https://www.mdysresort.com/guide/shuttle_bus.asp',
-      homepage: 'https://www.mdysresort.com/index.asp',
-    },
-    weather: {
-      weather: 'rain',
-      temperature: 23,
-      description: '소나기',
-    },
-    weeklyWeather: [
-      {
-        weather: 'rain',
-        temperature: {
-          lowest: '23°',
-          average: '33°',
-        },
-      },
-      {
-        weather: 'fog',
-        temperature: {
-          lowest: '22°',
-          average: '32°',
-        },
-      },
-      {
-        weather: 'rain',
-        temperature: {
-          lowest: '21°',
-          average: '33°',
-        },
-      },
-      {
-        weather: 'fog',
-        temperature: {
-          lowest: '23°',
-          average: '33°',
-        },
-      },
-      {
-        weather: 'sun',
-        temperature: {
-          lowest: '24°',
-          average: '32°',
-        },
-      },
-      {
-        weather: 'sun',
-        temperature: {
-          lowest: '23°',
-          average: '32°',
-        },
-      },
-      {
-        weather: 'cloud',
-        temperature: {
-          lowest: '22°',
-          average: '31°',
-        },
-      },
-      {
-        weather: 'cloud',
-        temperature: {
-          lowest: '22°',
-          average: '31°',
         },
       },
     ],
