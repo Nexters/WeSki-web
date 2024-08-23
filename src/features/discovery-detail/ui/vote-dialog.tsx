@@ -15,7 +15,9 @@ import {
   DialogTitle,
   DialogTrigger,
 } from '@/shared/ui/dialog';
+import { formatDate } from '../lib/formatDate';
 import { getVoteText } from '../lib/getVoteText';
+import { canVote, getVoteData, saveVoteData } from '../lib/vote';
 
 interface VoteDialogProps {
   id: number;
@@ -29,14 +31,21 @@ const VoteDialog = ({ id, trigger }: VoteDialogProps) => {
   const { mutateAsync } = usePostVote(id.toString());
 
   const handleVote = useCallback(async () => {
+    if (!canVote(id.toString())) {
+      toast.error('하루에 한 번만 투표할 수 있어요');
+      return;
+    }
     try {
       await mutateAsync({ isLike: isGood });
     } catch (error) {
       console.log(error);
     } finally {
+      const voteData = getVoteData();
+      voteData[id.toString()] = formatDate(new Date());
+      saveVoteData(voteData);
       toast.success('고마워요! 투표의 결과가 반영되었어요');
     }
-  }, [isGood, mutateAsync]);
+  }, [id, isGood, mutateAsync]);
 
   return (
     <Dialog>

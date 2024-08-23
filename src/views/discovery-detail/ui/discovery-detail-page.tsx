@@ -9,7 +9,9 @@ import { DiscoveryContentTabList } from '@/widgets/discovery-detail/model/consta
 import DiscoverySummary from '@/widgets/discovery-detail/ui/discovery-summary';
 import { Header } from '@/widgets/header/ui';
 import { WebcamMap, WebcamSlopList } from '@/widgets/webcam/ui';
+import { formatDate } from '@/features/discovery-detail/lib/formatDate';
 import { getVoteText } from '@/features/discovery-detail/lib/getVoteText';
+import { canVote, getVoteData, saveVoteData } from '@/features/discovery-detail/lib/vote';
 import AppDownloadDialog from '@/features/discovery-detail/ui/app-download-dialog';
 import useMapPinch from '@/features/slop/hooks/useMapPinch';
 import calculateWebcamPosition from '@/features/slop/lib/calculateWebcamPosition';
@@ -55,14 +57,21 @@ const DiscoveryDetailPage = ({ params }: { params: { resortId: string } }) => {
   };
 
   const handleVote = useCallback(async () => {
+    if (!canVote(params?.resortId)) {
+      toast.error('하루에 한 번만 투표할 수 있어요');
+      return;
+    }
     try {
       await mutateAsync({ isLike: isGood });
     } catch (error) {
       console.log(error);
     } finally {
+      const voteData = getVoteData();
+      voteData[params?.resortId] = formatDate(new Date());
+      saveVoteData(voteData);
       toast.success('고마워요! 투표의 결과가 반영되었어요');
     }
-  }, [isGood, mutateAsync]);
+  }, [isGood, mutateAsync, params?.resortId]);
 
   if (!discovery) return;
 
