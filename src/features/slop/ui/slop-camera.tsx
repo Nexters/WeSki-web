@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
 import { toast } from 'sonner';
 import type { Position, Webcam } from '@/entities/slop/model/model';
+import ArrowRightIcon from '@/shared/icons/arrow-right';
 import NeutralFace from '@/shared/icons/neutral-face';
 import { cn } from '@/shared/lib';
 import CameraButton from '@/shared/ui/cam-button';
@@ -62,9 +63,12 @@ const SlopCamera = ({
       >
         <div className={cn('relative')}>
           <Tooltip trigger={<CameraButton />} isOpen={isOpen}>
-            <p className={cn('body3-medium')} onClick={toggleVideo}>
-              {name}
-            </p>
+            <div className={cn('flex items-center')}>
+              <p className={cn('body3-medium')} onClick={toggleVideo}>
+                {name}
+              </p>
+              <ArrowRightIcon />
+            </div>
           </Tooltip>
         </div>
       </div>
