@@ -64,6 +64,7 @@ const SlopVideo = ({ src, closeVideo }: SlopVideoProps) => {
       <Loading />
 
       <video
+        playsInline
         className={cn('absolute top-0 z-50 h-full w-full')}
         ref={playerRef}
         autoPlay={true}
