@@ -33,13 +33,10 @@ const useTimer = (initialTime: number, onComplete?: () => void): UseTimerReturn 
     };
   }, [isRunning, timeLeft, onComplete]);
 
-  console.log(isRunning);
-
   const startTimer = (newTime?: number) => {
     if (newTime !== undefined) {
       setTimeLeft(newTime);
     }
-    console.log('startTimer');
     setIsRunning(true);
   };
 
