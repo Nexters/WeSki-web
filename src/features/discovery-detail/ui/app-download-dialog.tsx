@@ -1,7 +1,5 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { useCallback } from 'react';
-import { toast } from 'sonner';
 import logo from '@public/assets/logo.svg';
 import snow from '@public/assets/snow.png';
 import android from '@public/downloads/android.png';
@@ -14,11 +12,7 @@ interface AppDownloadDialogProps {
   onClose: () => void;
 }
 
-const AppDownloadDialog = ({ className, onClose }: AppDownloadDialogProps) => {
-  const handleAndroid = useCallback(() => {
-    toast.error('준비중입니다.');
-  }, []);
-  
+const AppDownloadDialog = ({ className, onClose }: AppDownloadDialogProps) => {  
   return (
     <div
       className={cn(
@@ -43,10 +37,13 @@ const AppDownloadDialog = ({ className, onClose }: AppDownloadDialogProps) => {
         >
           <Image src={ios} alt="ios" draggable={false} />
         </Link>
-        <button onClick={handleAndroid}>
+        <Link
+          href="https://play.google.com/store/apps/details?id=com.dieski.weski"
+          target="_blank"
+        >
           <Image src={android} alt="android" draggable={false} />
-        </button>
-      </div>
+        </Link>
+        </div>
     </div>
   );
 };
