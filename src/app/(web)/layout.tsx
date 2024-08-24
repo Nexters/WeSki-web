@@ -3,8 +3,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { GoogleAnalytics } from 'nextjs-google-analytics';
-import { useCallback } from 'react';
-import { toast } from 'sonner';
 import left from '@public/downloads/left.png';
 import android from '@public/downloads/right-android.png';
 import ios from '@public/downloads/right-ios.png';
@@ -13,10 +11,6 @@ import { cn } from '@/shared/lib';
 import { SnowConfetti } from '@/shared/ui/snow-confetti';
 
 export default function Layout({ children }: { children: React.ReactNode }) {
-  const handleAndroid = useCallback(() => {
-    toast.error('준비중입니다.');
-  }, []);
-
   return (
     <>
       <GoogleAnalytics trackPageViews />
@@ -49,9 +43,12 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             >
               <Image src={ios} alt="ios" width={95} draggable={false} />
             </Link>
-            <button onClick={handleAndroid}>
+            <Link
+              href="https://play.google.com/store/apps/details?id=com.dieski.weski"
+              target="_blank"
+            >
             <Image src={android} alt="android" width={95} draggable={false} />
-            </button>
+            </Link>
           </div>
         </div>
       </div>
