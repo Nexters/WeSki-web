@@ -17,20 +17,22 @@ const DiscoveryCard = ({ id, name, slope, weather, weeklyWeather }: Discovery) =
       )}
       onClick={() => router.push(`/${id}`)}
     >
-      <div className={cn('mx-[30px] flex items-center justify-between py-1 md:mx-[42px]')}>
-        <div className={cn('flex flex-col gap-[5px] py-1')}>
-          <h2 className={cn('title1 md:h2 text-gray-90')}>{name}</h2>
-          <p className={cn('body1-medium text-gray-60')}>운행중인 슬로프 {slope ?? 0}개</p>
-        </div>
-        <div className={cn('flex flex-col items-end gap-2')}>
-          <div className={cn('flex gap-2')}>
+      <div className={cn('mx-[30px] flex flex-col gap-[5px] items-center md:mx-[42px]')}>
+        <div className={cn('w-full flex justify-between items-center')}>
+        <h2 className={cn('title1 md:h2 text-gray-90')}>{name}</h2>
+        <div className={cn('flex gap-2 items-center')}>
             <WeatherIcon className={cn('origin-right scale-[1.17]')} weather={weather.weather} />
-            <p className={cn('h1-semibold text-[30px]')}>{weather.temperature}°</p>
+            <p className={cn('font-semibold text-[30px] leading-tight')}>{weather.temperature}°</p>
           </div>
+        </div>
+        <div className={cn('w-full flex justify-between')}>
+        <p className={cn('body1-medium text-gray-60')}>
+            {slope ? `운행중인 슬로프 ${slope}개` : '개장일이 곧 공개될 예정이에요'}
+          </p>
           <p className={cn('body1-semibold text-gray-60')}>{weather.description}</p>
         </div>
       </div>
-      <hr className={cn('mx-[30px] max-w-[287px] border-gray-80 opacity-[0.04]')} />
+      <hr className={cn('mx-[30px] border-gray-80 opacity-[0.04]')} />
       <ul
         className={cn(
           'flex w-full justify-between gap-[2px] overflow-x-scroll px-[30px] scrollbar-hide'
