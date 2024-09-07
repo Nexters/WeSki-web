@@ -4,6 +4,7 @@ import { GONJIAM } from './gonjiam';
 import { HIGH1 } from './high1';
 import { JISAN } from './jisan';
 import { MUJU } from './muju';
+import { O2 } from './o2';
 import { PHOENIX } from './phoenix';
 import { VIVALDIPARK } from './vivaldipark';
 import { WELLIHILLI } from './wellihilli';
@@ -19,6 +20,7 @@ export { EDEN } from './eden';
 export { WELLIHILLI } from './wellihilli';
 export { MUJU } from './muju';
 export { PHOENIX } from './phoenix';
+export { O2 } from './o2'
 
 export const RESORT_DOMAIN = {
   jisan: JISAN,
@@ -31,4 +33,5 @@ export const RESORT_DOMAIN = {
   wellihilli: WELLIHILLI,
   muju: MUJU,
   phoenix: PHOENIX,
+  o2: O2,
 };
