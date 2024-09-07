@@ -1,5 +1,8 @@
 'use client';
 
+import ChallengeSlope1Path from '../image/o2/challenge-slope1-path';
+import ChallengeSlope2Path from '../image/o2/challenge-slope2-path';
+import ChallengeSlope3Path from '../image/o2/challenge-slope3-path';
 import DreamSlope1Path from '../image/o2/dream-slope1-path';
 import DreamSlope2Path from '../image/o2/dream-slope2-path';
 import FashionSlope1Path from '../image/o2/fashion-slope1-path';
@@ -7,13 +10,10 @@ import FashionSlope2Path from '../image/o2/fashion-slope2-path';
 import GlorySlope1Path from '../image/o2/glory-slope1-path';
 import GlorySlope2Path from '../image/o2/glory-slope2-path';
 import GlorySlope3Path from '../image/o2/glory-slope3-path';
+import HalfPipePath from '../image/o2/half-pipe-path';
 import HappySlopePath from '../image/o2/happy-slope-path';
 import HeadSlopePath from '../image/o2/head-slope-path';
 import MapImage from '../image/o2/map';
-import ChallengeSlope1Path from '../image/wellihilli/challenge-slope1-path';
-import ChallengeSlope2Path from '../image/wellihilli/challenge-slope2-path';
-import ChallengeSlope3Path from '../image/wellihilli/challenge-slope3-path';
-import HalfPipePath from '../image/wellihilli/half-pipe-path';
 import type { ResortInfo } from './model';
 
 export const O2: ResortInfo = {
