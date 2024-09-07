@@ -731,4 +731,77 @@ export const DiscoveryData: Discovery[] = [
       },
     ],
   },
+  {
+    id: 11,
+    name: '오투리조트',
+    map: 'o2',
+    slope: 0,
+    url: {
+      bus: 'https://www.o2resort.com/GDE/trafficBusSeoul.jsp',
+      homepage: 'https://www.o2resort.com/SKI/basicInfo.jsp',
+    },
+    weather: {
+      weather: 'rain',
+      temperature: 24,
+      description: '소나기',
+    },
+    weeklyWeather: [
+      {
+        weather: 'rain',
+        temperature: {
+          lowest: '24°',
+          average: '33°',
+        },
+      },
+      {
+        weather: 'fog',
+        temperature: {
+          lowest: '23°',
+          average: '32°',
+        },
+      },
+      {
+        weather: 'sun',
+        temperature: {
+          lowest: '22°',
+          average: '33°',
+        },
+      },
+      {
+        weather: 'sun',
+        temperature: {
+          lowest: '23°',
+          average: '33°',
+        },
+      },
+      {
+        weather: 'sun',
+        temperature: {
+          lowest: '24°',
+          average: '32°',
+        },
+      },
+      {
+        weather: 'sun',
+        temperature: {
+          lowest: '23°',
+          average: '31°',
+        },
+      },
+      {
+        weather: 'cloud',
+        temperature: {
+          lowest: '23°',
+          average: '32°',
+        },
+      },
+      {
+        weather: 'fog',
+        temperature: {
+          lowest: '24°',
+          average: '32°',
+        },
+      },
+    ],
+  },
 ];

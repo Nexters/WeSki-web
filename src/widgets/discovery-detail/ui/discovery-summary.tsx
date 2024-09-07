@@ -13,18 +13,20 @@ const DiscoverySummary = ({ id, name, slope, url, weather }: Discovery) => {
     <div className={cn('flex w-full gap-[26px] px-5 pb-[34px] pt-[10px] md:px-[30px]')}>
       <Card
         className={cn(
-          'flex h-[134px] flex-1 items-center justify-between pl-[30px] pr-6 md:h-[123px]'
+          'flex flex-col justify-center gap-[5px] h-[134px] flex-1 items-center pl-[30px] pr-6 md:h-[123px]'
         )}
       >
-        <div className={cn('flex flex-col gap-[5px]')}>
+        <div className={cn('flex w-full justify-between items-center')}>
           <p className={cn('title1 text-gray-90')}>{name}</p>
-          <p className={cn('body1-medium text-gray-60')}>운행중인 슬로프 {slope ?? 0}개</p>
-        </div>
-        <div className={cn('flex flex-col items-end gap-2')}>
-          <div className={cn('flex gap-2')}>
+          <div className={cn('flex gap-2 items-center')}>
             <WeatherIcon weather={weather.weather} />
-            <p className={cn('h1-semibold text-[30px]')}>{weather.temperature}</p>
+            <p className={cn('font-semibold text-[30px] leading-tight')}>{weather.temperature}°</p>
           </div>
+        </div>
+        <div className={cn('flex w-full justify-between items-center')}>
+          <p className={cn('body1-medium text-gray-60')}>
+            {slope ? `운행중인 슬로프 ${slope}개` : '개장일이 곧 공개될 예정이에요'}
+          </p>
           <p className={cn('body1-semibold text-gray-60')}>{weather.description}</p>
         </div>
       </Card>
