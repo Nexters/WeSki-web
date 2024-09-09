@@ -61,7 +61,10 @@ const SlopVideo = ({ src, closeVideo }: SlopVideoProps) => {
     <div
       className={cn('absolute top-0 z-50 flex h-full w-full items-center justify-center bg-black')}
     >
-      <Loading />
+      <div className={cn('absolute flex h-[110px] flex-col items-center justify-between')}>
+        <Loading />
+        <p className={cn('body1-medium text-white')}>웹캠을 불러오고 있어요</p>
+      </div>
 
       <video
         playsInline

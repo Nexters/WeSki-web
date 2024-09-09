@@ -246,7 +246,7 @@ export const MUJU: ResortInfo = {
         left: 'left-[47%]',
       },
       src: '/api/webcam?url=http://muju.live.cdn.cloudn.co.kr/mujuresort/_definst_/cam01.stream/playlist.m3u8',
-      scale: 1,
+      scale: 2,
     },
     {
       id: 'heidi-house',
@@ -256,7 +256,7 @@ export const MUJU: ResortInfo = {
         left: 'left-[70%]',
       },
       src: '/api/webcam?url=http://muju.live.cdn.cloudn.co.kr/mujuresort/_definst_/cam03.stream/playlist.m3u8',
-      scale: 1,
+      scale: 2,
     },
     {
       id: 'seolcheon-house',
@@ -266,7 +266,7 @@ export const MUJU: ResortInfo = {
         left: 'left-[28%]',
       },
       src: '/api/webcam?url=http://muju.live.cdn.cloudn.co.kr/mujuresort/_definst_/cam05.stream/playlist.m3u8',
-      scale: 1,
+      scale: 2,
     },
     {
       id: 'soyokgihang-sundown',
@@ -276,7 +276,7 @@ export const MUJU: ResortInfo = {
         left: 'left-[68%]',
       },
       src: '/api/webcam?url=http://muju.live.cdn.cloudn.co.kr/mujuresort/_definst_/cam04.stream/playlist.m3u8',
-      scale: 1,
+      scale: 2,
     },
     {
       id: 'seolcheonbong-summit',
@@ -286,7 +286,7 @@ export const MUJU: ResortInfo = {
         left: 'left-[37%]',
       },
       src: '/api/webcam?url=http://muju.live.cdn.cloudn.co.kr/mujuresort/_definst_/cam07.stream/playlist.m3u8',
-      scale: 1,
+      scale: 2,
     },
     {
       id: 'mozart-minuet',
@@ -296,7 +296,7 @@ export const MUJU: ResortInfo = {
         left: 'left-[27%]',
       },
       src: '/api/webcam?url=http://muju.live.cdn.cloudn.co.kr/mujuresort/_definst_/cam08.stream/playlist.m3u8',
-      scale: 1,
+      scale: 2,
     },
     {
       id: 'seolcheon-top-slope',
@@ -306,7 +306,7 @@ export const MUJU: ResortInfo = {
         left: 'left-[23%]',
       },
       src: '/api/webcam?url=http://muju.live.cdn.cloudn.co.kr/mujuresort/_definst_/cam06.stream/playlist.m3u8',
-      scale: 1,
+      scale: 2,
     },
     {
       id: 'mansunbong-summit',
@@ -316,7 +316,7 @@ export const MUJU: ResortInfo = {
         left: 'left-[51%]',
       },
       src: '/api/webcam?url=http://muju.live.cdn.cloudn.co.kr/mujuresort/_definst_/cam02.stream/playlist.m3u8',
-      scale: 1,
+      scale: 2,
     },
   ],
 };

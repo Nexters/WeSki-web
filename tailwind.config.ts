@@ -107,35 +107,35 @@ const config = {
         mulShdSpin: {
           '0%, 100%': {
             boxShadow:
-              '0 -3em 0 0.2em #fff, 2em -2em 0 0em #fff, 3em 0 0 -1em #fff, 2em 2em 0 -1em #fff, 0 3em 0 -1em #fff, -2em 2em 0 -1em #fff, -3em 0 0 -1em #fff, -2em -2em 0 0 #fff',
+              '0 -2em 0 0.1em #fff, 1.5em -1.5em 0 0em #fff, 2em 0 0 -0.5em #fff, 1.5em 1.5em 0 -0.5em #fff, 0 2em 0 -0.5em #fff, -1.5em 1.5em 0 -0.5em #fff, -2em 0 0 -0.5em #fff, -1.5em -1.5em 0 0 #fff',
           },
           '12.5%': {
             boxShadow:
-              '0 -3em 0 0 #fff, 2em -2em 0 0.2em #fff, 3em 0 0 0 #fff, 2em 2em 0 -1em #fff, 0 3em 0 -1em #fff, -2em 2em 0 -1em #fff, -3em 0 0 -1em #fff, -2em -2em 0 -1em #fff',
+              '0 -2em 0 0 #fff, 1.5em -1.5em 0 0.1em #fff, 2em 0 0 0 #fff, 1.5em 1.5em 0 -0.5em #fff, 0 2em 0 -0.5em #fff, -1.5em 1.5em 0 -0.5em #fff, -2em 0 0 -0.5em #fff, -1.5em -1.5em 0 -0.5em #fff',
           },
           '25%': {
             boxShadow:
-              '0 -3em 0 -0.5em #fff, 2em -2em 0 0 #fff, 3em 0 0 0.2em #fff, 2em 2em 0 0 #fff, 0 3em 0 -1em #fff, -2em 2em 0 -1em #fff, -3em 0 0 -1em #fff, -2em -2em 0 -1em #fff',
+              '0 -2em 0 -0.25em #fff, 1.5em -1.5em 0 0 #fff, 2em 0 0 0.1em #fff, 1.5em 1.5em 0 0 #fff, 0 2em 0 -0.5em #fff, -1.5em 1.5em 0 -0.5em #fff, -2em 0 0 -0.5em #fff, -1.5em -1.5em 0 -0.5em #fff',
           },
           '37.5%': {
             boxShadow:
-              '0 -3em 0 -1em #fff, 2em -2em 0 -1em #fff, 3em 0 0 0 #fff, 2em 2em 0 0.2em #fff, 0 3em 0 0 #fff, -2em 2em 0 -1em #fff, -3em 0 0 -1em #fff, -2em -2em 0 -1em #fff',
+              '0 -2em 0 -0.5em #fff, 1.5em -1.5em 0 -0.5em #fff, 2em 0 0 0 #fff, 1.5em 1.5em 0 0.1em #fff, 0 2em 0 0 #fff, -1.5em 1.5em 0 -0.5em #fff, -2em 0 0 -0.5em #fff, -1.5em -1.5em 0 -0.5em #fff',
           },
           '50%': {
             boxShadow:
-              '0 -3em 0 -1em #fff, 2em -2em 0 -1em #fff, 3em 0 0 -1em #fff, 2em 2em 0 0 #fff, 0 3em 0 0.2em #fff, -2em 2em 0 0 #fff, -3em 0 0 -1em #fff, -2em -2em 0 -1em #fff',
+              '0 -2em 0 -0.5em #fff, 1.5em -1.5em 0 -0.5em #fff, 2em 0 0 -0.5em #fff, 1.5em 1.5em 0 0 #fff, 0 2em 0 0.1em #fff, -1.5em 1.5em 0 0 #fff, -2em 0 0 -0.5em #fff, -1.5em -1.5em 0 -0.5em #fff',
           },
           '62.5%': {
             boxShadow:
-              '0 -3em 0 -1em #fff, 2em -2em 0 -1em #fff, 3em 0 0 -1em #fff, 2em 2em 0 -1em #fff, 0 3em 0 0 #fff, -2em 2em 0 0.2em #fff, -3em 0 0 0 #fff, -2em -2em 0 -1em #fff',
+              '0 -2em 0 -0.5em #fff, 1.5em -1.5em 0 -0.5em #fff, 2em 0 0 -0.5em #fff, 1.5em 1.5em 0 -0.5em #fff, 0 2em 0 0 #fff, -1.5em 1.5em 0 0.1em #fff, -2em 0 0 0 #fff, -1.5em -1.5em 0 -0.5em #fff',
           },
           '75%': {
             boxShadow:
-              '0 -3em 0 -1em #fff, 2em -2em 0 -1em #fff, 3em 0 0 -1em #fff, 2em 2em 0 -1em #fff, 0 3em 0 -1em #fff, -2em 2em 0 0 #fff, -3em 0 0 0.2em #fff, -2em -2em 0 0 #fff',
+              '0 -2em 0 -0.5em #fff, 1.5em -1.5em 0 -0.5em #fff, 2em 0 0 -0.5em #fff, 1.5em 1.5em 0 -0.5em #fff, 0 2em 0 -0.5em #fff, -1.5em 1.5em 0 0 #fff, -2em 0 0 0.1em #fff, -1.5em -1.5em 0 0 #fff',
           },
           '87.5%': {
             boxShadow:
-              '0 -3em 0 0 #fff, 2em -2em 0 -1em #fff, 3em 0 0 -1em #fff, 2em 2em 0 -1em #fff, 0 3em 0 -1em #fff, -2em 2em 0 0 #fff, -3em 0 0 0 #fff, -2em -2em 0 0.2em #fff',
+              '0 -2em 0 0 #fff, 1.5em -1.5em 0 -0.5em #fff, 2em 0 0 -0.5em #fff, 1.5em 1.5em 0 -0.5em #fff, 0 2em 0 -0.5em #fff, -1.5em 1.5em 0 0 #fff, -2em 0 0 0 #fff, -1.5em -1.5em 0 0.1em #fff',
           },
         },
       },
