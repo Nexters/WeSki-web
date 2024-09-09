@@ -197,7 +197,7 @@ export const YONGPYONG: ResortInfo = {
         left: 'left-[17%]',
       },
       src: '/api/webcam?url=https://live.yongpyong.co.kr/Ycam1/cam15.stream/chunklist.m3u8',
-      scale: 1,
+      scale: 2,
     },
     {
       id: 'red-slope',
@@ -207,7 +207,7 @@ export const YONGPYONG: ResortInfo = {
         left: 'left-[29%]',
       },
       src: '/api/webcam?url=https://live.yongpyong.co.kr/Ycam1/cam03.stream/chunklist.m3u8',
-      scale: 1,
+      scale: 2,
     },
     {
       id: 'pink-slope',
@@ -216,7 +216,7 @@ export const YONGPYONG: ResortInfo = {
         top: 'top-[64%]',
         left: 'left-[33%]',
       },
-      scale: 1,
+      scale: 2,
     },
     {
       id: 'yellow-slope',
@@ -225,7 +225,7 @@ export const YONGPYONG: ResortInfo = {
         top: 'top-[71%]',
         left: 'left-[37%]',
       },
-      scale: 1,
+      scale: 2,
     },
     {
       id: 'rainbow-top',
@@ -235,7 +235,7 @@ export const YONGPYONG: ResortInfo = {
         left: 'left-[61%]',
       },
       src: '/api/webcam?url=https://live.yongpyong.co.kr/Ycam1/cam05.stream/chunklist.m3u8',
-      scale: 1,
+      scale: 2,
     },
     {
       id: 'rainbow-foreground',
@@ -245,7 +245,7 @@ export const YONGPYONG: ResortInfo = {
         left: 'left-[79%]',
       },
       src: '/api/webcam?url=https://live.yongpyong.co.kr/Ycam1/cam10.stream/chunklist.m3u8',
-      scale: 1,
+      scale: 2,
     },
     {
       id: 'mega-green-slope',
@@ -255,7 +255,7 @@ export const YONGPYONG: ResortInfo = {
         left: 'left-[56%]',
       },
       src: '/api/webcam?url=https://live.yongpyong.co.kr/Ycam1/cam07.stream/chunklist.m3u8',
-      scale: 1,
+      scale: 2,
     },
     {
       id: 'base-foreground',
@@ -264,7 +264,7 @@ export const YONGPYONG: ResortInfo = {
         top: 'top-[84%]',
         left: 'left-[34%]',
       },
-      scale: 1,
+      scale: 2,
     },
     {
       id: 'access-road',
@@ -273,7 +273,7 @@ export const YONGPYONG: ResortInfo = {
         top: 'top-[86%]',
         left: 'left-[26%]',
       },
-      scale: 1,
+      scale: 2,
     },
     {
       id: 'slope-top',
@@ -282,7 +282,7 @@ export const YONGPYONG: ResortInfo = {
         top: 'top-[26%]',
         left: 'left-[30%]',
       },
-      scale: 1,
+      scale: 2,
     },
   ],
 };
