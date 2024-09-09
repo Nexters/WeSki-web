@@ -7,7 +7,7 @@ interface LoadingProps {
 const Loading = ({ className }: LoadingProps) => {
   return (
     <div
-      className={cn('absolute h-4 w-4 animate-mulShdSpin rounded-full bg-black', className)}
+      className={cn('mt-[2em] h-4 w-4 animate-mulShdSpin rounded-full bg-black', className)}
     ></div>
   );
 };
