@@ -35,6 +35,7 @@ const WebcamMap = forwardRef<HTMLDivElement, WebcamMapProps>(
               <SlopCamera
                 key={webcam.id}
                 webcam={webcam}
+                webcamScale={style.scale.animation.to as number}
                 isOpen={slop.some((item) => item.id === selectedSlop)}
                 containerRef={containerRef}
                 onCameraClick={onCameraClick}
