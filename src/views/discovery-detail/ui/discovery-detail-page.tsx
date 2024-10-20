@@ -10,7 +10,6 @@ import DiscoverySummary from '@/widgets/discovery-detail/ui/discovery-summary';
 import { Header } from '@/widgets/header/ui';
 import { WebcamMap, WebcamSlopList } from '@/widgets/webcam/ui';
 import { formatDate } from '@/features/discovery-detail/lib/formatDate';
-import { getVoteText } from '@/features/discovery-detail/lib/getVoteText';
 import { canVote, getVoteData, saveVoteData } from '@/features/discovery-detail/lib/vote';
 import AppDownloadDialog from '@/features/discovery-detail/ui/app-download-dialog';
 import useMapPinch from '@/features/slop/hooks/useMapPinch';
@@ -27,13 +26,13 @@ const DiscoveryDetailPage = ({ params }: { params: { resortId: string } }) => {
   const discovery = DiscoveryData.find(
     (discovery) => discovery.id === +params?.resortId
   ) as Discovery;
-  const { data: voteData } = useQuery(discoveryApi.discoveryQueries.vote(params?.resortId));
+  const { data: voteData } = useQuery(discoveryApi.discoveryQueries.vote(+params?.resortId));
   const data = RESORT_DOMAIN[discovery?.map as keyof typeof RESORT_DOMAIN];
   const [selectedTab, setSelectedTab] = useState('webcam');
   const [showAppDownloadDialog, setShowAppDownloadDialog] = useState(true);
-  const { mutateAsync } = usePostVote(params?.resortId);
+  const { mutateAsync } = usePostVote(+params?.resortId);
 
-  const [isGood, setIsGood] = useState<boolean>(true);
+  const [isPositive, setIsPositive] = useState<boolean>(true);
   const [cameraPositions, setCameraPositions] = useState<{
     [key: string]: Position;
   }>({});
@@ -62,7 +61,7 @@ const DiscoveryDetailPage = ({ params }: { params: { resortId: string } }) => {
       return;
     }
     try {
-      await mutateAsync({ isLike: isGood });
+      await mutateAsync({ isPositive });
     } catch (error) {
       console.log(error);
     } finally {
@@ -71,7 +70,7 @@ const DiscoveryDetailPage = ({ params }: { params: { resortId: string } }) => {
       saveVoteData(voteData);
       toast.success('고마워요! 투표의 결과가 반영되었어요');
     }
-  }, [isGood, mutateAsync, params?.resortId]);
+  }, [isPositive, mutateAsync, params?.resortId]);
 
   if (!discovery) return;
 
@@ -119,12 +118,10 @@ const DiscoveryDetailPage = ({ params }: { params: { resortId: string } }) => {
             <div className={cn('flex flex-col gap-6')}>
               <p className={cn('title3-semibold')}>오늘의 설질</p>
               <div className={cn('flex flex-col gap-1')}>
-                <p className={cn('h3-semibold')}>
-                  {getVoteText(voteData?.totalNum, voteData?.likeNum)}
-                </p>
+                <p className={cn('h3-semibold')}>{voteData?.status}</p>
                 <p className={cn('body1-semibold text-gray-60')}>
-                  {voteData?.totalNum}명 중{' '}
-                  <span className={cn('body1-bold text-main-1')}>{voteData?.likeNum}</span>
+                  {voteData?.totalVotes}명 중{' '}
+                  <span className={cn('body1-bold text-main-1')}>{voteData?.positiveVotes}</span>
                   명이 긍정적으로 투표했어요.
                 </p>
               </div>
@@ -135,22 +132,22 @@ const DiscoveryDetailPage = ({ params }: { params: { resortId: string } }) => {
                 <button
                   className={cn(
                     'flex h-10 w-full items-center justify-between rounded-[8px] border border-main-1 pl-4 pr-3',
-                    !isGood && 'border-gray-30'
+                    !isPositive && 'border-gray-30'
                   )}
-                  onClick={() => setIsGood(true)}
+                  onClick={() => setIsPositive(true)}
                 >
                   <p className={cn('body1-regular text-gray-60')}>괜찮을 것 같아요</p>
-                  {isGood && <CheckIcon className={cn('text-main-1')} />}
+                  {isPositive && <CheckIcon className={cn('text-main-1')} />}
                 </button>
                 <button
                   className={cn(
                     'flex h-10 items-center justify-between rounded-[8px] border border-main-1 pl-4 pr-3',
-                    isGood && 'border-gray-30'
+                    isPositive && 'border-gray-30'
                   )}
-                  onClick={() => setIsGood(false)}
+                  onClick={() => setIsPositive(false)}
                 >
                   <p className={cn('body1-regular text-gray-60')}>별로일 것 같아요</p>
-                  {!isGood && <CheckIcon className={cn('text-main-1')} />}
+                  {!isPositive && <CheckIcon className={cn('text-main-1')} />}
                 </button>
               </div>
               <button

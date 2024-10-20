@@ -26,10 +26,8 @@ export type Discovery = {
 };
 
 export type Vote = {
-  totalNum: number;
-  likeNum: number;
-};
-
-export type PostVoteRequest = {
-  isLike: boolean;
+  resortId: number;
+  totalVotes: number;
+  positiveVotes: number;
+  status: string;
 };
