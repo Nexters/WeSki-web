@@ -11,10 +11,10 @@ export const discoveryQueries = {
       queryKey: [...discoveryQueries.listQueryKey()],
       queryFn: () => getDiscoveries(),
     }),
-  voteQueryKey: (key: string) => [...discoveryQueries.all(), 'vote', key],
-  vote: (key: string) =>
+  voteQueryKey: (resortId: number) => [...discoveryQueries.all(), 'vote', resortId],
+  vote: (resortId: number) =>
     queryOptions({
-      queryKey: discoveryQueries.voteQueryKey(key),
-      queryFn: () => getVote(key),
+      queryKey: discoveryQueries.voteQueryKey(resortId),
+      queryFn: () => getVote(resortId),
     }),
 };

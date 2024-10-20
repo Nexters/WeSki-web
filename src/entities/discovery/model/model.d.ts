@@ -26,10 +26,12 @@ export type Discovery = {
 };
 
 export type Vote = {
-  totalNum: number;
-  likeNum: number;
+  resortId: number;
+  totalVotes: number;
+  positiveVotes: number;
+  status: string;
 };
 
 export type PostVoteRequest = {
-  isLike: boolean;
+  isPositive: boolean;
 };

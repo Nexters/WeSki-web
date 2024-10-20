@@ -1,14 +1,14 @@
 import { useMutation, useQueryClient } from '@tanstack/react-query';
 import { discoveryApi } from '..';
 
-export const usePostVote = (key: string) => {
+export const usePostVote = (resortId: number) => {
   const queryClient = useQueryClient();
 
   return useMutation({
-    mutationFn: ({ isLike }: { isLike: boolean }) => discoveryApi.postVote(key, { isLike }),
+    mutationFn: ({ isPositive }: { isPositive: boolean }) => discoveryApi.postVote(resortId, { isPositive }),
     async onSettled() {
       await queryClient.invalidateQueries({
-        queryKey: discoveryApi.discoveryQueries.voteQueryKey(key),
+        queryKey: discoveryApi.discoveryQueries.voteQueryKey(resortId),
       });
     },
   });
