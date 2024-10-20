@@ -8,10 +8,12 @@ import { cn } from '@/shared/lib';
 import CameraButton from '@/shared/ui/cam-button';
 import { Tooltip } from '@/shared/ui/tooltip';
 import useSlopStore from '../hooks/useSlopStore';
+import calculateWebcamScaleRatio from '../lib/calculateWebcamScale';
 import SlopVideo from './slop-video';
 
 interface SlopWebcamProps {
   webcam: Webcam;
+  webcamScale: number;
   isOpen: boolean;
   containerRef: React.RefObject<HTMLElement>;
   onCameraClick: ({ scale, id }: { scale: number; id: string }) => void;
@@ -20,6 +22,7 @@ interface SlopWebcamProps {
 
 const SlopCamera = ({
   webcam: { scale, name, position, src, id },
+  webcamScale,
   isOpen,
   containerRef,
   onCameraClick,
@@ -57,6 +60,10 @@ const SlopCamera = ({
           <Tooltip
             trigger={
               <CameraButton
+                className={cn('scale-[calc(var(--v-scale))]')}
+                style={
+                  { '--v-scale': calculateWebcamScaleRatio(webcamScale) } as React.CSSProperties
+                }
                 onClick={() => {
                   setSelectedSlop(null);
                   setSelectedCamera(id);

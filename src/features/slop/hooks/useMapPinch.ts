@@ -1,12 +1,13 @@
 import { useSpring } from '@react-spring/web';
 import { createUseGesture, dragAction, pinchAction } from '@use-gesture/react';
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 import { getBoundedPositions } from '@/shared/lib';
 
 const useGesture = createUseGesture([pinchAction, dragAction]);
 
 const useMapPinch = () => {
   const [style, api] = useSpring(() => ({ scale: 1, x: 0, y: 0 }));
+  const [scale, setScale] = useState(1);
   const ref = useRef<HTMLDivElement>(null);
   const containerRef = useRef<HTMLElement>(null);
 
@@ -23,12 +24,16 @@ const useMapPinch = () => {
         const x = memo[0] - (ms - 1) * memo[2];
         const y = memo[1] - (ms - 1) * memo[3];
         api.start({ scale: s, x, y });
+        setScale(s);
         return memo;
       },
-      onPinchEnd: () => {
+      onPinchEnd: ({offset: [s]}) => {
         if (style.scale.get() < 1) {
           api.start({ scale: 1, x: 0, y: 0 });
+          setScale(1);
+          return;
         }
+        setScale(s);
       },
       onDrag: ({ pinching, cancel, offset: [x, y] }) => {
         if (pinching) return cancel();
@@ -58,7 +63,7 @@ const useMapPinch = () => {
     }
   );
 
-  return { ref, style, api, containerRef };
+  return { ref, style, api, containerRef, scale };
 };
 
 export default useMapPinch;
