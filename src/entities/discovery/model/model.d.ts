@@ -31,7 +31,3 @@ export type Vote = {
   positiveVotes: number;
   status: string;
 };
-
-export type PostVoteRequest = {
-  isPositive: boolean;
-};

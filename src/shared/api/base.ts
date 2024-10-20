@@ -20,7 +20,7 @@ export class ApiClient {
 
   public async get<TResult = unknown>(
     endpoint: string,
-    queryParams?: Record<string, string | number>
+    queryParams?: Record<string, string | number | boolean>
   ): Promise<TResult> {
     const url = new URL('/api/weski' + endpoint, window.location.origin);
 
@@ -42,16 +42,21 @@ export class ApiClient {
 
   public async post<TResult = unknown, TData = Record<string, unknown>>(
     endpoint: string,
-    body: TData
+    queryParams?: Record<string, string | number | boolean>,
+    body?: TData
   ): Promise<TResult> {
     const url = new URL('/api/weski' + endpoint, window.location.origin);
 
+    if (queryParams) {
+      Object.entries(queryParams).forEach(([key, value]) => {
+        url.searchParams.append(key, value.toString());
+      });
+    }
+  
+
     const response = await fetch(url.toString(), {
       method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(body),
+      body: body ? JSON.stringify(body) : undefined,
     });
 
     return this.handleResponse<TResult>(response);

@@ -1,7 +1,6 @@
 import { apiClient } from '@/shared/api/base';
-import type { PostVoteRequest } from '../model';
 
-export const postVote = async (resortId: number, body: PostVoteRequest) => {
-  const res = await apiClient.post<PostVoteRequest>(`api/snow-maker/${resortId}/vote`, body);
+export const postVote = async (resortId: number, {isPositive}: {isPositive: boolean}) => {
+  const res = await apiClient.post(`/api/snow-maker/${resortId}/vote`, {isPositive});
   return res;
 };
