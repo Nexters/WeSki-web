@@ -1,5 +1,5 @@
 import WeatherIcon from '@/features/discovery/ui/weather-icon';
-import type { WeeklyWeather as WeeklyWeatherType } from '@/entities/discovery/model/model';
+import type { DuplicatedWeeklyWeather as WeeklyWeatherType } from '@/entities/discovery/model/model';
 import { cn } from '@/shared/lib';
 
 interface WeeklyWeatherProps extends WeeklyWeatherType {
