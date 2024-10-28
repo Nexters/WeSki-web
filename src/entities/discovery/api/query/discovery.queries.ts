@@ -1,6 +1,6 @@
 import { queryOptions } from '@tanstack/react-query';
-import { getDiscoveries } from './get-discoveries';
-import { getVote } from './get-vote';
+import { getDiscoveries } from '../get-discoveries';
+import { getVote } from '../get-vote';
 
 export const discoveryQueries = {
   all: () => ['discovery'],
