@@ -78,7 +78,7 @@ const DiscoveryDetailPage = ({ params }: { params: { resortId: string } }) => {
     <div className={cn('size-full')}>
       <Header resortName={discovery.name} hasBackButton hasShareButton />
       <DiscoverySummary {...discovery} />
-      <ul className={cn('flex size-full h-[53px] bg-white')}>
+      <ul className={cn('relative z-10 flex size-full h-[53px] bg-white')}>
         {DiscoveryContentTabList.map((tab) => (
           <li
             key={tab.name}
@@ -108,13 +108,13 @@ const DiscoveryDetailPage = ({ params }: { params: { resortId: string } }) => {
             updateCameraPosition={updateCameraPosition}
           />
           <WebcamSlopList
-            className={cn('bg-white')}
+            className={cn('relative z-10 bg-white')}
             webcams={data.webcams}
             list={data.slops}
             onItemClick={handleFocusSlopCamClick}
           />
           <div className={cn('h-[6px] w-full bg-gray-20 md:hidden')} />
-          <div className={cn('flex flex-col gap-5 bg-white px-6 py-8 md:hidden')}>
+          <div className={cn('relative z-10 flex flex-col gap-5 bg-white px-6 py-8 md:hidden')}>
             <div className={cn('flex flex-col gap-6')}>
               <p className={cn('title3-semibold')}>오늘의 설질</p>
               <div className={cn('flex flex-col gap-1')}>
