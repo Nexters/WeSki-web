@@ -7,7 +7,7 @@ import calculateWebcamPosition from '@/features/slop/lib/calculateWebcamPosition
 import type { Position, ResortInfo } from '@/entities/slop/model/model';
 import { cn } from '@/shared/lib';
 
-const WebCamMobileMapPage = ({ data }: { data: ResortInfo }) => {
+const WebCamMobileMapPage = ({ data }: { resortId?: number; data: ResortInfo }) => {
   const [cameraPositions, setCameraPositions] = useState<{
     [key: string]: Position;
   }>({});
