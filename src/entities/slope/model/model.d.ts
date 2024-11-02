@@ -1,6 +1,14 @@
+export type Level =
+  | '초급'
+  | '초중급'
+  | '중급'
+  | '중상급'
+  | '상급'
+  | '최상급';
+
 export type Slope = {
   name: string,
-  difficulty: string,
+  difficulty: Level,
   isDayOperating: true,
   isNightOperating: true,
   isLateNightOperating: true,

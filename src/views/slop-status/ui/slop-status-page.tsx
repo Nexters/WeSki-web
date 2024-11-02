@@ -20,7 +20,6 @@ const SlopStatusPage = ({
   const { ref, style, containerRef } = useMapPinch();
 
   const { data: slopeData } = useQuery(slopeApi.slopeQueries.slope(resortId ?? 1));
-  console.log(slopeData);
 
   const { data } = useQuery(slopQueries.list(params?.key ?? 'jisan'));
 
@@ -37,7 +36,7 @@ const SlopStatusPage = ({
           slops={RESORT_DOMAIN[data.key].slops}
         />
       </section>
-      <SlopStatusList list={data.slopes} />
+      <SlopStatusList slopes={slopeData?.slopes} />
     </main>
   );
 };

@@ -1,1 +1,1 @@
-export type { Slope, Webcam, SlopeResponse } from './model';
+export type { Level, Slope, Webcam, SlopeResponse } from './model';
