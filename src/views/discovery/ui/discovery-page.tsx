@@ -7,14 +7,14 @@ import { discoveryApi } from '@/entities/discovery';
 import { cn } from '@/shared/lib';
 
 const DiscoveryPage = () => {
-  const { data: discoveryData } = useQuery(discoveryApi.discoveryQueries.list());
+  const { data: resorts } = useQuery(discoveryApi.resortQueries.list());
 
-  if (!discoveryData) return null;
+  if (!resorts) return null;
 
   return (
     <div className={cn('size-full bg-gradient-to-b from-[rgba(141,163,221,0.2)] to-transparent')}>
       <Header />
-      <DiscoveryList discoveryData={discoveryData} />
+      <DiscoveryList resorts={resorts} />
     </div>
   );
 };

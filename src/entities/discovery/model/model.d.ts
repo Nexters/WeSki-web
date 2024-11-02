@@ -55,6 +55,13 @@ export type WeeklyWeather = {
   condition: string;
 };
 
+export type SummarizedWeeklyWeather = {
+  day: string;
+  maxTemperature: number;
+  minTemperature: number;
+  description: string;
+};
+
 export type Resort = {
   resortId: number,
   name: string,
@@ -64,10 +71,5 @@ export type Resort = {
     temperature: number,
     description: string
   },
-  weeklyWeather: {
-    day: string,
-    maxTemperature: number,
-    minTemperature: number,
-    description: string
-  }[]
+  weeklyWeather: SummarizedWeeklyWeather[]
 }

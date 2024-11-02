@@ -1,11 +1,11 @@
-import type { Discovery } from '@/entities/discovery';
+import type { Resort } from '@/entities/discovery';
 import { cn } from '@/shared/lib';
 import DiscoveryCard from './discovery-card';
 
-const DiscoveryList = ({ discoveryData }: { discoveryData: Discovery[] }) => (
+const DiscoveryList = ({ resorts }: { resorts: Resort[] }) => (
   <div className={cn('flex flex-col gap-4 px-5 py-4 md:px-8')}>
-    {discoveryData.map((discovery) => (
-      <DiscoveryCard key={discovery.id} {...discovery} />
+    {resorts.map((resort) => (
+      <DiscoveryCard key={resort.resortId} {...resort} />
     ))}
   </div>
 );
