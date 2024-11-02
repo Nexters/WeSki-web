@@ -1,13 +1,19 @@
 import WeatherIcon from '@/features/discovery/ui/weather-icon';
-import type { WeeklyWeather as WeeklyWeatherType } from '@/entities/discovery/model/model';
+import type { SummarizedWeeklyWeather as WeeklyWeatherType } from '@/entities/discovery/model/model';
 import { cn } from '@/shared/lib';
+import { getWeatherFromDescription } from '@/shared/lib/getWeatherFromDescription';
 
 interface WeeklyWeatherProps extends WeeklyWeatherType {
-  day: string;
   isToday: boolean;
 }
 
-const WeeklyWeather = ({ day, weather, temperature, isToday }: WeeklyWeatherProps) => {
+const WeeklyWeather = ({
+  day,
+  maxTemperature,
+  minTemperature,
+  description,
+  isToday,
+}: WeeklyWeatherProps) => {
   return (
     <li
       className={cn(
@@ -17,11 +23,11 @@ const WeeklyWeather = ({ day, weather, temperature, isToday }: WeeklyWeatherProp
     >
       <div className={cn('flex flex-col items-center gap-[7px]')}>
         <div className={cn('body3-regular text-gray-60')}>{day}</div>
-        <WeatherIcon weather={weather} />
+        <WeatherIcon weather={getWeatherFromDescription(description)} />
       </div>
       <div className={cn('flex flex-col items-center')}>
-        <p className={cn('title3-semibold text-gray-90')}>{temperature.lowest}</p>
-        <p className={cn('body3-regular text-gray-60')}>{temperature.average}</p>
+        <p className={cn('title3-semibold text-gray-90')}>{minTemperature}</p>
+        <p className={cn('body3-regular text-gray-60')}>{maxTemperature}</p>
       </div>
     </li>
   );
