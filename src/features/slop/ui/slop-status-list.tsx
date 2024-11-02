@@ -1,23 +1,16 @@
 import React from 'react';
-import type { Level } from '@/entities/slop/model/model';
-import LevelChip from '@/entities/slop/ui/level-chip';
+import type { Slope } from '@/entities/slope';
+import LevelChip from '@/entities/slope/ui/level-chip';
 import CheckIcon from '@/shared/icons/check';
 import CloseIcon from '@/shared/icons/close';
 import { cn } from '@/shared/lib';
 import useSlopStore from '../hooks/useSlopStore';
 
 interface SlopStatusListProps {
-  list: {
-    key: string;
-    name: string;
-    level: Level;
-    isOpenDuringDay: boolean;
-    isOpenDuringWeek: boolean;
-    isOpenDuringNight: boolean;
-  }[];
+  slopes?: Slope[];
 }
 
-const SlopStatusList = ({ list }: SlopStatusListProps) => {
+const SlopStatusList = ({ slopes }: SlopStatusListProps) => {
   const { selectedSlop, setSelectedSlop } = useSlopStore();
 
   const handleSlopClick = ({ id }: { id: string }) => {
@@ -47,26 +40,26 @@ const SlopStatusList = ({ list }: SlopStatusListProps) => {
         </tr>
       </thead>
       <tbody>
-        {list.map((item) => (
+        {slopes?.map((slope) => (
           <tr
-            key={item.key}
-            className={cn(selectedSlop === item.key && 'bg-main-5')}
-            onClick={() => handleSlopClick({ id: item.key })}
+            key={slope.name}
+            className={cn(selectedSlop === slope.name && 'bg-main-5')}
+            onClick={() => handleSlopClick({ id: slope.name })}
           >
             <td className={cn('body1-semibold py-[12px] pl-5 text-left text-gray-80')}>
-              {item.name}
+              {slope.name}
             </td>
             <td className={cn('text-center')}>
-              <LevelChip level={item.level} className={cn('m-auto')} />
+              <LevelChip level={slope.difficulty} className={cn('m-auto')} />
             </td>
             <td className={cn('text-center')}>
-              <StatusIcon isOpen={item.isOpenDuringDay} className={cn('m-auto')} />
+              <StatusIcon isOpen={slope.isDayOperating} className={cn('m-auto')} />
             </td>
             <td className={cn('text-center')}>
-              <StatusIcon isOpen={item.isOpenDuringWeek} className={cn('m-auto')} />
+              <StatusIcon isOpen={slope.isNightOperating} className={cn('m-auto')} />
             </td>
             <td className={cn('pr-5 text-center')}>
-              <StatusIcon isOpen={item.isOpenDuringNight} className={cn('m-auto')} />
+              <StatusIcon isOpen={slope.isLateNightOperating} className={cn('m-auto')} />
             </td>
           </tr>
         ))}

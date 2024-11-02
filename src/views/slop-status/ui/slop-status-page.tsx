@@ -7,12 +7,21 @@ import SlopMap from '@/features/slop/ui/slop-map';
 import SlopStatusList from '@/features/slop/ui/slop-status-list';
 import { slopQueries } from '@/entities/slop/api';
 import { RESORT_DOMAIN } from '@/entities/slop/model';
+import { slopeApi } from '@/entities/slope';
 import { cn } from '@/shared/lib';
 
-const SlopStatusPage = ({ params }: { params: { key: keyof typeof RESORT_DOMAIN } }) => {
+const SlopStatusPage = ({
+  params,
+  resortId,
+}: {
+  params?: { key: keyof typeof RESORT_DOMAIN };
+  resortId?: number;
+}) => {
   const { ref, style, containerRef } = useMapPinch();
 
-  const { data } = useQuery(slopQueries.list(params.key));
+  const { data: slopeData } = useQuery(slopeApi.slopeQueries.slope(resortId ?? 1));
+
+  const { data } = useQuery(slopQueries.list(params?.key ?? 'jisan'));
 
   if (!data) return;
 
@@ -27,7 +36,7 @@ const SlopStatusPage = ({ params }: { params: { key: keyof typeof RESORT_DOMAIN 
           slops={RESORT_DOMAIN[data.key].slops}
         />
       </section>
-      <SlopStatusList list={data.slopes} />
+      <SlopStatusList slopes={slopeData?.slopes} />
     </main>
   );
 };
