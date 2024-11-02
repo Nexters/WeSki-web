@@ -8,15 +8,17 @@ export type DuplicatedWeeklyWeather = {
   };
 };
 
+export type Url = {
+  bus: string;
+  homepage: string;
+};
+
 export type Discovery = {
   id: number;
   name: string;
   map: string;
   slope: number | null;
-  url: {
-    bus: string;
-    homepage: string;
-  };
+  url: Url;
   weather: {
     weather: Weather;
     temperature: number;

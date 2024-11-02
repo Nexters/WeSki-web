@@ -26,6 +26,8 @@ const DiscoveryDetailPage = ({ params }: { params: { resortId: string } }) => {
   const discovery = DiscoveryData.find(
     (discovery) => discovery.id === +params?.resortId
   ) as Discovery;
+  const { data: resortsData } = useQuery(discoveryApi.resortQueries.list());
+  const resort = resortsData?.find((resort) => resort.resortId === +params?.resortId);
   const { data: voteData } = useQuery(discoveryApi.discoveryQueries.vote(+params?.resortId));
   const data = RESORT_DOMAIN[discovery?.map as keyof typeof RESORT_DOMAIN];
   const [selectedTab, setSelectedTab] = useState('webcam');
@@ -72,12 +74,12 @@ const DiscoveryDetailPage = ({ params }: { params: { resortId: string } }) => {
     }
   }, [isPositive, mutateAsync, params?.resortId]);
 
-  if (!discovery) return;
+  if (!discovery || !resort) return;
 
   return (
     <div className={cn('size-full')}>
-      <Header resortName={discovery.name} hasBackButton hasShareButton />
-      <DiscoverySummary {...discovery} />
+      <Header resortName={resort.name} hasBackButton hasShareButton />
+      <DiscoverySummary {...resort} {...discovery.url} />
       <ul className={cn('relative z-10 flex size-full h-[53px] bg-white')}>
         {DiscoveryContentTabList.map((tab) => (
           <li

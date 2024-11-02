@@ -1,3 +1,4 @@
+// eslint-disable-next-line boundaries/element-types
 import type { Weather } from "@/entities/discovery";
 
 const weatherDescription = {
