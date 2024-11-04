@@ -1,10 +1,9 @@
 import React, { useEffect, useRef } from 'react';
 import { createPortal } from 'react-dom';
-import { toast } from 'sonner';
 import type { Position, Webcam } from '@/entities/slop/model/model';
 import ArrowRightIcon from '@/shared/icons/arrow-right';
-import NeutralFace from '@/shared/icons/neutral-face';
 import { cn } from '@/shared/lib';
+import postAppMessage from '@/shared/lib/postAppMessage';
 import CameraButton from '@/shared/ui/cam-button';
 import { Tooltip } from '@/shared/ui/tooltip';
 import useSlopStore from '../hooks/useSlopStore';
@@ -45,11 +44,7 @@ const SlopCamera = ({
     setOpenCamera();
 
     if (!src) {
-      toast(
-        <>
-          <NeutralFace /> 선택한 웹캠은 아직 준비중 이에요
-        </>
-      );
+      postAppMessage('선택한 웹캠은 아직 준비중 이에요');
     }
   };
 
