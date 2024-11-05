@@ -1,12 +1,12 @@
 declare global {
   interface Window {
-    BRIDGE: {
-      sendMessage: (message: string) => void;
+    Android: {
+      showToast: (message: string) => void;
     };
     webkit: {
       messageHandlers: {
         weski: {
-          showToast: (message: string) => void;
+          postMessage: ({ method, message }: { method: "showToast", message: string }) => void;
         };
       };
     };
@@ -14,18 +14,20 @@ declare global {
 }
 
 const postAppMessage = (message: string) => {
-  const userAgent = navigator.userAgent;
-  const android = userAgent.match(/Android/i);
-  const iphone = userAgent.match(/iPhone/i);
-    
+  const userAgent = navigator.userAgent.toLowerCase();
+  const android = userAgent.match(/android/i);
+  const iphone = userAgent.match(/iphone/i);
+
   if (android !== null) {
     console.log("Android");
-    return window.BRIDGE.sendMessage(message);
-
+    return window.Android.showToast(message);
   } else if (iphone !== null) {
     console.log("iOS");
-    return window.webkit.messageHandlers.weski.showToast(message);
-  
+    if (window.webkit.messageHandlers.weski) {
+      window.webkit.messageHandlers.weski.postMessage({ method: "showToast", message: message });
+    } else {
+      console.error("Weski bridge is not available.");
+    }
   } else {
     return window.opener.postMessage(message);
   }
