@@ -13,23 +13,21 @@ declare global {
   }
 }
 
-const postAppMessage = (message: string) => {
+const postAppMessage = (message: string, showToast: (message: string) => void) => {
   const userAgent = navigator.userAgent.toLowerCase();
   const android = userAgent.match(/android/i);
   const iphone = userAgent.match(/iphone/i);
 
   if (android !== null) {
-    console.log("Android");
     return window.Android.showToast(message);
   } else if (iphone !== null) {
-    console.log("iOS");
     if (window.webkit.messageHandlers.weski) {
       window.webkit.messageHandlers.weski.postMessage({ method: "showToast", message: message });
     } else {
       console.error("Weski bridge is not available.");
     }
   } else {
-    return window.opener.postMessage(message);
+    return showToast(message);
   }
 }
 

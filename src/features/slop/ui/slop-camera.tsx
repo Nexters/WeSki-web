@@ -1,7 +1,9 @@
 import React, { useEffect, useRef } from 'react';
 import { createPortal } from 'react-dom';
+import { toast } from 'sonner';
 import type { Position, Webcam } from '@/entities/slop/model/model';
 import ArrowRightIcon from '@/shared/icons/arrow-right';
+import NeutralFace from '@/shared/icons/neutral-face';
 import { cn } from '@/shared/lib';
 import postAppMessage from '@/shared/lib/postAppMessage';
 import CameraButton from '@/shared/ui/cam-button';
@@ -44,7 +46,13 @@ const SlopCamera = ({
     setOpenCamera();
 
     if (!src) {
-      postAppMessage('선택한 웹캠은 아직 준비중 이에요');
+      postAppMessage('선택한 웹캠은 아직 준비중 이에요', (message) =>
+        toast(
+          <>
+            <NeutralFace /> {message}
+          </>
+        )
+      );
     }
   };
 
@@ -68,10 +76,8 @@ const SlopCamera = ({
             }
             isOpen={isOpen}
           >
-            <div className={cn('flex items-center')}>
-              <p className={cn('body3-medium')} onClick={openVideo}>
-                {name}
-              </p>
+            <div className={cn('flex cursor-pointer items-center')} onClick={openVideo}>
+              <p className={cn('body3-medium')}>{name}</p>
               <ArrowRightIcon />
             </div>
           </Tooltip>
