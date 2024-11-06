@@ -13,7 +13,7 @@ const DiscoveryCard = ({ resortId, name, openSlopes, currentWeather, weeklyWeath
     <Card
       className={cn(
         'box-border flex cursor-pointer flex-col gap-[15px] pb-4 pt-[34px] md:pb-[26px] md:pt-10',
-        'transition-all hover:scale-[1.02] hover:border-2 hover:border-main-1/30 hover:pb-[15px] hover:pt-[33px] hover:md:pb-[25px] hover:md:pt-[39px]'
+        'transition-all hover:scale-[1.02] hover:border-2 hover:border-main-1/60 hover:pb-[15px] hover:pt-[33px] hover:md:pb-[25px] hover:md:pt-[39px]'
       )}
       onClick={() => router.push(`/${resortId}`)}
     >
