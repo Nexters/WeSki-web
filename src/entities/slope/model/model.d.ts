@@ -4,7 +4,8 @@ export type Level =
   | '중급'
   | '중상급'
   | '상급'
-  | '최상급';
+  | '최상급'
+  | '파크';
 
 export type Slope = {
   name: string,
