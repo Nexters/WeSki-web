@@ -13,22 +13,26 @@ declare global {
   }
 }
 
-const postAppMessage = (message: string, showToast: (message: string) => void) => {
+const postAppMessage = (message: string, isWebview: boolean, showToast: (message: string) => void) => {
   const userAgent = navigator.userAgent.toLowerCase();
   const android = userAgent.match(/android/i);
   const iphone = userAgent.match(/iphone/i);
 
-  if (android !== null) {
-    return window.Android.showToast(message);
-  } else if (iphone !== null) {
-    if (window.webkit.messageHandlers.weski) {
-      window.webkit.messageHandlers.weski.postMessage({ method: "showToast", message: message });
+  if (isWebview) {
+    if (android !== null) {
+      return window.Android.showToast(message);
+    } else if (iphone !== null) {
+      if (window.webkit.messageHandlers.weski) {
+        window.webkit.messageHandlers.weski.postMessage({ method: "showToast", message: message });
+      } else {
+        console.error("Weski bridge is not available.");
+      }
     } else {
-      console.error("Weski bridge is not available.");
+      return showToast(message);
     }
-  } else {
-    return showToast(message);
   }
+  
+  return showToast(message);
 }
 
 export default postAppMessage;
