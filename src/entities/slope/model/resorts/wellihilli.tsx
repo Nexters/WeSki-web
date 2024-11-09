@@ -21,14 +21,14 @@ import HalfPipePath from '../image/wellihilli/half-pipe-path';
 import WellihilliMap from '../image/wellihilli/map';
 import StarExpress1Path from '../image/wellihilli/star-express1-path';
 import StarExpress2Path from '../image/wellihilli/star-express2-path';
-import type { ResortInfo } from './model';
+import type { ResortConstant } from '../model';
 
-export const WELLIHILLI: ResortInfo = {
+export const WELLIHILLI: ResortConstant = {
   MapComponent: WellihilliMap,
-  slops: [
+  slopes: [
     {
       id: 'alpha-slope1',
-      level: 'BEGINNER',
+      level: '초급',
       name: '알파슬로프 1',
       Element: AlphaSlope1Path,
       webcamId: 'a1/a3-slope',
@@ -36,7 +36,7 @@ export const WELLIHILLI: ResortInfo = {
     },
     {
       id: 'alpha-slope2',
-      level: 'BEGINNER',
+      level: '초급',
       name: '알파슬로프 2',
       Element: AlphaSlope2Path,
       webcamId: 'outdoor-square',
@@ -44,7 +44,7 @@ export const WELLIHILLI: ResortInfo = {
     },
     {
       id: 'alpha-slope3',
-      level: 'BEGINNER',
+      level: '초급',
       name: '알파슬로프 3',
       Element: AlphaSlope3Path,
       webcamId: 'outdoor-square',
@@ -52,21 +52,21 @@ export const WELLIHILLI: ResortInfo = {
     },
     {
       id: 'bravo-slope1',
-      level: 'INTERMEDIATE',
+      level: '중급',
       name: '브라보슬로프 1',
       Element: BravoSlope1Path,
       isOpen: true,
     },
     {
       id: 'bravo-slope2',
-      level: 'INTERMEDIATE',
+      level: '중급',
       name: '브라보슬로프 2',
       Element: BravoSlope2Path,
       isOpen: true,
     },
     {
       id: 'delta-slope1',
-      level: 'BEGINNER',
+      level: '초급',
       name: '델타슬로프 1',
       Element: DeltaSlope1Path,
       webcamId: 'family-slope',
@@ -74,7 +74,7 @@ export const WELLIHILLI: ResortInfo = {
     },
     {
       id: 'delta-slope2',
-      level: 'BEGINNER',
+      level: '초급',
       name: '델타슬로프 2',
       Element: DeltaSlope2Path,
       webcamId: 'top-square',
@@ -82,84 +82,84 @@ export const WELLIHILLI: ResortInfo = {
     },
     {
       id: 'delta-slope-plus',
-      level: 'BEGINNER',
+      level: '초급',
       name: '델타슬로프 +',
       Element: DeltaSlopePlusPath,
       isOpen: true,
     },
     {
       id: 'echo-slope1',
-      level: 'EXPERT',
+      level: '최상급',
       name: '에코슬로프 1',
       Element: EchoSlope1Path,
       isOpen: true,
     },
     {
       id: 'echo-slope2',
-      level: 'ADVANCED',
+      level: '상급',
       name: '에코슬로프 2',
       Element: EchoSlope2Path,
       isOpen: true,
     },
     {
       id: 'echo-slope3',
-      level: 'EXPERT',
+      level: '최상급',
       name: '에코슬로프 3',
       Element: EchoSlope3Path,
       isOpen: true,
     },
     {
       id: 'echo-slope-plus',
-      level: 'EXPERT',
+      level: '최상급',
       name: '에코슬로프 +',
       Element: EchoSlopePlusPath,
       isOpen: true,
     },
     {
       id: 'challenge-slope1',
-      level: 'ADVANCED',
+      level: '상급',
       name: '첼린지슬로프 1',
       Element: ChallengeSlope1Path,
       isOpen: true,
     },
     {
       id: 'challenge-slope2',
-      level: 'ADVANCED',
+      level: '상급',
       name: '첼린지슬로프 2',
       Element: ChallengeSlope2Path,
       isOpen: true,
     },
     {
       id: 'challenge-slope3',
-      level: 'EXPERT',
+      level: '최상급',
       name: '첼린지슬로프 3',
       Element: ChallengeSlope3Path,
       isOpen: true,
     },
     {
       id: 'challenge-slope4',
-      level: 'ADVANCED',
+      level: '상급',
       name: '첼린지슬로프 4',
       Element: ChallengeSlope4Path,
       isOpen: true,
     },
     {
       id: 'challenge-slope5',
-      level: 'ADVANCED',
+      level: '상급',
       name: '첼린지슬로프 5',
       Element: ChallengeSlope5Path,
       isOpen: true,
     },
     {
       id: 'star-express1',
-      level: 'INTERMEDIATE',
+      level: '중급',
       name: '스타 익스프레스1',
       Element: StarExpress1Path,
       isOpen: true,
     },
     {
       id: 'star-express2',
-      level: 'BEGINNER',
+      level: '초급',
       name: '스타 익스프레스2',
       Element: StarExpress2Path,
       webcamId: 'top-square',
@@ -167,7 +167,7 @@ export const WELLIHILLI: ResortInfo = {
     },
     {
       id: 'half-pipe',
-      level: 'BEGINNER',
+      level: '초급',
       name: '하프파이프',
       Element: HalfPipePath,
       webcamId: 'half-pipe',

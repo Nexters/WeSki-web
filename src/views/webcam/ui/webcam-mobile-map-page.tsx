@@ -1,13 +1,13 @@
 'use client';
 
 import React, { useCallback, useState } from 'react';
-import { WebcamMap, WebcamSlopList } from '@/widgets/webcam/ui';
-import useMapPinch from '@/features/slop/hooks/useMapPinch';
-import calculateWebcamPosition from '@/features/slop/lib/calculateWebcamPosition';
-import type { Position, ResortInfo } from '@/entities/slop/model/model';
+import { WebcamMap, WebcamSlopeList } from '@/widgets/webcam/ui';
+import useMapPinch from '@/features/slope/hooks/useMapPinch';
+import calculateWebcamPosition from '@/features/slope/lib/calculateWebcamPosition';
+import type { Position, ResortConstant } from '@/entities/slope/model';
 import { cn } from '@/shared/lib';
 
-const WebCamMobileMapPage = ({ data }: { resortId?: number; data: ResortInfo }) => {
+const WebCamMobileMapPage = ({ data }: { resortId?: number; data: ResortConstant }) => {
   const [cameraPositions, setCameraPositions] = useState<{
     [key: string]: Position;
   }>({});
@@ -39,15 +39,15 @@ const WebCamMobileMapPage = ({ data }: { resortId?: number; data: ResortInfo }) 
         style={style}
         isWebview
         containerRef={containerRef}
-        slops={data.slops}
+        slopes={data.slopes}
         webcams={data.webcams}
         MapComponent={data.MapComponent}
         onCameraClick={handleFocusSlopCamClick}
         updateCameraPosition={updateCameraPosition}
       />
-      <WebcamSlopList
+      <WebcamSlopeList
         webcams={data.webcams}
-        list={data.slops}
+        list={data.slopes}
         onItemClick={handleFocusSlopCamClick}
       />
     </main>

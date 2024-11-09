@@ -10,14 +10,14 @@ import VivaldiparkMap from '../image/vivaldipark/map';
 import ReggaeSlopPath from '../image/vivaldipark/reggae-slop-path';
 import RockSlopPath from '../image/vivaldipark/rock-slop-path';
 import TechnoSlopPath from '../image/vivaldipark/techno-slop-path';
-import type { ResortInfo } from './model';
+import type { ResortConstant } from '../model';
 
-export const VIVALDIPARK: ResortInfo = {
+export const VIVALDIPARK: ResortConstant = {
   MapComponent: VivaldiparkMap,
-  slops: [
+  slopes: [
     {
       id: 'ballad-slop',
-      level: 'BEGINNER',
+      level: '초급',
       name: '발라드슬로프',
       Element: BalladSlopPath,
       webcamId: 'ballad-webcam',
@@ -25,7 +25,7 @@ export const VIVALDIPARK: ResortInfo = {
     },
     {
       id: 'blues-slop',
-      level: 'BEGINNER',
+      level: '초급',
       name: '블루스슬로프',
       Element: BluesSlopPath,
       webcamId: 'blues-webcam',
@@ -33,7 +33,7 @@ export const VIVALDIPARK: ResortInfo = {
     },
     {
       id: 'hiphop-slop',
-      level: 'UPPER_INTERMEDIATE',
+      level: '중상급',
       name: '힙합슬로프',
       Element: HiphopSlopPath,
       webcamId: 'hiphop-webcam',
@@ -41,7 +41,7 @@ export const VIVALDIPARK: ResortInfo = {
     },
     {
       id: 'classic-slop',
-      level: 'UPPER_INTERMEDIATE',
+      level: '중상급',
       name: '클래식슬로프',
       Element: ClassicSlopPath,
       webcamId: 'classic-webcam',
@@ -49,14 +49,14 @@ export const VIVALDIPARK: ResortInfo = {
     },
     {
       id: 'reggae-slop',
-      level: 'INTERMEDIATE',
+      level: '중급',
       name: '레게슬로프',
       Element: ReggaeSlopPath,
       isOpen: true,
     },
     {
       id: 'jazz-slop',
-      level: 'INTERMEDIATE',
+      level: '중급',
       name: '재즈슬로프',
       Element: JazzSlopPath,
       webcamId: 'jazz-webcam',
@@ -64,7 +64,7 @@ export const VIVALDIPARK: ResortInfo = {
     },
     {
       id: 'funky-slop',
-      level: 'ADVANCED',
+      level: '상급',
       name: '펑키슬로프',
       Element: FunkySlopPath,
       webcamId: 'funky-webcam',
@@ -72,7 +72,7 @@ export const VIVALDIPARK: ResortInfo = {
     },
     {
       id: 'techno-slop',
-      level: 'ADVANCED',
+      level: '상급',
       name: '테크노슬로프',
       Element: TechnoSlopPath,
       webcamId: 'techno-bottom',
@@ -80,7 +80,7 @@ export const VIVALDIPARK: ResortInfo = {
     },
     {
       id: 'rock-slop',
-      level: 'EXPERT',
+      level: '최상급',
       name: '락슬로프',
       Element: RockSlopPath,
       isOpen: true,

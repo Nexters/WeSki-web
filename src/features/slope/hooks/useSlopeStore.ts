@@ -1,24 +1,24 @@
 import { create } from 'zustand';
 
-type SlopId = string | null;
+type SlopeId = string | null;
 type CameraId = string | null | undefined;
 
-interface SlopState {
-  selectedSlop: SlopId;
+interface SlopeState {
+  selectedSlope: SlopeId;
   selectedCamera: { id: CameraId; isOpen: boolean };
-  setSelectedSlop: (slopId: SlopId) => void;
+  setSelectedSlope: (slopeId: SlopeId) => void;
   setSelectedCamera: (cameraId: CameraId) => void;
   setOpenCamera: () => void;
   setCloseCamera: () => void;
 }
 
-const useSlopStore = create<SlopState>((set) => ({
-  selectedSlop: null,
+const useSlopeStore = create<SlopeState>((set) => ({
+  selectedSlope: null,
   selectedCamera: {
     id: null,
     isOpen: false,
   },
-  setSelectedSlop: (slopId: SlopId) => set(() => ({ selectedSlop: slopId })),
+  setSelectedSlope: (slopeId: SlopeId) => set(() => ({ selectedSlope: slopeId })),
   setSelectedCamera: (cameraId: CameraId) =>
     set((state) => ({ selectedCamera: { ...state.selectedCamera, id: cameraId } })),
   setOpenCamera: () =>
@@ -27,4 +27,4 @@ const useSlopStore = create<SlopState>((set) => ({
     set((state) => ({ selectedCamera: { ...state.selectedCamera, isOpen: false } })),
 }));
 
-export default useSlopStore;
+export default useSlopeStore;

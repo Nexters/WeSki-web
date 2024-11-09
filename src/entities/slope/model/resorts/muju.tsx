@@ -28,14 +28,14 @@ import TurboSlopePath from '../image/muju/turbo-slope-path';
 import WaltzSlopePath from '../image/muju/waltz-slope-path';
 import WesternSlopePath from '../image/muju/western-slope-path';
 import YamagaSlopePath from '../image/muju/yamaga-slope-path';
-import type { ResortInfo } from './model';
+import type { ResortConstant } from '../model';
 
-export const MUJU: ResortInfo = {
+export const MUJU: ResortConstant = {
   MapComponent: MujuMap,
-  slops: [
+  slopes: [
     {
       id: 'eastern-slope',
-      level: 'BEGINNER',
+      level: '초급',
       name: '이스턴슬로프',
       Element: EasternSlopePath,
       webcamId: 'mansun-house',
@@ -43,7 +43,7 @@ export const MUJU: ResortInfo = {
     },
     {
       id: 'soyokgihang',
-      level: 'BEGINNER',
+      level: '초급',
       name: '서역기행',
       Element: SoyokgihangPath,
       webcamId: 'heidi-house',
@@ -51,7 +51,7 @@ export const MUJU: ResortInfo = {
     },
     {
       id: 'spitch-lowest',
-      level: 'BEGINNER',
+      level: '초급',
       name: '스피츠 하단',
       Element: SpitchLowestPath,
       webcamId: 'seolcheon-house',
@@ -59,14 +59,14 @@ export const MUJU: ResortInfo = {
     },
     {
       id: 'western-slope',
-      level: 'INTERMEDIATE',
+      level: '중급',
       name: '웨스턴슬로프',
       Element: WesternSlopePath,
       isOpen: true,
     },
     {
       id: 'sundown-slope',
-      level: 'INTERMEDIATE',
+      level: '중급',
       name: '썬다운슬로프',
       Element: SundownSlopePath,
       webcamId: 'soyokgihang-sundown',
@@ -74,7 +74,7 @@ export const MUJU: ResortInfo = {
     },
     {
       id: 'silkroad',
-      level: 'INTERMEDIATE',
+      level: '중급',
       name: '실크로드',
       Element: SilkroadPath,
       webcamId: 'seolcheonbong-summit',
@@ -82,14 +82,14 @@ export const MUJU: ResortInfo = {
     },
     {
       id: 'rookiehill-slope',
-      level: 'INTERMEDIATE',
+      level: '중급',
       name: '루키힐슬로프',
       Element: RookiehillSlopePath,
       isOpen: true,
     },
     {
       id: 'turbo-slope',
-      level: 'INTERMEDIATE',
+      level: '중급',
       name: '터보슬로프',
       Element: TurboSlopePath,
       webcamId: 'soyokgihang-sundown',
@@ -97,14 +97,14 @@ export const MUJU: ResortInfo = {
     },
     {
       id: 'connection-slope',
-      level: 'INTERMEDIATE',
+      level: '중급',
       name: '커넥션슬로프',
       Element: ConnectionSlopePath,
       isOpen: true,
     },
     {
       id: 'minuet',
-      level: 'ADVANCED',
+      level: '상급',
       name: '미뉴에트',
       Element: MinuetPath,
       webcamId: 'mozart-minuet',
@@ -112,7 +112,7 @@ export const MUJU: ResortInfo = {
     },
     {
       id: 'freeway',
-      level: 'ADVANCED',
+      level: '상급',
       name: '프리웨이',
       Element: FreewayPath,
       webcamId: 'heidi-house',
@@ -120,7 +120,7 @@ export const MUJU: ResortInfo = {
     },
     {
       id: 'yamaga-slope',
-      level: 'ADVANCED',
+      level: '상급',
       name: '야마가슬로프',
       Element: YamagaSlopePath,
       webcamId: 'heidi-house',
@@ -128,21 +128,21 @@ export const MUJU: ResortInfo = {
     },
     {
       id: 'panorama',
-      level: 'ADVANCED',
+      level: '상급',
       name: '파노라마',
       Element: PanoramaPath,
       isOpen: true,
     },
     {
       id: 'raiders-lowest',
-      level: 'ADVANCED',
+      level: '상급',
       name: '레이더스 하단',
       Element: RaidersLowestPath,
       isOpen: true,
     },
     {
       id: 'mozart',
-      level: 'ADVANCED',
+      level: '상급',
       name: '모차르트',
       Element: MozartPath,
       webcamId: 'mozart-minuet',
@@ -150,14 +150,14 @@ export const MUJU: ResortInfo = {
     },
     {
       id: 'waltz-slope',
-      level: 'ADVANCED',
+      level: '상급',
       name: '왈츠슬로프',
       Element: WaltzSlopePath,
       isOpen: true,
     },
     {
       id: 'allegro',
-      level: 'ADVANCED',
+      level: '상급',
       name: '알레그로',
       Element: AllegroPath,
       webcamId: 'seolcheon-top-slope',
@@ -165,7 +165,7 @@ export const MUJU: ResortInfo = {
     },
     {
       id: 'raiders-highest',
-      level: 'EXPERT',
+      level: '최상급',
       name: '레이더스 상단',
       Element: RaidersHighestPath,
       webcamId: 'mansunbong-summit',
@@ -173,7 +173,7 @@ export const MUJU: ResortInfo = {
     },
     {
       id: 'polka-slope',
-      level: 'EXPERT',
+      level: '최상급',
       name: '폴카슬로프',
       Element: PolkaSlopePath,
       webcamId: 'seolcheon-top-slope',
@@ -181,7 +181,7 @@ export const MUJU: ResortInfo = {
     },
     {
       id: 'cadenza-slope',
-      level: 'EXPERT',
+      level: '최상급',
       name: '카덴자슬로프',
       Element: CadenzaSlopePath,
       webcamId: 'seolcheon-top-slope',
@@ -189,49 +189,49 @@ export const MUJU: ResortInfo = {
     },
     {
       id: 'shortcut-slope',
-      level: 'BEGINNER',
+      level: '초급',
       name: '쇼트컷슬로프',
       Element: ShortcutSlopePath,
       isOpen: true,
     },
     {
       id: 'spitch-slope',
-      level: 'BEGINNER',
+      level: '초급',
       name: '스피츠슬로프',
       Element: SpitchSlopePath,
       isOpen: true,
     },
     {
       id: 'flamingo',
-      level: 'BEGINNER',
+      level: '초급',
       name: '플라밍고',
       Element: FlamingoPath,
       isOpen: true,
     },
     {
       id: 'moderato',
-      level: 'BEGINNER',
+      level: '초급',
       name: '모데라토',
       Element: ModeratoPath,
       isOpen: true,
     },
     {
       id: 'r-gardner-slope',
-      level: 'BEGINNER',
+      level: '초급',
       name: 'R.가드너슬로프',
       Element: RGardnerSlopePath,
       isOpen: true,
     },
     {
       id: 'freeway2',
-      level: 'BEGINNER',
+      level: '초급',
       name: '프리웨이2',
       Element: Freeway2Path,
       isOpen: true,
     },
     {
       id: 'rusutsu-slope',
-      level: 'BEGINNER',
+      level: '초급',
       name: '루스츠슬로프',
       Element: RusutsuSlopePath,
       isOpen: true,

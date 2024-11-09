@@ -11,14 +11,14 @@ import PegasusSlopPath from '../image/elysian-gangchon/pegasus-slop-path';
 import PumaSlopPath from '../image/elysian-gangchon/puma-slop-path';
 import RabbitSlopPath from '../image/elysian-gangchon/rabbit-slop-path';
 import ZebraSlopPath from '../image/elysian-gangchon/zebra-slop-path';
-import type { ResortInfo } from './model';
+import type { ResortConstant } from '../model';
 
-export const ELYSIAN_GANGCHON: ResortInfo = {
+export const ELYSIAN_GANGCHON: ResortConstant = {
   MapComponent: ElysianGangchonMap,
-  slops: [
+  slopes: [
     {
       id: 'panda-slop',
-      level: 'BEGINNER',
+      level: '초급',
       name: '팬더슬로프',
       Element: PandaSlopPath,
       webcamId: 'sub-house',
@@ -26,7 +26,7 @@ export const ELYSIAN_GANGCHON: ResortInfo = {
     },
     {
       id: 'rabbit-slop',
-      level: 'BEGINNER',
+      level: '초급',
       name: '래빗슬로프',
       Element: RabbitSlopPath,
       webcamId: 'sub-house',
@@ -34,7 +34,7 @@ export const ELYSIAN_GANGCHON: ResortInfo = {
     },
     {
       id: 'dragon-slop',
-      level: 'INTERMEDIATE',
+      level: '중급',
       name: '드래곤슬로프',
       Element: DragonSlopPath,
       webcamId: 'alp-house',
@@ -42,7 +42,7 @@ export const ELYSIAN_GANGCHON: ResortInfo = {
     },
     {
       id: 'horse-slop',
-      level: 'INTERMEDIATE',
+      level: '중급',
       name: '호스슬로프',
       Element: HorseSlopPath,
       webcamId: 'alp-house',
@@ -50,7 +50,7 @@ export const ELYSIAN_GANGCHON: ResortInfo = {
     },
     {
       id: 'pegasus-slop',
-      level: 'INTERMEDIATE',
+      level: '중급',
       name: '페가수스슬로프',
       Element: PegasusSlopPath,
       webcamId: 'ski-house',
@@ -58,7 +58,7 @@ export const ELYSIAN_GANGCHON: ResortInfo = {
     },
     {
       id: 'zebra-slop',
-      level: 'INTERMEDIATE',
+      level: '중급',
       name: '제브라슬로프',
       Element: ZebraSlopPath,
       webcamId: 'ski-house',
@@ -66,14 +66,14 @@ export const ELYSIAN_GANGCHON: ResortInfo = {
     },
     {
       id: 'deer-slop',
-      level: 'INTERMEDIATE',
+      level: '중급',
       name: '디어슬로프',
       Element: DeerSlopPath,
       isOpen: true,
     },
     {
       id: 'puma-slop',
-      level: 'INTERMEDIATE',
+      level: '중급',
       name: '퓨마슬로프',
       Element: PumaSlopPath,
       webcamId: 'alp-house',
@@ -81,7 +81,7 @@ export const ELYSIAN_GANGCHON: ResortInfo = {
     },
     {
       id: 'leopard-slop',
-      level: 'ADVANCED',
+      level: '상급',
       name: '래퍼드슬로프',
       Element: LeopardSlopPath,
       webcamId: 'ski-house',
@@ -89,7 +89,7 @@ export const ELYSIAN_GANGCHON: ResortInfo = {
     },
     {
       id: 'jaguar-slop',
-      level: 'ADVANCED',
+      level: '상급',
       name: '제규어슬로프',
       Element: JaguarSlopPath,
       webcamId: 'ski-house',

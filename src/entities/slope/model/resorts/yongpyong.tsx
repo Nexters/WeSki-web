@@ -22,14 +22,14 @@ import SilverParadisePath from '../image/yongpyong/silver-paradise-path';
 import SilverSlopePath from '../image/yongpyong/silver-slope-path';
 import SummitLandTheGreenPath from '../image/yongpyong/summit-land-the-green-path';
 import YellowSlopePath from '../image/yongpyong/yellow-slope-path';
-import type { ResortInfo } from './model';
+import type { ResortConstant } from '../model';
 
-export const YONGPYONG: ResortInfo = {
+export const YONGPYONG: ResortConstant = {
   MapComponent: MapImage,
-  slops: [
+  slopes: [
     {
       id: 'gold-valley',
-      level: 'ADVANCED',
+      level: '상급',
       name: '골드 밸리',
       Element: GoldValleyPath,
       webcamId: 'gold-slope-foreground',
@@ -37,14 +37,14 @@ export const YONGPYONG: ResortInfo = {
     },
     {
       id: 'gold-paradise',
-      level: 'INTERMEDIATE',
+      level: '중급',
       name: '골드 파라다이스',
       Element: GoldParadisePath,
       isOpen: true,
     },
     {
       id: 'new-gold-slope',
-      level: 'ADVANCED',
+      level: '상급',
       name: '뉴골드슬로프',
       Element: NewGoldSlopePath,
       webcamId: 'gold-slope-foreground',
@@ -52,7 +52,7 @@ export const YONGPYONG: ResortInfo = {
     },
     {
       id: 'gold-fantastic',
-      level: 'ADVANCED',
+      level: '상급',
       name: '골드 환타스틱',
       Element: GoldFantasticPath,
       webcamId: 'gold-slope-foreground',
@@ -60,7 +60,7 @@ export const YONGPYONG: ResortInfo = {
     },
     {
       id: 'red-paradise',
-      level: 'INTERMEDIATE',
+      level: '중급',
       name: '레드 파라다이스',
       Element: RedParadisePath,
       webcamId: 'red-slope',
@@ -68,14 +68,14 @@ export const YONGPYONG: ResortInfo = {
     },
     {
       id: 'red-slope',
-      level: 'EXPERT',
+      level: '최상급',
       name: '레드슬로프',
       Element: RedSlopePath,
       isOpen: true,
     },
     {
       id: 'new-red-slope',
-      level: 'ADVANCED',
+      level: '상급',
       name: '뉴레드슬로프',
       Element: NewRedSlopePath,
       webcamId: 'red-slope',
@@ -83,14 +83,14 @@ export const YONGPYONG: ResortInfo = {
     },
     {
       id: 'blue-slope',
-      level: 'ADVANCED',
+      level: '상급',
       name: '블루슬로프',
       Element: BlueSlopePath,
       isOpen: true,
     },
     {
       id: 'pink-slope',
-      level: 'INTERMEDIATE',
+      level: '중급',
       name: '핑크슬로프',
       Element: PinkSlopePath,
       webcamId: 'pink-slope',
@@ -98,14 +98,14 @@ export const YONGPYONG: ResortInfo = {
     },
     {
       id: 'yellow-slope',
-      level: 'BEGINNER',
+      level: '초급',
       name: '옐로우슬로프',
       Element: YellowSlopePath,
       isOpen: true,
     },
     {
       id: 'new-yellow-slope',
-      level: 'BEGINNER',
+      level: '초급',
       name: '뉴 옐로우 슬로프',
       Element: NewYellowSlopePath,
       webcamId: 'yellow-slope',
@@ -113,21 +113,21 @@ export const YONGPYONG: ResortInfo = {
     },
     {
       id: 'silver-slope',
-      level: 'INTERMEDIATE',
+      level: '중급',
       name: '실버 슬로프',
       Element: SilverSlopePath,
       isOpen: true,
     },
     {
       id: 'silver-paradise',
-      level: 'INTERMEDIATE',
+      level: '중급',
       name: '실버 파라다이스',
       Element: SilverParadisePath,
       isOpen: true,
     },
     {
       id: 'rainbow-paradise',
-      level: 'INTERMEDIATE',
+      level: '중급',
       name: '레인보우 파라다이스',
       Element: RainbowParadisePath,
       webcamId: 'rainbow-top',
@@ -135,7 +135,7 @@ export const YONGPYONG: ResortInfo = {
     },
     {
       id: 'rainbow1',
-      level: 'EXPERT',
+      level: '최상급',
       name: '레인보우 1',
       Element: Rainbow1Path,
       webcamId: 'rainbow-foreground',
@@ -143,7 +143,7 @@ export const YONGPYONG: ResortInfo = {
     },
     {
       id: 'rainbow2',
-      level: 'EXPERT',
+      level: '최상급',
       name: '레인보우 2',
       Element: Rainbow2Path,
       webcamId: 'rainbow-foreground',
@@ -151,7 +151,7 @@ export const YONGPYONG: ResortInfo = {
     },
     {
       id: 'rainbow3',
-      level: 'EXPERT',
+      level: '최상급',
       name: '레인보우 3',
       Element: Rainbow3Path,
       webcamId: 'rainbow-foreground',
@@ -159,7 +159,7 @@ export const YONGPYONG: ResortInfo = {
     },
     {
       id: 'rainbow4',
-      level: 'ADVANCED',
+      level: '상급',
       name: '레인보우 4',
       Element: Rainbow4Path,
       webcamId: 'rainbow-foreground',
@@ -167,7 +167,7 @@ export const YONGPYONG: ResortInfo = {
     },
     {
       id: 'mega-green',
-      level: 'INTERMEDIATE',
+      level: '중급',
       name: '메가 그린',
       Element: MegaGreenPath,
       webcamId: 'mega-green-slope',
@@ -175,14 +175,14 @@ export const YONGPYONG: ResortInfo = {
     },
     {
       id: 'dragon-park',
-      level: 'INTERMEDIATE',
+      level: '중급',
       name: '드래곤 파크',
       Element: DragonParkPath,
       isOpen: true,
     },
     {
       id: 'summit-land-the-green',
-      level: 'INTERMEDIATE',
+      level: '중급',
       name: '서밋랜드 더 그린',
       Element: SummitLandTheGreenPath,
       isOpen: false,

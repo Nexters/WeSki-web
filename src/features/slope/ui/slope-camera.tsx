@@ -1,20 +1,20 @@
 import React, { useEffect, useRef } from 'react';
 import { createPortal } from 'react-dom';
 import { toast } from 'sonner';
-import type { Position, Webcam } from '@/entities/slop/model/model';
+import type { Position, WebcamConstant } from '@/entities/slope/model';
 import ArrowRightIcon from '@/shared/icons/arrow-right';
 import NeutralFace from '@/shared/icons/neutral-face';
 import { cn } from '@/shared/lib';
 import postAppMessage from '@/shared/lib/postAppMessage';
 import CameraButton from '@/shared/ui/cam-button';
 import { Tooltip } from '@/shared/ui/tooltip';
-import useSlopStore from '../hooks/useSlopStore';
+import useSlopeStore from '../hooks/useSlopeStore';
 import calculateWebcamScaleRatio from '../lib/calculateWebcamScale';
-import SlopVideo from './slop-video';
+import SlopeVideo from './slope-video';
 
-interface SlopWebcamProps {
+interface SlopeWebcamProps {
   isWebview?: boolean;
-  webcam: Webcam;
+  webcam: WebcamConstant;
   webcamScale: number;
   isOpen: boolean;
   containerRef: React.RefObject<HTMLElement>;
@@ -22,7 +22,7 @@ interface SlopWebcamProps {
   updateCameraPosition: (id: string, position: Position) => void;
 }
 
-const SlopCamera = ({
+const SlopeCamera = ({
   isWebview = false,
   webcam: { scale, name, position, src, id },
   webcamScale,
@@ -30,9 +30,9 @@ const SlopCamera = ({
   containerRef,
   onCameraClick,
   updateCameraPosition,
-}: SlopWebcamProps) => {
-  const { setSelectedSlop, selectedCamera, setSelectedCamera, setOpenCamera, setCloseCamera } =
-    useSlopStore();
+}: SlopeWebcamProps) => {
+  const { setSelectedSlope, selectedCamera, setSelectedCamera, setOpenCamera, setCloseCamera } =
+    useSlopeStore();
 
   const cameraRef = useRef<HTMLDivElement>(null);
 
@@ -70,7 +70,7 @@ const SlopCamera = ({
                   { '--v-scale': calculateWebcamScaleRatio(webcamScale) } as React.CSSProperties
                 }
                 onClick={() => {
-                  setSelectedSlop(null);
+                  setSelectedSlope(null);
                   setSelectedCamera(id);
                   onCameraClick({ scale, id: id });
                 }}
@@ -89,9 +89,9 @@ const SlopCamera = ({
         selectedCamera.isOpen &&
         selectedCamera.id === id &&
         src &&
-        createPortal(<SlopVideo src={src} closeVideo={setCloseCamera} />, containerRef.current)}
+        createPortal(<SlopeVideo src={src} closeVideo={setCloseCamera} />, containerRef.current)}
     </>
   );
 };
 
-export default SlopCamera;
+export default SlopeCamera;

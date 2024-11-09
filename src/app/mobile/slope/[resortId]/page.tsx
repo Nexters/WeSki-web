@@ -1,8 +1,8 @@
 import React from 'react';
-import WebcamMobileMapPage from '@/views/slop-status/ui/slop-status-page';
+import SlopeStatusPage from '@/views/slope-status/ui/slope-status-page';
 
 const Page = ({ params }: { params: { resortId: string } }) => {
-  return <WebcamMobileMapPage resortId={+params.resortId} />;
+  return <SlopeStatusPage resortId={+params.resortId} />;
 };
 
 export default Page;

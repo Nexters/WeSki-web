@@ -14,14 +14,14 @@ import HalfPipePath from '../image/o2/half-pipe-path';
 import HappySlopePath from '../image/o2/happy-slope-path';
 import HeadSlopePath from '../image/o2/head-slope-path';
 import MapImage from '../image/o2/map';
-import type { ResortInfo } from './model';
+import type { ResortConstant } from '../model';
 
-export const O2: ResortInfo = {
+export const O2: ResortConstant = {
   MapComponent: MapImage,
-  slops: [
+  slopes: [
     {
       id: 'dream-slope1',
-      level: 'BEGINNER',
+      level: '초급',
       name: '드림슬로프 1',
       Element: DreamSlope1Path,
       webcamId: 'dream1',
@@ -29,21 +29,21 @@ export const O2: ResortInfo = {
     },
     {
       id: 'dream-slope2',
-      level: 'BEGINNER',
+      level: '초급',
       name: '드림슬로프 2',
       Element: DreamSlope2Path,
       isOpen: true,
     },
     {
       id: 'head-slope',
-      level: 'INTERMEDIATE',
+      level: '중급',
       name: '헤드슬로프',
       Element: HeadSlopePath,
       isOpen: true,
     },
     {
       id: 'happy-slope',
-      level: 'INTERMEDIATE',
+      level: '중급',
       name: '해피슬로프',
       Element: HappySlopePath,
       webcamId: 'peak1',
@@ -51,21 +51,21 @@ export const O2: ResortInfo = {
     },
     {
       id: 'glory-slope1',
-      level: 'ADVANCED',
+      level: '상급',
       name: '글로리슬로프 1',
       Element: GlorySlope1Path,
       isOpen: true,
     },
     {
       id: 'glory-slope2',
-      level: 'ADVANCED',
+      level: '상급',
       name: '글로리슬로프 2',
       Element: GlorySlope2Path,
       isOpen: true,
     },
     {
       id: 'glory-slope3',
-      level: 'ADVANCED',
+      level: '상급',
       name: '글로리슬로프 3',
       Element: GlorySlope3Path,
       webcamId: 'peak1',
@@ -73,7 +73,7 @@ export const O2: ResortInfo = {
     },
     {
       id: 'fashion-slope1',
-      level: 'EXPERT',
+      level: '최상급',
       name: '패션슬로프 1',
       Element: FashionSlope1Path,
       webcamId: 'peak1',
@@ -81,14 +81,14 @@ export const O2: ResortInfo = {
     },
     {
       id: 'fashion-slope2',
-      level: 'EXPERT',
+      level: '최상급',
       name: '패션슬로프 2',
       Element: FashionSlope2Path,
       isOpen: true,
     },
     {
       id: 'challenge-slope1',
-      level: 'EXPERT',
+      level: '최상급',
       name: '챌린지슬로프 1',
       Element: ChallengeSlope1Path,
       webcamId: 'peak2',
@@ -96,7 +96,7 @@ export const O2: ResortInfo = {
     },
     {
       id: 'challenge-slope2',
-      level: 'EXPERT',
+      level: '최상급',
       name: '챌린지슬로프 2',
       Element: ChallengeSlope2Path,
       webcamId: 'peak2',
@@ -104,7 +104,7 @@ export const O2: ResortInfo = {
     },
     {
       id: 'challenge-slope3',
-      level: 'EXPERT',
+      level: '최상급',
       name: '챌린지슬로프 3',
       Element: ChallengeSlope3Path,
       webcamId: 'peak2',
@@ -112,7 +112,7 @@ export const O2: ResortInfo = {
     },
     {
       id: 'half-pipe',
-      level: 'BEGINNER',
+      level: '초급',
       name: '하프파이프',
       Element: HalfPipePath,
       webcamId: 'ski-house',

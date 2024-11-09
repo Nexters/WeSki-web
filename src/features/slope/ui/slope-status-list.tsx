@@ -4,17 +4,17 @@ import LevelChip from '@/entities/slope/ui/level-chip';
 import CheckIcon from '@/shared/icons/check';
 import CloseIcon from '@/shared/icons/close';
 import { cn } from '@/shared/lib';
-import useSlopStore from '../hooks/useSlopStore';
+import useSlopeStore from '../hooks/useSlopeStore';
 
-interface SlopStatusListProps {
+interface SlopeStatusListProps {
   slopes?: Slope[];
 }
 
-const SlopStatusList = ({ slopes }: SlopStatusListProps) => {
-  const { selectedSlop, setSelectedSlop } = useSlopStore();
+const SlopeStatusList = ({ slopes }: SlopeStatusListProps) => {
+  const { selectedSlope, setSelectedSlope } = useSlopeStore();
 
   const handleSlopClick = ({ id }: { id: string }) => {
-    setSelectedSlop(id);
+    setSelectedSlope(id);
   };
   return (
     <table className={cn('mt-[24px] w-full')}>
@@ -43,7 +43,7 @@ const SlopStatusList = ({ slopes }: SlopStatusListProps) => {
         {slopes?.map((slope) => (
           <tr
             key={slope.name}
-            className={cn(selectedSlop === slope.name && 'bg-main-5')}
+            className={cn(selectedSlope === slope.name && 'bg-main-5')}
             onClick={() => handleSlopClick({ id: slope.name })}
           >
             <td className={cn('body1-semibold py-[12px] pl-5 text-left text-gray-80')}>
@@ -68,7 +68,7 @@ const SlopStatusList = ({ slopes }: SlopStatusListProps) => {
   );
 };
 
-export default SlopStatusList;
+export default SlopeStatusList;
 
 const StatusIcon = ({ isOpen, className }: { isOpen: boolean; className?: string }) =>
   isOpen ? (

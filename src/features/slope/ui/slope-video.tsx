@@ -5,12 +5,12 @@ import CloseButton from '@/shared/ui/close-button';
 import Loading from '@/shared/ui/loading';
 import useTimer from '../hooks/useTimer';
 
-interface SlopVideoProps {
+interface SlopeVideoProps {
   src: string;
   closeVideo: () => void;
 }
 
-const SlopVideo = ({ src, closeVideo }: SlopVideoProps) => {
+const SlopeVideo = ({ src, closeVideo }: SlopeVideoProps) => {
   const playerRef = React.useRef<HTMLVideoElement>(null);
   const hlsRef = useRef<Hls | null>(null);
 
@@ -88,4 +88,4 @@ const SlopVideo = ({ src, closeVideo }: SlopVideoProps) => {
   );
 };
 
-export default SlopVideo;
+export default SlopeVideo;

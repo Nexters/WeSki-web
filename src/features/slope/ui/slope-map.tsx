@@ -1,16 +1,16 @@
 import { animated } from '@react-spring/web';
 import type { ComponentType } from 'react';
 import React, { forwardRef } from 'react';
-import type { Level } from '@/entities/slop/model/model';
+import type { Level } from '@/entities/slope/model';
 import { cn } from '@/shared/lib';
 import type useMapPinch from '../hooks/useMapPinch';
-import useSlopStore from '../hooks/useSlopStore';
+import useSlopeStore from '../hooks/useSlopeStore';
 
-interface SlopMapProps {
+interface SlopeMapProps {
   children?: React.ReactNode;
   MapComponent: ComponentType;
 
-  slops: {
+  slopes: {
     id: string;
     level: Level;
     Element: ComponentType<{
@@ -21,9 +21,9 @@ interface SlopMapProps {
   style: ReturnType<typeof useMapPinch>['style'];
 }
 
-const SlopMap = forwardRef<HTMLDivElement, SlopMapProps>(
-  ({ children, MapComponent, slops, style }, ref) => {
-    const { selectedSlop } = useSlopStore();
+const SlopeMap = forwardRef<HTMLDivElement, SlopeMapProps>(
+  ({ children, MapComponent, slopes, style }, ref) => {
+    const { selectedSlope } = useSlopeStore();
 
     return (
       <animated.div
@@ -37,10 +37,12 @@ const SlopMap = forwardRef<HTMLDivElement, SlopMapProps>(
         }}
       >
         <MapComponent />
-        {slops.map((slop) => (
-          <div key={slop.id} className={cn('absolute top-0 w-full')}>
-            <slop.Element
-              color={selectedSlop !== slop.id && selectedSlop !== null ? 'fill-gray-40' : undefined}
+        {slopes.map((slope) => (
+          <div key={slope.id} className={cn('absolute top-0 w-full')}>
+            <slope.Element
+              color={
+                selectedSlope !== slope.id && selectedSlope !== null ? 'fill-gray-40' : undefined
+              }
             />
           </div>
         ))}
@@ -51,6 +53,6 @@ const SlopMap = forwardRef<HTMLDivElement, SlopMapProps>(
   }
 );
 
-SlopMap.displayName = 'SlopMap';
+SlopeMap.displayName = 'SlopeMap';
 
-export default SlopMap;
+export default SlopeMap;

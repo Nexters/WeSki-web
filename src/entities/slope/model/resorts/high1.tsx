@@ -17,21 +17,21 @@ import Zeus1SlopPath from '../image/high1/zeus1-slop-path';
 import Zeus2SlopPath from '../image/high1/zeus2-slop-path';
 import Zeus3Sub1SlopPath from '../image/high1/zeus3-1-slop-path';
 import Zeus3SlopPath from '../image/high1/zeus3-slop-path';
-import type { ResortInfo } from './model';
+import type { ResortConstant } from '../model';
 
-export const HIGH1: ResortInfo = {
+export const HIGH1: ResortConstant = {
   MapComponent: High1Map,
-  slops: [
+  slopes: [
     {
       id: 'zeus1-slop',
-      level: 'BEGINNER',
+      level: '초급',
       name: '제우스슬로프 1',
       Element: Zeus1SlopPath,
       isOpen: true,
     },
     {
       id: 'zeus2-slop',
-      level: 'BEGINNER',
+      level: '초급',
       name: '제우스슬로프 2',
       Element: Zeus2SlopPath,
       webcamId: 'zeus2-entry',
@@ -39,7 +39,7 @@ export const HIGH1: ResortInfo = {
     },
     {
       id: 'zeus3-slop',
-      level: 'BEGINNER',
+      level: '초급',
       name: '제우스슬로프 3',
       Element: Zeus3SlopPath,
       webcamId: 'zeus3-entry',
@@ -47,14 +47,14 @@ export const HIGH1: ResortInfo = {
     },
     {
       id: 'zeus3-1-slop',
-      level: 'BEGINNER',
+      level: '초급',
       name: '제우스슬로프 3-1',
       Element: Zeus3Sub1SlopPath,
       isOpen: true,
     },
     {
       id: 'victoria1-slop',
-      level: 'ADVANCED',
+      level: '상급',
       name: '빅토리아슬로프 1',
       Element: Victoria1SlopPath,
       webcamId: 'victoria1-entry',
@@ -62,21 +62,21 @@ export const HIGH1: ResortInfo = {
     },
     {
       id: 'victoria2-slop',
-      level: 'ADVANCED',
+      level: '상급',
       name: '빅토리아슬로프 2',
       Element: Victoria2SlopPath,
       isOpen: true,
     },
     {
       id: 'hera1-slop',
-      level: 'INTERMEDIATE',
+      level: '중급',
       name: '헤라슬로프 1',
       Element: Hera1SlopPath,
       isOpen: true,
     },
     {
       id: 'hera2-slop',
-      level: 'UPPER_INTERMEDIATE',
+      level: '중상급',
       name: '헤라슬로프 2',
       Element: Hera2SlopPath,
       webcamId: 'hera2-entry',
@@ -84,35 +84,35 @@ export const HIGH1: ResortInfo = {
     },
     {
       id: 'hera3-slop',
-      level: 'ADVANCED',
+      level: '상급',
       name: '헤라슬로프 3',
       Element: Hera3SlopPath,
       isOpen: true,
     },
     {
       id: 'apollo1-slop',
-      level: 'ADVANCED',
+      level: '상급',
       name: '아폴로슬로프 1',
       Element: Apollo1SlopPath,
       isOpen: true,
     },
     {
       id: 'apollo2-slop',
-      level: 'ADVANCED',
+      level: '상급',
       name: '아폴로슬로프 2',
       Element: Apollo2SlopPath,
       isOpen: true,
     },
     {
       id: 'apollo3-slop',
-      level: 'ADVANCED',
+      level: '상급',
       name: '아폴로슬로프 3',
       Element: Apollo3SlopPath,
       isOpen: true,
     },
     {
       id: 'apollo4-slop',
-      level: 'ADVANCED',
+      level: '상급',
       name: '아폴로슬로프 4',
       Element: Apollo4SlopPath,
       webcamId: 'apollo4-mid',
@@ -120,14 +120,14 @@ export const HIGH1: ResortInfo = {
     },
     {
       id: 'apollo6-slop',
-      level: 'ADVANCED',
+      level: '상급',
       name: '아폴로슬로프 6',
       Element: Apollo6SlopPath,
       isOpen: true,
     },
     {
       id: 'athena2-slop',
-      level: 'INTERMEDIATE',
+      level: '중급',
       name: '아테나슬로프 2',
       Element: Athena2SlopPath,
       webcamId: 'athena2-entry',
@@ -135,7 +135,7 @@ export const HIGH1: ResortInfo = {
     },
     {
       id: 'athena3-slop',
-      level: 'BEGINNER',
+      level: '초급',
       name: '아테나슬로프 3',
       Element: Athena3SlopPath,
       isOpen: true,

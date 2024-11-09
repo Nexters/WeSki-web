@@ -4,7 +4,7 @@ import { cn } from '@/shared/lib';
 import { Tooltip } from '@/shared/ui/tooltip';
 import { getFormattedYesterday } from '../lib/getFormattedYesterday';
 
-const SlopStatusHeader = () => {
+const SlopeStatusHeader = () => {
   return (
     <div className={cn('mb-[26px] flex items-center justify-between px-[20px]')}>
       <div className={cn('flex items-center gap-[4px]')}>
@@ -25,4 +25,4 @@ const SlopStatusHeader = () => {
   );
 };
 
-export default SlopStatusHeader;
+export default SlopeStatusHeader;

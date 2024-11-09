@@ -16,14 +16,14 @@ import PenguinSlopePath from '../image/phoenix/penguin-slope-path';
 import SlopeStylePath from '../image/phoenix/slope-style-path';
 import SparrowPath from '../image/phoenix/sparrow-path';
 import ValleySlopePath from '../image/phoenix/valley-slope-path';
-import type { ResortInfo } from './model';
+import type { ResortConstant } from '../model';
 
-export const PHOENIX: ResortInfo = {
+export const PHOENIX: ResortConstant = {
   MapComponent: MapImage,
-  slops: [
+  slopes: [
     {
       id: 'sparrow',
-      level: 'BEGINNER',
+      level: '초급',
       name: '스패로우',
       Element: SparrowPath,
       webcamId: 'sparrow',
@@ -31,7 +31,7 @@ export const PHOENIX: ResortInfo = {
     },
     {
       id: 'penguin-slope',
-      level: 'BEGINNER',
+      level: '초급',
       name: '펭귄 슬로프',
       Element: PenguinSlopePath,
       webcamId: 'penguin-slope',
@@ -39,14 +39,14 @@ export const PHOENIX: ResortInfo = {
     },
     {
       id: 'hawk-slope1',
-      level: 'BEGINNER',
+      level: '초급',
       name: '호크 슬로프 1',
       Element: HawkSlope1Path,
       isOpen: true,
     },
     {
       id: 'kiwi-slope',
-      level: 'INTERMEDIATE',
+      level: '중급',
       name: '키위 슬로프',
       Element: KiwiSlopePath,
       webcamId: 'ski-base',
@@ -54,7 +54,7 @@ export const PHOENIX: ResortInfo = {
     },
     {
       id: 'panorama',
-      level: 'INTERMEDIATE',
+      level: '중급',
       name: '파노라마',
       Element: PanoramaPath,
       webcamId: 'panorama',
@@ -62,7 +62,7 @@ export const PHOENIX: ResortInfo = {
     },
     {
       id: 'valley-slope',
-      level: 'INTERMEDIATE',
+      level: '중급',
       name: '밸리 슬로프',
       Element: ValleySlopePath,
       webcamId: 'montblanc-peak',
@@ -70,14 +70,14 @@ export const PHOENIX: ResortInfo = {
     },
     {
       id: 'hawk-slope2',
-      level: 'INTERMEDIATE',
+      level: '중급',
       name: '호크 슬로프 2',
       Element: HawkSlope2Path,
       isOpen: true,
     },
     {
       id: 'duke-slope',
-      level: 'INTERMEDIATE',
+      level: '중급',
       name: '듀크 슬로프',
       Element: DukeSlopePath,
       webcamId: 'bulsae-maru-zone',
@@ -85,7 +85,7 @@ export const PHOENIX: ResortInfo = {
     },
     {
       id: 'slope-style',
-      level: 'INTERMEDIATE',
+      level: '중급',
       name: '슬로프 스타일',
       Element: SlopeStylePath,
       webcamId: 'penguin-slope',
@@ -93,7 +93,7 @@ export const PHOENIX: ResortInfo = {
     },
     {
       id: 'champion-slope',
-      level: 'ADVANCED',
+      level: '상급',
       name: '챔피언 슬로프',
       Element: ChampionSlopePath,
       webcamId: 'champion',
@@ -101,14 +101,14 @@ export const PHOENIX: ResortInfo = {
     },
     {
       id: 'fantasy-slope',
-      level: 'ADVANCED',
+      level: '상급',
       name: '환타지 슬로프',
       Element: FantasySlopePath,
       isOpen: true,
     },
     {
       id: 'diggy-slope',
-      level: 'EXPERT',
+      level: '최상급',
       name: '디지 슬로프',
       Element: DiggySlopePath,
       webcamId: 'montblanc-peak',
@@ -116,21 +116,21 @@ export const PHOENIX: ResortInfo = {
     },
     {
       id: 'mogul-slope',
-      level: 'EXPERT',
+      level: '최상급',
       name: '모글 슬로프',
       Element: MogulSlopePath,
       isOpen: true,
     },
     {
       id: 'paradise',
-      level: 'EXPERT',
+      level: '최상급',
       name: '파라다이스',
       Element: ParadisePath,
       isOpen: true,
     },
     {
       id: 'extreme-park',
-      level: 'BEGINNER',
+      level: '초급',
       name: '익스트림 파크',
       Element: ExtremeParkPath,
       isOpen: true,

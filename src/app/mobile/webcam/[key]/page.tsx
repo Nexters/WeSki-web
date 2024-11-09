@@ -1,7 +1,7 @@
 import React from 'react';
 import WebcamMobileMapPage from '@/views/webcam/ui/webcam-mobile-map-page';
 import { ResortData } from '@/entities/resort';
-import { RESORT_DOMAIN } from '@/entities/slop/model';
+import { RESORT_DOMAIN } from '@/entities/slope/model';
 
 const Page = ({ params }: { params: { key: string } }) => {
   if (!(params.key in RESORT_DOMAIN)) {

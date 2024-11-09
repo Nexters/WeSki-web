@@ -11,14 +11,14 @@ import Thinkyou2SlopPath from '../image/gonjiam/thinkyou2-slop-path';
 import Thinkyou3SlopPath from '../image/gonjiam/thinkyou3-slop-path';
 import WhisenSlopPath from '../image/gonjiam/whisen-slop-path';
 import WhynotSlopPath from '../image/gonjiam/whynot-slop-path';
-import type { ResortInfo } from './model';
+import type { ResortConstant } from '../model';
 
-export const GONJIAM: ResortInfo = {
+export const GONJIAM: ResortConstant = {
   MapComponent: GonjiamMap,
-  slops: [
+  slopes: [
     {
       id: 'whynot-slop',
-      level: 'UPPER_BEGINNER',
+      level: '초중급',
       name: '와이낫슬로프',
       Element: WhynotSlopPath,
       webcamId: 'upper-base',
@@ -26,21 +26,21 @@ export const GONJIAM: ResortInfo = {
     },
     {
       id: 'gram1-slop',
-      level: 'ADVANCED',
+      level: '상급',
       name: '그램슬로프1',
       Element: Gram1SlopPath,
       isOpen: true,
     },
     {
       id: 'gram2-slop',
-      level: 'INTERMEDIATE',
+      level: '중급',
       name: '그램슬로프 2',
       Element: Gram2SlopPath,
       isOpen: true,
     },
     {
       id: 'cnp1-slop',
-      level: 'UPPER_BEGINNER',
+      level: '초중급',
       name: 'CNP슬로프 1',
       Element: CNP1SlopPath,
       webcamId: 'cnp-top',
@@ -48,14 +48,14 @@ export const GONJIAM: ResortInfo = {
     },
     {
       id: 'cnp2-slop',
-      level: 'ADVANCED',
+      level: '상급',
       name: 'CNP슬로프 2',
       Element: CNP2SlopPath,
       isOpen: true,
     },
     {
       id: 'thinkyou1-slop',
-      level: 'UPPER_INTERMEDIATE',
+      level: '중상급',
       name: '씽큐리프트 1',
       Element: Thinkyou1SlopPath,
       webcamId: 'cnp-top',
@@ -63,7 +63,7 @@ export const GONJIAM: ResortInfo = {
     },
     {
       id: 'thinkyou2-slop',
-      level: 'UPPER_BEGINNER',
+      level: '초중급',
       name: '씽큐리프트 2',
       Element: Thinkyou2SlopPath,
       webcamId: 'upper-base',
@@ -71,21 +71,21 @@ export const GONJIAM: ResortInfo = {
     },
     {
       id: 'thinkyou3-slop',
-      level: 'UPPER_INTERMEDIATE',
+      level: '중상급',
       name: '씽큐리프트 3',
       Element: Thinkyou3SlopPath,
       isOpen: true,
     },
     {
       id: 'thinkyou-bridge-slop',
-      level: 'ADVANCED',
+      level: '상급',
       name: '씽큐브릿지',
       Element: ThinkyouBridgeSlopPath,
       isOpen: true,
     },
     {
       id: 'whisen-slop',
-      level: 'BEGINNER',
+      level: '초급',
       name: '휘센슬로프',
       Element: WhisenSlopPath,
       webcamId: 'whisen-base',

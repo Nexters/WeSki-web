@@ -9,14 +9,14 @@ import Orange2LiftPath from '../image/jisan/orange2-lift-path';
 import Orange3LiftPath from '../image/jisan/orange3-lift-path';
 import Silver6LiftPath from '../image/jisan/silver6-lift-path';
 import Silver7LiftPath from '../image/jisan/silver7-lift-path';
-import type { ResortInfo } from './model';
+import type { ResortConstant } from '../model';
 
-export const JISAN: ResortInfo = {
+export const JISAN: ResortConstant = {
   MapComponent: MapImage,
-  slops: [
+  slopes: [
     {
       id: 'lemon1-lift',
-      level: 'BEGINNER',
+      level: '초급',
       name: '레몬 리프트 1',
       Element: Lemon1LiftPath,
       webcamId: 'lemon-station',
@@ -24,14 +24,14 @@ export const JISAN: ResortInfo = {
     },
     {
       id: 'lemon1-1-lift',
-      level: 'BEGINNER',
+      level: '초급',
       name: '레몬 리프트 1-1',
       Element: Lemon1Sub1LiftPath,
       isOpen: false,
     },
     {
       id: 'orange2-lift',
-      level: 'INTERMEDIATE',
+      level: '중급',
       name: '오렌지 리프트 2',
       Element: Orange2LiftPath,
       webcamId: 'orange-station',
@@ -39,7 +39,7 @@ export const JISAN: ResortInfo = {
     },
     {
       id: 'orange3-lift',
-      level: 'INTERMEDIATE',
+      level: '중급',
       name: '오렌지 리프트 3',
       Element: Orange3LiftPath,
       webcamId: 'new-orange-station',
@@ -47,14 +47,14 @@ export const JISAN: ResortInfo = {
     },
     {
       id: 'new-orange-lift',
-      level: 'ADVANCED',
+      level: '상급',
       name: '뉴오렌지 리프트',
       Element: NewOrangeLiftPath,
       isOpen: true,
     },
     {
       id: 'blue-lift',
-      level: 'ADVANCED',
+      level: '상급',
       name: '블루 리프트 5',
       Element: BlueLiftPath,
       webcamId: 'blue-station',
@@ -62,7 +62,7 @@ export const JISAN: ResortInfo = {
     },
     {
       id: 'silver6-lift',
-      level: 'EXPERT',
+      level: '최상급',
       name: '실버 리프트 6',
       Element: Silver6LiftPath,
       webcamId: '5-station',
@@ -70,7 +70,7 @@ export const JISAN: ResortInfo = {
     },
     {
       id: 'silver7-lift',
-      level: 'UPPER_INTERMEDIATE',
+      level: '중상급',
       name: '실버 리프트 7',
       Element: Silver7LiftPath,
       webcamId: 'silver-station',

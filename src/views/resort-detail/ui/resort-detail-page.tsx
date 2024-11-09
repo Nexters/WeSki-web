@@ -8,17 +8,17 @@ import blind1 from '@public/blinds/blind_01.png';
 import { Header } from '@/widgets/header/ui';
 import { ResortContentTabList } from '@/widgets/resort-detail/model/constants';
 import ResortSummary from '@/widgets/resort-detail/ui/resort-summary';
-import { WebcamMap, WebcamSlopList } from '@/widgets/webcam/ui';
+import { WebcamMap, WebcamSlopeList } from '@/widgets/webcam/ui';
 import { formatDate } from '@/features/resort-detail/lib/formatDate';
 import { canVote, getVoteData, saveVoteData } from '@/features/resort-detail/lib/vote';
 import AppDownloadDialog from '@/features/resort-detail/ui/app-download-dialog';
-import useMapPinch from '@/features/slop/hooks/useMapPinch';
-import calculateWebcamPosition from '@/features/slop/lib/calculateWebcamPosition';
+import useMapPinch from '@/features/slope/hooks/useMapPinch';
+import calculateWebcamPosition from '@/features/slope/lib/calculateWebcamPosition';
 import { type ResortInfo, ResortData } from '@/entities/resort';
 import { resortApi } from '@/entities/resort';
 import { usePostVote } from '@/entities/resort/api/use-post-vote';
-import { RESORT_DOMAIN } from '@/entities/slop/model';
-import type { Position } from '@/entities/slop/model/model';
+import { RESORT_DOMAIN } from '@/entities/slope/model';
+import type { Position } from '@/entities/slope/model';
 import CheckIcon from '@/shared/icons/check';
 import { cn } from '@/shared/lib';
 
@@ -101,16 +101,16 @@ const ResortDetailPage = ({ params }: { params: { resortId: string } }) => {
             ref={ref}
             style={style}
             containerRef={containerRef}
-            slops={data.slops}
+            slopes={data.slopes}
             webcams={data.webcams}
             MapComponent={data.MapComponent}
             onCameraClick={handleFocusSlopCamClick}
             updateCameraPosition={updateCameraPosition}
           />
-          <WebcamSlopList
+          <WebcamSlopeList
             className={cn('relative z-10 bg-white')}
             webcams={data.webcams}
-            list={data.slops}
+            list={data.slopes}
             onItemClick={handleFocusSlopCamClick}
           />
           <div className={cn('h-[6px] w-full bg-gray-20 md:hidden')} />

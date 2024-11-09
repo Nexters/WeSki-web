@@ -8,14 +8,14 @@ import MercurySlopePath from '../image/eden/mercury-slope-path';
 import SaturnSlopePath from '../image/eden/saturn-slope-path';
 import UranusSlopePath from '../image/eden/uranus-slope-path';
 import VenusSlopePath from '../image/eden/venus-slope-path';
-import type { ResortInfo } from './model';
+import type { ResortConstant } from '../model';
 
-export const EDEN: ResortInfo = {
+export const EDEN: ResortConstant = {
   MapComponent: MapImage,
-  slops: [
+  slopes: [
     {
       id: 'basic-slope',
-      level: 'BEGINNER',
+      level: '초급',
       name: '베이직 슬로프',
       Element: BasicSlopePath,
       webcamId: 'basic-slope',
@@ -23,7 +23,7 @@ export const EDEN: ResortInfo = {
     },
     {
       id: 'main-slope',
-      level: 'BEGINNER',
+      level: '초급',
       name: '메인 슬로프',
       Element: MainSlopePath,
       webcamId: 'basic-slope',
@@ -31,7 +31,7 @@ export const EDEN: ResortInfo = {
     },
     {
       id: 'jupiter-slope',
-      level: 'INTERMEDIATE',
+      level: '중급',
       name: '쥬피터 슬로프',
       Element: JupiterSlopePath,
       webcamId: 'jupiter-slope',
@@ -39,14 +39,14 @@ export const EDEN: ResortInfo = {
     },
     {
       id: 'saturn-slope',
-      level: 'INTERMEDIATE',
+      level: '중급',
       name: '새턴 슬로프',
       Element: SaturnSlopePath,
       isOpen: true,
     },
     {
       id: 'uranus-slope',
-      level: 'INTERMEDIATE',
+      level: '중급',
       name: '우라누스',
       Element: UranusSlopePath,
       webcamId: 'uranus-slope',
@@ -54,14 +54,14 @@ export const EDEN: ResortInfo = {
     },
     {
       id: 'mercury-slope',
-      level: 'ADVANCED',
+      level: '상급',
       name: '머큐리 슬로프',
       Element: MercurySlopePath,
       isOpen: true,
     },
     {
       id: 'venus-slope',
-      level: 'ADVANCED',
+      level: '상급',
       name: '비너스 슬로프',
       Element: VenusSlopePath,
       webcamId: 'basic-slope',
