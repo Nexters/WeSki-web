@@ -1,4 +1,4 @@
-import type { Resort } from '@/entities/discovery';
+import type { Resort } from '@/entities/resort';
 import { cn } from '@/shared/lib';
 import DiscoveryCard from './discovery-card';
 

@@ -1,5 +1,5 @@
 import WeatherIcon from '@/features/discovery/ui/weather-icon';
-import type { SummarizedWeeklyWeather as WeeklyWeatherType } from '@/entities/discovery/model/model';
+import type { SummarizedWeeklyWeather as WeeklyWeatherType } from '@/entities/resort';
 import { cn } from '@/shared/lib';
 import { getWeatherFromDescription } from '@/shared/lib/getWeatherFromDescription';
 

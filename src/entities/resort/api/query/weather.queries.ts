@@ -1,5 +1,5 @@
 import { queryOptions } from '@tanstack/react-query';
-import { getWeather } from './get-weather';
+import { getWeather } from '../get-weather';
 
 export const weatherQueries = {
   all: () => ['weather'],

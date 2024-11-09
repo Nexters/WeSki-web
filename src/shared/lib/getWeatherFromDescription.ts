@@ -1,5 +1,5 @@
 // eslint-disable-next-line boundaries/element-types
-import type { Weather } from "@/entities/discovery";
+import type { Weather } from "@/entities/resort";
 
 const weatherDescription = {
   sun: ['맑음'],

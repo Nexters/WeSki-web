@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import WeatherIcon from '@/features/discovery/ui/weather-icon';
 import VoteDialog from '@/features/discovery-detail/ui/vote-dialog';
-import type { Resort, Url } from '@/entities/discovery';
+import type { Resort, Url } from '@/entities/resort';
 import { BusIcon, LiftIcon, VoteIcon } from '@/shared/icons';
 import { cn } from '@/shared/lib';
 import { getWeatherFromDescription } from '@/shared/lib/getWeatherFromDescription';

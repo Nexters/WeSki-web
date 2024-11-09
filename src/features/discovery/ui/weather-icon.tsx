@@ -1,4 +1,4 @@
-import type { Weather } from '@/entities/discovery/model';
+import type { Weather } from '@/entities/resort/model';
 import { CloudIcon, FogIcon, RainIcon, SnowIcon, SnowRainIcon, SunIcon } from '@/shared/icons';
 
 interface WeatherIconProps {

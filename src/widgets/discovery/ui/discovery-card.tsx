@@ -1,6 +1,6 @@
 import { useRouter } from 'next/navigation';
 import WeatherIcon from '@/features/discovery/ui/weather-icon';
-import type { Resort } from '@/entities/discovery';
+import type { Resort } from '@/entities/resort';
 import { cn } from '@/shared/lib';
 import { getWeatherFromDescription } from '@/shared/lib/getWeatherFromDescription';
 import Card from '@/shared/ui/card';

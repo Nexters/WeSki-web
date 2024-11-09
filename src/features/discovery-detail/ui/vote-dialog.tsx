@@ -1,8 +1,8 @@
 import { useQuery } from '@tanstack/react-query';
 import { useCallback, useState } from 'react';
 import { toast } from 'sonner';
-import { discoveryApi } from '@/entities/discovery';
-import { usePostVote } from '@/entities/discovery/api/use-post-vote';
+import { resortApi } from '@/entities/resort';
+import { usePostVote } from '@/entities/resort/api/use-post-vote';
 import { CheckIcon, CloseIcon } from '@/shared/icons';
 import { cn } from '@/shared/lib';
 import {
@@ -25,7 +25,7 @@ interface VoteDialogProps {
 
 const VoteDialog = ({ id, trigger }: VoteDialogProps) => {
   const [isPositive, setIsPositive] = useState<boolean>(true);
-  const { data: voteData } = useQuery(discoveryApi.discoveryQueries.vote(id));
+  const { data: voteData } = useQuery(resortApi.resortQueries.vote(id));
 
   const { mutateAsync } = usePostVote(id);
 
