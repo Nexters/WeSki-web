@@ -7,6 +7,7 @@ import type { Position, ResortInfo } from '@/entities/slop/model/model';
 import { cn } from '@/shared/lib';
 
 interface WebcamMapProps extends ResortInfo {
+  isWebview?: boolean;
   containerRef: React.RefObject<HTMLElement>;
   onCameraClick: ({ scale, id }: { scale: number; id: string }) => void;
   style: {
@@ -19,7 +20,16 @@ interface WebcamMapProps extends ResortInfo {
 
 const WebcamMap = forwardRef<HTMLDivElement, WebcamMapProps>(
   (
-    { slops, webcams, style, MapComponent, onCameraClick, containerRef, updateCameraPosition },
+    {
+      isWebview,
+      slops,
+      webcams,
+      style,
+      MapComponent,
+      onCameraClick,
+      containerRef,
+      updateCameraPosition,
+    },
     ref
   ) => {
     const { selectedSlop } = useSlopStore();
@@ -33,6 +43,7 @@ const WebcamMap = forwardRef<HTMLDivElement, WebcamMapProps>(
 
             return (
               <SlopCamera
+                isWebview={isWebview}
                 key={webcam.id}
                 webcam={webcam}
                 webcamScale={style.scale.animation.to as number}

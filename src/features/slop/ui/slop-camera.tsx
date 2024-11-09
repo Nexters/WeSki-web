@@ -13,6 +13,7 @@ import calculateWebcamScaleRatio from '../lib/calculateWebcamScale';
 import SlopVideo from './slop-video';
 
 interface SlopWebcamProps {
+  isWebview?: boolean;
   webcam: Webcam;
   webcamScale: number;
   isOpen: boolean;
@@ -22,6 +23,7 @@ interface SlopWebcamProps {
 }
 
 const SlopCamera = ({
+  isWebview = false,
   webcam: { scale, name, position, src, id },
   webcamScale,
   isOpen,
@@ -46,7 +48,7 @@ const SlopCamera = ({
     setOpenCamera();
 
     if (!src) {
-      postAppMessage('선택한 웹캠은 아직 준비중 이에요', (message) =>
+      postAppMessage('선택한 웹캠은 아직 준비중 이에요', isWebview, (message) =>
         toast(
           <>
             <NeutralFace /> {message}

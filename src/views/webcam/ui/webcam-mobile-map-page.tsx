@@ -37,6 +37,7 @@ const WebCamMobileMapPage = ({ data }: { resortId?: number; data: ResortInfo }) 
       <WebcamMap
         ref={ref}
         style={style}
+        isWebview
         containerRef={containerRef}
         slops={data.slops}
         webcams={data.webcams}
