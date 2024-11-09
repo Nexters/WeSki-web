@@ -4,10 +4,15 @@ import React, { useCallback, useState } from 'react';
 import { WebcamMap, WebcamSlopeList } from '@/widgets/webcam/ui';
 import useMapPinch from '@/features/slope/hooks/useMapPinch';
 import calculateWebcamPosition from '@/features/slope/lib/calculateWebcamPosition';
-import type { Position, ResortConstant } from '@/entities/slope/model';
+import { ResortData } from '@/entities/resort';
+import { RESORT_DOMAIN, type Position } from '@/entities/slope/model';
 import { cn } from '@/shared/lib';
 
-const WebCamMobileMapPage = ({ data }: { resortId?: number; data: ResortConstant }) => {
+const WebCamMobileMapPage = ({ resortId }: { resortId?: number }) => {
+  const data =
+    RESORT_DOMAIN[
+      ResortData.find((resort) => resort.id === resortId)?.map as keyof typeof RESORT_DOMAIN
+    ];
   const [cameraPositions, setCameraPositions] = useState<{
     [key: string]: Position;
   }>({});
