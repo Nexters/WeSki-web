@@ -1,5 +1,5 @@
 import { queryOptions } from '@tanstack/react-query';
-import { getSlopes } from '../get-slope';
+import { getSlope } from '../get-slope';
 
 export const slopeQueries = {
   all: () => ['slope'],
@@ -8,6 +8,6 @@ export const slopeQueries = {
   slope: (resortId: number) =>
     queryOptions({
       queryKey: slopeQueries.slopeQueryKey(resortId),
-      queryFn: () => getSlopes(resortId),
+      queryFn: () => getSlope(resortId),
     }),
 };

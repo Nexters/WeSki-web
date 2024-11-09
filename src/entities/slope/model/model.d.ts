@@ -33,3 +33,34 @@ export type SlopeResponse = {
   slopes: Slope[],
   webcams: Webcam[]
 }
+
+export type ResortConstant = {
+  MapComponent: ComponentType;
+  slopes: SlopeConstant[];
+  webcams: WebcamConstant[];
+};
+
+export type WebcamConstant = {
+  id: string;
+  name: string;
+  scale: number;
+  position: {
+    top: string;
+    left: string;
+  };
+  src?: string;
+};
+
+export type SlopeConstant = {
+  id: string;
+  level: Level;
+  name: string;
+  Element: React.FC;
+  webcamId?: string;
+  isOpen: boolean;
+};
+
+export type Position = {
+  x: number;
+  y: number;
+};
