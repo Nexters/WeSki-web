@@ -19,7 +19,7 @@ const SlopStatusPage = ({
 }) => {
   const { ref, style, containerRef } = useMapPinch();
 
-  const { data: slopeData } = useQuery(slopeApi.slopeQueries.slope(resortId ?? 1));
+  const { data: slopeData } = useQuery(slopeApi.slopeQueries.slope(resortId ?? 0));
 
   const { data } = useQuery(slopQueries.list(params?.key ?? 'jisan'));
 

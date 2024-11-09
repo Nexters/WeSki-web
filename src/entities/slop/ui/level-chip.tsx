@@ -27,6 +27,10 @@ const LEVEL: Record<Level, { text: string; color: string }> = {
     text: '최상급',
     color: 'bg-gray-70',
   },
+  PARK: {
+    text: '파크',
+    color: 'bg-sub-2',
+  },
 };
 
 interface LevelChipProps {

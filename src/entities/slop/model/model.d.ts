@@ -4,7 +4,8 @@ export type Level =
   | 'INTERMEDIATE'
   | 'UPPER_INTERMEDIATE'
   | 'ADVANCED'
-  | 'EXPERT';
+  | 'EXPERT'
+  | 'PARK';
 
 export type ResortInfo = {
   MapComponent: ComponentType;
