@@ -5,16 +5,16 @@ import Image from 'next/image';
 import { useState, useCallback } from 'react';
 import { toast } from 'sonner';
 import blind1 from '@public/blinds/blind_01.png';
-import { DiscoveryContentTabList } from '@/widgets/discovery-detail/model/constants';
-import DiscoverySummary from '@/widgets/discovery-detail/ui/discovery-summary';
 import { Header } from '@/widgets/header/ui';
+import { ResortContentTabList } from '@/widgets/resort-detail/model/constants';
+import ResortSummary from '@/widgets/resort-detail/ui/resort-summary';
 import { WebcamMap, WebcamSlopList } from '@/widgets/webcam/ui';
-import { formatDate } from '@/features/discovery-detail/lib/formatDate';
-import { canVote, getVoteData, saveVoteData } from '@/features/discovery-detail/lib/vote';
-import AppDownloadDialog from '@/features/discovery-detail/ui/app-download-dialog';
+import { formatDate } from '@/features/resort-detail/lib/formatDate';
+import { canVote, getVoteData, saveVoteData } from '@/features/resort-detail/lib/vote';
+import AppDownloadDialog from '@/features/resort-detail/ui/app-download-dialog';
 import useMapPinch from '@/features/slop/hooks/useMapPinch';
 import calculateWebcamPosition from '@/features/slop/lib/calculateWebcamPosition';
-import { type Discovery, DiscoveryData } from '@/entities/resort';
+import { type ResortInfo, ResortData } from '@/entities/resort';
 import { resortApi } from '@/entities/resort';
 import { usePostVote } from '@/entities/resort/api/use-post-vote';
 import { RESORT_DOMAIN } from '@/entities/slop/model';
@@ -22,14 +22,12 @@ import type { Position } from '@/entities/slop/model/model';
 import CheckIcon from '@/shared/icons/check';
 import { cn } from '@/shared/lib';
 
-const DiscoveryDetailPage = ({ params }: { params: { resortId: string } }) => {
-  const discovery = DiscoveryData.find(
-    (discovery) => discovery.id === +params?.resortId
-  ) as Discovery;
+const ResortDetailPage = ({ params }: { params: { resortId: string } }) => {
+  const resortInfo = ResortData.find((resort) => resort.id === +params?.resortId) as ResortInfo;
   const { data: resortsData } = useQuery(resortApi.resortQueries.list());
   const resort = resortsData?.find((resort) => resort.resortId === +params?.resortId);
   const { data: voteData } = useQuery(resortApi.resortQueries.vote(+params?.resortId));
-  const data = RESORT_DOMAIN[discovery?.map as keyof typeof RESORT_DOMAIN];
+  const data = RESORT_DOMAIN[resortInfo?.map as keyof typeof RESORT_DOMAIN];
   const [selectedTab, setSelectedTab] = useState('webcam');
   const [showAppDownloadDialog, setShowAppDownloadDialog] = useState(true);
   const { mutateAsync } = usePostVote(+params?.resortId);
@@ -74,14 +72,14 @@ const DiscoveryDetailPage = ({ params }: { params: { resortId: string } }) => {
     }
   }, [isPositive, mutateAsync, params?.resortId]);
 
-  if (!discovery || !resort) return;
+  if (!resortInfo || !resort) return;
 
   return (
     <div className={cn('size-full')}>
       <Header resortName={resort.name} hasBackButton hasShareButton />
-      <DiscoverySummary {...resort} {...discovery.url} />
+      <ResortSummary {...resort} {...resortInfo.url} />
       <ul className={cn('relative z-10 flex size-full h-[53px] bg-white')}>
-        {DiscoveryContentTabList.map((tab) => (
+        {ResortContentTabList.map((tab) => (
           <li
             key={tab.name}
             className={cn(
@@ -219,4 +217,4 @@ const DiscoveryDetailPage = ({ params }: { params: { resortId: string } }) => {
   );
 };
 
-export default DiscoveryDetailPage;
+export default ResortDetailPage;

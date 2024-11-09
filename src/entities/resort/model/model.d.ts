@@ -5,7 +5,7 @@ export type Url = {
   homepage: string;
 };
 
-export type Discovery = {
+export type ResortInfo = {
   id: number;
   name: string;
   map: string;

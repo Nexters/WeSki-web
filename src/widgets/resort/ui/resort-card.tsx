@@ -1,12 +1,12 @@
 import { useRouter } from 'next/navigation';
-import WeatherIcon from '@/features/discovery/ui/weather-icon';
+import WeatherIcon from '@/features/resort/ui/weather-icon';
 import type { Resort } from '@/entities/resort';
 import { cn } from '@/shared/lib';
 import { getWeatherFromDescription } from '@/shared/lib/getWeatherFromDescription';
 import Card from '@/shared/ui/card';
 import WeeklyWeather from './weekly-weather';
 
-const DiscoveryCard = ({ resortId, name, openSlopes, currentWeather, weeklyWeather }: Resort) => {
+const ResortCard = ({ resortId, name, openSlopes, currentWeather, weeklyWeather }: Resort) => {
   const router = useRouter();
 
   return (
@@ -46,4 +46,4 @@ const DiscoveryCard = ({ resortId, name, openSlopes, currentWeather, weeklyWeath
     </Card>
   );
 };
-export default DiscoveryCard;
+export default ResortCard;

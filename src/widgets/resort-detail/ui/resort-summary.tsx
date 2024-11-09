@@ -1,15 +1,15 @@
 import Link from 'next/link';
-import WeatherIcon from '@/features/discovery/ui/weather-icon';
-import VoteDialog from '@/features/discovery-detail/ui/vote-dialog';
+import WeatherIcon from '@/features/resort/ui/weather-icon';
+import VoteDialog from '@/features/resort-detail/ui/vote-dialog';
 import type { Resort, Url } from '@/entities/resort';
 import { BusIcon, LiftIcon, VoteIcon } from '@/shared/icons';
 import { cn } from '@/shared/lib';
 import { getWeatherFromDescription } from '@/shared/lib/getWeatherFromDescription';
 import Card from '@/shared/ui/card';
-import { DiscoverySummaryActionList } from '../model/constants';
-import DiscoverySummaryAction from './discovery-summary-action';
+import { ResortSummaryActionList } from '../model/constants';
+import ResortSummaryAction from './resort-summary-action';
 
-const DiscoverySummary = ({
+const ResortSummary = ({
   resortId,
   name,
   openSlopes,
@@ -41,21 +41,19 @@ const DiscoverySummary = ({
         </div>
       </Card>
       <Card className={cn('hidden h-[123px] items-center justify-center gap-[30px] px-5 md:flex')}>
-        {DiscoverySummaryActionList.map((action) => {
+        {ResortSummaryActionList.map((action) => {
           if (action.name === 'vote') {
             return (
               <VoteDialog
                 key={action.name}
                 id={resortId}
-                trigger={
-                  <DiscoverySummaryAction key={action.name} {...action} icon={<VoteIcon />} />
-                }
+                trigger={<ResortSummaryAction key={action.name} {...action} icon={<VoteIcon />} />}
               />
             );
           } else {
             return (
               <Link key={action.name} href={action.name === 'bus' ? bus : homepage} target="_blank">
-                <DiscoverySummaryAction
+                <ResortSummaryAction
                   {...action}
                   icon={action.name === 'bus' ? <BusIcon /> : <LiftIcon />}
                 />
@@ -68,4 +66,4 @@ const DiscoverySummary = ({
   );
 };
 
-export default DiscoverySummary;
+export default ResortSummary;

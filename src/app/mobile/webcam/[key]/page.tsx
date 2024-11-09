@@ -1,11 +1,11 @@
 import React from 'react';
 import WebcamMobileMapPage from '@/views/webcam/ui/webcam-mobile-map-page';
-import { DiscoveryData } from '@/entities/resort';
+import { ResortData } from '@/entities/resort';
 import { RESORT_DOMAIN } from '@/entities/slop/model';
 
 const Page = ({ params }: { params: { key: string } }) => {
   if (!(params.key in RESORT_DOMAIN)) {
-    const key = DiscoveryData.find((discovery) => discovery.id === +params.key)?.map;
+    const key = ResortData.find((resort) => resort.id === +params.key)?.map;
     return (
       <WebcamMobileMapPage
         resortId={+params.key}

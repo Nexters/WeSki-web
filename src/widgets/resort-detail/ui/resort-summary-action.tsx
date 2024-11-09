@@ -1,12 +1,12 @@
 import { cn } from '@/shared/lib';
 
-interface DiscoverySummaryActionProps {
+interface ResortSummaryActionProps {
   name: string;
   title: string;
   icon: React.ReactNode;
 }
 
-const DiscoverySummaryAction = ({ name, title, icon }: DiscoverySummaryActionProps) => {
+const ResortSummaryAction = ({ name, title, icon }: ResortSummaryActionProps) => {
   return (
     <div
       key={name}
@@ -20,4 +20,4 @@ const DiscoverySummaryAction = ({ name, title, icon }: DiscoverySummaryActionPro
   );
 };
 
-export default DiscoverySummaryAction;
+export default ResortSummaryAction;

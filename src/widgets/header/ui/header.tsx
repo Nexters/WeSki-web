@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import logo from '@public/assets/logo.svg';
-import ShareDialog from '@/features/discovery-detail/ui/share-dialog';
+import ShareDialog from '@/features/resort-detail/ui/share-dialog';
 import { ChevronLeftIcon, ShareIcon } from '@/shared/icons';
 import { cn } from '@/shared/lib';
 

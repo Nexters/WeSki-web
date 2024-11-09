@@ -1,6 +1,6 @@
-import type { Discovery } from './model';
+import type { ResortInfo } from './model';
 
-export const DiscoveryData: Discovery[] = [
+export const ResortData: ResortInfo[] = [
   {
     id: 2,
     name: '곤지암리조트',

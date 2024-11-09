@@ -1,2 +1,2 @@
-export { DiscoveryData } from './constants';
-export type { Weather, Discovery, Vote, WeeklyWeather, WeatherResponse, SummarizedWeeklyWeather, Resort, Url } from './model';
+export { ResortData } from './constants';
+export type { Weather, ResortInfo, Vote, WeeklyWeather, WeatherResponse, SummarizedWeeklyWeather, Resort, Url } from './model';

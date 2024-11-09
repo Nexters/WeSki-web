@@ -1,14 +1,14 @@
 import '@/app/globals.css';
 
 import type { Metadata } from 'next';
-import { DiscoveryData } from '@/entities/resort';
+import { ResortData } from '@/entities/resort';
 import KakaoScript from '@/shared/lib/kakao-script';
 import { Toaster } from '@/shared/ui/toaster';
 import Providers from './_providers';
 
 export async function generateMetadata({ params }: { params: { id: string } }): Promise<Metadata> {
   const id = params?.id;
-  const resort = DiscoveryData.find((resort) => resort.id === +id);
+  const resort = ResortData.find((resort) => resort.id === +id);
 
   return {
     title: resort ? `${resort.name} - WeSki` : 'WeSki : 스키장 혼잡도 확인 서비스',

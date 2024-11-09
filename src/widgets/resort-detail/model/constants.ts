@@ -1,4 +1,4 @@
-export const DiscoverySummaryActionList = [
+export const ResortSummaryActionList = [
   {
     name: 'bus',
     title: '셔틀버스',
@@ -7,7 +7,7 @@ export const DiscoverySummaryActionList = [
   { name: 'vote', title: '설질 투표' },
 ] as const;
 
-export const DiscoveryContentTabList = [
+export const ResortContentTabList = [
   {
     name: 'webcam',
     title: '웹캠 정보',
