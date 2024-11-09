@@ -35,10 +35,10 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             'hidden h-[320px] w-[calc((100vw-670px)/2)] max-w-[270px] flex-col items-center justify-center gap-[34px] px-2.5 lg:flex'
           )}
         >
-          <Image className={cn('px-4')} src={text} alt="text" width={194} draggable={false} />
+          <Image className={cn('px-2.5')} src={text} alt="text" width={214} draggable={false} />
           <div
             className={cn(
-              'flex w-[calc((100vw-670px)/2)] max-w-[200px] justify-between gap-2.5 px-2.5'
+              'flex w-[calc((100vw-670px)/2)] max-w-[240px] justify-between gap-2.5 px-5'
             )}
           >
             <Link
