@@ -1,13 +1,5 @@
 export type Weather = 'sun' | 'cloud' | 'rain' | 'snow' | 'fog' | 'snow-rain';
 
-export type DuplicatedWeeklyWeather = {
-  weather: Weather;
-  temperature: {
-    lowest: string;
-    average: string;
-  };
-};
-
 export type Url = {
   bus: string;
   homepage: string;
@@ -17,14 +9,7 @@ export type Discovery = {
   id: number;
   name: string;
   map: string;
-  slope: number | null;
   url: Url;
-  weather: {
-    weather: Weather;
-    temperature: number;
-    description: string;
-  };
-  weeklyWeather: DuplicatedWeeklyWeather[];
 };
 
 export type Vote = {
