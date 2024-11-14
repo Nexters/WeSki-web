@@ -23,16 +23,16 @@ const postAppMessage = (message: string, isWebview: boolean, showToast: (message
       return window.Android.showToast(message);
     } else if (iphone !== null) {
       if (window.webkit.messageHandlers.weski) {
-        window.webkit.messageHandlers.weski.postMessage({ method: "showToast", message: message });
+        return window.webkit.messageHandlers.weski.postMessage({ method: "showToast", message: message });
       } else {
         console.error("Weski bridge is not available.");
       }
     } else {
       return showToast(message);
     }
+  } else {
+    return showToast(message);
   }
-  
-  return showToast(message);
 }
 
 export default postAppMessage;
