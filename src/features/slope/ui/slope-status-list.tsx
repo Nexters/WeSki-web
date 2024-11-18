@@ -7,13 +7,15 @@ import { cn } from '@/shared/lib';
 import useSlopeStore from '../hooks/useSlopeStore';
 
 interface SlopeStatusListProps {
+  resortId: number;
   slopes?: Slope[];
 }
 
-const SlopeStatusList = ({ slopes }: SlopeStatusListProps) => {
+const SlopeStatusList = ({ resortId, slopes }: SlopeStatusListProps) => {
   const { selectedSlope, setSelectedSlope } = useSlopeStore();
 
   const handleSlopClick = ({ id }: { id: string }) => {
+    gtag('event', 'details_slope_slope_click', { detail_type: resortId, slope_type: id });
     setSelectedSlope(id);
   };
   return (

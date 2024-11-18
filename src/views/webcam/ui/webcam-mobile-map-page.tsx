@@ -23,6 +23,7 @@ const WebCamMobileMapPage = ({ resortId }: { resortId?: number }) => {
   }, []);
 
   const handleFocusSlopCamClick = ({ id, scale }: { id: string; scale: number }) => {
+    gtag('event', 'details_webcam_webcam_click', { detail_type: resortId, webcam_type: id });
     const { width, height } = containerRef.current!.getBoundingClientRect();
     const { boundedX, boundedY } = calculateWebcamPosition({
       containerPosition: { left: 0, top: 0, width, height },
