@@ -53,6 +53,8 @@ export type Resort = {
   resortId: number,
   name: string,
   status: string,
+  openingDate: string,
+  closingDate: string,
   openSlopes: number,
   currentWeather: {
     temperature: number,
