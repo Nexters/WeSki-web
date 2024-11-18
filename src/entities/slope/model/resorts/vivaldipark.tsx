@@ -17,46 +17,46 @@ export const VIVALDIPARK: ResortConstant = {
   slopes: [
     {
       id: 'ballad-slop',
-      pathAsset: BalladSlopPath,
+      PathAsset: BalladSlopPath,
       webcam: 6,
     },
     {
       id: 'blues-slop',
-      pathAsset: BluesSlopPath,
+      PathAsset: BluesSlopPath,
       webcam: 9,
     },
     {
       id: 'hiphop-slop',
-      pathAsset: HiphopSlopPath,
+      PathAsset: HiphopSlopPath,
       webcam: 4,
     },
     {
       id: 'classic-slop',
-      pathAsset: ClassicSlopPath,
+      PathAsset: ClassicSlopPath,
       webcam: 3,
     },
     {
       id: 'reggae-slop',
-      pathAsset: ReggaeSlopPath,
+      PathAsset: ReggaeSlopPath,
     },
     {
       id: 'jazz-slop',
-      pathAsset: JazzSlopPath,
+      PathAsset: JazzSlopPath,
       webcam: 8,
     },
     {
       id: 'funky-slop',
-      pathAsset: FunkySlopPath,
+      PathAsset: FunkySlopPath,
       webcam: 5,
     },
     {
       id: 'techno-slop',
-      pathAsset: TechnoSlopPath,
+      PathAsset: TechnoSlopPath,
       webcam: 7,
     },
     {
       id: 'rock-slop',
-      pathAsset: RockSlopPath,
+      PathAsset: RockSlopPath,
     },
   ],
   webcams: [

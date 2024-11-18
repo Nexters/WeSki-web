@@ -18,51 +18,51 @@ export const ELYSIAN_GANGCHON: ResortConstant = {
   slopes: [
     {
       id: 'panda-slop',
-      pathAsset: PandaSlopPath,
+      PathAsset: PandaSlopPath,
       webcam: 2,
     },
     {
       id: 'rabbit-slop',
-      pathAsset: RabbitSlopPath,
+      PathAsset: RabbitSlopPath,
       webcam: 2,
     },
     {
       id: 'dragon-slop',
-      pathAsset: DragonSlopPath,
+      PathAsset: DragonSlopPath,
       webcam: 1,
     },
     {
       id: 'horse-slop',
-      pathAsset: HorseSlopPath,
+      PathAsset: HorseSlopPath,
       webcam: 1,
     },
     {
       id: 'pegasus-slop',
-      pathAsset: PegasusSlopPath,
+      PathAsset: PegasusSlopPath,
       webcam: 3,
     },
     {
       id: 'zebra-slop',
-      pathAsset: ZebraSlopPath,
+      PathAsset: ZebraSlopPath,
       webcam: 3,
     },
     {
       id: 'deer-slop',
-      pathAsset: DeerSlopPath,
+      PathAsset: DeerSlopPath,
     },
     {
       id: 'puma-slop',
-      pathAsset: PumaSlopPath,
+      PathAsset: PumaSlopPath,
       webcam: 1,
     },
     {
       id: 'leopard-slop',
-      pathAsset: LeopardSlopPath,
+      PathAsset: LeopardSlopPath,
       webcam: 3,
     },
     {
       id: 'jaguar-slop',
-      pathAsset: JaguarSlopPath,
+      PathAsset: JaguarSlopPath,
       webcam: 3,
     },
   ],

@@ -21,62 +21,62 @@ export const O2: ResortConstant = {
   slopes: [
     {
       id: 'dream-slope1',
-      pathAsset: DreamSlope1Path,
+      PathAsset: DreamSlope1Path,
       webcam: 3,
     },
     {
       id: 'dream-slope2',
-      pathAsset: DreamSlope2Path,
+      PathAsset: DreamSlope2Path,
     },
     {
       id: 'head-slope',
-      pathAsset: HeadSlopePath,
+      PathAsset: HeadSlopePath,
     },
     {
       id: 'happy-slope',
-      pathAsset: HappySlopePath,
+      PathAsset: HappySlopePath,
       webcam: 1,
     },
     {
       id: 'glory-slope1',
-      pathAsset: GlorySlope1Path,
+      PathAsset: GlorySlope1Path,
     },
     {
       id: 'glory-slope2',
-      pathAsset: GlorySlope2Path,
+      PathAsset: GlorySlope2Path,
     },
     {
       id: 'glory-slope3',
-      pathAsset: GlorySlope3Path,
+      PathAsset: GlorySlope3Path,
       webcam: 1,
     },
     {
       id: 'fashion-slope1',
-      pathAsset: FashionSlope1Path,
+      PathAsset: FashionSlope1Path,
       webcam: 1,
     },
     {
       id: 'fashion-slope2',
-      pathAsset: FashionSlope2Path,
+      PathAsset: FashionSlope2Path,
     },
     {
       id: 'challenge-slope1',
-      pathAsset: ChallengeSlope1Path,
+      PathAsset: ChallengeSlope1Path,
       webcam: 2,
     },
     {
       id: 'challenge-slope2',
-      pathAsset: ChallengeSlope2Path,
+      PathAsset: ChallengeSlope2Path,
       webcam: 2,
     },
     {
       id: 'challenge-slope3',
-      pathAsset: ChallengeSlope3Path,
+      PathAsset: ChallengeSlope3Path,
       webcam: 2,
     },
     {
       id: 'half-pipe',
-      pathAsset: HalfPipePath,
+      PathAsset: HalfPipePath,
       webcam: 4,
     },
   ],

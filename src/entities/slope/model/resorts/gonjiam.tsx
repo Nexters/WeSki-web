@@ -18,47 +18,47 @@ export const GONJIAM: ResortConstant = {
   slopes: [
     {
       id: 'whynot-slop',
-      pathAsset: WhynotSlopPath,
+      PathAsset: WhynotSlopPath,
       webcam: 2,
     },
     {
       id: 'gram1-slop',
-      pathAsset: Gram1SlopPath,
+      PathAsset: Gram1SlopPath,
     },
     {
       id: 'gram2-slop',
-      pathAsset: Gram2SlopPath,
+      PathAsset: Gram2SlopPath,
     },
     {
       id: 'cnp1-slop',
-      pathAsset: CNP1SlopPath,
+      PathAsset: CNP1SlopPath,
       webcam: 3,
     },
     {
       id: 'cnp2-slop',
-      pathAsset: CNP2SlopPath,
+      PathAsset: CNP2SlopPath,
     },
     {
       id: 'thinkyou1-slop',
-      pathAsset: Thinkyou1SlopPath,
+      PathAsset: Thinkyou1SlopPath,
       webcam: 3,
     },
     {
       id: 'thinkyou2-slop',
-      pathAsset: Thinkyou2SlopPath,
+      PathAsset: Thinkyou2SlopPath,
       webcam: 2,
     },
     {
       id: 'thinkyou3-slop',
-      pathAsset: Thinkyou3SlopPath,
+      PathAsset: Thinkyou3SlopPath,
     },
     {
       id: 'thinkyou-bridge-slop',
-      pathAsset: ThinkyouBridgeSlopPath,
+      PathAsset: ThinkyouBridgeSlopPath,
     },
     {
       id: 'whisen-slop',
-      pathAsset: WhisenSlopPath,
+      PathAsset: WhisenSlopPath,
       webcam: 1,
     },
   ],

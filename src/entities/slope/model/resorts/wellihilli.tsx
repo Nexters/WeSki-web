@@ -28,89 +28,89 @@ export const WELLIHILLI: ResortConstant = {
   slopes: [
     {
       id: 'alpha-slope1',
-      pathAsset: AlphaSlope1Path,
+      PathAsset: AlphaSlope1Path,
       webcam: 5,
     },
     {
       id: 'alpha-slope2',
-      pathAsset: AlphaSlope2Path,
+      PathAsset: AlphaSlope2Path,
       webcam: 4,
     },
     {
       id: 'alpha-slope3',
-      pathAsset: AlphaSlope3Path,
+      PathAsset: AlphaSlope3Path,
       webcam: 4,
     },
     {
       id: 'bravo-slope1',
-      pathAsset: BravoSlope1Path,
+      PathAsset: BravoSlope1Path,
     },
     {
       id: 'bravo-slope2',
-      pathAsset: BravoSlope2Path,
+      PathAsset: BravoSlope2Path,
     },
     {
       id: 'delta-slope1',
-      pathAsset: DeltaSlope1Path,
+      PathAsset: DeltaSlope1Path,
       webcam: 3,
     },
     {
       id: 'delta-slope2',
-      pathAsset: DeltaSlope2Path,
+      PathAsset: DeltaSlope2Path,
       webcam: 1,
     },
     {
       id: 'delta-slope-plus',
-      pathAsset: DeltaSlopePlusPath,
+      PathAsset: DeltaSlopePlusPath,
     },
     {
       id: 'echo-slope1',
-      pathAsset: EchoSlope1Path,
+      PathAsset: EchoSlope1Path,
     },
     {
       id: 'echo-slope2',
-      pathAsset: EchoSlope2Path,
+      PathAsset: EchoSlope2Path,
     },
     {
       id: 'echo-slope3',
-      pathAsset: EchoSlope3Path,
+      PathAsset: EchoSlope3Path,
     },
     {
       id: 'echo-slope-plus',
-      pathAsset: EchoSlopePlusPath,
+      PathAsset: EchoSlopePlusPath,
     },
     {
       id: 'challenge-slope1',
-      pathAsset: ChallengeSlope1Path,
+      PathAsset: ChallengeSlope1Path,
     },
     {
       id: 'challenge-slope2',
-      pathAsset: ChallengeSlope2Path,
+      PathAsset: ChallengeSlope2Path,
     },
     {
       id: 'challenge-slope3',
-      pathAsset: ChallengeSlope3Path,
+      PathAsset: ChallengeSlope3Path,
     },
     {
       id: 'challenge-slope4',
-      pathAsset: ChallengeSlope4Path,
+      PathAsset: ChallengeSlope4Path,
     },
     {
       id: 'challenge-slope5',
-      pathAsset: ChallengeSlope5Path,
+      PathAsset: ChallengeSlope5Path,
     },
     {
       id: 'star-express1',
-      pathAsset: StarExpress1Path,
+      PathAsset: StarExpress1Path,
     },
     {
       id: 'star-express2',
-      pathAsset: StarExpress2Path,
+      PathAsset: StarExpress2Path,
       webcam: 1,
     },
     {
       id: 'half-pipe',
-      pathAsset: HalfPipePath,
+      PathAsset: HalfPipePath,
       webcam: 2,
     },
   ],

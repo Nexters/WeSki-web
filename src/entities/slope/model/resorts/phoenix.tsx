@@ -23,72 +23,72 @@ export const PHOENIX: ResortConstant = {
   slopes: [
     {
       id: 'sparrow',
-      pathAsset: SparrowPath,
+      PathAsset: SparrowPath,
       webcam: 6,
     },
     {
       id: 'penguin-slope',
-      pathAsset: PenguinSlopePath,
+      PathAsset: PenguinSlopePath,
       webcam: 3,
     },
     {
       id: 'hawk-slope1',
-      pathAsset: HawkSlope1Path,
+      PathAsset: HawkSlope1Path,
     },
     {
       id: 'kiwi-slope',
-      pathAsset: KiwiSlopePath,
+      PathAsset: KiwiSlopePath,
       webcam: 1,
     },
     {
       id: 'panorama',
-      pathAsset: PanoramaPath,
+      PathAsset: PanoramaPath,
       webcam: 4,
     },
     {
       id: 'valley-slope',
-      pathAsset: ValleySlopePath,
+      PathAsset: ValleySlopePath,
       webcam: 5,
     },
     {
       id: 'hawk-slope2',
-      pathAsset: HawkSlope2Path,
+      PathAsset: HawkSlope2Path,
     },
     {
       id: 'duke-slope',
-      pathAsset: DukeSlopePath,
+      PathAsset: DukeSlopePath,
       webcam: 2,
     },
     {
       id: 'slope-style',
-      pathAsset: SlopeStylePath,
+      PathAsset: SlopeStylePath,
       webcam: 3,
     },
     {
       id: 'champion-slope',
-      pathAsset: ChampionSlopePath,
+      PathAsset: ChampionSlopePath,
       webcam: 7,
     },
     {
       id: 'fantasy-slope',
-      pathAsset: FantasySlopePath,
+      PathAsset: FantasySlopePath,
     },
     {
       id: 'diggy-slope',
-      pathAsset: DiggySlopePath,
+      PathAsset: DiggySlopePath,
       webcam: 5,
     },
     {
       id: 'mogul-slope',
-      pathAsset: MogulSlopePath,
+      PathAsset: MogulSlopePath,
     },
     {
       id: 'paradise',
-      pathAsset: ParadisePath,
+      PathAsset: ParadisePath,
     },
     {
       id: 'extreme-park',
-      pathAsset: ExtremeParkPath,
+      PathAsset: ExtremeParkPath,
     },
   ],
   webcams: [

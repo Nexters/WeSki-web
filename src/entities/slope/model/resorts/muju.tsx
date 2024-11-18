@@ -35,125 +35,125 @@ export const MUJU: ResortConstant = {
   slopes: [
     {
       id: 'eastern-slope',
-      pathAsset: EasternSlopePath,
+      PathAsset: EasternSlopePath,
       webcam: 7,
     },
     {
       id: 'soyokgihang',
-      pathAsset: SoyokgihangPath,
+      PathAsset: SoyokgihangPath,
       webcam: 5,
     },
     {
       id: 'spitch-lowest',
-      pathAsset: SpitchLowestPath,
+      PathAsset: SpitchLowestPath,
       webcam: 8,
     },
     {
       id: 'western-slope',
-      pathAsset: WesternSlopePath,
+      PathAsset: WesternSlopePath,
     },
     {
       id: 'sundown-slope',
-      pathAsset: SundownSlopePath,
+      PathAsset: SundownSlopePath,
       webcam: 6,
     },
     {
       id: 'silkroad',
-      pathAsset: SilkroadPath,
+      PathAsset: SilkroadPath,
       webcam: 2,
     },
     {
       id: 'rookiehill-slope',
-      pathAsset: RookiehillSlopePath,
+      PathAsset: RookiehillSlopePath,
     },
     {
       id: 'turbo-slope',
-      pathAsset: TurboSlopePath,
+      PathAsset: TurboSlopePath,
       webcam: 6,
     },
     {
       id: 'connection-slope',
-      pathAsset: ConnectionSlopePath,
+      PathAsset: ConnectionSlopePath,
     },
     {
       id: 'minuet',
-      pathAsset: MinuetPath,
+      PathAsset: MinuetPath,
       webcam: 3,
     },
     {
       id: 'freeway',
-      pathAsset: FreewayPath,
+      PathAsset: FreewayPath,
       webcam: 5,
     },
     {
       id: 'yamaga-slope',
-      pathAsset: YamagaSlopePath,
+      PathAsset: YamagaSlopePath,
       webcam: 5,
     },
     {
       id: 'panorama',
-      pathAsset: PanoramaPath,
+      PathAsset: PanoramaPath,
     },
     {
       id: 'raiders-lowest',
-      pathAsset: RaidersLowestPath,
+      PathAsset: RaidersLowestPath,
     },
     {
       id: 'mozart',
-      pathAsset: MozartPath,
+      PathAsset: MozartPath,
       webcam: 3,
     },
     {
       id: 'waltz-slope',
-      pathAsset: WaltzSlopePath,
+      PathAsset: WaltzSlopePath,
     },
     {
       id: 'allegro',
-      pathAsset: AllegroPath,
+      PathAsset: AllegroPath,
       webcam: 1,
     },
     {
       id: 'raiders-highest',
-      pathAsset: RaidersHighestPath,
+      PathAsset: RaidersHighestPath,
       webcam: 4,
     },
     {
       id: 'polka-slope',
-      pathAsset: PolkaSlopePath,
+      PathAsset: PolkaSlopePath,
       webcam: 1,
     },
     {
       id: 'cadenza-slope',
-      pathAsset: CadenzaSlopePath,
+      PathAsset: CadenzaSlopePath,
       webcam: 1,
     },
     {
       id: 'shortcut-slope',
-      pathAsset: ShortcutSlopePath,
+      PathAsset: ShortcutSlopePath,
     },
     {
       id: 'spitch-slope',
-      pathAsset: SpitchSlopePath,
+      PathAsset: SpitchSlopePath,
     },
     {
       id: 'flamingo',
-      pathAsset: FlamingoPath,
+      PathAsset: FlamingoPath,
     },
     {
       id: 'moderato',
-      pathAsset: ModeratoPath,
+      PathAsset: ModeratoPath,
     },
     {
       id: 'r-gardner-slope',
-      pathAsset: RGardnerSlopePath,
+      PathAsset: RGardnerSlopePath,
     },
     {
       id: 'freeway2',
-      pathAsset: Freeway2Path,
+      PathAsset: Freeway2Path,
     },
     {
       id: 'rusutsu-slope',
-      pathAsset: RusutsuSlopePath,
+      PathAsset: RusutsuSlopePath,
     },
   ],
   webcams: [

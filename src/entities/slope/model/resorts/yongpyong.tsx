@@ -29,100 +29,100 @@ export const YONGPYONG: ResortConstant = {
   slopes: [
     {
       id: 'gold-valley',
-      pathAsset: GoldValleyPath,
+      PathAsset: GoldValleyPath,
       webcam: 4,
     },
     {
       id: 'gold-paradise',
-      pathAsset: GoldParadisePath,
+      PathAsset: GoldParadisePath,
     },
     {
       id: 'new-gold-slope',
-      pathAsset: NewGoldSlopePath,
+      PathAsset: NewGoldSlopePath,
       webcam: 4,
     },
     {
       id: 'gold-fantastic',
-      pathAsset: GoldFantasticPath,
+      PathAsset: GoldFantasticPath,
       webcam: 4,
     },
     {
       id: 'red-paradise',
-      pathAsset: RedParadisePath,
+      PathAsset: RedParadisePath,
       webcam: 6,
     },
     {
       id: 'red-slope',
-      pathAsset: RedSlopePath,
+      PathAsset: RedSlopePath,
     },
     {
       id: 'new-red-slope',
-      pathAsset: NewRedSlopePath,
+      PathAsset: NewRedSlopePath,
       webcam: 6,
     },
     {
       id: 'blue-slope',
-      pathAsset: BlueSlopePath,
+      PathAsset: BlueSlopePath,
     },
     {
       id: 'pink-slope',
-      pathAsset: PinkSlopePath,
+      PathAsset: PinkSlopePath,
       webcam: 7,
     },
     {
       id: 'yellow-slope',
-      pathAsset: YellowSlopePath,
+      PathAsset: YellowSlopePath,
     },
     {
       id: 'new-yellow-slope',
-      pathAsset: NewYellowSlopePath,
+      PathAsset: NewYellowSlopePath,
       webcam: 8,
     },
     {
       id: 'silver-slope',
-      pathAsset: SilverSlopePath,
+      PathAsset: SilverSlopePath,
     },
     {
       id: 'silver-paradise',
-      pathAsset: SilverParadisePath,
+      PathAsset: SilverParadisePath,
     },
     {
       id: 'rainbow-paradise',
-      pathAsset: RainbowParadisePath,
+      PathAsset: RainbowParadisePath,
       webcam: 1,
     },
     {
       id: 'rainbow1',
-      pathAsset: Rainbow1Path,
+      PathAsset: Rainbow1Path,
       webcam: 3,
     },
     {
       id: 'rainbow2',
-      pathAsset: Rainbow2Path,
+      PathAsset: Rainbow2Path,
       webcam: 3,
     },
     {
       id: 'rainbow3',
-      pathAsset: Rainbow3Path,
+      PathAsset: Rainbow3Path,
       webcam: 3,
     },
     {
       id: 'rainbow4',
-      pathAsset: Rainbow4Path,
+      PathAsset: Rainbow4Path,
       webcam: 3,
     },
     {
       id: 'mega-green',
-      pathAsset: MegaGreenPath,
+      PathAsset: MegaGreenPath,
       webcam: 5,
     },
     {
       id: 'dragon-park',
-      pathAsset: DragonParkPath,
+      PathAsset: DragonParkPath,
     },
     {
       id: 'summit-land-the-green',
-      pathAsset: SummitLandTheGreenPath,
+      PathAsset: SummitLandTheGreenPath,
     },
   ],
   webcams: [
