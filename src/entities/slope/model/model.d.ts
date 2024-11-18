@@ -1,6 +1,7 @@
 export type Level = '초급' | '초중급' | '중급' | '중상급' | '상급' | '최상급' | '파크';
 
-export type Slope = {
+export type SlopeRaw = {
+  id: number;
   name: string;
   difficulty: Level;
   isDayOperating: true;
@@ -10,7 +11,7 @@ export type Slope = {
   isMidnightOperating: true;
 };
 
-export type Webcam = {
+export type WebcamRaw = {
   name: string;
   number: 0;
   description: string;
@@ -23,8 +24,8 @@ export type SlopeResponse = {
   lateNightOperatingHours: string;
   dawnOperatingHours: string;
   midnightOperatingHours: string;
-  slopes: Slope[];
-  webcams: Webcam[];
+  slopes: SlopeRaw[];
+  webcams: WebcamRaw[];
 };
 
 export type ResortConstant = {
@@ -44,7 +45,9 @@ export type WebcamConstant = {
 
 export type SlopeConstant = {
   id: number | string;
-  pathAsset: React.FC;
+  PathAsset: ComponentType<{
+    color?: string;
+  }>;
   webcam?: number;
 };
 
@@ -52,3 +55,6 @@ export type Position = {
   x: number;
   y: number;
 };
+
+export type Slope = SlopeRaw & SlopeConstant;
+export type Webcam = WebcamRaw & WebcamConstant;
