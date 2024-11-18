@@ -1,4 +1,6 @@
 import Link from 'next/link';
+// eslint-disable-next-line boundaries/element-types
+import { getResortStatusText } from '@/widgets/resort/lib/getResortStatusText';
 import WeatherIcon from '@/features/resort/ui/weather-icon';
 import VoteDialog from '@/features/resort-detail/ui/vote-dialog';
 import type { Resort, Url } from '@/entities/resort';
@@ -12,6 +14,8 @@ import ResortSummaryAction from './resort-summary-action';
 const ResortSummary = ({
   resortId,
   name,
+  status,
+  openingDate,
   openSlopes,
   currentWeather,
   bus,
@@ -35,7 +39,7 @@ const ResortSummary = ({
         </div>
         <div className={cn('flex w-full items-center justify-between')}>
           <p className={cn('body1-medium text-gray-60')}>
-            {openSlopes ? `운행중인 슬로프 ${openSlopes}개` : '개장일이 곧 공개될 예정이에요'}
+            {getResortStatusText(status, openingDate, openSlopes)}
           </p>
           <p className={cn('body1-semibold text-gray-60')}>{currentWeather.description}</p>
         </div>

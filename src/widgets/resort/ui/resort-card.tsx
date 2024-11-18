@@ -4,9 +4,18 @@ import type { Resort } from '@/entities/resort';
 import { cn } from '@/shared/lib';
 import { getWeatherFromDescription } from '@/shared/lib/getWeatherFromDescription';
 import Card from '@/shared/ui/card';
+import { getResortStatusText } from '../lib/getResortStatusText';
 import WeeklyWeather from './weekly-weather';
 
-const ResortCard = ({ resortId, name, openSlopes, currentWeather, weeklyWeather }: Resort) => {
+const ResortCard = ({
+  resortId,
+  name,
+  status,
+  openingDate,
+  openSlopes,
+  currentWeather,
+  weeklyWeather,
+}: Resort) => {
   const router = useRouter();
 
   return (
@@ -32,7 +41,7 @@ const ResortCard = ({ resortId, name, openSlopes, currentWeather, weeklyWeather 
         </div>
         <div className={cn('flex w-full justify-between')}>
           <p className={cn('body1-medium text-gray-60')}>
-            {openSlopes ? `운행중인 슬로프 ${openSlopes}개` : '개장일이 곧 공개될 예정이에요'}
+            {getResortStatusText(status, openingDate, openSlopes)}
           </p>
           <p className={cn('body1-semibold text-gray-60')}>{currentWeather.description}</p>
         </div>
