@@ -43,6 +43,7 @@ const VoteDialog = ({ id, trigger }: VoteDialogProps) => {
       voteData[id.toString()] = formatDate(new Date());
       saveVoteData(voteData);
       toast.success('고마워요! 투표의 결과가 반영되었어요');
+      gtag('event', 'details_webcam_vote', { detail_type: id });
     }
   }, [id, isPositive, mutateAsync]);
 

@@ -6,12 +6,13 @@ import { ChevronLeftIcon, ShareIcon } from '@/shared/icons';
 import { cn } from '@/shared/lib';
 
 interface HeaderProps {
+  resortId?: number;
   resortName?: string;
   hasBackButton?: boolean;
   hasShareButton?: boolean;
 }
 
-const Header = ({ resortName, hasBackButton, hasShareButton }: HeaderProps) => {
+const Header = ({ resortId, resortName, hasBackButton, hasShareButton }: HeaderProps) => {
   const router = useRouter();
 
   return (
@@ -19,7 +20,10 @@ const Header = ({ resortName, hasBackButton, hasShareButton }: HeaderProps) => {
       {hasBackButton && (
         <button
           className={cn('absolute left-7 top-1/2 -translate-y-1/2')}
-          onClick={() => router.push('/')}
+          onClick={() => {
+            gtag('event', 'details_webcam_exit', { detail_type: resortId });
+            router.push('/');
+          }}
         >
           <ChevronLeftIcon />
         </button>

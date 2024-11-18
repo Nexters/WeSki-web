@@ -2,7 +2,7 @@
 
 import { useQuery } from '@tanstack/react-query';
 import Image from 'next/image';
-import { useState, useCallback } from 'react';
+import { useState, useCallback, useEffect } from 'react';
 import { toast } from 'sonner';
 import blind1 from '@public/blinds/blind_01.png';
 import { Header } from '@/widgets/header/ui';
@@ -72,11 +72,15 @@ const ResortDetailPage = ({ params }: { params: { resortId: string } }) => {
     }
   }, [isPositive, mutateAsync, params?.resortId]);
 
+  useEffect(() => {
+    gtag('event', 'page_view_details', { detail_type: params?.resortId });
+  }, []);
+
   if (!resortInfo || !resort) return;
 
   return (
     <div className={cn('size-full')}>
-      <Header resortName={resort.name} hasBackButton hasShareButton />
+      <Header resortId={resort.resortId} resortName={resort.name} hasBackButton hasShareButton />
       <ResortSummary {...resort} {...resortInfo.url} />
       <ul className={cn('relative z-10 flex size-full h-[53px] bg-white')}>
         {ResortContentTabList.map((tab) => (

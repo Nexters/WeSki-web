@@ -28,7 +28,7 @@ const SlopeStatusPage = ({ resortId }: { resortId: number }) => {
           slopes={RESORT_DOMAIN[key].slopes}
         />
       </section>
-      <SlopeStatusList slopes={slopeData?.slopes} />
+      <SlopeStatusList resortId={resortId} slopes={slopeData?.slopes} />
     </main>
   );
 };
