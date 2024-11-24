@@ -18,7 +18,7 @@ const SlopeStatusPage = ({ resortId }: { resortId: number }) => {
     ?.map as keyof typeof RESORT_DOMAIN;
 
   return (
-    <main className={cn('w-full')}>
+    <main className={cn('mb-3 w-full')}>
       <SlopeStatusHeader />
       <section className={cn('relative mx-[20px] overflow-hidden')} ref={containerRef}>
         <SlopeMap

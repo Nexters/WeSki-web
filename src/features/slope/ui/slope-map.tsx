@@ -53,7 +53,6 @@ const SlopeMap = forwardRef<HTMLDivElement, SlopeMapProps>(
             />
           </div>
         ))}
-
         {children}
       </animated.div>
     );
