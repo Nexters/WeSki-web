@@ -1,9 +1,9 @@
 'use client';
 
+import MapImage from '@public/maps/jisan.png';
 import BlueLiftPath from '../image/jisan/blue-lift-path';
 import Lemon1Sub1LiftPath from '../image/jisan/lemon1-1-lift-path';
 import Lemon1LiftPath from '../image/jisan/lemon1-lift-path';
-import MapImage from '../image/jisan/map';
 import NewOrangeLiftPath from '../image/jisan/new-orange-lift-path';
 import Orange2LiftPath from '../image/jisan/orange2-lift-path';
 import Orange3LiftPath from '../image/jisan/orange3-lift-path';

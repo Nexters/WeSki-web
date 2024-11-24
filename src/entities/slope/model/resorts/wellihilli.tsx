@@ -1,5 +1,6 @@
 'use client';
 
+import WellihilliMap from '@public/maps/wellihilli.png';
 import AlphaSlope1Path from '../image/wellihilli/alpha-slope1-path';
 import AlphaSlope2Path from '../image/wellihilli/alpha-slope2-path';
 import AlphaSlope3Path from '../image/wellihilli/alpha-slope3-path';
@@ -18,7 +19,6 @@ import EchoSlope1Path from '../image/wellihilli/echo-slope1-path';
 import EchoSlope2Path from '../image/wellihilli/echo-slope2-path';
 import EchoSlope3Path from '../image/wellihilli/echo-slope3-path';
 import HalfPipePath from '../image/wellihilli/half-pipe-path';
-import WellihilliMap from '../image/wellihilli/map';
 import StarExpress1Path from '../image/wellihilli/star-express1-path';
 import StarExpress2Path from '../image/wellihilli/star-express2-path';
 import type { ResortConstant } from '../model';

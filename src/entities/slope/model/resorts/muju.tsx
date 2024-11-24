@@ -1,5 +1,6 @@
 'use client';
 
+import MujuMap from '@public/maps/muju.png';
 import AllegroPath from '../image/muju/allegro-path';
 import CadenzaSlopePath from '../image/muju/cadenza-slope-path';
 import ConnectionSlopePath from '../image/muju/connection-slope-path';
@@ -7,7 +8,6 @@ import EasternSlopePath from '../image/muju/eastern-slope-path';
 import FlamingoPath from '../image/muju/flamingo-path';
 import FreewayPath from '../image/muju/freeway-path';
 import Freeway2Path from '../image/muju/freeway2-path';
-import MujuMap from '../image/muju/map';
 import MinuetPath from '../image/muju/minuet-path';
 import ModeratoPath from '../image/muju/moderato-path';
 import MozartPath from '../image/muju/mozart-path';

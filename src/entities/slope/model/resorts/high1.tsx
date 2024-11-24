@@ -1,5 +1,6 @@
 'use client';
 
+import High1Map from '@public/maps/high1.png';
 import Apollo1SlopPath from '../image/high1/apollo1-slop-path';
 import Apollo2SlopPath from '../image/high1/apollo2-slop-path';
 import Apollo3SlopPath from '../image/high1/apollo3-slop-path';
@@ -10,7 +11,6 @@ import Athena3SlopPath from '../image/high1/athena3-slop-path';
 import Hera1SlopPath from '../image/high1/hera1-slop-path';
 import Hera2SlopPath from '../image/high1/hera2-slop-path';
 import Hera3SlopPath from '../image/high1/hera3-slop-path';
-import High1Map from '../image/high1/map';
 import Victoria1SlopPath from '../image/high1/victoria1-slop-path';
 import Victoria2SlopPath from '../image/high1/victoria2-slop-path';
 import Zeus1SlopPath from '../image/high1/zeus1-slop-path';

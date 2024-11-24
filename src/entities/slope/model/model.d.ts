@@ -35,7 +35,7 @@ export type SlopeResponse = {
 }
 
 export type ResortConstant = {
-  MapComponent: ComponentType;
+  MapComponent: ComponentType | StaticImageData;
   slopes: SlopeConstant[];
   webcams: WebcamConstant[];
 };

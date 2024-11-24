@@ -1,11 +1,11 @@
 'use client';
 
+import ElysianGangchonMap from '@public/maps/elysian-gangchon.png';
 import DeerSlopPath from '../image/elysian-gangchon/deer-slop-path';
 import DragonSlopPath from '../image/elysian-gangchon/dragon-slop-path';
 import HorseSlopPath from '../image/elysian-gangchon/horse-slop-path';
 import JaguarSlopPath from '../image/elysian-gangchon/jaguar-slop-path';
 import LeopardSlopPath from '../image/elysian-gangchon/leopard-slop-path';
-import ElysianGangchonMap from '../image/elysian-gangchon/map';
 import PandaSlopPath from '../image/elysian-gangchon/panda-slop-path';
 import PegasusSlopPath from '../image/elysian-gangchon/pegasus-slop-path';
 import PumaSlopPath from '../image/elysian-gangchon/puma-slop-path';

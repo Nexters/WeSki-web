@@ -1,11 +1,11 @@
 'use client';
 
+import MapImage from '@public/maps/yongpyong.png';
 import BlueSlopePath from '../image/yongpyong/blue-slope-path';
 import DragonParkPath from '../image/yongpyong/dragon-park-path';
 import GoldFantasticPath from '../image/yongpyong/gold-fantastic-path';
 import GoldParadisePath from '../image/yongpyong/gold-paradise-path';
 import GoldValleyPath from '../image/yongpyong/gold-valley-path';
-import MapImage from '../image/yongpyong/map';
 import MegaGreenPath from '../image/yongpyong/mega-green-path';
 import NewGoldSlopePath from '../image/yongpyong/new-gold-slope-path';
 import NewRedSlopePath from '../image/yongpyong/new-red-slope-path';

@@ -1,5 +1,6 @@
 'use client';
 
+import MapImage from '@public/maps/phoenix.png';
 import ChampionSlopePath from '../image/phoenix/champion-slope-path';
 import DiggySlopePath from '../image/phoenix/diggy-slope-path';
 import DukeSlopePath from '../image/phoenix/duke-slope-path';
@@ -8,7 +9,6 @@ import FantasySlopePath from '../image/phoenix/fantasy-slope-path';
 import HawkSlope1Path from '../image/phoenix/hawk-slope1-path';
 import HawkSlope2Path from '../image/phoenix/hawk-slope2-path';
 import KiwiSlopePath from '../image/phoenix/kiwi-slope-path';
-import MapImage from '../image/phoenix/map';
 import MogulSlopePath from '../image/phoenix/mogul-slope-path';
 import PanoramaPath from '../image/phoenix/panorama-path';
 import ParadisePath from '../image/phoenix/paradise-path';

@@ -1,9 +1,9 @@
 'use client';
 
+import MapImage from '@public/maps/eden.png';
 import BasicSlopePath from '../image/eden/basic-slope-path';
 import JupiterSlopePath from '../image/eden/jupiter-slope-path';
 import MainSlopePath from '../image/eden/main-slope-path';
-import MapImage from '../image/eden/map';
 import MercurySlopePath from '../image/eden/mercury-slope-path';
 import SaturnSlopePath from '../image/eden/saturn-slope-path';
 import UranusSlopePath from '../image/eden/uranus-slope-path';

@@ -1,12 +1,12 @@
 'use client';
 
+import VivaldiparkMap from '@public/maps/vivaldipark.png';
 import BalladSlopPath from '../image/vivaldipark/ballad-slop-path';
 import BluesSlopPath from '../image/vivaldipark/blues-slop-path';
 import ClassicSlopPath from '../image/vivaldipark/classic-slop-path';
 import FunkySlopPath from '../image/vivaldipark/funky-slop-path';
 import HiphopSlopPath from '../image/vivaldipark/hiphop-slop-path';
 import JazzSlopPath from '../image/vivaldipark/jazz-slop-path';
-import VivaldiparkMap from '../image/vivaldipark/map';
 import ReggaeSlopPath from '../image/vivaldipark/reggae-slop-path';
 import RockSlopPath from '../image/vivaldipark/rock-slop-path';
 import TechnoSlopPath from '../image/vivaldipark/techno-slop-path';

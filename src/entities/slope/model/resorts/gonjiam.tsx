@@ -1,10 +1,10 @@
 'use client';
 
+import GonjiamMap from '@public/maps/gonjiam.png';
 import CNP1SlopPath from '../image/gonjiam/cnp1-slop-path';
 import CNP2SlopPath from '../image/gonjiam/cnp2-slop-path';
 import Gram1SlopPath from '../image/gonjiam/gram1-slop-path';
 import Gram2SlopPath from '../image/gonjiam/gram2-slop-path';
-import GonjiamMap from '../image/gonjiam/map';
 import ThinkyouBridgeSlopPath from '../image/gonjiam/thinkyou-bridge-slop';
 import Thinkyou1SlopPath from '../image/gonjiam/thinkyou1-slop-path';
 import Thinkyou2SlopPath from '../image/gonjiam/thinkyou2-slop-path';
