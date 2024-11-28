@@ -1,19 +1,20 @@
 export type Level = '초급' | '초중급' | '중급' | '중상급' | '상급' | '최상급' | '파크';
 
 export type SlopeRaw = {
-  id: number;
+  slopeId: number;
   name: string;
   difficulty: Level;
-  isDayOperating: true;
-  isNightOperating: true;
-  isLateNightOperating: true;
-  isDawnOperating: true;
-  isMidnightOperating: true;
+  isDayOperating: boolean;
+  isNightOperating: boolean;
+  isLateNightOperating: boolean;
+  isDawnOperating: boolean;
+  isMidnightOperating: boolean;
+  webcamNo: number;
 };
 
 export type WebcamRaw = {
   name: string;
-  number: 0;
+  number: number;
   description: string;
   url: string;
 };
@@ -44,11 +45,10 @@ export type WebcamConstant = {
 };
 
 export type SlopeConstant = {
-  id: number | string;
+  id: number;
   PathAsset: ComponentType<{
     color?: string;
   }>;
-  webcam?: number;
 };
 
 export type Position = {

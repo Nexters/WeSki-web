@@ -14,37 +14,32 @@ export const EDEN: ResortConstant = {
   MapComponent: MapImage,
   slopes: [
     {
-      id: '베이직 슬로프',
+      id: 145,
       PathAsset: BasicSlopePath,
-      webcam: 1,
     },
     {
-      id: '메인 슬로프',
+      id: 146,
       PathAsset: MainSlopePath,
-      webcam: 1,
     },
     {
-      id: '쥬피터 슬로프',
+      id: 147,
       PathAsset: JupiterSlopePath,
-      webcam: 2,
     },
     {
-      id: '새턴 슬로프',
+      id: 148,
       PathAsset: SaturnSlopePath,
     },
     {
-      id: '우라누스 슬로프',
+      id: 149,
       PathAsset: UranusSlopePath,
-      webcam: 3,
     },
     {
-      id: '머큐리 슬로프',
+      id: 150,
       PathAsset: MercurySlopePath,
     },
     {
-      id: '비너스 슬로프',
+      id: 151,
       PathAsset: VenusSlopePath,
-      webcam: 1,
     },
   ],
   webcams: [

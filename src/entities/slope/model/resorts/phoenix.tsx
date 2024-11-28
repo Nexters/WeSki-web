@@ -22,72 +22,63 @@ export const PHOENIX: ResortConstant = {
   MapComponent: MapImage,
   slopes: [
     {
-      id: 'sparrow',
+      id: 59,
       PathAsset: SparrowPath,
-      webcam: 6,
     },
     {
-      id: 'penguin-slope',
+      id: 60,
       PathAsset: PenguinSlopePath,
-      webcam: 3,
     },
     {
-      id: 'hawk-slope1',
+      id: 61,
       PathAsset: HawkSlope1Path,
     },
     {
-      id: 'kiwi-slope',
+      id: 62,
       PathAsset: KiwiSlopePath,
-      webcam: 1,
     },
     {
-      id: 'panorama',
+      id: 63,
       PathAsset: PanoramaPath,
-      webcam: 4,
     },
     {
-      id: 'valley-slope',
+      id: 64,
       PathAsset: ValleySlopePath,
-      webcam: 5,
     },
     {
-      id: 'hawk-slope2',
+      id: 65,
       PathAsset: HawkSlope2Path,
     },
     {
-      id: 'duke-slope',
+      id: 66,
       PathAsset: DukeSlopePath,
-      webcam: 2,
     },
     {
-      id: 'slope-style',
+      id: 67,
       PathAsset: SlopeStylePath,
-      webcam: 3,
     },
     {
-      id: 'champion-slope',
+      id: 68,
       PathAsset: ChampionSlopePath,
-      webcam: 7,
     },
     {
-      id: 'fantasy-slope',
+      id: 69,
       PathAsset: FantasySlopePath,
     },
     {
-      id: 'diggy-slope',
+      id: 70,
       PathAsset: DiggySlopePath,
-      webcam: 5,
     },
     {
-      id: 'mogul-slope',
+      id: 71,
       PathAsset: MogulSlopePath,
     },
     {
-      id: 'paradise',
+      id: 72,
       PathAsset: ParadisePath,
     },
     {
-      id: 'extreme-park',
+      id: 73,
       PathAsset: ExtremeParkPath,
     },
   ],

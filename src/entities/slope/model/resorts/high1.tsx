@@ -23,73 +23,67 @@ export const HIGH1: ResortConstant = {
   MapComponent: High1Map,
   slopes: [
     {
-      id: 'zeus1-slop',
+      id: 1,
       PathAsset: Zeus1SlopPath,
     },
     {
-      id: 'zeus2-slop',
+      id: 2,
       PathAsset: Zeus2SlopPath,
-      webcam: 1,
     },
     {
-      id: 'zeus3-slop',
+      id: 3,
       PathAsset: Zeus3SlopPath,
-      webcam: 13,
     },
     {
-      id: 'zeus3-1-slop',
+      id: 4,
       PathAsset: Zeus3Sub1SlopPath,
     },
     {
-      id: 'victoria1-slop',
+      id: 5,
       PathAsset: Victoria1SlopPath,
-      webcam: 12,
     },
     {
-      id: 'victoria2-slop',
+      id: 6,
       PathAsset: Victoria2SlopPath,
     },
     {
-      id: 'hera1-slop',
+      id: 8,
       PathAsset: Hera1SlopPath,
     },
     {
-      id: 'hera2-slop',
+      id: 9,
       PathAsset: Hera2SlopPath,
-      webcam: 2,
     },
     {
-      id: 'hera3-slop',
+      id: 10,
       PathAsset: Hera3SlopPath,
     },
     {
-      id: 'apollo1-slop',
+      id: 11,
       PathAsset: Apollo1SlopPath,
     },
     {
-      id: 'apollo2-slop',
+      id: 12,
       PathAsset: Apollo2SlopPath,
     },
     {
-      id: 'apollo3-slop',
+      id: 13,
       PathAsset: Apollo3SlopPath,
     },
     {
-      id: 'apollo4-slop',
+      id: 14,
       PathAsset: Apollo4SlopPath,
-      webcam: 15,
     },
     {
-      id: 'apollo6-slop',
+      id: 16,
       PathAsset: Apollo6SlopPath,
     },
     {
-      id: 'athena2-slop',
+      id: 18,
       PathAsset: Athena2SlopPath,
-      webcam: 6,
     },
     {
-      id: 'athena3-slop',
+      id: 19,
       PathAsset: Athena3SlopPath,
     },
   ],

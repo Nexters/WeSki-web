@@ -19,8 +19,8 @@ import Rainbow4Path from '../image/yongpyong/rainbow4-path';
 import RedParadisePath from '../image/yongpyong/red-paradise-path';
 import RedSlopePath from '../image/yongpyong/red-slope-path';
 import SilverParadisePath from '../image/yongpyong/silver-paradise-path';
-import SilverSlopePath from '../image/yongpyong/silver-slope-path';
-import SummitLandTheGreenPath from '../image/yongpyong/summit-land-the-green-path';
+// import SilverSlopePath from '../image/yongpyong/silver-slope-path';
+// import SummitLandTheGreenPath from '../image/yongpyong/summit-land-the-green-path';
 import YellowSlopePath from '../image/yongpyong/yellow-slope-path';
 import type { ResortConstant } from '../model';
 
@@ -28,102 +28,89 @@ export const YONGPYONG: ResortConstant = {
   MapComponent: MapImage,
   slopes: [
     {
-      id: 'gold-valley',
+      id: 40,
       PathAsset: GoldValleyPath,
-      webcam: 4,
     },
     {
-      id: 'gold-paradise',
+      id: 41,
       PathAsset: GoldParadisePath,
     },
     {
-      id: 'new-gold-slope',
+      id: 42,
       PathAsset: NewGoldSlopePath,
-      webcam: 4,
     },
     {
-      id: 'gold-fantastic',
+      id: 43,
       PathAsset: GoldFantasticPath,
-      webcam: 4,
     },
     {
-      id: 'red-paradise',
+      id: 44,
       PathAsset: RedParadisePath,
-      webcam: 6,
     },
     {
-      id: 'red-slope',
+      id: 45,
       PathAsset: RedSlopePath,
     },
     {
-      id: 'new-red-slope',
+      id: 46,
       PathAsset: NewRedSlopePath,
-      webcam: 6,
     },
     {
-      id: 'blue-slope',
+      id: 47,
       PathAsset: BlueSlopePath,
     },
     {
-      id: 'pink-slope',
+      id: 48,
       PathAsset: PinkSlopePath,
-      webcam: 7,
     },
     {
-      id: 'yellow-slope',
+      id: 49,
       PathAsset: YellowSlopePath,
     },
     {
-      id: 'new-yellow-slope',
+      id: 50,
       PathAsset: NewYellowSlopePath,
-      webcam: 8,
     },
+    // {
+    //   id: 'silver-slope',
+    //   PathAsset: SilverSlopePath,
+    // },
     {
-      id: 'silver-slope',
-      PathAsset: SilverSlopePath,
-    },
-    {
-      id: 'silver-paradise',
+      id: 51,
       PathAsset: SilverParadisePath,
     },
     {
-      id: 'rainbow-paradise',
+      id: 52,
       PathAsset: RainbowParadisePath,
-      webcam: 1,
     },
     {
-      id: 'rainbow1',
+      id: 53,
       PathAsset: Rainbow1Path,
-      webcam: 3,
     },
     {
-      id: 'rainbow2',
+      id: 54,
       PathAsset: Rainbow2Path,
-      webcam: 3,
     },
     {
-      id: 'rainbow3',
+      id: 55,
       PathAsset: Rainbow3Path,
-      webcam: 3,
     },
     {
-      id: 'rainbow4',
+      id: 56,
       PathAsset: Rainbow4Path,
-      webcam: 3,
     },
     {
-      id: 'mega-green',
+      id: 57,
       PathAsset: MegaGreenPath,
-      webcam: 5,
     },
     {
-      id: 'dragon-park',
+      id: 58,
       PathAsset: DragonParkPath,
     },
-    {
-      id: 'summit-land-the-green',
-      PathAsset: SummitLandTheGreenPath,
-    },
+    // {
+    //   id: 'summit-land-the-green',
+    //   PathAsset: SummitLandTheGreenPath,
+    // },
   ],
   webcams: [
     {

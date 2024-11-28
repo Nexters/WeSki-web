@@ -20,64 +20,56 @@ export const O2: ResortConstant = {
   MapComponent: MapImage,
   slopes: [
     {
-      id: 'dream-slope1',
+      id: 132,
       PathAsset: DreamSlope1Path,
-      webcam: 3,
     },
     {
-      id: 'dream-slope2',
+      id: 133,
       PathAsset: DreamSlope2Path,
     },
     {
-      id: 'head-slope',
+      id: 134,
       PathAsset: HeadSlopePath,
     },
     {
-      id: 'happy-slope',
+      id: 135,
       PathAsset: HappySlopePath,
-      webcam: 1,
     },
     {
-      id: 'glory-slope1',
+      id: 136,
       PathAsset: GlorySlope1Path,
     },
     {
-      id: 'glory-slope2',
+      id: 137,
       PathAsset: GlorySlope2Path,
     },
     {
-      id: 'glory-slope3',
+      id: 138,
       PathAsset: GlorySlope3Path,
-      webcam: 1,
     },
     {
-      id: 'fashion-slope1',
+      id: 139,
       PathAsset: FashionSlope1Path,
-      webcam: 1,
     },
     {
-      id: 'fashion-slope2',
+      id: 140,
       PathAsset: FashionSlope2Path,
     },
     {
-      id: 'challenge-slope1',
+      id: 141,
       PathAsset: ChallengeSlope1Path,
-      webcam: 2,
     },
     {
-      id: 'challenge-slope2',
+      id: 142,
       PathAsset: ChallengeSlope2Path,
-      webcam: 2,
     },
     {
-      id: 'challenge-slope3',
+      id: 143,
       PathAsset: ChallengeSlope3Path,
-      webcam: 2,
     },
     {
-      id: 'half-pipe',
+      id: 144,
       PathAsset: HalfPipePath,
-      webcam: 4,
     },
   ],
   webcams: [

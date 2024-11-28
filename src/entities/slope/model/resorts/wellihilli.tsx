@@ -13,8 +13,8 @@ import ChallengeSlope4Path from '../image/wellihilli/challenge-slope4-path';
 import ChallengeSlope5Path from '../image/wellihilli/challenge-slope5-path';
 import DeltaSlopePlusPath from '../image/wellihilli/delta-slope-plus-path';
 import DeltaSlope1Path from '../image/wellihilli/delta-slope1-path';
-import DeltaSlope2Path from '../image/wellihilli/delta-slope2-path';
-import EchoSlopePlusPath from '../image/wellihilli/echo-slope-plus-path';
+// import DeltaSlope2Path from '../image/wellihilli/delta-slope2-path';
+// import EchoSlopePlusPath from '../image/wellihilli/echo-slope-plus-path';
 import EchoSlope1Path from '../image/wellihilli/echo-slope1-path';
 import EchoSlope2Path from '../image/wellihilli/echo-slope2-path';
 import EchoSlope3Path from '../image/wellihilli/echo-slope3-path';
@@ -27,91 +27,84 @@ export const WELLIHILLI: ResortConstant = {
   MapComponent: WellihilliMap,
   slopes: [
     {
-      id: 'alpha-slope1',
+      id: 94,
       PathAsset: AlphaSlope1Path,
-      webcam: 5,
     },
     {
-      id: 'alpha-slope2',
+      id: 95,
       PathAsset: AlphaSlope2Path,
-      webcam: 4,
     },
     {
-      id: 'alpha-slope3',
+      id: 96,
       PathAsset: AlphaSlope3Path,
-      webcam: 4,
     },
     {
-      id: 'bravo-slope1',
+      id: 97,
       PathAsset: BravoSlope1Path,
     },
     {
-      id: 'bravo-slope2',
+      id: 98,
       PathAsset: BravoSlope2Path,
     },
     {
-      id: 'delta-slope1',
+      id: 99,
       PathAsset: DeltaSlope1Path,
-      webcam: 3,
     },
+    // {
+    //   id: 'delta-slope2',
+    //   PathAsset: DeltaSlope2Path,
+    // },
     {
-      id: 'delta-slope2',
-      PathAsset: DeltaSlope2Path,
-      webcam: 1,
-    },
-    {
-      id: 'delta-slope-plus',
+      id: 100,
       PathAsset: DeltaSlopePlusPath,
     },
     {
-      id: 'echo-slope1',
+      id: 101,
       PathAsset: EchoSlope1Path,
     },
     {
-      id: 'echo-slope2',
+      id: 102,
       PathAsset: EchoSlope2Path,
     },
     {
-      id: 'echo-slope3',
+      id: 103,
       PathAsset: EchoSlope3Path,
     },
+    // {
+    //   id: 'echo-slope-plus',
+    //   PathAsset: EchoSlopePlusPath,
+    // },
     {
-      id: 'echo-slope-plus',
-      PathAsset: EchoSlopePlusPath,
-    },
-    {
-      id: 'challenge-slope1',
+      id: 104,
       PathAsset: ChallengeSlope1Path,
     },
     {
-      id: 'challenge-slope2',
+      id: 105,
       PathAsset: ChallengeSlope2Path,
     },
     {
-      id: 'challenge-slope3',
+      id: 106,
       PathAsset: ChallengeSlope3Path,
     },
     {
-      id: 'challenge-slope4',
+      id: 107,
       PathAsset: ChallengeSlope4Path,
     },
     {
-      id: 'challenge-slope5',
+      id: 108,
       PathAsset: ChallengeSlope5Path,
     },
     {
-      id: 'star-express1',
+      id: 109,
       PathAsset: StarExpress1Path,
     },
     {
-      id: 'star-express2',
+      id: 110,
       PathAsset: StarExpress2Path,
-      webcam: 1,
     },
     {
-      id: 'half-pipe',
+      id: 111,
       PathAsset: HalfPipePath,
-      webcam: 2,
     },
   ],
   webcams: [
