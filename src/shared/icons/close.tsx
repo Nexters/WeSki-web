@@ -8,19 +8,19 @@ interface CloseIconProps extends SVGProps<SVGSVGElement> {
 const CloseIcon = ({ className, ...args }: CloseIconProps) => {
   return (
     <svg
-      width="18"
-      height="18"
-      viewBox="0 0 18 18"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       className={className}
       {...args}
     >
       <path
-        d="M12.75 5.25L5.25 12.75M12.75 12.75L5.25 5.25"
+        d="M17 7L7 17M17 17L7 7"
         stroke="currentColor"
-        strokeWidth="2"
-        strokeLinecap="round"
+        stroke-width="2"
+        stroke-linecap="round"
       />
     </svg>
   );
