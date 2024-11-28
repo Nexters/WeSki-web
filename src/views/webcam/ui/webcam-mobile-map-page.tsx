@@ -15,14 +15,22 @@ const WebCamMobileMapPage = ({ resortId }: { resortId?: number }) => {
   const { data: slopeRawData } = useQuery(slopeApi.slopeQueries.slope(resortId ?? 0));
   const key = ResortData.find((resort) => resort.id === resortId)
     ?.map as keyof typeof RESORT_DOMAIN;
-  const slopes = slopeRawData?.slopes.map((slope) => ({
-    ...slope,
-    ...RESORT_DOMAIN[key].slopes.find((slopeConstant) => slopeConstant.id === slope.slopeId),
-  })) as Slope[];
-  const webcams = slopeRawData?.webcams.map((webcam) => ({
-    ...webcam,
-    ...RESORT_DOMAIN[key].webcams.find((webcamConstant) => webcamConstant.id === webcam.number),
-  })) as Webcam[];
+  const slopes = slopeRawData?.slopes
+    .filter((slope) =>
+      RESORT_DOMAIN[key].slopes.find((slopeConstant) => slopeConstant.id === slope.slopeId)
+    )
+    .map((slope) => ({
+      ...slope,
+      ...RESORT_DOMAIN[key].slopes.find((slopeConstant) => slopeConstant.id === slope.slopeId),
+    })) as Slope[];
+  const webcams = slopeRawData?.webcams
+    .filter((webcam) =>
+      RESORT_DOMAIN[key].webcams.find((webcamConstant) => webcamConstant.id === webcam.number)
+    )
+    .map((webcam) => ({
+      ...webcam,
+      ...RESORT_DOMAIN[key].webcams.find((webcamConstant) => webcamConstant.id === webcam.number),
+    })) as Webcam[];
 
   const [cameraPositions, setCameraPositions] = useState<{
     [key: number]: Position;
@@ -47,7 +55,7 @@ const WebCamMobileMapPage = ({ resortId }: { resortId?: number }) => {
     api.start({ scale: scale, x: boundedX, y: boundedY });
   };
 
-  if (!slopeRawData) return;
+  if (!slopes || !webcams) return;
 
   return (
     <main className={cn('w-full')}>

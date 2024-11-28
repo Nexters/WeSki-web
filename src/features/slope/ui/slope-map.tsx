@@ -37,10 +37,12 @@ const SlopeMap = forwardRef<HTMLDivElement, SlopeMapProps>(
           <MapComponent />
         )}
         {slopes.map((slope) => (
-          <div key={slope.id} className={cn('absolute top-0 w-full')}>
+          <div key={slope.slopeId} className={cn('absolute top-0 w-full')}>
             <slope.PathAsset
               color={
-                selectedSlope !== slope.id && selectedSlope !== null ? 'fill-gray-40' : undefined
+                selectedSlope !== slope.slopeId && selectedSlope !== null
+                  ? 'fill-gray-40'
+                  : undefined
               }
             />
           </div>

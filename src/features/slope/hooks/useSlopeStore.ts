@@ -1,7 +1,6 @@
 import { create } from 'zustand';
 
-// TODO: 데이터 수정 후 SlopeId string 타입 삭제
-type SlopeId = string | number | null;
+type SlopeId = number | null;
 type CameraId = number | null | undefined;
 
 interface SlopeState {

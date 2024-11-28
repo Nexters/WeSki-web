@@ -20,12 +20,18 @@ const SlopeStatusPage = ({ resortId }: { resortId: number }) => {
     ?.map as keyof typeof RESORT_DOMAIN;
   const slopes = useMemo(
     () =>
-      slopeRawData?.slopes.map((slope) => ({
-        ...slope,
-        ...RESORT_DOMAIN[key].slopes.find((slopeConstant) => slopeConstant.id === slope.slopeId),
-      })) as Slope[],
+      slopeRawData?.slopes
+        .filter((slope) =>
+          RESORT_DOMAIN[key].slopes.find((slopeConstant) => slopeConstant.id === slope.slopeId)
+        )
+        .map((slope) => ({
+          ...slope,
+          ...RESORT_DOMAIN[key].slopes.find((slopeConstant) => slopeConstant.id === slope.slopeId),
+        })) as Slope[],
     [slopeRawData, key]
   );
+
+  if (!slopes) return;
 
   return (
     <main className={cn('mb-3 w-full')}>
