@@ -22,7 +22,7 @@ const SlopeStatusPage = ({ resortId }: { resortId: number }) => {
     () =>
       slopeRawData?.slopes.map((slope) => ({
         ...slope,
-        ...RESORT_DOMAIN[key].slopes.find((slopeConstant) => slopeConstant.id === slope.id),
+        ...RESORT_DOMAIN[key].slopes.find((slopeConstant) => slopeConstant.id === slope.slopeId),
       })) as Slope[],
     [slopeRawData, key]
   );

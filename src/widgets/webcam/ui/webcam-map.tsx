@@ -42,7 +42,7 @@ const WebcamMap = forwardRef<HTMLDivElement, WebcamMapProps>(
       <section className={cn('relative aspect-[25/14] w-full overflow-hidden')} ref={containerRef}>
         <SlopeMap MapComponent={MapComponent} ref={ref} slopes={slopes} style={style}>
           {webcams.map((webcam) => {
-            const slop = slopes.filter((slop) => slop.webcam === webcam.id);
+            const slop = slopes.filter((slop) => slop.webcamNo === webcam.number);
             // webcam을 띄워야 하는 slop를 찾음
 
             return (

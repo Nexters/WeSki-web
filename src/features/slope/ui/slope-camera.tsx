@@ -89,7 +89,10 @@ const SlopeCamera = ({
         selectedCamera.isOpen &&
         selectedCamera.id === id &&
         url &&
-        createPortal(<SlopeVideo src={url} closeVideo={setCloseCamera} />, containerRef.current)}
+        createPortal(
+          <SlopeVideo src={`/api/webcam?url=${url}`} closeVideo={setCloseCamera} />,
+          containerRef.current
+        )}
     </>
   );
 };

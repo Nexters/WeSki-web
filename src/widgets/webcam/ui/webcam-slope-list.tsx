@@ -39,11 +39,11 @@ const WebcamSlopeList = ({ className, slopes, webcams, onItemClick }: WebcamSlop
                 setSelectedCamera(null);
               } else {
                 setSelectedSlope(item.id);
-                setSelectedCamera(item.webcam);
+                setSelectedCamera(item.webcamNo);
               }
               setCloseCamera();
-              if (item.webcam) {
-                const webcam = webcams.find((webcam) => webcam.id === item.webcam);
+              if (item.webcamNo) {
+                const webcam = webcams.find((webcam) => webcam.id === item.webcamNo);
                 if (!webcam) return;
                 onItemClick({
                   scale: webcam.scale,
@@ -54,7 +54,7 @@ const WebcamSlopeList = ({ className, slopes, webcams, onItemClick }: WebcamSlop
           >
             <div className={cn('flex items-center gap-2')}>
               <p className={cn('title3-semibold', !isOpen && 'opacity-30')}>{item.name}</p>
-              {item.webcam && <CameraButton />}
+              {item.webcamNo && <CameraButton />}
             </div>
             <LevelChip className={cn(!isOpen && 'opacity-30')} level={item.difficulty} />
           </li>

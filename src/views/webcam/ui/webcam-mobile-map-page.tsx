@@ -17,7 +17,7 @@ const WebCamMobileMapPage = ({ resortId }: { resortId?: number }) => {
     ?.map as keyof typeof RESORT_DOMAIN;
   const slopes = slopeRawData?.slopes.map((slope) => ({
     ...slope,
-    ...RESORT_DOMAIN[key].slopes.find((slopeConstant) => slopeConstant.id === slope.id),
+    ...RESORT_DOMAIN[key].slopes.find((slopeConstant) => slopeConstant.id === slope.slopeId),
   })) as Slope[];
   const webcams = slopeRawData?.webcams.map((webcam) => ({
     ...webcam,
