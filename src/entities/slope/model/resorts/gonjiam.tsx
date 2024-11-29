@@ -17,44 +17,44 @@ export const GONJIAM: ResortConstant = {
   MapComponent: GonjiamMap,
   slopes: [
     {
-      id: 1,
-      PathAsset: WhynotSlopPath,
-    },
-    {
-      id: 2,
-      PathAsset: Gram1SlopPath,
-    },
-    {
-      id: 3,
-      PathAsset: Gram2SlopPath,
-    },
-    {
-      id: 4,
-      PathAsset: CNP1SlopPath,
-    },
-    {
-      id: 5,
-      PathAsset: CNP2SlopPath,
-    },
-    {
-      id: 6,
-      PathAsset: Thinkyou1SlopPath,
-    },
-    {
-      id: 7,
-      PathAsset: Thinkyou2SlopPath,
-    },
-    {
-      id: 8,
-      PathAsset: Thinkyou3SlopPath,
-    },
-    {
       id: 9,
-      PathAsset: ThinkyouBridgeSlopPath,
+      PathAsset: WhisenSlopPath,
     },
     {
       id: 10,
-      PathAsset: WhisenSlopPath,
+      PathAsset: WhynotSlopPath,
+    },
+    {
+      id: 11,
+      PathAsset: Gram1SlopPath,
+    },
+    {
+      id: 12,
+      PathAsset: Gram2SlopPath,
+    },
+    {
+      id: 13,
+      PathAsset: CNP1SlopPath,
+    },
+    {
+      id: 14,
+      PathAsset: CNP2SlopPath,
+    },
+    {
+      id: 15,
+      PathAsset: Thinkyou1SlopPath,
+    },
+    {
+      id: 16,
+      PathAsset: Thinkyou2SlopPath,
+    },
+    {
+      id: 17,
+      PathAsset: Thinkyou3SlopPath,
+    },
+    {
+      id: 18,
+      PathAsset: ThinkyouBridgeSlopPath,
     },
   ],
   webcams: [
