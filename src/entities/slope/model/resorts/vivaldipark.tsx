@@ -16,152 +16,45 @@ export const VIVALDIPARK: ResortConstant = {
   MapComponent: VivaldiparkMap,
   slopes: [
     {
-      id: 'ballad-slop',
-      level: '초급',
-      name: '발라드슬로프',
-      Element: BalladSlopPath,
-      webcamId: 'ballad-webcam',
-      isOpen: true,
+      id: 122,
+      PathAsset: BalladSlopPath,
     },
     {
-      id: 'blues-slop',
-      level: '초급',
-      name: '블루스슬로프',
-      Element: BluesSlopPath,
-      webcamId: 'blues-webcam',
-      isOpen: true,
+      id: 123,
+      PathAsset: BluesSlopPath,
     },
     {
-      id: 'hiphop-slop',
-      level: '중상급',
-      name: '힙합슬로프',
-      Element: HiphopSlopPath,
-      webcamId: 'hiphop-webcam',
-      isOpen: true,
+      id: 124,
+      PathAsset: HiphopSlopPath,
     },
     {
-      id: 'classic-slop',
-      level: '중상급',
-      name: '클래식슬로프',
-      Element: ClassicSlopPath,
-      webcamId: 'classic-webcam',
-      isOpen: true,
+      id: 125,
+      PathAsset: ClassicSlopPath,
     },
     {
-      id: 'reggae-slop',
-      level: '중급',
-      name: '레게슬로프',
-      Element: ReggaeSlopPath,
-      isOpen: true,
+      id: 126,
+      PathAsset: ReggaeSlopPath,
     },
     {
-      id: 'jazz-slop',
-      level: '중급',
-      name: '재즈슬로프',
-      Element: JazzSlopPath,
-      webcamId: 'jazz-webcam',
-      isOpen: true,
+      id: 127,
+      PathAsset: JazzSlopPath,
     },
     {
-      id: 'funky-slop',
-      level: '상급',
-      name: '펑키슬로프',
-      Element: FunkySlopPath,
-      webcamId: 'funky-webcam',
-      isOpen: true,
+      id: 128,
+      PathAsset: FunkySlopPath,
     },
     {
-      id: 'techno-slop',
-      level: '상급',
-      name: '테크노슬로프',
-      Element: TechnoSlopPath,
-      webcamId: 'techno-bottom',
-      isOpen: true,
+      id: 129,
+      PathAsset: TechnoSlopPath,
     },
     {
-      id: 'rock-slop',
-      level: '최상급',
-      name: '락슬로프',
-      Element: RockSlopPath,
-      isOpen: true,
+      id: 130,
+      PathAsset: RockSlopPath,
     },
   ],
   webcams: [
     {
-      id: 'ballad-webcam',
-      name: '발라드',
-      position: {
-        top: 'top-[56%]',
-        left: 'left-[41%]',
-      },
-      scale: 1,
-    },
-    {
-      id: 'blues-webcam',
-      name: '블루스',
-      position: {
-        top: 'top-[62%]',
-        left: 'left-[77%]',
-      },
-      scale: 1,
-    },
-    {
-      id: 'hiphop-webcam',
-      name: '힙합',
-      position: {
-        top: 'top-[34%]',
-        left: 'left-[55%]',
-      },
-      scale: 1,
-    },
-    {
-      id: 'classic-webcam',
-      name: '클래식',
-      position: {
-        top: 'top-[30%]',
-        left: 'left-[30%]',
-      },
-      scale: 1,
-    },
-    {
-      id: 'jazz-webcam',
-      name: '재즈',
-      position: {
-        top: 'top-[62%]',
-        left: 'left-[21%]',
-      },
-      scale: 1,
-    },
-    {
-      id: 'funky-webcam',
-      name: '펑키',
-      position: {
-        top: 'top-[44%]',
-        left: 'left-[46%]',
-      },
-      scale: 1,
-    },
-    {
-      id: 'techno-bottom',
-      name: '테크노하단',
-      position: {
-        top: 'top-[64%]',
-        left: 'left-[51%]',
-      },
-      scale: 1,
-    },
-    {
-      id: 'slope-view',
-      name: '슬로프 전경',
-      position: {
-        top: 'top-[76%]',
-        left: 'left-[45%]',
-      },
-      scale: 1,
-    },
-    {
-      id: 'skiword-top',
-      name: '스키월드 정상',
+      id: 1,
       position: {
         top: 'top-[14%]',
         left: 'left-[37%]',
@@ -169,11 +62,74 @@ export const VIVALDIPARK: ResortConstant = {
       scale: 1,
     },
     {
-      id: 'techno-top',
-      name: '테크노 상단',
+      id: 2,
       position: {
         top: 'top-[24%]',
         left: 'left-[48%]',
+      },
+      scale: 1,
+    },
+    {
+      id: 3,
+      position: {
+        top: 'top-[30%]',
+        left: 'left-[30%]',
+      },
+      scale: 1,
+    },
+    {
+      id: 4,
+      position: {
+        top: 'top-[34%]',
+        left: 'left-[55%]',
+      },
+      scale: 1,
+    },
+    {
+      id: 5,
+      position: {
+        top: 'top-[44%]',
+        left: 'left-[46%]',
+      },
+      scale: 1,
+    },
+    {
+      id: 6,
+      position: {
+        top: 'top-[56%]',
+        left: 'left-[41%]',
+      },
+      scale: 1,
+    },
+    {
+      id: 7,
+      position: {
+        top: 'top-[64%]',
+        left: 'left-[51%]',
+      },
+      scale: 1,
+    },
+    {
+      id: 8,
+      position: {
+        top: 'top-[62%]',
+        left: 'left-[21%]',
+      },
+      scale: 1,
+    },
+    {
+      id: 9,
+      position: {
+        top: 'top-[62%]',
+        left: 'left-[77%]',
+      },
+      scale: 1,
+    },
+    {
+      id: 10,
+      position: {
+        top: 'top-[76%]',
+        left: 'left-[45%]',
       },
       scale: 1,
     },

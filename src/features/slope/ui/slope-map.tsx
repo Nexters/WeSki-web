@@ -2,7 +2,7 @@ import { animated } from '@react-spring/web';
 import Image, { type StaticImageData } from 'next/image';
 import type { ComponentType } from 'react';
 import React, { forwardRef } from 'react';
-import type { Level } from '@/entities/slope/model';
+import type { Slope } from '@/entities/slope/model';
 import { cn } from '@/shared/lib';
 import type useMapPinch from '../hooks/useMapPinch';
 import useSlopeStore from '../hooks/useSlopeStore';
@@ -10,15 +10,7 @@ import useSlopeStore from '../hooks/useSlopeStore';
 interface SlopeMapProps {
   children?: React.ReactNode;
   MapComponent: ComponentType | StaticImageData;
-
-  slopes: {
-    id: string;
-    level: Level;
-    Element: ComponentType<{
-      color?: string;
-    }>;
-  }[];
-
+  slopes: Slope[];
   style: ReturnType<typeof useMapPinch>['style'];
 }
 
@@ -45,10 +37,12 @@ const SlopeMap = forwardRef<HTMLDivElement, SlopeMapProps>(
           <MapComponent />
         )}
         {slopes.map((slope) => (
-          <div key={slope.id} className={cn('absolute top-0 w-full')}>
-            <slope.Element
+          <div key={slope.slopeId} className={cn('absolute top-0 w-full')}>
+            <slope.PathAsset
               color={
-                selectedSlope !== slope.id && selectedSlope !== null ? 'fill-gray-40' : undefined
+                selectedSlope !== slope.slopeId && selectedSlope !== null
+                  ? 'fill-gray-40'
+                  : undefined
               }
             />
           </div>

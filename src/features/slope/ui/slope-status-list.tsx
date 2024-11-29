@@ -14,7 +14,7 @@ interface SlopeStatusListProps {
 const SlopeStatusList = ({ resortId, slopes }: SlopeStatusListProps) => {
   const { selectedSlope, setSelectedSlope } = useSlopeStore();
 
-  const handleSlopClick = ({ id }: { id: string }) => {
+  const handleSlopClick = ({ id }: { id: number }) => {
     gtag('event', 'details_slope_slope_click', { detail_type: resortId, slope_type: id });
     setSelectedSlope(id);
   };
@@ -45,8 +45,8 @@ const SlopeStatusList = ({ resortId, slopes }: SlopeStatusListProps) => {
         {slopes?.map((slope) => (
           <tr
             key={slope.name}
-            className={cn(selectedSlope === slope.name && 'bg-main-5')}
-            onClick={() => handleSlopClick({ id: slope.name })}
+            className={cn(selectedSlope === slope.slopeId && 'bg-main-5')}
+            onClick={() => handleSlopClick({ id: slope.slopeId })}
           >
             <td className={cn('body1-semibold py-[12px] pl-5 text-left text-gray-80')}>
               {slope.name}

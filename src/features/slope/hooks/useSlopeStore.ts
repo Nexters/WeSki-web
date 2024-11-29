@@ -1,7 +1,7 @@
 import { create } from 'zustand';
 
-type SlopeId = string | null;
-type CameraId = string | null | undefined;
+type SlopeId = number | null;
+type CameraId = number | null | undefined;
 
 interface SlopeState {
   selectedSlope: SlopeId;

@@ -17,8 +17,9 @@ import calculateWebcamPosition from '@/features/slope/lib/calculateWebcamPositio
 import { type ResortInfo, ResortData } from '@/entities/resort';
 import { resortApi } from '@/entities/resort';
 import { usePostVote } from '@/entities/resort/api/use-post-vote';
+import { slopeApi } from '@/entities/slope';
 import { RESORT_DOMAIN } from '@/entities/slope/model';
-import type { Position } from '@/entities/slope/model';
+import type { Position, Slope, Webcam } from '@/entities/slope/model';
 import CheckIcon from '@/shared/icons/check';
 import { cn } from '@/shared/lib';
 
@@ -28,21 +29,40 @@ const ResortDetailPage = ({ params }: { params: { resortId: string } }) => {
   const resort = resortsData?.find((resort) => resort.resortId === +params?.resortId);
   const { data: voteData } = useQuery(resortApi.resortQueries.vote(+params?.resortId));
   const data = RESORT_DOMAIN[resortInfo?.map as keyof typeof RESORT_DOMAIN];
+  const { data: slopeRawData } = useQuery(slopeApi.slopeQueries.slope(+params?.resortId));
+  const key = ResortData.find((resort) => resort.id === +params?.resortId)
+    ?.map as keyof typeof RESORT_DOMAIN;
+  const slopes = slopeRawData?.slopes
+    .filter((slope) =>
+      RESORT_DOMAIN[key].slopes.find((slopeConstant) => slopeConstant.id === slope.slopeId)
+    )
+    .map((slope) => ({
+      ...slope,
+      ...RESORT_DOMAIN[key].slopes.find((slopeConstant) => slopeConstant.id === slope.slopeId),
+    })) as Slope[];
+  const webcams = slopeRawData?.webcams
+    .filter((webcam) =>
+      RESORT_DOMAIN[key].webcams.find((webcamConstant) => webcamConstant.id === webcam.number)
+    )
+    .map((webcam) => ({
+      ...webcam,
+      ...RESORT_DOMAIN[key].webcams.find((webcamConstant) => webcamConstant.id === webcam.number),
+    })) as Webcam[];
   const [selectedTab, setSelectedTab] = useState('webcam');
   const [showAppDownloadDialog, setShowAppDownloadDialog] = useState(true);
   const { mutateAsync } = usePostVote(+params?.resortId);
 
   const [isPositive, setIsPositive] = useState<boolean>(true);
   const [cameraPositions, setCameraPositions] = useState<{
-    [key: string]: Position;
+    [key: number]: Position;
   }>({});
   const { ref, style, api, containerRef } = useMapPinch();
 
-  const updateCameraPosition = useCallback((id: string, position: Position) => {
+  const updateCameraPosition = useCallback((id: number, position: Position) => {
     setCameraPositions((prev) => ({ ...prev, [id]: position }));
   }, []);
 
-  const handleFocusSlopCamClick = ({ id }: { id: string }) => {
+  const handleFocusSlopCamClick = ({ id }: { id: number }) => {
     const { width, height } = containerRef.current!.getBoundingClientRect();
     const { boundedX, boundedY } = calculateWebcamPosition({
       containerPosition: { left: 0, top: 0, width, height },
@@ -76,7 +96,7 @@ const ResortDetailPage = ({ params }: { params: { resortId: string } }) => {
     gtag('event', 'page_view_details', { detail_type: params?.resortId });
   }, []);
 
-  if (!resortInfo || !resort) return;
+  if (!resortInfo || !resort || !slopes || !webcams) return;
 
   return (
     <div className={cn('size-full')}>
@@ -105,16 +125,16 @@ const ResortDetailPage = ({ params }: { params: { resortId: string } }) => {
             ref={ref}
             style={style}
             containerRef={containerRef}
-            slopes={data.slopes}
-            webcams={data.webcams}
+            slopes={slopes}
+            webcams={webcams}
             MapComponent={data.MapComponent}
             onCameraClick={handleFocusSlopCamClick}
             updateCameraPosition={updateCameraPosition}
           />
           <WebcamSlopeList
             className={cn('relative z-10 bg-white')}
-            webcams={data.webcams}
-            list={data.slopes}
+            webcams={webcams}
+            slopes={slopes}
             onItemClick={handleFocusSlopCamClick}
           />
           <div className={cn('h-[6px] w-full bg-gray-20 md:hidden')} />

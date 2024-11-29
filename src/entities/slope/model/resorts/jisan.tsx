@@ -15,72 +15,41 @@ export const JISAN: ResortConstant = {
   MapComponent: MapImage,
   slopes: [
     {
-      id: 'lemon1-lift',
-      level: '초급',
-      name: '레몬 리프트 1',
-      Element: Lemon1LiftPath,
-      webcamId: 'lemon-station',
-      isOpen: true,
+      id: 32,
+      PathAsset: Lemon1LiftPath,
     },
     {
-      id: 'lemon1-1-lift',
-      level: '초급',
-      name: '레몬 리프트 1-1',
-      Element: Lemon1Sub1LiftPath,
-      isOpen: false,
+      id: 33,
+      PathAsset: Lemon1Sub1LiftPath,
     },
     {
-      id: 'orange2-lift',
-      level: '중급',
-      name: '오렌지 리프트 2',
-      Element: Orange2LiftPath,
-      webcamId: 'orange-station',
-      isOpen: true,
+      id: 34,
+      PathAsset: Orange2LiftPath,
     },
     {
-      id: 'orange3-lift',
-      level: '중급',
-      name: '오렌지 리프트 3',
-      Element: Orange3LiftPath,
-      webcamId: 'new-orange-station',
-      isOpen: true,
+      id: 35,
+      PathAsset: Orange3LiftPath,
     },
     {
-      id: 'new-orange-lift',
-      level: '상급',
-      name: '뉴오렌지 리프트',
-      Element: NewOrangeLiftPath,
-      isOpen: true,
+      id: 36,
+      PathAsset: NewOrangeLiftPath,
     },
     {
-      id: 'blue-lift',
-      level: '상급',
-      name: '블루 리프트 5',
-      Element: BlueLiftPath,
-      webcamId: 'blue-station',
-      isOpen: true,
+      id: 37,
+      PathAsset: BlueLiftPath,
     },
     {
-      id: 'silver6-lift',
-      level: '최상급',
-      name: '실버 리프트 6',
-      Element: Silver6LiftPath,
-      webcamId: '5-station',
-      isOpen: true,
+      id: 38,
+      PathAsset: Silver6LiftPath,
     },
     {
-      id: 'silver7-lift',
-      level: '중상급',
-      name: '실버 리프트 7',
-      Element: Silver7LiftPath,
-      webcamId: 'silver-station',
-      isOpen: true,
+      id: 39,
+      PathAsset: Silver7LiftPath,
     },
   ],
   webcams: [
     {
-      id: 'lemon-station',
-      name: '레몬 탑승장',
+      id: 1,
       position: {
         top: 'top-[84%]',
         left: 'left-[20%]',
@@ -88,8 +57,7 @@ export const JISAN: ResortConstant = {
       scale: 1,
     },
     {
-      id: 'orange-station',
-      name: '오렌지 탑승장',
+      id: 2,
       position: {
         top: 'top-[74%]',
         left: 'left-[31%]',
@@ -97,50 +65,44 @@ export const JISAN: ResortConstant = {
       scale: 1,
     },
     {
-      id: 'blue-station',
-      name: '블루 탑승장',
-      scale: 1,
-      position: {
-        top: 'top-[69%]',
-        left: 'left-[56%]',
-      },
-    },
-    {
-      id: 'silver-station',
-      name: '실버 탑승장',
-      scale: 1,
-      position: {
-        top: 'top-[72%]',
-        left: 'left-[68%]',
-      },
-    },
-    {
-      id: '5-station',
-      name: '5번 슬로프',
-      scale: 1,
-
-      position: {
-        top: 'top-[47%]',
-        left: 'left-[37%]',
-      },
-    },
-    {
-      id: 'new-orange-station',
-      name: '뉴오렌지 탑승장',
-      scale: 1,
+      id: 3,
       position: {
         top: 'top-[64%]',
         left: 'left-[38%]',
       },
+      scale: 1,
     },
     {
-      id: 'jisan-overview',
-      name: '지산 전경',
+      id: 4,
+      position: {
+        top: 'top-[69%]',
+        left: 'left-[56%]',
+      },
       scale: 1,
+    },
+    {
+      id: 5,
+      position: {
+        top: 'top-[47%]',
+        left: 'left-[37%]',
+      },
+      scale: 1,
+    },
+    {
+      id: 6,
+      position: {
+        top: 'top-[72%]',
+        left: 'left-[68%]',
+      },
+      scale: 1,
+    },
+    {
+      id: 7,
       position: {
         top: 'top-[38%]',
         left: 'left-[52%]',
       },
+      scale: 1,
     },
   ],
 };

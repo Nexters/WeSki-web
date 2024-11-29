@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import { createPortal } from 'react-dom';
 import { toast } from 'sonner';
-import type { Position, WebcamConstant } from '@/entities/slope/model';
+import type { Position, Webcam } from '@/entities/slope/model';
 import ArrowRightIcon from '@/shared/icons/arrow-right';
 import NeutralFace from '@/shared/icons/neutral-face';
 import { cn } from '@/shared/lib';
@@ -14,17 +14,17 @@ import SlopeVideo from './slope-video';
 
 interface SlopeWebcamProps {
   isWebview?: boolean;
-  webcam: WebcamConstant;
+  webcam: Webcam;
   webcamScale: number;
   isOpen: boolean;
   containerRef: React.RefObject<HTMLElement>;
-  onCameraClick: ({ scale, id }: { scale: number; id: string }) => void;
-  updateCameraPosition: (id: string, position: Position) => void;
+  onCameraClick: ({ scale, id }: { scale: number; id: number }) => void;
+  updateCameraPosition: (id: number, position: Position) => void;
 }
 
 const SlopeCamera = ({
   isWebview = false,
-  webcam: { scale, name, position, src, id },
+  webcam: { scale, name, position, url, id },
   webcamScale,
   isOpen,
   containerRef,
@@ -47,7 +47,7 @@ const SlopeCamera = ({
   const openVideo = () => {
     setOpenCamera();
 
-    if (!src) {
+    if (!url) {
       postAppMessage('선택한 웹캠은 아직 준비중 이에요', isWebview, (message) =>
         toast(
           <>
@@ -88,8 +88,11 @@ const SlopeCamera = ({
       {containerRef?.current &&
         selectedCamera.isOpen &&
         selectedCamera.id === id &&
-        src &&
-        createPortal(<SlopeVideo src={src} closeVideo={setCloseCamera} />, containerRef.current)}
+        url &&
+        createPortal(
+          <SlopeVideo src={`/api/webcam?url=${url}`} closeVideo={setCloseCamera} />,
+          containerRef.current
+        )}
     </>
   );
 };
