@@ -19,7 +19,7 @@ import Rainbow4Path from '../image/yongpyong/rainbow4-path';
 import RedParadisePath from '../image/yongpyong/red-paradise-path';
 import RedSlopePath from '../image/yongpyong/red-slope-path';
 import SilverParadisePath from '../image/yongpyong/silver-paradise-path';
-// import SilverSlopePath from '../image/yongpyong/silver-slope-path';
+import SilverSlopePath from '../image/yongpyong/silver-slope-path';
 // import SummitLandTheGreenPath from '../image/yongpyong/summit-land-the-green-path';
 import YellowSlopePath from '../image/yongpyong/yellow-slope-path';
 import type { ResortConstant } from '../model';
@@ -28,83 +28,83 @@ export const YONGPYONG: ResortConstant = {
   MapComponent: MapImage,
   slopes: [
     {
-      id: 40,
-      PathAsset: GoldValleyPath,
-    },
-    {
-      id: 41,
-      PathAsset: GoldParadisePath,
-    },
-    {
-      id: 42,
-      PathAsset: NewGoldSlopePath,
-    },
-    {
-      id: 43,
-      PathAsset: GoldFantasticPath,
-    },
-    {
-      id: 44,
-      PathAsset: RedParadisePath,
-    },
-    {
-      id: 45,
-      PathAsset: RedSlopePath,
-    },
-    {
-      id: 46,
-      PathAsset: NewRedSlopePath,
-    },
-    {
-      id: 47,
-      PathAsset: BlueSlopePath,
-    },
-    {
-      id: 48,
-      PathAsset: PinkSlopePath,
-    },
-    {
-      id: 49,
+      id: 95,
       PathAsset: YellowSlopePath,
     },
     {
-      id: 50,
+      id: 96,
       PathAsset: NewYellowSlopePath,
     },
-    // {
-    //   id: 'silver-slope',
-    //   PathAsset: SilverSlopePath,
-    // },
     {
-      id: 51,
-      PathAsset: SilverParadisePath,
-    },
-    {
-      id: 52,
-      PathAsset: RainbowParadisePath,
-    },
-    {
-      id: 53,
-      PathAsset: Rainbow1Path,
-    },
-    {
-      id: 54,
-      PathAsset: Rainbow2Path,
-    },
-    {
-      id: 55,
-      PathAsset: Rainbow3Path,
-    },
-    {
-      id: 56,
-      PathAsset: Rainbow4Path,
-    },
-    {
-      id: 57,
+      id: 97,
       PathAsset: MegaGreenPath,
     },
     {
-      id: 58,
+      id: 98,
+      PathAsset: PinkSlopePath,
+    },
+    {
+      id: 99,
+      PathAsset: RedParadisePath,
+    },
+    {
+      id: 100,
+      PathAsset: GoldParadisePath,
+    },
+    {
+      id: 101,
+      PathAsset: SilverParadisePath,
+    },
+    {
+      id: 102,
+      PathAsset: RainbowParadisePath,
+    },
+    {
+      id: 103,
+      PathAsset: GoldFantasticPath,
+    },
+    {
+      id: 104,
+      PathAsset: NewRedSlopePath,
+    },
+    {
+      id: 105,
+      PathAsset: BlueSlopePath,
+    },
+    {
+      id: 106,
+      PathAsset: GoldValleyPath,
+    },
+    {
+      id: 107,
+      PathAsset: Rainbow4Path,
+    },
+    {
+      id: 108,
+      PathAsset: RedSlopePath,
+    },
+    {
+      id: 109,
+      PathAsset: SilverSlopePath,
+    },
+    {
+      id: 110,
+      PathAsset: NewGoldSlopePath,
+    },
+    {
+      id: 111,
+      PathAsset: Rainbow1Path,
+    },
+    {
+      id: 112,
+      PathAsset: Rainbow2Path,
+    },
+    {
+      id: 113,
+      PathAsset: Rainbow3Path,
+    },
+    {
+      id: 114,
       PathAsset: DragonParkPath,
     },
     // {
