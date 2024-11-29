@@ -20,9 +20,10 @@ const WebcamSlopeList = ({ className, slopes, webcams, onItemClick }: WebcamSlop
   return (
     <ul className={cn('w-full md:grid md:grid-cols-2', className)}>
       {slopes.map((item) => {
-        const isOpen = [item.isDayOperating, item.isNightOperating, item.isLateNightOperating].some(
-          (time) => time
-        );
+        // const isOpen = [item.isDayOperating, item.isNightOperating, item.isLateNightOperating].some(
+        //   (time) => time
+        // );
+        const isOpen = true;
         return (
           <li
             key={item.id}
