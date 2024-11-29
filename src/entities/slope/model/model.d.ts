@@ -1,4 +1,4 @@
-export type Level = '초급' | '초중급' | '중급' | '중상급' | '상급' | '최상급' | '파크';
+export type Level = '초급' | '초중급' | '중급' | '중상급' | '상급' | '최상급' | '파크' | '익스트림';
 
 export type SlopeRaw = {
   slopeId: number;

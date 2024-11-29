@@ -31,6 +31,10 @@ const LEVEL: Record<Level, { text: string; color: string }> = {
     text: '파크',
     color: 'bg-sub-2',
   },
+  익스트림: {
+    text: '익스트림',
+    color: 'bg-gray-70',
+  },
 };
 
 interface LevelChipProps {
