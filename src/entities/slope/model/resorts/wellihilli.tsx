@@ -13,12 +13,12 @@ import ChallengeSlope4Path from '../image/wellihilli/challenge-slope4-path';
 import ChallengeSlope5Path from '../image/wellihilli/challenge-slope5-path';
 import DeltaSlopePlusPath from '../image/wellihilli/delta-slope-plus-path';
 import DeltaSlope1Path from '../image/wellihilli/delta-slope1-path';
-// import DeltaSlope2Path from '../image/wellihilli/delta-slope2-path';
+import DeltaSlope2Path from '../image/wellihilli/delta-slope2-path';
 // import EchoSlopePlusPath from '../image/wellihilli/echo-slope-plus-path';
 import EchoSlope1Path from '../image/wellihilli/echo-slope1-path';
 import EchoSlope2Path from '../image/wellihilli/echo-slope2-path';
 import EchoSlope3Path from '../image/wellihilli/echo-slope3-path';
-import HalfPipePath from '../image/wellihilli/half-pipe-path';
+// import HalfPipePath from '../image/wellihilli/half-pipe-path';
 import StarExpress1Path from '../image/wellihilli/star-express1-path';
 import StarExpress2Path from '../image/wellihilli/star-express2-path';
 import type { ResortConstant } from '../model';
@@ -27,47 +27,47 @@ export const WELLIHILLI: ResortConstant = {
   MapComponent: WellihilliMap,
   slopes: [
     {
-      id: 94,
+      id: 39,
       PathAsset: AlphaSlope1Path,
     },
     {
-      id: 95,
+      id: 40,
       PathAsset: AlphaSlope2Path,
     },
     {
-      id: 96,
+      id: 41,
       PathAsset: AlphaSlope3Path,
     },
     {
-      id: 97,
+      id: 42,
       PathAsset: BravoSlope1Path,
     },
     {
-      id: 98,
+      id: 43,
       PathAsset: BravoSlope2Path,
     },
     {
-      id: 99,
+      id: 44,
       PathAsset: DeltaSlope1Path,
     },
-    // {
-    //   id: 'delta-slope2',
-    //   PathAsset: DeltaSlope2Path,
-    // },
     {
-      id: 100,
+      id: 45,
+      PathAsset: DeltaSlope2Path,
+    },
+    {
+      id: 46,
       PathAsset: DeltaSlopePlusPath,
     },
     {
-      id: 101,
+      id: 47,
       PathAsset: EchoSlope1Path,
     },
     {
-      id: 102,
+      id: 48,
       PathAsset: EchoSlope2Path,
     },
     {
-      id: 103,
+      id: 49,
       PathAsset: EchoSlope3Path,
     },
     // {
@@ -75,37 +75,37 @@ export const WELLIHILLI: ResortConstant = {
     //   PathAsset: EchoSlopePlusPath,
     // },
     {
-      id: 104,
+      id: 50,
       PathAsset: ChallengeSlope1Path,
     },
     {
-      id: 105,
+      id: 51,
       PathAsset: ChallengeSlope2Path,
     },
     {
-      id: 106,
+      id: 52,
       PathAsset: ChallengeSlope3Path,
     },
     {
-      id: 107,
+      id: 53,
       PathAsset: ChallengeSlope4Path,
     },
     {
-      id: 108,
+      id: 54,
       PathAsset: ChallengeSlope5Path,
     },
     {
-      id: 109,
+      id: 55,
       PathAsset: StarExpress1Path,
     },
     {
-      id: 110,
+      id: 56,
       PathAsset: StarExpress2Path,
     },
-    {
-      id: 111,
-      PathAsset: HalfPipePath,
-    },
+    // {
+    //   id: 111,
+    //   PathAsset: HalfPipePath,
+    // },
   ],
   webcams: [
     {

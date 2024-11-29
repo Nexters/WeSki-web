@@ -15,35 +15,35 @@ export const JISAN: ResortConstant = {
   MapComponent: MapImage,
   slopes: [
     {
-      id: 32,
+      id: 1,
       PathAsset: Lemon1LiftPath,
     },
     {
-      id: 33,
+      id: 2,
       PathAsset: Lemon1Sub1LiftPath,
     },
     {
-      id: 34,
+      id: 3,
       PathAsset: Orange2LiftPath,
     },
     {
-      id: 35,
+      id: 4,
       PathAsset: Orange3LiftPath,
     },
     {
-      id: 36,
+      id: 5,
       PathAsset: NewOrangeLiftPath,
     },
     {
-      id: 37,
+      id: 6,
       PathAsset: BlueLiftPath,
     },
     {
-      id: 38,
+      id: 7,
       PathAsset: Silver6LiftPath,
     },
     {
-      id: 39,
+      id: 8,
       PathAsset: Silver7LiftPath,
     },
   ],

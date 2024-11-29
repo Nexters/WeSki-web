@@ -14,31 +14,31 @@ export const EDEN: ResortConstant = {
   MapComponent: MapImage,
   slopes: [
     {
-      id: 145,
+      id: 135,
       PathAsset: BasicSlopePath,
     },
     {
-      id: 146,
+      id: 136,
       PathAsset: MainSlopePath,
     },
     {
-      id: 147,
+      id: 137,
       PathAsset: JupiterSlopePath,
     },
     {
-      id: 148,
+      id: 138,
       PathAsset: SaturnSlopePath,
     },
     {
-      id: 149,
+      id: 139,
       PathAsset: UranusSlopePath,
     },
     {
-      id: 150,
+      id: 140,
       PathAsset: MercurySlopePath,
     },
     {
-      id: 151,
+      id: 141,
       PathAsset: VenusSlopePath,
     },
   ],

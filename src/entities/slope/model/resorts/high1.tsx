@@ -23,67 +23,67 @@ export const HIGH1: ResortConstant = {
   MapComponent: High1Map,
   slopes: [
     {
-      id: 1,
+      id: 75,
       PathAsset: Zeus1SlopPath,
     },
     {
-      id: 2,
+      id: 76,
       PathAsset: Zeus2SlopPath,
     },
     {
-      id: 3,
+      id: 77,
       PathAsset: Zeus3SlopPath,
     },
     {
-      id: 4,
+      id: 78,
       PathAsset: Zeus3Sub1SlopPath,
     },
     {
-      id: 5,
+      id: 79,
       PathAsset: Victoria1SlopPath,
     },
     {
-      id: 6,
+      id: 80,
       PathAsset: Victoria2SlopPath,
     },
     {
-      id: 8,
+      id: 82,
       PathAsset: Hera1SlopPath,
     },
     {
-      id: 9,
+      id: 83,
       PathAsset: Hera2SlopPath,
     },
     {
-      id: 10,
+      id: 84,
       PathAsset: Hera3SlopPath,
     },
     {
-      id: 11,
+      id: 85,
       PathAsset: Apollo1SlopPath,
     },
     {
-      id: 12,
+      id: 86,
       PathAsset: Apollo2SlopPath,
     },
     {
-      id: 13,
+      id: 87,
       PathAsset: Apollo3SlopPath,
     },
     {
-      id: 14,
+      id: 88,
       PathAsset: Apollo4SlopPath,
     },
     {
-      id: 16,
+      id: 90,
       PathAsset: Apollo6SlopPath,
     },
     {
-      id: 18,
+      id: 92,
       PathAsset: Athena2SlopPath,
     },
     {
-      id: 19,
+      id: 93,
       PathAsset: Athena3SlopPath,
     },
   ],

@@ -34,83 +34,83 @@ export const MUJU: ResortConstant = {
   MapComponent: MujuMap,
   slopes: [
     {
-      id: 74,
+      id: 115,
       PathAsset: EasternSlopePath,
     },
     {
-      id: 75,
+      id: 116,
       PathAsset: SoyokgihangPath,
     },
     {
-      id: 76,
+      id: 117,
       PathAsset: SpitchLowestPath,
     },
     {
-      id: 77,
+      id: 118,
       PathAsset: WesternSlopePath,
     },
     {
-      id: 78,
+      id: 119,
       PathAsset: SundownSlopePath,
     },
     {
-      id: 79,
+      id: 120,
       PathAsset: SilkroadPath,
     },
     {
-      id: 80,
+      id: 121,
       PathAsset: RookiehillSlopePath,
     },
     {
-      id: 81,
+      id: 122,
       PathAsset: TurboSlopePath,
     },
     {
-      id: 82,
+      id: 123,
       PathAsset: ConnectionSlopePath,
     },
     {
-      id: 83,
+      id: 124,
       PathAsset: MinuetPath,
     },
     {
-      id: 84,
+      id: 125,
       PathAsset: FreewayPath,
     },
     {
-      id: 85,
+      id: 126,
       PathAsset: YamagaSlopePath,
     },
     {
-      id: 86,
+      id: 127,
       PathAsset: PanoramaPath,
     },
     {
-      id: 87,
+      id: 128,
       PathAsset: RaidersLowestPath,
     },
     {
-      id: 88,
+      id: 129,
       PathAsset: MozartPath,
     },
     {
-      id: 89,
+      id: 130,
       PathAsset: WaltzSlopePath,
     },
     {
-      id: 90,
+      id: 131,
       PathAsset: AllegroPath,
     },
     {
-      id: 91,
+      id: 132,
       PathAsset: RaidersHighestPath,
     },
     {
-      id: 92,
+      id: 133,
       PathAsset: PolkaSlopePath,
     },
     {
-      id: 93,
+      id: 134,
       PathAsset: CadenzaSlopePath,
     },
     // {
