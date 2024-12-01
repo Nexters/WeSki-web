@@ -3,6 +3,7 @@
 import { useQuery } from '@tanstack/react-query';
 import { useMemo } from 'react';
 import SlopeStatusHeader from '@/widgets/header/ui/slope-status-header';
+import SlopeStatusTime from '@/widgets/header/ui/slope-status-time';
 import useMapPinch from '@/features/slope/hooks/useMapPinch';
 import SlopeMap from '@/features/slope/ui/slope-map';
 import SlopeStatusList from '@/features/slope/ui/slope-status-list';
@@ -11,7 +12,6 @@ import { slopeApi } from '@/entities/slope';
 import type { Slope } from '@/entities/slope/model';
 import { RESORT_DOMAIN } from '@/entities/slope/model';
 import { cn } from '@/shared/lib';
-import SlopeStatusTime from '@/widgets/header/ui/slope-status-time';
 
 const SlopeStatusPage = ({ resortId }: { resortId: number }) => {
   const { ref, style, containerRef } = useMapPinch();
