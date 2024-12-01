@@ -60,7 +60,11 @@ const SlopeCamera = ({
 
   return (
     <>
-      <div ref={cameraRef} className={cn('absolute z-10', position.top, position.left)}>
+      <div
+        ref={cameraRef}
+        className={cn('absolute z-10', 'top-[--top]', 'left-[--left]')}
+        style={{ '--top': `${position[0]}%`, '--left': `${position[1]}%` } as React.CSSProperties}
+      >
         <div className={cn('relative')}>
           <Tooltip
             trigger={

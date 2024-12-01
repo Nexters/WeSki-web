@@ -46,28 +46,19 @@ export const EDEN: ResortConstant = {
     {
       id: 1,
       key: '베이직 슬로프',
-      position: {
-        top: 'top-[52%]',
-        left: 'left-[35%]',
-      },
+      position: [52, 35],
       scale: 1,
     },
     {
       id: 2,
       key: '쥬피터 슬로프',
-      position: {
-        top: 'top-[16%]',
-        left: 'left-[50%]',
-      },
+      position: [16, 50],
       scale: 1,
     },
     {
       id: 3,
       key: '우라누스 슬로프',
-      position: {
-        top: 'top-[32%]',
-        left: 'left-[77%]',
-      },
+      position: [32, 77],
       scale: 1,
     },
   ],

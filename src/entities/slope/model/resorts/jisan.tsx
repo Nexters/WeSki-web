@@ -51,64 +51,43 @@ export const JISAN: ResortConstant = {
     {
       id: 1,
       key: '레몬 탑승장',
-      position: {
-        top: 'top-[84%]',
-        left: 'left-[20%]',
-      },
+      position: [84, 20],
       scale: 1,
     },
     {
       id: 2,
       key: '오렌지 탑승장',
-      position: {
-        top: 'top-[74%]',
-        left: 'left-[31%]',
-      },
+      position: [74, 31],
       scale: 1,
     },
     {
       id: 3,
       key: '뉴오렌지 탑승장',
-      position: {
-        top: 'top-[64%]',
-        left: 'left-[38%]',
-      },
+      position: [64, 38],
       scale: 1,
     },
     {
       id: 4,
       key: '블루 탑승장',
-      position: {
-        top: 'top-[69%]',
-        left: 'left-[56%]',
-      },
+      position: [69, 56],
       scale: 1,
     },
     {
       id: 5,
       key: '5번 슬로프',
-      position: {
-        top: 'top-[47%]',
-        left: 'left-[37%]',
-      },
+      position: [47, 37],
       scale: 1,
     },
     {
       id: 6,
       key: '실버 탑승장',
-      position: {
-        top: 'top-[72%]',
-        left: 'left-[68%]',
-      },
+      position: [72, 68],
       scale: 1,
     },
     {
       id: 7,
       key: '지산 전경',
-      position: {
-        top: 'top-[38%]',
-        left: 'left-[52%]',
-      },
+      position: [38, 52],
       scale: 1,
     },
   ],

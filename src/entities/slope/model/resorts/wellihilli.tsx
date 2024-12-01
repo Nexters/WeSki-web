@@ -111,46 +111,31 @@ export const WELLIHILLI: ResortConstant = {
     {
       id: 5,
       key: '정상광장',
-      position: {
-        top: 'top-[4%]',
-        left: 'left-[56%]',
-      },
+      position: [4, 56],
       scale: 1,
     },
     {
       id: 2,
       key: '하프파이프',
-      position: {
-        top: 'top-[81%]',
-        left: 'left-[31%]',
-      },
+      position: [81, 31],
       scale: 1,
     },
     {
       id: 6,
       key: '패밀리슬로프',
-      position: {
-        top: 'top-[85%]',
-        left: 'left-[39%]',
-      },
+      position: [85, 39],
       scale: 1,
     },
     {
       id: 4,
       key: '야외광장',
-      position: {
-        top: 'top-[73%]',
-        left: 'left-[19%]',
-      },
+      position: [73, 19],
       scale: 1,
     },
     {
       id: 5,
       key: 'A1/A3 슬로프',
-      position: {
-        top: 'top-[62%]',
-        left: 'left-[8%]',
-      },
+      position: [62, 8],
       scale: 1,
     },
   ],

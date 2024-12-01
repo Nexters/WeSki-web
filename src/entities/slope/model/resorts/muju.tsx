@@ -146,73 +146,49 @@ export const MUJU: ResortConstant = {
     {
       id: 1,
       key: '설천상단 슬로프',
-      position: {
-        top: 'top-[16%]',
-        left: 'left-[23%]',
-      },
+      position: [16, 23],
       scale: 2,
     },
     {
       id: 2,
       key: '설천봉 정상',
-      position: {
-        top: 'top-[12%]',
-        left: 'left-[37%]',
-      },
+      position: [12, 37],
       scale: 2,
     },
     {
       id: 3,
       key: '모차르트, 미뉴에트',
-      position: {
-        top: 'top-[30%]',
-        left: 'left-[27%]',
-      },
+      position: [30, 27],
       scale: 2,
     },
     {
       id: 4,
       key: '만선봉 정상',
-      position: {
-        top: 'top-[32%]',
-        left: 'left-[51%]',
-      },
+      position: [32, 51],
       scale: 2,
     },
     {
       id: 5,
       key: '하이디 하우스',
-      position: {
-        top: 'top-[45%]',
-        left: 'left-[70%]',
-      },
+      position: [45, 70],
       scale: 2,
     },
     {
       id: 6,
       key: '서역기행, 썬다운',
-      position: {
-        top: 'top-[65%]',
-        left: 'left-[68%]',
-      },
+      position: [65, 68],
       scale: 2,
     },
     {
       id: 7,
       key: '만선 하우스',
-      position: {
-        top: 'top-[78%]',
-        left: 'left-[47%]',
-      },
+      position: [78, 47],
       scale: 2,
     },
     {
       id: 8,
       key: '설천 하우스',
-      position: {
-        top: 'top-[74%]',
-        left: 'left-[28%]',
-      },
+      position: [74, 28],
       scale: 2,
     },
   ],

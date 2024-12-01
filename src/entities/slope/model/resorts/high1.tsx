@@ -91,163 +91,109 @@ export const HIGH1: ResortConstant = {
     {
       id: 1,
       key: '제우스2번 슬로프 입구',
-      position: {
-        top: 'top-[6%]',
-        left: 'left-[45%]',
-      },
+      position: [6, 45],
       scale: 2,
     },
     {
       id: 2,
       key: '헤라2번 슬로프 입구',
-      position: {
-        top: 'top-[10%]',
-        left: 'left-[50%]',
-      },
+      position: [10, 50],
       scale: 2,
     },
     {
       id: 3,
       key: '하이원 탑',
-      position: {
-        top: 'top-[6%]',
-        left: 'left-[54%]',
-      },
+      position: [6, 54],
       scale: 2,
     },
     {
       id: 4,
       key: '아테나1번 슬로프',
-      position: {
-        top: 'top-[30%]',
-        left: 'left-[65%]',
-      },
+      position: [30, 65],
       scale: 2,
     },
     {
       id: 5,
       key: '마운틴 허브 베이스',
-      position: {
-        top: 'top-[35%]',
-        left: 'left-[61%]',
-      },
+      position: [35, 61],
       scale: 2,
     },
     {
       id: 6,
       key: '아테나2번 슬로프',
-      position: {
-        top: 'top-[40%]',
-        left: 'left-[66%]',
-      },
+      position: [40, 66],
       scale: 2,
     },
     {
       id: 7,
       key: '마운틴 베이스',
-      position: {
-        top: 'top-[68%]',
-        left: 'left-[78%]',
-      },
+      position: [68, 78],
       scale: 2,
     },
     {
       id: 8,
       key: '아테나2번 슬로프 하단',
-      position: {
-        top: 'top-[76%]',
-        left: 'left-[73%]',
-      },
+      position: [76, 73],
       scale: 2,
     },
     {
       id: 9,
       key: '빅토리아 상단',
-      position: {
-        top: 'top-[17%]',
-        left: 'left-[17%]',
-      },
+      position: [17, 17],
       scale: 2,
     },
     {
       id: 10,
       key: '제우스 2번',
-      position: {
-        top: 'top-[34%]',
-        left: 'left-[38%]',
-      },
+      position: [34, 38],
       scale: 2,
     },
     {
       id: 11,
       key: '밸리 허브 베이스',
-      position: {
-        top: 'top-[40%]',
-        left: 'left-[40%]',
-      },
+      position: [40, 40],
       scale: 2,
     },
     {
       id: 12,
       key: '빅토리아1번 슬로프',
-      position: {
-        top: 'top-[48%]',
-        left: 'left-[43%]',
-      },
+      position: [48, 43],
       scale: 2,
     },
     {
       id: 13,
       key: '제우스3번 슬로프',
-      position: {
-        top: 'top-[50%]',
-        left: 'left-[36%]',
-      },
+      position: [50, 36],
       scale: 2,
     },
     {
       id: 14,
       key: '제우스3번 중단부',
-      position: {
-        top: 'top-[58%]',
-        left: 'left-[40%]',
-      },
+      position: [58, 40],
       scale: 2,
     },
     {
       id: 15,
       key: '아폴로4번 중단부',
-      position: {
-        top: 'top-[58%]',
-        left: 'left-[52%]',
-      },
+      position: [58, 52],
       scale: 2,
     },
     {
       id: 16,
       key: '아폴로 베이스',
-      position: {
-        top: 'top-[71%]',
-        left: 'left-[44%]',
-      },
+      position: [71, 44],
       scale: 2,
     },
     {
       id: 17,
       key: '제우스3번 하단',
-      position: {
-        top: 'top-[86%]',
-        left: 'left-[46%]',
-      },
+      position: [86, 46],
       scale: 2,
     },
     {
       id: 18,
       key: '밸리 베이스',
-      position: {
-        top: 'top-[86%]',
-        left: 'left-[39%]',
-      },
+      position: [86, 39],
       scale: 2,
     },
   ],

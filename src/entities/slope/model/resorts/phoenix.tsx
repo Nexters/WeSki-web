@@ -86,64 +86,43 @@ export const PHOENIX: ResortConstant = {
     {
       id: 1,
       key: '스패로우',
-      position: {
-        top: 'top-[45%]',
-        left: 'left-[87%]',
-      },
+      position: [45, 87],
       scale: 1,
     },
     {
       id: 2,
       key: '파노라마',
-      position: {
-        top: 'top-[15%]',
-        left: 'left-[88%]',
-      },
+      position: [15, 88],
       scale: 1,
     },
     {
       id: 3,
       key: '불새마루존',
-      position: {
-        top: 'top-[31%]',
-        left: 'left-[9%]',
-      },
+      position: [31, 9],
       scale: 1,
     },
     {
       id: 4,
       key: '스키베이스',
-      position: {
-        top: 'top-[83%]',
-        left: 'left-[79%]',
-      },
+      position: [83, 79],
       scale: 1,
     },
     {
       id: 5,
       key: '펭귄 슬로프',
-      position: {
-        top: 'top-[79%]',
-        left: 'left-[43%]',
-      },
+      position: [79, 43],
       scale: 1,
     },
     {
       id: 6,
       key: '몽블랑 정상',
-      position: {
-        top: 'top-[7%]',
-        left: 'left-[53%]',
-      },
+      position: [7, 53],
       scale: 1,
     },
     {
       id: 7,
       key: '챔피온',
-      position: {
-        top: 'top-[26%]',
-        left: 'left-[66%]',
-      },
+      position: [26, 66],
       scale: 1,
     },
   ],

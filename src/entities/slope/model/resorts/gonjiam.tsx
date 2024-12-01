@@ -61,47 +61,32 @@ export const GONJIAM: ResortConstant = {
     {
       id: 1,
       key: '정상 휴게소',
-      position: {
-        top: 'top-[7%]',
-        left: 'left-[20%]',
-      },
+      position: [7, 20],
       scale: 1,
     },
     {
       id: 2,
       key: '정상부 슬로프',
-      position: {
-        top: 'top-[34%]',
-        left: 'left-[21%]',
-      },
+      position: [34, 21],
       scale: 1,
     },
 
     {
       id: 3,
       key: '중간 슬로프',
-      position: {
-        top: 'top-[60%]',
-        left: 'left-[43%]',
-      },
+      position: [60, 43],
       scale: 1,
     },
     {
       id: 4,
       key: '초중급 베이스',
-      position: {
-        top: 'top-[82%]',
-        left: 'left-[51%]',
-      },
+      position: [82, 51],
       scale: 1,
     },
     {
       id: 5,
       key: '중상급 베이스',
-      position: {
-        top: 'top-[85%]',
-        left: 'left-[43%]',
-      },
+      position: [85, 43],
       scale: 1,
     },
   ],

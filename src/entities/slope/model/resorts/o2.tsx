@@ -76,37 +76,25 @@ export const O2: ResortConstant = {
     {
       id: 1,
       key: '으뜸마루',
-      position: {
-        top: 'top-[5%]',
-        left: 'left-[75%]',
-      },
+      position: [5, 75],
       scale: 1,
     },
     {
       id: 2,
       key: '버금마루',
-      position: {
-        top: 'top-[23%]',
-        left: 'left-[46%]',
-      },
+      position: [23, 46],
       scale: 1,
     },
     {
       id: 3,
       key: '드림1',
-      position: {
-        top: 'top-[80%]',
-        left: 'left-[48%]',
-      },
+      position: [80, 48],
       scale: 1,
     },
     {
       id: 4,
       key: '오투 스키하우스',
-      position: {
-        top: 'top-[76%]',
-        left: 'left-[14%]',
-      },
+      position: [76, 14],
       scale: 1,
     },
   ],

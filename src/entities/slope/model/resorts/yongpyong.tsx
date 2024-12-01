@@ -116,91 +116,61 @@ export const YONGPYONG: ResortConstant = {
     {
       id: 3,
       key: '옐로우 슬로프',
-      position: {
-        top: 'top-[71%]',
-        left: 'left-[37%]',
-      },
+      position: [71, 37],
       scale: 2,
     },
     {
       id: 4,
       key: '핑크 슬로프',
-      position: {
-        top: 'top-[64%]',
-        left: 'left-[33%]',
-      },
+      position: [64, 33],
       scale: 2,
     },
     {
       id: 5,
       key: '베이스 전경',
-      position: {
-        top: 'top-[84%]',
-        left: 'left-[34%]',
-      },
+      position: [84, 34],
       scale: 2,
     },
     {
       id: 6,
       key: '용평 진입로',
-      position: {
-        top: 'top-[86%]',
-        left: 'left-[26%]',
-      },
+      position: [86, 26],
       scale: 2,
     },
     {
       id: 7,
       key: '골드 슬로프 전경',
-      position: {
-        top: 'top-[56%]',
-        left: 'left-[17%]',
-      },
+      position: [56, 17],
       scale: 2,
     },
     {
       id: 8,
       key: '레드 슬로프',
-      position: {
-        top: 'top-[57%]',
-        left: 'left-[29%]',
-      },
+      position: [57, 29],
       scale: 2,
     },
     {
       id: 9,
       key: '레인보우 정상',
-      position: {
-        top: 'top-[2%]',
-        left: 'left-[61%]',
-      },
+      position: [2, 61],
       scale: 2,
     },
     {
       id: 10,
       key: '레인보우 전경',
-      position: {
-        top: 'top-[41%]',
-        left: 'left-[79%]',
-      },
+      position: [41, 79],
       scale: 2,
     },
     {
       id: 11,
       key: '메가 그린 슬로프',
-      position: {
-        top: 'top-[59%]',
-        left: 'left-[56%]',
-      },
+      position: [59, 56],
       scale: 2,
     },
     {
       id: 12,
       key: '슬로프 정상',
-      position: {
-        top: 'top-[26%]',
-        left: 'left-[30%]',
-      },
+      position: [26, 30],
       scale: 2,
     },
   ],

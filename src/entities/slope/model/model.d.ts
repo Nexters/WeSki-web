@@ -39,10 +39,7 @@ export type WebcamConstant = {
   id: number;
   key?: string;
   scale: number;
-  position: {
-    top: string;
-    left: string;
-  };
+  position: [number, number];
 };
 
 export type SlopeConstant = {

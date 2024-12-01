@@ -61,28 +61,19 @@ export const ELYSIAN_GANGCHON: ResortConstant = {
     {
       id: 1,
       key: '알프하우스',
-      position: {
-        top: 'top-[7%]',
-        left: 'left-[27%]',
-      },
+      position: [7, 27],
       scale: 1,
     },
     {
       id: 2,
       key: '서브하우스',
-      position: {
-        top: 'top-[86%]',
-        left: 'left-[19%]',
-      },
+      position: [86, 19],
       scale: 1,
     },
     {
       id: 3,
       key: '스키하우스',
-      position: {
-        top: 'top-[83%]',
-        left: 'left-[80%]',
-      },
+      position: [83, 80],
       scale: 1,
     },
   ],
