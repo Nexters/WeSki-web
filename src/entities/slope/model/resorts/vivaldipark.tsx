@@ -73,7 +73,7 @@ export const VIVALDIPARK: ResortConstant = {
     },
     {
       id: 5,
-      key: '테크노하단',
+      key: '테크노',
       position: [64, 51],
       scale: 1,
     },
@@ -91,27 +91,8 @@ export const VIVALDIPARK: ResortConstant = {
     },
     {
       id: 9,
-      key: '스키월드 정상',
+      key: '스키장 정상',
       position: [14, 37],
-      scale: 1,
-    },
-    {
-      id: 3,
-      key: '클래식',
-      position: [30, 30],
-      scale: 1,
-    },
-
-    {
-      id: 7,
-      key: '펑키',
-      position: [44, 46],
-      scale: 1,
-    },
-    {
-      id: 10,
-      key: '테크노 상단',
-      position: [24, 48],
       scale: 1,
     },
   ],

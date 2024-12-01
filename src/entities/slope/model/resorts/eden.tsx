@@ -61,5 +61,11 @@ export const EDEN: ResortConstant = {
       position: [32, 77],
       scale: 1,
     },
+    {
+      id: 4,
+      key: '슬로프 광장',
+      position: [83, 55],
+      scale: 1,
+    },
   ],
 };
