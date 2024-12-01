@@ -55,62 +55,7 @@ export const VIVALDIPARK: ResortConstant = {
   webcams: [
     {
       id: 1,
-      position: {
-        top: 'top-[14%]',
-        left: 'left-[37%]',
-      },
-      scale: 1,
-    },
-    {
-      id: 2,
-      position: {
-        top: 'top-[24%]',
-        left: 'left-[48%]',
-      },
-      scale: 1,
-    },
-    {
-      id: 3,
-      position: {
-        top: 'top-[30%]',
-        left: 'left-[30%]',
-      },
-      scale: 1,
-    },
-    {
-      id: 4,
-      position: {
-        top: 'top-[34%]',
-        left: 'left-[55%]',
-      },
-      scale: 1,
-    },
-    {
-      id: 5,
-      position: {
-        top: 'top-[44%]',
-        left: 'left-[46%]',
-      },
-      scale: 1,
-    },
-    {
-      id: 6,
-      position: {
-        top: 'top-[56%]',
-        left: 'left-[41%]',
-      },
-      scale: 1,
-    },
-    {
-      id: 7,
-      position: {
-        top: 'top-[64%]',
-        left: 'left-[51%]',
-      },
-      scale: 1,
-    },
-    {
-      id: 8,
+      key: '재즈',
       position: {
         top: 'top-[62%]',
         left: 'left-[21%]',
@@ -118,7 +63,17 @@ export const VIVALDIPARK: ResortConstant = {
       scale: 1,
     },
     {
-      id: 9,
+      id: 2,
+      key: '발라드',
+      position: {
+        top: 'top-[56%]',
+        left: 'left-[41%]',
+      },
+      scale: 1,
+    },
+    {
+      id: 4,
+      key: '블루스',
       position: {
         top: 'top-[62%]',
         left: 'left-[77%]',
@@ -126,10 +81,66 @@ export const VIVALDIPARK: ResortConstant = {
       scale: 1,
     },
     {
-      id: 10,
+      id: 5,
+      key: '테크노하단',
+      position: {
+        top: 'top-[64%]',
+        left: 'left-[51%]',
+      },
+      scale: 1,
+    },
+    {
+      id: 6,
+      key: '힙합',
+      position: {
+        top: 'top-[34%]',
+        left: 'left-[55%]',
+      },
+      scale: 1,
+    },
+    {
+      id: 8,
+      key: '슬로프 전경',
       position: {
         top: 'top-[76%]',
         left: 'left-[45%]',
+      },
+      scale: 1,
+    },
+    {
+      id: 9,
+      key: '스키월드 정상',
+      position: {
+        top: 'top-[14%]',
+        left: 'left-[37%]',
+      },
+      scale: 1,
+    },
+    {
+      id: 3,
+      key: '클래식',
+      position: {
+        top: 'top-[30%]',
+        left: 'left-[30%]',
+      },
+      scale: 1,
+    },
+
+    {
+      id: 7,
+      key: '펑키',
+      position: {
+        top: 'top-[44%]',
+        left: 'left-[46%]',
+      },
+      scale: 1,
+    },
+    {
+      id: 10,
+      key: '테크노 상단',
+      position: {
+        top: 'top-[24%]',
+        left: 'left-[48%]',
       },
       scale: 1,
     },

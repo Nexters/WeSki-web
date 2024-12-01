@@ -145,6 +145,7 @@ export const MUJU: ResortConstant = {
   webcams: [
     {
       id: 1,
+      key: '설천상단 슬로프',
       position: {
         top: 'top-[16%]',
         left: 'left-[23%]',
@@ -153,6 +154,7 @@ export const MUJU: ResortConstant = {
     },
     {
       id: 2,
+      key: '설천봉 정상',
       position: {
         top: 'top-[12%]',
         left: 'left-[37%]',
@@ -161,6 +163,7 @@ export const MUJU: ResortConstant = {
     },
     {
       id: 3,
+      key: '모차르트, 미뉴에트',
       position: {
         top: 'top-[30%]',
         left: 'left-[27%]',
@@ -169,6 +172,7 @@ export const MUJU: ResortConstant = {
     },
     {
       id: 4,
+      key: '만선봉 정상',
       position: {
         top: 'top-[32%]',
         left: 'left-[51%]',
@@ -177,6 +181,7 @@ export const MUJU: ResortConstant = {
     },
     {
       id: 5,
+      key: '하이디 하우스',
       position: {
         top: 'top-[45%]',
         left: 'left-[70%]',
@@ -185,6 +190,7 @@ export const MUJU: ResortConstant = {
     },
     {
       id: 6,
+      key: '서역기행, 썬다운',
       position: {
         top: 'top-[65%]',
         left: 'left-[68%]',
@@ -193,6 +199,7 @@ export const MUJU: ResortConstant = {
     },
     {
       id: 7,
+      key: '만선 하우스',
       position: {
         top: 'top-[78%]',
         left: 'left-[47%]',
@@ -201,6 +208,7 @@ export const MUJU: ResortConstant = {
     },
     {
       id: 8,
+      key: '설천 하우스',
       position: {
         top: 'top-[74%]',
         left: 'left-[28%]',

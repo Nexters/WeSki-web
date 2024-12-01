@@ -85,46 +85,7 @@ export const PHOENIX: ResortConstant = {
   webcams: [
     {
       id: 1,
-      position: {
-        top: 'top-[83%]',
-        left: 'left-[79%]',
-      },
-      scale: 1,
-    },
-    {
-      id: 2,
-      position: {
-        top: 'top-[31%]',
-        left: 'left-[9%]',
-      },
-      scale: 1,
-    },
-    {
-      id: 3,
-      position: {
-        top: 'top-[79%]',
-        left: 'left-[43%]',
-      },
-      scale: 1,
-    },
-    {
-      id: 4,
-      position: {
-        top: 'top-[15%]',
-        left: 'left-[88%]',
-      },
-      scale: 1,
-    },
-    {
-      id: 5,
-      position: {
-        top: 'top-[7%]',
-        left: 'left-[53%]',
-      },
-      scale: 1,
-    },
-    {
-      id: 6,
+      key: '스패로우',
       position: {
         top: 'top-[45%]',
         left: 'left-[87%]',
@@ -132,7 +93,53 @@ export const PHOENIX: ResortConstant = {
       scale: 1,
     },
     {
+      id: 2,
+      key: '파노라마',
+      position: {
+        top: 'top-[15%]',
+        left: 'left-[88%]',
+      },
+      scale: 1,
+    },
+    {
+      id: 3,
+      key: '불새마루존',
+      position: {
+        top: 'top-[31%]',
+        left: 'left-[9%]',
+      },
+      scale: 1,
+    },
+    {
+      id: 4,
+      key: '스키베이스',
+      position: {
+        top: 'top-[83%]',
+        left: 'left-[79%]',
+      },
+      scale: 1,
+    },
+    {
+      id: 5,
+      key: '펭귄 슬로프',
+      position: {
+        top: 'top-[79%]',
+        left: 'left-[43%]',
+      },
+      scale: 1,
+    },
+    {
+      id: 6,
+      key: '몽블랑 정상',
+      position: {
+        top: 'top-[7%]',
+        left: 'left-[53%]',
+      },
+      scale: 1,
+    },
+    {
       id: 7,
+      key: '챔피온',
       position: {
         top: 'top-[26%]',
         left: 'left-[66%]',

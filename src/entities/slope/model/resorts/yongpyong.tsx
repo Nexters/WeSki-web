@@ -114,63 +114,8 @@ export const YONGPYONG: ResortConstant = {
   ],
   webcams: [
     {
-      id: 1,
-      position: {
-        top: 'top-[2%]',
-        left: 'left-[61%]',
-      },
-      scale: 2,
-    },
-    {
-      id: 2,
-      position: {
-        top: 'top-[26%]',
-        left: 'left-[30%]',
-      },
-      scale: 2,
-    },
-    {
       id: 3,
-      position: {
-        top: 'top-[41%]',
-        left: 'left-[79%]',
-      },
-      scale: 2,
-    },
-    {
-      id: 4,
-      position: {
-        top: 'top-[56%]',
-        left: 'left-[17%]',
-      },
-      scale: 2,
-    },
-    {
-      id: 5,
-      position: {
-        top: 'top-[59%]',
-        left: 'left-[56%]',
-      },
-      scale: 2,
-    },
-    {
-      id: 6,
-      position: {
-        top: 'top-[57%]',
-        left: 'left-[29%]',
-      },
-      scale: 2,
-    },
-    {
-      id: 7,
-      position: {
-        top: 'top-[64%]',
-        left: 'left-[33%]',
-      },
-      scale: 2,
-    },
-    {
-      id: 8,
+      key: '옐로우 슬로프',
       position: {
         top: 'top-[71%]',
         left: 'left-[37%]',
@@ -178,7 +123,17 @@ export const YONGPYONG: ResortConstant = {
       scale: 2,
     },
     {
-      id: 9,
+      id: 4,
+      key: '핑크 슬로프',
+      position: {
+        top: 'top-[64%]',
+        left: 'left-[33%]',
+      },
+      scale: 2,
+    },
+    {
+      id: 5,
+      key: '베이스 전경',
       position: {
         top: 'top-[84%]',
         left: 'left-[34%]',
@@ -186,10 +141,65 @@ export const YONGPYONG: ResortConstant = {
       scale: 2,
     },
     {
-      id: 10,
+      id: 6,
+      key: '용평 진입로',
       position: {
         top: 'top-[86%]',
         left: 'left-[26%]',
+      },
+      scale: 2,
+    },
+    {
+      id: 7,
+      key: '골드 슬로프 전경',
+      position: {
+        top: 'top-[56%]',
+        left: 'left-[17%]',
+      },
+      scale: 2,
+    },
+    {
+      id: 8,
+      key: '레드 슬로프',
+      position: {
+        top: 'top-[57%]',
+        left: 'left-[29%]',
+      },
+      scale: 2,
+    },
+    {
+      id: 9,
+      key: '레인보우 정상',
+      position: {
+        top: 'top-[2%]',
+        left: 'left-[61%]',
+      },
+      scale: 2,
+    },
+    {
+      id: 10,
+      key: '레인보우 전경',
+      position: {
+        top: 'top-[41%]',
+        left: 'left-[79%]',
+      },
+      scale: 2,
+    },
+    {
+      id: 11,
+      key: '메가 그린 슬로프',
+      position: {
+        top: 'top-[59%]',
+        left: 'left-[56%]',
+      },
+      scale: 2,
+    },
+    {
+      id: 12,
+      key: '슬로프 정상',
+      position: {
+        top: 'top-[26%]',
+        left: 'left-[30%]',
       },
       scale: 2,
     },

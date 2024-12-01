@@ -50,6 +50,7 @@ export const JISAN: ResortConstant = {
   webcams: [
     {
       id: 1,
+      key: '레몬 탑승장',
       position: {
         top: 'top-[84%]',
         left: 'left-[20%]',
@@ -58,6 +59,7 @@ export const JISAN: ResortConstant = {
     },
     {
       id: 2,
+      key: '오렌지 탑승장',
       position: {
         top: 'top-[74%]',
         left: 'left-[31%]',
@@ -66,6 +68,7 @@ export const JISAN: ResortConstant = {
     },
     {
       id: 3,
+      key: '뉴오렌지 탑승장',
       position: {
         top: 'top-[64%]',
         left: 'left-[38%]',
@@ -74,6 +77,7 @@ export const JISAN: ResortConstant = {
     },
     {
       id: 4,
+      key: '블루 탑승장',
       position: {
         top: 'top-[69%]',
         left: 'left-[56%]',
@@ -82,6 +86,7 @@ export const JISAN: ResortConstant = {
     },
     {
       id: 5,
+      key: '5번 슬로프',
       position: {
         top: 'top-[47%]',
         left: 'left-[37%]',
@@ -90,6 +95,7 @@ export const JISAN: ResortConstant = {
     },
     {
       id: 6,
+      key: '실버 탑승장',
       position: {
         top: 'top-[72%]',
         left: 'left-[68%]',
@@ -98,6 +104,7 @@ export const JISAN: ResortConstant = {
     },
     {
       id: 7,
+      key: '지산 전경',
       position: {
         top: 'top-[38%]',
         left: 'left-[52%]',

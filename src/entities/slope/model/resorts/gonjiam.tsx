@@ -60,30 +60,7 @@ export const GONJIAM: ResortConstant = {
   webcams: [
     {
       id: 1,
-      position: {
-        top: 'top-[82%]',
-        left: 'left-[51%]',
-      },
-      scale: 1,
-    },
-    {
-      id: 2,
-      position: {
-        top: 'top-[85%]',
-        left: 'left-[43%]',
-      },
-      scale: 1,
-    },
-    {
-      id: 3,
-      position: {
-        top: 'top-[34%]',
-        left: 'left-[21%]',
-      },
-      scale: 1,
-    },
-    {
-      id: 4,
+      key: '정상 휴게소',
       position: {
         top: 'top-[7%]',
         left: 'left-[20%]',
@@ -91,9 +68,38 @@ export const GONJIAM: ResortConstant = {
       scale: 1,
     },
     {
-      id: 5,
+      id: 2,
+      key: '정상부 슬로프',
+      position: {
+        top: 'top-[34%]',
+        left: 'left-[21%]',
+      },
+      scale: 1,
+    },
+
+    {
+      id: 3,
+      key: '중간 슬로프',
       position: {
         top: 'top-[60%]',
+        left: 'left-[43%]',
+      },
+      scale: 1,
+    },
+    {
+      id: 4,
+      key: '초중급 베이스',
+      position: {
+        top: 'top-[82%]',
+        left: 'left-[51%]',
+      },
+      scale: 1,
+    },
+    {
+      id: 5,
+      key: '중상급 베이스',
+      position: {
+        top: 'top-[85%]',
         left: 'left-[43%]',
       },
       scale: 1,

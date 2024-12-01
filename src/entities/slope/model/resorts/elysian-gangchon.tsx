@@ -60,14 +60,7 @@ export const ELYSIAN_GANGCHON: ResortConstant = {
   webcams: [
     {
       id: 1,
-      position: {
-        top: 'top-[86%]',
-        left: 'left-[19%]',
-      },
-      scale: 1,
-    },
-    {
-      id: 2,
+      key: '알프하우스',
       position: {
         top: 'top-[7%]',
         left: 'left-[27%]',
@@ -75,7 +68,17 @@ export const ELYSIAN_GANGCHON: ResortConstant = {
       scale: 1,
     },
     {
+      id: 2,
+      key: '서브하우스',
+      position: {
+        top: 'top-[86%]',
+        left: 'left-[19%]',
+      },
+      scale: 1,
+    },
+    {
       id: 3,
+      key: '스키하우스',
       position: {
         top: 'top-[83%]',
         left: 'left-[80%]',

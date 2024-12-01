@@ -75,6 +75,7 @@ export const O2: ResortConstant = {
   webcams: [
     {
       id: 1,
+      key: '으뜸마루',
       position: {
         top: 'top-[5%]',
         left: 'left-[75%]',
@@ -83,6 +84,7 @@ export const O2: ResortConstant = {
     },
     {
       id: 2,
+      key: '버금마루',
       position: {
         top: 'top-[23%]',
         left: 'left-[46%]',
@@ -91,6 +93,7 @@ export const O2: ResortConstant = {
     },
     {
       id: 3,
+      key: '드림1',
       position: {
         top: 'top-[80%]',
         left: 'left-[48%]',
@@ -99,6 +102,7 @@ export const O2: ResortConstant = {
     },
     {
       id: 4,
+      key: '오투 스키하우스',
       position: {
         top: 'top-[76%]',
         left: 'left-[14%]',

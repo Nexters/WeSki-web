@@ -90,6 +90,7 @@ export const HIGH1: ResortConstant = {
   webcams: [
     {
       id: 1,
+      key: '제우스2번 슬로프 입구',
       position: {
         top: 'top-[6%]',
         left: 'left-[45%]',
@@ -98,6 +99,7 @@ export const HIGH1: ResortConstant = {
     },
     {
       id: 2,
+      key: '헤라2번 슬로프 입구',
       position: {
         top: 'top-[10%]',
         left: 'left-[50%]',
@@ -106,6 +108,7 @@ export const HIGH1: ResortConstant = {
     },
     {
       id: 3,
+      key: '하이원 탑',
       position: {
         top: 'top-[6%]',
         left: 'left-[54%]',
@@ -114,6 +117,7 @@ export const HIGH1: ResortConstant = {
     },
     {
       id: 4,
+      key: '아테나1번 슬로프',
       position: {
         top: 'top-[30%]',
         left: 'left-[65%]',
@@ -122,6 +126,7 @@ export const HIGH1: ResortConstant = {
     },
     {
       id: 5,
+      key: '마운틴 허브 베이스',
       position: {
         top: 'top-[35%]',
         left: 'left-[61%]',
@@ -130,6 +135,7 @@ export const HIGH1: ResortConstant = {
     },
     {
       id: 6,
+      key: '아테나2번 슬로프',
       position: {
         top: 'top-[40%]',
         left: 'left-[66%]',
@@ -138,6 +144,7 @@ export const HIGH1: ResortConstant = {
     },
     {
       id: 7,
+      key: '마운틴 베이스',
       position: {
         top: 'top-[68%]',
         left: 'left-[78%]',
@@ -146,6 +153,7 @@ export const HIGH1: ResortConstant = {
     },
     {
       id: 8,
+      key: '아테나2번 슬로프 하단',
       position: {
         top: 'top-[76%]',
         left: 'left-[73%]',
@@ -154,6 +162,7 @@ export const HIGH1: ResortConstant = {
     },
     {
       id: 9,
+      key: '빅토리아 상단',
       position: {
         top: 'top-[17%]',
         left: 'left-[17%]',
@@ -162,6 +171,7 @@ export const HIGH1: ResortConstant = {
     },
     {
       id: 10,
+      key: '제우스 2번',
       position: {
         top: 'top-[34%]',
         left: 'left-[38%]',
@@ -170,6 +180,7 @@ export const HIGH1: ResortConstant = {
     },
     {
       id: 11,
+      key: '밸리 허브 베이스',
       position: {
         top: 'top-[40%]',
         left: 'left-[40%]',
@@ -178,6 +189,7 @@ export const HIGH1: ResortConstant = {
     },
     {
       id: 12,
+      key: '빅토리아1번 슬로프',
       position: {
         top: 'top-[48%]',
         left: 'left-[43%]',
@@ -186,6 +198,7 @@ export const HIGH1: ResortConstant = {
     },
     {
       id: 13,
+      key: '제우스3번 슬로프',
       position: {
         top: 'top-[50%]',
         left: 'left-[36%]',
@@ -194,6 +207,7 @@ export const HIGH1: ResortConstant = {
     },
     {
       id: 14,
+      key: '제우스3번 중단부',
       position: {
         top: 'top-[58%]',
         left: 'left-[40%]',
@@ -202,6 +216,7 @@ export const HIGH1: ResortConstant = {
     },
     {
       id: 15,
+      key: '아폴로4번 중단부',
       position: {
         top: 'top-[58%]',
         left: 'left-[52%]',
@@ -210,6 +225,7 @@ export const HIGH1: ResortConstant = {
     },
     {
       id: 16,
+      key: '아폴로 베이스',
       position: {
         top: 'top-[71%]',
         left: 'left-[44%]',
@@ -218,6 +234,7 @@ export const HIGH1: ResortConstant = {
     },
     {
       id: 17,
+      key: '제우스3번 하단',
       position: {
         top: 'top-[86%]',
         left: 'left-[46%]',
@@ -226,6 +243,7 @@ export const HIGH1: ResortConstant = {
     },
     {
       id: 18,
+      key: '밸리 베이스',
       position: {
         top: 'top-[86%]',
         left: 'left-[39%]',

@@ -45,6 +45,7 @@ export const EDEN: ResortConstant = {
   webcams: [
     {
       id: 1,
+      key: '베이직 슬로프',
       position: {
         top: 'top-[52%]',
         left: 'left-[35%]',
@@ -53,6 +54,7 @@ export const EDEN: ResortConstant = {
     },
     {
       id: 2,
+      key: '쥬피터 슬로프',
       position: {
         top: 'top-[16%]',
         left: 'left-[50%]',
@@ -61,6 +63,7 @@ export const EDEN: ResortConstant = {
     },
     {
       id: 3,
+      key: '우라누스 슬로프',
       position: {
         top: 'top-[32%]',
         left: 'left-[77%]',

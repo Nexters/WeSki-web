@@ -37,6 +37,7 @@ export type ResortConstant = {
 
 export type WebcamConstant = {
   id: number;
+  key?: string;
   scale: number;
   position: {
     top: string;
