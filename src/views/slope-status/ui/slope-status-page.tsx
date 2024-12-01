@@ -11,6 +11,7 @@ import { slopeApi } from '@/entities/slope';
 import type { Slope } from '@/entities/slope/model';
 import { RESORT_DOMAIN } from '@/entities/slope/model';
 import { cn } from '@/shared/lib';
+import SlopeStatusTime from '@/widgets/header/ui/slope-status-time';
 
 const SlopeStatusPage = ({ resortId }: { resortId: number }) => {
   const { ref, style, containerRef } = useMapPinch();
@@ -30,6 +31,23 @@ const SlopeStatusPage = ({ resortId }: { resortId: number }) => {
         })) as Slope[],
     [slopeRawData, key]
   );
+  const times = useMemo(
+    () => ({
+      day: {
+        label: '주간',
+        value: slopeRawData?.dayOperatingHours,
+      },
+      night: {
+        label: '야간',
+        value: slopeRawData?.nightOperatingHours,
+      },
+      lateNight: {
+        label: '심야',
+        value: slopeRawData?.lateNightOperatingHours,
+      },
+    }),
+    [slopeRawData]
+  );
 
   if (!slopes) return;
 
@@ -44,6 +62,7 @@ const SlopeStatusPage = ({ resortId }: { resortId: number }) => {
           slopes={slopes}
         />
       </section>
+      {Object.values(times).some((time) => time.value) && <SlopeStatusTime times={times} />}
       <SlopeStatusList resortId={resortId} slopes={slopes} />
     </main>
   );
