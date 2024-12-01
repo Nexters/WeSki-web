@@ -1,27 +1,26 @@
 'use client';
 
 import MapImage from '@public/maps/yongpyong.png';
-import BlueSlopePath from '../image/yongpyong/blue-slope-path';
+import BluePath from '../image/yongpyong/blue-path';
 import DragonParkPath from '../image/yongpyong/dragon-park-path';
 import GoldFantasticPath from '../image/yongpyong/gold-fantastic-path';
 import GoldParadisePath from '../image/yongpyong/gold-paradise-path';
 import GoldValleyPath from '../image/yongpyong/gold-valley-path';
 import MegaGreenPath from '../image/yongpyong/mega-green-path';
-import NewGoldSlopePath from '../image/yongpyong/new-gold-slope-path';
-import NewRedSlopePath from '../image/yongpyong/new-red-slope-path';
-import NewYellowSlopePath from '../image/yongpyong/new-yellow-slope-path';
-import PinkSlopePath from '../image/yongpyong/pink-slope-path';
+import NewGoldPath from '../image/yongpyong/new-gold-path';
+import NewRedPath from '../image/yongpyong/new-red-path';
+import NewYellowPath from '../image/yongpyong/new-yellow-path';
+import PinkPath from '../image/yongpyong/pink-path';
 import RainbowParadisePath from '../image/yongpyong/rainbow-paradise-path';
 import Rainbow1Path from '../image/yongpyong/rainbow1-path';
 import Rainbow2Path from '../image/yongpyong/rainbow2-path';
 import Rainbow3Path from '../image/yongpyong/rainbow3-path';
 import Rainbow4Path from '../image/yongpyong/rainbow4-path';
 import RedParadisePath from '../image/yongpyong/red-paradise-path';
-import RedSlopePath from '../image/yongpyong/red-slope-path';
+import RedPath from '../image/yongpyong/red-path';
 import SilverParadisePath from '../image/yongpyong/silver-paradise-path';
-import SilverSlopePath from '../image/yongpyong/silver-slope-path';
-// import SummitLandTheGreenPath from '../image/yongpyong/summit-land-the-green-path';
-import YellowSlopePath from '../image/yongpyong/yellow-slope-path';
+import SilverPath from '../image/yongpyong/silver-path';
+import YellowPath from '../image/yongpyong/yellow-path';
 import type { ResortConstant } from '../model';
 
 export const YONGPYONG: ResortConstant = {
@@ -29,11 +28,11 @@ export const YONGPYONG: ResortConstant = {
   slopes: [
     {
       id: 95,
-      PathAsset: YellowSlopePath,
+      PathAsset: YellowPath,
     },
     {
       id: 96,
-      PathAsset: NewYellowSlopePath,
+      PathAsset: NewYellowPath,
     },
     {
       id: 97,
@@ -41,7 +40,7 @@ export const YONGPYONG: ResortConstant = {
     },
     {
       id: 98,
-      PathAsset: PinkSlopePath,
+      PathAsset: PinkPath,
     },
     {
       id: 99,
@@ -65,11 +64,11 @@ export const YONGPYONG: ResortConstant = {
     },
     {
       id: 104,
-      PathAsset: NewRedSlopePath,
+      PathAsset: NewRedPath,
     },
     {
       id: 105,
-      PathAsset: BlueSlopePath,
+      PathAsset: BluePath,
     },
     {
       id: 106,
@@ -81,15 +80,15 @@ export const YONGPYONG: ResortConstant = {
     },
     {
       id: 108,
-      PathAsset: RedSlopePath,
+      PathAsset: RedPath,
     },
     {
       id: 109,
-      PathAsset: SilverSlopePath,
+      PathAsset: SilverPath,
     },
     {
       id: 110,
-      PathAsset: NewGoldSlopePath,
+      PathAsset: NewGoldPath,
     },
     {
       id: 111,
@@ -107,10 +106,6 @@ export const YONGPYONG: ResortConstant = {
       id: 114,
       PathAsset: DragonParkPath,
     },
-    // {
-    //   id: 'summit-land-the-green',
-    //   PathAsset: SummitLandTheGreenPath,
-    // },
   ],
   webcams: [
     {

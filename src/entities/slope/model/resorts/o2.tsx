@@ -1,18 +1,18 @@
 'use client';
 
-import ChallengeSlope1Path from '../image/o2/challenge-slope1-path';
-import ChallengeSlope2Path from '../image/o2/challenge-slope2-path';
-import ChallengeSlope3Path from '../image/o2/challenge-slope3-path';
-import DreamSlope1Path from '../image/o2/dream-slope1-path';
-import DreamSlope2Path from '../image/o2/dream-slope2-path';
-import FashionSlope1Path from '../image/o2/fashion-slope1-path';
-import FashionSlope2Path from '../image/o2/fashion-slope2-path';
-import GlorySlope1Path from '../image/o2/glory-slope1-path';
-import GlorySlope2Path from '../image/o2/glory-slope2-path';
-import GlorySlope3Path from '../image/o2/glory-slope3-path';
+import Challenge1Path from '../image/o2/challenge1-path';
+import Challenge2Path from '../image/o2/challenge2-path';
+import Challenge3Path from '../image/o2/challenge3-path';
+import Dream1Path from '../image/o2/dream1-path';
+import Dream2Path from '../image/o2/dream2-path';
+import Fashion1Path from '../image/o2/fashion1-path';
+import Fashion2Path from '../image/o2/fashion2-path';
+import Glory1Path from '../image/o2/glory1-path';
+import Glory2Path from '../image/o2/glory2-path';
+import Glory3Path from '../image/o2/glory3-path';
 import HalfPipePath from '../image/o2/half-pipe-path';
-import HappySlopePath from '../image/o2/happy-slope-path';
-import HeadSlopePath from '../image/o2/head-slope-path';
+import HappyPath from '../image/o2/happy-path';
+import HeadPath from '../image/o2/head-path';
 import MapImage from '../image/o2/map';
 import type { ResortConstant } from '../model';
 
@@ -21,51 +21,51 @@ export const O2: ResortConstant = {
   slopes: [
     {
       id: 142,
-      PathAsset: DreamSlope1Path,
+      PathAsset: Dream1Path,
     },
     {
       id: 143,
-      PathAsset: DreamSlope2Path,
+      PathAsset: Dream2Path,
     },
     {
       id: 144,
-      PathAsset: HeadSlopePath,
+      PathAsset: HeadPath,
     },
     {
       id: 145,
-      PathAsset: HappySlopePath,
+      PathAsset: HappyPath,
     },
     {
       id: 146,
-      PathAsset: GlorySlope1Path,
+      PathAsset: Glory1Path,
     },
     {
       id: 147,
-      PathAsset: GlorySlope2Path,
+      PathAsset: Glory2Path,
     },
     {
       id: 148,
-      PathAsset: GlorySlope3Path,
+      PathAsset: Glory3Path,
     },
     {
       id: 149,
-      PathAsset: FashionSlope1Path,
+      PathAsset: Fashion1Path,
     },
     {
       id: 150,
-      PathAsset: FashionSlope2Path,
+      PathAsset: Fashion2Path,
     },
     {
       id: 151,
-      PathAsset: ChallengeSlope1Path,
+      PathAsset: Challenge1Path,
     },
     {
       id: 152,
-      PathAsset: ChallengeSlope2Path,
+      PathAsset: Challenge2Path,
     },
     {
       id: 153,
-      PathAsset: ChallengeSlope3Path,
+      PathAsset: Challenge3Path,
     },
     {
       id: 154,
