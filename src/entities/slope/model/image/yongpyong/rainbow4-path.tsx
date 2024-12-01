@@ -3,7 +3,7 @@ import { cn } from '@/shared/lib';
 
 const Rainbow4Path = ({ color }: { color?: string }) => {
   const defaultStrokeColor = 'text-[#303A45]';
-  const strokeColorClass = color ? color.replace('fill-', 'texts-') : defaultStrokeColor;
+  const strokeColorClass = color ? color.replace('fill-', 'text-') : defaultStrokeColor;
   return (
     <svg
       width="100%"

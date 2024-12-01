@@ -114,6 +114,18 @@ export const YONGPYONG: ResortConstant = {
   ],
   webcams: [
     {
+      id: 1,
+      key: '발왕산 스카이워크',
+      position: [3, 54],
+      scale: 2,
+    },
+    {
+      id: 2,
+      key: '발왕산 천년주목숲길(동쪽)',
+      position: [2, 63],
+      scale: 2,
+    },
+    {
       id: 3,
       key: '옐로우 슬로프',
       position: [71, 37],
@@ -127,50 +139,14 @@ export const YONGPYONG: ResortConstant = {
     },
     {
       id: 5,
-      key: '베이스 전경',
-      position: [84, 34],
+      key: '베이스전경/레드 슬로프',
+      position: [60, 26],
       scale: 2,
     },
     {
       id: 6,
-      key: '용평 진입로',
+      key: '모나용평진입로',
       position: [86, 26],
-      scale: 2,
-    },
-    {
-      id: 7,
-      key: '골드 슬로프 전경',
-      position: [56, 17],
-      scale: 2,
-    },
-    {
-      id: 8,
-      key: '레드 슬로프',
-      position: [57, 29],
-      scale: 2,
-    },
-    {
-      id: 9,
-      key: '레인보우 정상',
-      position: [2, 61],
-      scale: 2,
-    },
-    {
-      id: 10,
-      key: '레인보우 전경',
-      position: [41, 79],
-      scale: 2,
-    },
-    {
-      id: 11,
-      key: '메가 그린 슬로프',
-      position: [59, 56],
-      scale: 2,
-    },
-    {
-      id: 12,
-      key: '슬로프 정상',
-      position: [26, 30],
       scale: 2,
     },
   ],

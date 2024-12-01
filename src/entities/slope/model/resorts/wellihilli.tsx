@@ -108,6 +108,19 @@ export const WELLIHILLI: ResortConstant = {
     // },
   ],
   webcams: [
+    { id: 2, key: '알파', position: [72, 20], scale: 1 },
+    {
+      id: 3,
+      key: '베이스',
+      position: [75, 26],
+      scale: 1,
+    },
+    {
+      id: 4,
+      key: '리조트 전경',
+      position: [78, 35],
+      scale: 1,
+    },
     {
       id: 5,
       key: '정상광장',
@@ -115,27 +128,15 @@ export const WELLIHILLI: ResortConstant = {
       scale: 1,
     },
     {
-      id: 2,
-      key: '하프파이프',
-      position: [81, 31],
-      scale: 1,
-    },
-    {
       id: 6,
-      key: '패밀리슬로프',
+      key: '패밀리',
       position: [85, 39],
       scale: 1,
     },
     {
-      id: 4,
-      key: '야외광장',
-      position: [73, 19],
-      scale: 1,
-    },
-    {
-      id: 5,
-      key: 'A1/A3 슬로프',
-      position: [62, 8],
+      id: 7,
+      key: '워터플래닛',
+      position: [88, 22],
       scale: 1,
     },
   ],
