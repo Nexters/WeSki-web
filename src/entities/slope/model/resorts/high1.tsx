@@ -78,6 +78,10 @@ export const HIGH1: ResortConstant = {
       id: 88,
       PathAsset: Apollo4Path,
     },
+    // {
+    //   id: 89,
+    //   PathAsset: Apollo5Path,
+    // },
     {
       id: 90,
       PathAsset: Apollo6Path,
