@@ -1,14 +1,7 @@
 'use client';
 
 import VivaldiparkMap from '@public/maps/vivaldipark.png';
-import BalladPath from '../image/vivaldipark/ballad-path';
-import BluesPath from '../image/vivaldipark/blues-path';
-import ClassicPath from '../image/vivaldipark/classic-path';
-import FunkyPath from '../image/vivaldipark/funky-path';
-import HiphopPath from '../image/vivaldipark/hiphop-path';
-import JazzPath from '../image/vivaldipark/jazz-path';
-import ReggaePath from '../image/vivaldipark/reggae-path';
-import TechnoPath from '../image/vivaldipark/techno-path';
+import * as Slope from '../image/vivaldipark';
 import type { ResortConstant } from '../model';
 
 export const VIVALDIPARK: ResortConstant = {
@@ -16,43 +9,35 @@ export const VIVALDIPARK: ResortConstant = {
   slopes: [
     {
       id: 19,
-      PathAsset: BalladPath,
+      PathAsset: Slope.BalladPath,
     },
     {
       id: 20,
-      PathAsset: ReggaePath,
+      PathAsset: Slope.ReggaePath,
     },
     {
       id: 21,
-      PathAsset: ClassicPath,
+      PathAsset: Slope.ClassicPath,
     },
     {
       id: 22,
-      PathAsset: FunkyPath,
+      PathAsset: Slope.FunkyPath,
     },
     {
       id: 23,
-      PathAsset: TechnoPath,
+      PathAsset: Slope.TechnoPath,
     },
-    // {
-    //   id: 24,
-    //   PathAsset: TechnoPath,
-    // },
     {
       id: 25,
-      PathAsset: HiphopPath,
+      PathAsset: Slope.HiphopPath,
     },
-    // {
-    //   id: 26,
-    //   PathAsset: HiphopPath,
-    // },
     {
       id: 27,
-      PathAsset: BluesPath,
+      PathAsset: Slope.BluesPath,
     },
     {
       id: 28,
-      PathAsset: JazzPath,
+      PathAsset: Slope.JazzPath,
     },
   ],
   webcams: [

@@ -1,18 +1,6 @@
 'use client';
 
-import Challenge1Path from '../image/o2/challenge1-path';
-import Challenge2Path from '../image/o2/challenge2-path';
-import Challenge3Path from '../image/o2/challenge3-path';
-import Dream1Path from '../image/o2/dream1-path';
-import Dream2Path from '../image/o2/dream2-path';
-import Fashion1Path from '../image/o2/fashion1-path';
-import Fashion2Path from '../image/o2/fashion2-path';
-import Glory1Path from '../image/o2/glory1-path';
-import Glory2Path from '../image/o2/glory2-path';
-import Glory3Path from '../image/o2/glory3-path';
-import HalfPipePath from '../image/o2/half-pipe-path';
-import HappyPath from '../image/o2/happy-path';
-import HeadPath from '../image/o2/head-path';
+import * as Slope from '../image/o2';
 import MapImage from '../image/o2/map';
 import type { ResortConstant } from '../model';
 
@@ -21,55 +9,55 @@ export const O2: ResortConstant = {
   slopes: [
     {
       id: 142,
-      PathAsset: Dream1Path,
+      PathAsset: Slope.Dream1Path,
     },
     {
       id: 143,
-      PathAsset: Dream2Path,
+      PathAsset: Slope.Dream2Path,
     },
     {
       id: 144,
-      PathAsset: HeadPath,
+      PathAsset: Slope.HeadPath,
     },
     {
       id: 145,
-      PathAsset: HappyPath,
+      PathAsset: Slope.HappyPath,
     },
     {
       id: 146,
-      PathAsset: Glory1Path,
+      PathAsset: Slope.Glory1Path,
     },
     {
       id: 147,
-      PathAsset: Glory2Path,
+      PathAsset: Slope.Glory2Path,
     },
     {
       id: 148,
-      PathAsset: Glory3Path,
+      PathAsset: Slope.Glory3Path,
     },
     {
       id: 149,
-      PathAsset: Fashion1Path,
+      PathAsset: Slope.Fashion1Path,
     },
     {
       id: 150,
-      PathAsset: Fashion2Path,
+      PathAsset: Slope.Fashion2Path,
     },
     {
       id: 151,
-      PathAsset: Challenge1Path,
+      PathAsset: Slope.Challenge1Path,
     },
     {
       id: 152,
-      PathAsset: Challenge2Path,
+      PathAsset: Slope.Challenge2Path,
     },
     {
       id: 153,
-      PathAsset: Challenge3Path,
+      PathAsset: Slope.Challenge3Path,
     },
     {
       id: 154,
-      PathAsset: HalfPipePath,
+      PathAsset: Slope.HalfPipePath,
     },
   ],
   webcams: [

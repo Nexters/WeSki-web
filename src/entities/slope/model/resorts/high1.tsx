@@ -1,23 +1,7 @@
 'use client';
 
 import High1Map from '@public/maps/high1.png';
-import Apollo1Path from '../image/high1/apollo1-path';
-import Apollo2Path from '../image/high1/apollo2-path';
-import Apollo3Path from '../image/high1/apollo3-path';
-import Apollo4Path from '../image/high1/apollo4-path';
-import Apollo5Path from '../image/high1/apollo5-path';
-import Apollo6Path from '../image/high1/apollo6-path';
-import Athena2Path from '../image/high1/athena2-path';
-import Athena3Path from '../image/high1/athena3-path';
-import Hera1Path from '../image/high1/hera1-path';
-import Hera2Path from '../image/high1/hera2-path';
-import Hera3Path from '../image/high1/hera3-path';
-import Victoria1Path from '../image/high1/victoria1-path';
-import Victoria2Path from '../image/high1/victoria2-path';
-import Zeus1Path from '../image/high1/zeus1-path';
-import Zeus2Path from '../image/high1/zeus2-path';
-import Zeus3Sub1Path from '../image/high1/zeus3-1-path';
-import Zeus3Path from '../image/high1/zeus3-path';
+import * as Slope from '../image/high1';
 import type { ResortConstant } from '../model';
 
 export const HIGH1: ResortConstant = {
@@ -25,84 +9,72 @@ export const HIGH1: ResortConstant = {
   slopes: [
     {
       id: 75,
-      PathAsset: Zeus1Path,
+      PathAsset: Slope.Zeus1Path,
     },
     {
       id: 76,
-      PathAsset: Zeus2Path,
+      PathAsset: Slope.Zeus2Path,
     },
     {
       id: 77,
-      PathAsset: Zeus3Path,
+      PathAsset: Slope.Zeus3Path,
     },
     {
       id: 78,
-      PathAsset: Zeus3Sub1Path,
+      PathAsset: Slope.Zeus3Sub1Path,
     },
     {
       id: 79,
-      PathAsset: Victoria1Path,
+      PathAsset: Slope.Victoria1Path,
     },
     {
       id: 80,
-      PathAsset: Victoria2Path,
+      PathAsset: Slope.Victoria2Path,
     },
-    // {
-    //   id: 81,
-    //   PathAsset: Victoria3Path,
-    // },
     {
       id: 82,
-      PathAsset: Hera1Path,
+      PathAsset: Slope.Hera1Path,
     },
     {
       id: 83,
-      PathAsset: Hera2Path,
+      PathAsset: Slope.Hera2Path,
     },
     {
       id: 84,
-      PathAsset: Hera3Path,
+      PathAsset: Slope.Hera3Path,
     },
     {
       id: 85,
-      PathAsset: Apollo1Path,
+      PathAsset: Slope.Apollo1Path,
     },
     {
       id: 86,
-      PathAsset: Apollo2Path,
+      PathAsset: Slope.Apollo2Path,
     },
     {
       id: 87,
-      PathAsset: Apollo3Path,
+      PathAsset: Slope.Apollo3Path,
     },
     {
       id: 88,
-      PathAsset: Apollo4Path,
+      PathAsset: Slope.Apollo4Path,
     },
     {
       id: 89,
-      PathAsset: Apollo5Path,
+      PathAsset: Slope.Apollo5Path,
     },
     {
       id: 90,
-      PathAsset: Apollo6Path,
+      PathAsset: Slope.Apollo6Path,
     },
-    // {
-    //   id: 91,
-    //   PathAsset: Athena1Path,
-    // },
     {
       id: 92,
-      PathAsset: Athena2Path,
+      PathAsset: Slope.Athena2Path,
     },
     {
       id: 93,
-      PathAsset: Athena3Path,
+      PathAsset: Slope.Athena3Path,
     },
-    // {
-    //   id: 94,
-    //   PathAsset: Athena3Sub1Path,
-    // },
   ],
   webcams: [
     {

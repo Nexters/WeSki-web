@@ -1,14 +1,7 @@
 'use client';
 
 import MapImage from '@public/maps/jisan.png';
-import BlueLiftPath from '../image/jisan/blue-lift-path';
-import Lemon1Sub1LiftPath from '../image/jisan/lemon1-1-lift-path';
-import Lemon1LiftPath from '../image/jisan/lemon1-lift-path';
-import NewOrangeLiftPath from '../image/jisan/new-orange-lift-path';
-import Orange2LiftPath from '../image/jisan/orange2-lift-path';
-import Orange3LiftPath from '../image/jisan/orange3-lift-path';
-import Silver6LiftPath from '../image/jisan/silver6-lift-path';
-import Silver7LiftPath from '../image/jisan/silver7-lift-path';
+import * as Slope from '../image/jisan';
 import type { ResortConstant } from '../model';
 
 export const JISAN: ResortConstant = {
@@ -16,35 +9,35 @@ export const JISAN: ResortConstant = {
   slopes: [
     {
       id: 1,
-      PathAsset: Lemon1LiftPath,
+      PathAsset: Slope.Lemon1LiftPath,
     },
     {
       id: 2,
-      PathAsset: Lemon1Sub1LiftPath,
+      PathAsset: Slope.Lemon1Sub1LiftPath,
     },
     {
       id: 3,
-      PathAsset: Orange2LiftPath,
+      PathAsset: Slope.Orange2LiftPath,
     },
     {
       id: 4,
-      PathAsset: Orange3LiftPath,
+      PathAsset: Slope.Orange3LiftPath,
     },
     {
       id: 5,
-      PathAsset: NewOrangeLiftPath,
+      PathAsset: Slope.NewOrangeLiftPath,
     },
     {
       id: 6,
-      PathAsset: BlueLiftPath,
+      PathAsset: Slope.BlueLiftPath,
     },
     {
       id: 7,
-      PathAsset: Silver6LiftPath,
+      PathAsset: Slope.Silver6LiftPath,
     },
     {
       id: 8,
-      PathAsset: Silver7LiftPath,
+      PathAsset: Slope.Silver7LiftPath,
     },
   ],
   webcams: [

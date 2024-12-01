@@ -1,0 +1,13 @@
+export { default as Challenge1Path } from './challenge1-path';
+export { default as Challenge2Path } from './challenge2-path';
+export { default as Challenge3Path } from './challenge3-path';
+export { default as Dream1Path } from './dream1-path';
+export { default as Dream2Path } from './dream2-path';
+export { default as Fashion1Path } from './fashion1-path';
+export { default as Fashion2Path } from './fashion2-path';
+export { default as Glory1Path } from './glory1-path';
+export { default as Glory2Path } from './glory2-path';
+export { default as Glory3Path } from './glory3-path';
+export { default as HalfPipePath } from './half-pipe-path';
+export { default as HappyPath } from './happy-path';
+export { default as HeadPath } from './head-path';

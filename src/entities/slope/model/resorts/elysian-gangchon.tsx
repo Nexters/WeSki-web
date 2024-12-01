@@ -1,16 +1,7 @@
 'use client';
 
 import ElysianGangchonMap from '@public/maps/elysian-gangchon.png';
-import DeerPath from '../image/elysian-gangchon/deer-path';
-import DragonPath from '../image/elysian-gangchon/dragon-path';
-import HorsePath from '../image/elysian-gangchon/horse-path';
-import JaguarPath from '../image/elysian-gangchon/jaguar-path';
-import LeopardPath from '../image/elysian-gangchon/leopard-path';
-import PandaPath from '../image/elysian-gangchon/panda-path';
-import PegasusPath from '../image/elysian-gangchon/pegasus-path';
-import PumaPath from '../image/elysian-gangchon/puma-path';
-import RabbitPath from '../image/elysian-gangchon/rabbit-path';
-import ZebraPath from '../image/elysian-gangchon/zebra-path';
+import * as Slope from '../image/elysian-gangchon';
 import type { ResortConstant } from '../model';
 
 export const ELYSIAN_GANGCHON: ResortConstant = {
@@ -18,43 +9,43 @@ export const ELYSIAN_GANGCHON: ResortConstant = {
   slopes: [
     {
       id: 29,
-      PathAsset: PandaPath,
+      PathAsset: Slope.PandaPath,
     },
     {
       id: 30,
-      PathAsset: RabbitPath,
+      PathAsset: Slope.RabbitPath,
     },
     {
       id: 31,
-      PathAsset: DragonPath,
+      PathAsset: Slope.DragonPath,
     },
     {
       id: 32,
-      PathAsset: HorsePath,
+      PathAsset: Slope.HorsePath,
     },
     {
       id: 33,
-      PathAsset: PegasusPath,
+      PathAsset: Slope.PegasusPath,
     },
     {
       id: 34,
-      PathAsset: ZebraPath,
+      PathAsset: Slope.ZebraPath,
     },
     {
       id: 35,
-      PathAsset: DeerPath,
+      PathAsset: Slope.DeerPath,
     },
     {
       id: 36,
-      PathAsset: PumaPath,
+      PathAsset: Slope.PumaPath,
     },
     {
       id: 37,
-      PathAsset: LeopardPath,
+      PathAsset: Slope.LeopardPath,
     },
     {
       id: 38,
-      PathAsset: JaguarPath,
+      PathAsset: Slope.JaguarPath,
     },
   ],
   webcams: [

@@ -1,21 +1,7 @@
 'use client';
 
 import MapImage from '@public/maps/phoenix.png';
-import ChampionPath from '../image/phoenix/champion-path';
-import DiggyPath from '../image/phoenix/diggy-path';
-import DukePath from '../image/phoenix/duke-path';
-import ExtremeParkPath from '../image/phoenix/extreme-park-path';
-import FantasyPath from '../image/phoenix/fantasy-path';
-import Hawk1Path from '../image/phoenix/hawk1-path';
-import Hawk2Path from '../image/phoenix/hawk2-path';
-import KiwiPath from '../image/phoenix/kiwi-path';
-import MogulPath from '../image/phoenix/mogul-path';
-import PanoramaPath from '../image/phoenix/panorama-path';
-import ParadisePath from '../image/phoenix/paradise-path';
-import PenguinPath from '../image/phoenix/penguin-path';
-import SlopeStylePath from '../image/phoenix/slope-style-path';
-import SparrowPath from '../image/phoenix/sparrow-path';
-import ValleyPath from '../image/phoenix/valley-path';
+import * as Slope from '../image/phoenix';
 import type { ResortConstant } from '../model';
 
 export const PHOENIX: ResortConstant = {
@@ -23,67 +9,67 @@ export const PHOENIX: ResortConstant = {
   slopes: [
     {
       id: 57,
-      PathAsset: SparrowPath,
+      PathAsset: Slope.SparrowPath,
     },
     {
       id: 58,
-      PathAsset: PenguinPath,
+      PathAsset: Slope.PenguinPath,
     },
     {
       id: 59,
-      PathAsset: Hawk2Path,
+      PathAsset: Slope.Hawk2Path,
     },
     // {
     //   id: 60,
-    //   PathAsset: DodoPath,
+    //   PathAsset: Slope.DodoPath,
     // },
     {
       id: 61,
-      PathAsset: KiwiPath,
+      PathAsset: Slope.KiwiPath,
     },
     {
       id: 62,
-      PathAsset: PanoramaPath,
+      PathAsset: Slope.PanoramaPath,
     },
     {
       id: 63,
-      PathAsset: Hawk1Path,
+      PathAsset: Slope.Hawk1Path,
     },
     {
       id: 64,
-      PathAsset: ValleyPath,
+      PathAsset: Slope.ValleyPath,
     },
     {
       id: 65,
-      PathAsset: DukePath,
+      PathAsset: Slope.DukePath,
     },
     {
       id: 66,
-      PathAsset: SlopeStylePath,
+      PathAsset: Slope.SlopeStylePath,
     },
     {
       id: 67,
-      PathAsset: ChampionPath,
+      PathAsset: Slope.ChampionPath,
     },
     {
       id: 68,
-      PathAsset: FantasyPath,
+      PathAsset: Slope.FantasyPath,
     },
     {
       id: 69,
-      PathAsset: DiggyPath,
+      PathAsset: Slope.DiggyPath,
     },
     {
       id: 70,
-      PathAsset: MogulPath,
+      PathAsset: Slope.MogulPath,
     },
     {
       id: 71,
-      PathAsset: ParadisePath,
+      PathAsset: Slope.ParadisePath,
     },
     {
       id: 72,
-      PathAsset: ExtremeParkPath,
+      PathAsset: Slope.ExtremeParkPath,
     },
   ],
   webcams: [

@@ -1,13 +1,7 @@
 'use client';
 
 import MapImage from '@public/maps/eden.png';
-import BasicPath from '../image/eden/basic-path';
-import JupiterPath from '../image/eden/jupiter-path';
-import MainPath from '../image/eden/main-path';
-import MercuryPath from '../image/eden/mercury-path';
-import SaturnPath from '../image/eden/saturn-path';
-import UranusPath from '../image/eden/uranus-path';
-import VenusPath from '../image/eden/venus-path';
+import * as Slope from '../image/eden';
 import type { ResortConstant } from '../model';
 
 export const EDEN: ResortConstant = {
@@ -15,31 +9,31 @@ export const EDEN: ResortConstant = {
   slopes: [
     {
       id: 135,
-      PathAsset: BasicPath,
+      PathAsset: Slope.BasicPath,
     },
     {
       id: 136,
-      PathAsset: MainPath,
+      PathAsset: Slope.MainPath,
     },
     {
       id: 137,
-      PathAsset: JupiterPath,
+      PathAsset: Slope.JupiterPath,
     },
     {
       id: 138,
-      PathAsset: SaturnPath,
+      PathAsset: Slope.SaturnPath,
     },
     {
       id: 139,
-      PathAsset: UranusPath,
+      PathAsset: Slope.UranusPath,
     },
     {
       id: 140,
-      PathAsset: MercuryPath,
+      PathAsset: Slope.MercuryPath,
     },
     {
       id: 141,
-      PathAsset: VenusPath,
+      PathAsset: Slope.VenusPath,
     },
   ],
   webcams: [

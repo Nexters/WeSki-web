@@ -1,26 +1,7 @@
 'use client';
 
 import MujuMap from '@public/maps/muju.png';
-import AllegroPath from '../image/muju/allegro-path';
-import CadenzaPath from '../image/muju/cadenza-path';
-import ConnectionPath from '../image/muju/connection-path';
-import EasternPath from '../image/muju/eastern-path';
-import FreewayPath from '../image/muju/freeway-path';
-import MinuetPath from '../image/muju/minuet-path';
-import MozartPath from '../image/muju/mozart-path';
-import PanoramaPath from '../image/muju/panorama-path';
-import PolkaPath from '../image/muju/polka-path';
-import RaidersHighestPath from '../image/muju/raiders-highest-path';
-import RaidersLowestPath from '../image/muju/raiders-lowest-path';
-import RookiehillPath from '../image/muju/rookiehill-path';
-import SilkroadPath from '../image/muju/silkroad-path';
-import SoyokgihangPath from '../image/muju/soyokgihang-path';
-import SpitchLowestPath from '../image/muju/spitch-lowest-path';
-import SundownPath from '../image/muju/sundown-path';
-import TurboPath from '../image/muju/turbo-path';
-import WaltzPath from '../image/muju/waltz-path';
-import WesternPath from '../image/muju/western-path';
-import YamagaPath from '../image/muju/yamaga-path';
+import * as Slope from '../image/muju';
 import type { ResortConstant } from '../model';
 
 export const MUJU: ResortConstant = {
@@ -28,83 +9,83 @@ export const MUJU: ResortConstant = {
   slopes: [
     {
       id: 115,
-      PathAsset: EasternPath,
+      PathAsset: Slope.EasternPath,
     },
     {
       id: 116,
-      PathAsset: SoyokgihangPath,
+      PathAsset: Slope.SoyokgihangPath,
     },
     {
       id: 117,
-      PathAsset: SpitchLowestPath,
+      PathAsset: Slope.SpitchLowestPath,
     },
     {
       id: 118,
-      PathAsset: WesternPath,
+      PathAsset: Slope.WesternPath,
     },
     {
       id: 119,
-      PathAsset: SundownPath,
+      PathAsset: Slope.SundownPath,
     },
     {
       id: 120,
-      PathAsset: SilkroadPath,
+      PathAsset: Slope.SilkroadPath,
     },
     {
       id: 121,
-      PathAsset: RookiehillPath,
+      PathAsset: Slope.RookiehillPath,
     },
     {
       id: 122,
-      PathAsset: TurboPath,
+      PathAsset: Slope.TurboPath,
     },
     {
       id: 123,
-      PathAsset: ConnectionPath,
+      PathAsset: Slope.ConnectionPath,
     },
     {
       id: 124,
-      PathAsset: MinuetPath,
+      PathAsset: Slope.MinuetPath,
     },
     {
       id: 125,
-      PathAsset: FreewayPath,
+      PathAsset: Slope.FreewayPath,
     },
     {
       id: 126,
-      PathAsset: YamagaPath,
+      PathAsset: Slope.YamagaPath,
     },
     {
       id: 127,
-      PathAsset: PanoramaPath,
+      PathAsset: Slope.PanoramaPath,
     },
     {
       id: 128,
-      PathAsset: RaidersLowestPath,
+      PathAsset: Slope.RaidersLowestPath,
     },
     {
       id: 129,
-      PathAsset: MozartPath,
+      PathAsset: Slope.MozartPath,
     },
     {
       id: 130,
-      PathAsset: WaltzPath,
+      PathAsset: Slope.WaltzPath,
     },
     {
       id: 131,
-      PathAsset: AllegroPath,
+      PathAsset: Slope.AllegroPath,
     },
     {
       id: 132,
-      PathAsset: RaidersHighestPath,
+      PathAsset: Slope.RaidersHighestPath,
     },
     {
       id: 133,
-      PathAsset: PolkaPath,
+      PathAsset: Slope.PolkaPath,
     },
     {
       id: 134,
-      PathAsset: CadenzaPath,
+      PathAsset: Slope.CadenzaPath,
     },
   ],
   webcams: [
