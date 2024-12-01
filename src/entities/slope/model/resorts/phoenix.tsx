@@ -1,84 +1,88 @@
 'use client';
 
 import MapImage from '@public/maps/phoenix.png';
-import ChampionSlopePath from '../image/phoenix/champion-slope-path';
-import DiggySlopePath from '../image/phoenix/diggy-slope-path';
-import DukeSlopePath from '../image/phoenix/duke-slope-path';
+import ChampionPath from '../image/phoenix/champion-path';
+import DiggyPath from '../image/phoenix/diggy-path';
+import DukePath from '../image/phoenix/duke-path';
 import ExtremeParkPath from '../image/phoenix/extreme-park-path';
-import FantasySlopePath from '../image/phoenix/fantasy-slope-path';
-import HawkSlope1Path from '../image/phoenix/hawk-slope1-path';
-import HawkSlope2Path from '../image/phoenix/hawk-slope2-path';
-import KiwiSlopePath from '../image/phoenix/kiwi-slope-path';
-import MogulSlopePath from '../image/phoenix/mogul-slope-path';
+import FantasyPath from '../image/phoenix/fantasy-path';
+import Hawk1Path from '../image/phoenix/hawk1-path';
+import Hawk2Path from '../image/phoenix/hawk2-path';
+import KiwiPath from '../image/phoenix/kiwi-path';
+import MogulPath from '../image/phoenix/mogul-path';
 import PanoramaPath from '../image/phoenix/panorama-path';
 import ParadisePath from '../image/phoenix/paradise-path';
-import PenguinSlopePath from '../image/phoenix/penguin-slope-path';
+import PenguinPath from '../image/phoenix/penguin-path';
 import SlopeStylePath from '../image/phoenix/slope-style-path';
 import SparrowPath from '../image/phoenix/sparrow-path';
-import ValleySlopePath from '../image/phoenix/valley-slope-path';
+import ValleyPath from '../image/phoenix/valley-path';
 import type { ResortConstant } from '../model';
 
 export const PHOENIX: ResortConstant = {
   MapComponent: MapImage,
   slopes: [
     {
-      id: 59,
+      id: 57,
       PathAsset: SparrowPath,
     },
     {
-      id: 60,
-      PathAsset: PenguinSlopePath,
+      id: 58,
+      PathAsset: PenguinPath,
     },
     {
+      id: 59,
+      PathAsset: Hawk2Path,
+    },
+    // {
+    //   id: 60,
+    //   PathAsset: DodoPath,
+    // },
+    {
       id: 61,
-      PathAsset: HawkSlope1Path,
+      PathAsset: KiwiPath,
     },
     {
       id: 62,
-      PathAsset: KiwiSlopePath,
-    },
-    {
-      id: 63,
       PathAsset: PanoramaPath,
     },
     {
+      id: 63,
+      PathAsset: Hawk1Path,
+    },
+    {
       id: 64,
-      PathAsset: ValleySlopePath,
+      PathAsset: ValleyPath,
     },
     {
       id: 65,
-      PathAsset: HawkSlope2Path,
+      PathAsset: DukePath,
     },
     {
       id: 66,
-      PathAsset: DukeSlopePath,
-    },
-    {
-      id: 67,
       PathAsset: SlopeStylePath,
     },
     {
+      id: 67,
+      PathAsset: ChampionPath,
+    },
+    {
       id: 68,
-      PathAsset: ChampionSlopePath,
+      PathAsset: FantasyPath,
     },
     {
       id: 69,
-      PathAsset: FantasySlopePath,
+      PathAsset: DiggyPath,
     },
     {
       id: 70,
-      PathAsset: DiggySlopePath,
+      PathAsset: MogulPath,
     },
     {
       id: 71,
-      PathAsset: MogulSlopePath,
-    },
-    {
-      id: 72,
       PathAsset: ParadisePath,
     },
     {
-      id: 73,
+      id: 72,
       PathAsset: ExtremeParkPath,
     },
   ],
@@ -86,7 +90,7 @@ export const PHOENIX: ResortConstant = {
     {
       id: 1,
       key: '호크,스패로우',
-      position: [45, 87],
+      position: [82, 76],
       scale: 1,
     },
     {
@@ -98,7 +102,7 @@ export const PHOENIX: ResortConstant = {
     {
       id: 3,
       key: '불새마루',
-      position: [48, 59],
+      position: [31, 9],
       scale: 1,
     },
     {
@@ -110,7 +114,7 @@ export const PHOENIX: ResortConstant = {
     {
       id: 5,
       key: '펭귄',
-      position: [28, 62],
+      position: [45, 50],
       scale: 1,
     },
     {

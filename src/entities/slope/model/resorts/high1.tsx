@@ -1,22 +1,22 @@
 'use client';
 
 import High1Map from '@public/maps/high1.png';
-import Apollo1SlopPath from '../image/high1/apollo1-slop-path';
-import Apollo2SlopPath from '../image/high1/apollo2-slop-path';
-import Apollo3SlopPath from '../image/high1/apollo3-slop-path';
-import Apollo4SlopPath from '../image/high1/apollo4-slop-path';
-import Apollo6SlopPath from '../image/high1/apollo6-slop-path';
-import Athena2SlopPath from '../image/high1/athena2-slop-path';
-import Athena3SlopPath from '../image/high1/athena3-slop-path';
-import Hera1SlopPath from '../image/high1/hera1-slop-path';
-import Hera2SlopPath from '../image/high1/hera2-slop-path';
-import Hera3SlopPath from '../image/high1/hera3-slop-path';
-import Victoria1SlopPath from '../image/high1/victoria1-slop-path';
-import Victoria2SlopPath from '../image/high1/victoria2-slop-path';
-import Zeus1SlopPath from '../image/high1/zeus1-slop-path';
-import Zeus2SlopPath from '../image/high1/zeus2-slop-path';
-import Zeus3Sub1SlopPath from '../image/high1/zeus3-1-slop-path';
-import Zeus3SlopPath from '../image/high1/zeus3-slop-path';
+import Apollo1Path from '../image/high1/apollo1-path';
+import Apollo2Path from '../image/high1/apollo2-path';
+import Apollo3Path from '../image/high1/apollo3-path';
+import Apollo4Path from '../image/high1/apollo4-path';
+import Apollo6Path from '../image/high1/apollo6-path';
+import Athena2Path from '../image/high1/athena2-path';
+import Athena3Path from '../image/high1/athena3-path';
+import Hera1Path from '../image/high1/hera1-path';
+import Hera2Path from '../image/high1/hera2-path';
+import Hera3Path from '../image/high1/hera3-path';
+import Victoria1Path from '../image/high1/victoria1-path';
+import Victoria2Path from '../image/high1/victoria2-path';
+import Zeus1Path from '../image/high1/zeus1-path';
+import Zeus2Path from '../image/high1/zeus2-path';
+import Zeus3Sub1Path from '../image/high1/zeus3-1-path';
+import Zeus3Path from '../image/high1/zeus3-path';
 import type { ResortConstant } from '../model';
 
 export const HIGH1: ResortConstant = {
@@ -24,68 +24,80 @@ export const HIGH1: ResortConstant = {
   slopes: [
     {
       id: 75,
-      PathAsset: Zeus1SlopPath,
+      PathAsset: Zeus1Path,
     },
     {
       id: 76,
-      PathAsset: Zeus2SlopPath,
+      PathAsset: Zeus2Path,
     },
     {
       id: 77,
-      PathAsset: Zeus3SlopPath,
+      PathAsset: Zeus3Path,
     },
     {
       id: 78,
-      PathAsset: Zeus3Sub1SlopPath,
+      PathAsset: Zeus3Sub1Path,
     },
     {
       id: 79,
-      PathAsset: Victoria1SlopPath,
+      PathAsset: Victoria1Path,
     },
     {
       id: 80,
-      PathAsset: Victoria2SlopPath,
+      PathAsset: Victoria2Path,
     },
+    // {
+    //   id: 81,
+    //   PathAsset: Victoria3Path,
+    // },
     {
       id: 82,
-      PathAsset: Hera1SlopPath,
+      PathAsset: Hera1Path,
     },
     {
       id: 83,
-      PathAsset: Hera2SlopPath,
+      PathAsset: Hera2Path,
     },
     {
       id: 84,
-      PathAsset: Hera3SlopPath,
+      PathAsset: Hera3Path,
     },
     {
       id: 85,
-      PathAsset: Apollo1SlopPath,
+      PathAsset: Apollo1Path,
     },
     {
       id: 86,
-      PathAsset: Apollo2SlopPath,
+      PathAsset: Apollo2Path,
     },
     {
       id: 87,
-      PathAsset: Apollo3SlopPath,
+      PathAsset: Apollo3Path,
     },
     {
       id: 88,
-      PathAsset: Apollo4SlopPath,
+      PathAsset: Apollo4Path,
     },
     {
       id: 90,
-      PathAsset: Apollo6SlopPath,
+      PathAsset: Apollo6Path,
     },
+    // {
+    //   id: 91,
+    //   PathAsset: Athena1Path,
+    // },
     {
       id: 92,
-      PathAsset: Athena2SlopPath,
+      PathAsset: Athena2Path,
     },
     {
       id: 93,
-      PathAsset: Athena3SlopPath,
+      PathAsset: Athena3Path,
     },
+    // {
+    //   id: 94,
+    //   PathAsset: Athena3Sub1Path,
+    // },
   ],
   webcams: [
     {

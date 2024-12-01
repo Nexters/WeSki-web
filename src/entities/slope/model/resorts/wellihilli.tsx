@@ -1,24 +1,22 @@
 'use client';
 
 import WellihilliMap from '@public/maps/wellihilli.png';
-import AlphaSlope1Path from '../image/wellihilli/alpha-slope1-path';
-import AlphaSlope2Path from '../image/wellihilli/alpha-slope2-path';
-import AlphaSlope3Path from '../image/wellihilli/alpha-slope3-path';
-import BravoSlope1Path from '../image/wellihilli/bravo-slope1-path';
-import BravoSlope2Path from '../image/wellihilli/bravo-slope2-path';
-import ChallengeSlope1Path from '../image/wellihilli/challenge-slope1-path';
-import ChallengeSlope2Path from '../image/wellihilli/challenge-slope2-path';
-import ChallengeSlope3Path from '../image/wellihilli/challenge-slope3-path';
-import ChallengeSlope4Path from '../image/wellihilli/challenge-slope4-path';
-import ChallengeSlope5Path from '../image/wellihilli/challenge-slope5-path';
-import DeltaSlopePlusPath from '../image/wellihilli/delta-slope-plus-path';
-import DeltaSlope1Path from '../image/wellihilli/delta-slope1-path';
-import DeltaSlope2Path from '../image/wellihilli/delta-slope2-path';
-// import EchoSlopePlusPath from '../image/wellihilli/echo-slope-plus-path';
-import EchoSlope1Path from '../image/wellihilli/echo-slope1-path';
-import EchoSlope2Path from '../image/wellihilli/echo-slope2-path';
-import EchoSlope3Path from '../image/wellihilli/echo-slope3-path';
-// import HalfPipePath from '../image/wellihilli/half-pipe-path';
+import Alpha1Path from '../image/wellihilli/alpha1-path';
+import Alpha2Path from '../image/wellihilli/alpha2-path';
+import Alpha3Path from '../image/wellihilli/alpha3-path';
+import Bravo1Path from '../image/wellihilli/bravo1-path';
+import Bravo2Path from '../image/wellihilli/bravo2-path';
+import Challenge1Path from '../image/wellihilli/challenge1-path';
+import Challenge2Path from '../image/wellihilli/challenge2-path';
+import Challenge3Path from '../image/wellihilli/challenge3-path';
+import Challenge4Path from '../image/wellihilli/challenge4-path';
+import Challenge5Path from '../image/wellihilli/challenge5-path';
+import DeltaPlusPath from '../image/wellihilli/delta-plus-path';
+import Delta1Path from '../image/wellihilli/delta1-path';
+import Delta2Path from '../image/wellihilli/delta2-path';
+import Echo1Path from '../image/wellihilli/echo1-path';
+import Echo2Path from '../image/wellihilli/echo2-path';
+import Echo3Path from '../image/wellihilli/echo3-path';
 import StarExpress1Path from '../image/wellihilli/star-express1-path';
 import StarExpress2Path from '../image/wellihilli/star-express2-path';
 import type { ResortConstant } from '../model';
@@ -28,71 +26,67 @@ export const WELLIHILLI: ResortConstant = {
   slopes: [
     {
       id: 39,
-      PathAsset: AlphaSlope1Path,
+      PathAsset: Alpha1Path,
     },
     {
       id: 40,
-      PathAsset: AlphaSlope2Path,
+      PathAsset: Alpha2Path,
     },
     {
       id: 41,
-      PathAsset: AlphaSlope3Path,
+      PathAsset: Alpha3Path,
     },
     {
       id: 42,
-      PathAsset: BravoSlope1Path,
+      PathAsset: Bravo1Path,
     },
     {
       id: 43,
-      PathAsset: BravoSlope2Path,
+      PathAsset: Bravo2Path,
     },
     {
       id: 44,
-      PathAsset: DeltaSlope1Path,
+      PathAsset: Delta1Path,
     },
     {
       id: 45,
-      PathAsset: DeltaSlope2Path,
+      PathAsset: Delta2Path,
     },
     {
       id: 46,
-      PathAsset: DeltaSlopePlusPath,
+      PathAsset: DeltaPlusPath,
     },
     {
       id: 47,
-      PathAsset: EchoSlope1Path,
+      PathAsset: Echo1Path,
     },
     {
       id: 48,
-      PathAsset: EchoSlope2Path,
+      PathAsset: Echo2Path,
     },
     {
       id: 49,
-      PathAsset: EchoSlope3Path,
+      PathAsset: Echo3Path,
     },
-    // {
-    //   id: 'echo-slope-plus',
-    //   PathAsset: EchoSlopePlusPath,
-    // },
     {
       id: 50,
-      PathAsset: ChallengeSlope1Path,
+      PathAsset: Challenge1Path,
     },
     {
       id: 51,
-      PathAsset: ChallengeSlope2Path,
+      PathAsset: Challenge2Path,
     },
     {
       id: 52,
-      PathAsset: ChallengeSlope3Path,
+      PathAsset: Challenge3Path,
     },
     {
       id: 53,
-      PathAsset: ChallengeSlope4Path,
+      PathAsset: Challenge4Path,
     },
     {
       id: 54,
-      PathAsset: ChallengeSlope5Path,
+      PathAsset: Challenge5Path,
     },
     {
       id: 55,
@@ -102,10 +96,6 @@ export const WELLIHILLI: ResortConstant = {
       id: 56,
       PathAsset: StarExpress2Path,
     },
-    // {
-    //   id: 111,
-    //   PathAsset: HalfPipePath,
-    // },
   ],
   webcams: [
     { id: 2, key: '알파', position: [72, 20], scale: 1 },
