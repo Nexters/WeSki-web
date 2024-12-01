@@ -1,7 +1,7 @@
 import React from 'react';
 import { cn } from '@/shared/lib';
 
-const PumaSlopPath = ({ color }: { color?: string }) => {
+const PumaPath = ({ color }: { color?: string }) => {
   const defaultStrokeColor = 'text-[#447EFF]';
   const strokeColorClass = color ? color.replace('fill-', 'text-') : defaultStrokeColor;
 
@@ -24,4 +24,4 @@ const PumaSlopPath = ({ color }: { color?: string }) => {
   );
 };
 
-export default PumaSlopPath;
+export default PumaPath;

@@ -1,16 +1,16 @@
 'use client';
 
 import ElysianGangchonMap from '@public/maps/elysian-gangchon.png';
-import DeerSlopPath from '../image/elysian-gangchon/deer-slop-path';
-import DragonSlopPath from '../image/elysian-gangchon/dragon-slop-path';
-import HorseSlopPath from '../image/elysian-gangchon/horse-slop-path';
-import JaguarSlopPath from '../image/elysian-gangchon/jaguar-slop-path';
-import LeopardSlopPath from '../image/elysian-gangchon/leopard-slop-path';
-import PandaSlopPath from '../image/elysian-gangchon/panda-slop-path';
-import PegasusSlopPath from '../image/elysian-gangchon/pegasus-slop-path';
-import PumaSlopPath from '../image/elysian-gangchon/puma-slop-path';
-import RabbitSlopPath from '../image/elysian-gangchon/rabbit-slop-path';
-import ZebraSlopPath from '../image/elysian-gangchon/zebra-slop-path';
+import DeerPath from '../image/elysian-gangchon/deer-path';
+import DragonPath from '../image/elysian-gangchon/dragon-path';
+import HorsePath from '../image/elysian-gangchon/horse-path';
+import JaguarPath from '../image/elysian-gangchon/jaguar-path';
+import LeopardPath from '../image/elysian-gangchon/leopard-path';
+import PandaPath from '../image/elysian-gangchon/panda-path';
+import PegasusPath from '../image/elysian-gangchon/pegasus-path';
+import PumaPath from '../image/elysian-gangchon/puma-path';
+import RabbitPath from '../image/elysian-gangchon/rabbit-path';
+import ZebraPath from '../image/elysian-gangchon/zebra-path';
 import type { ResortConstant } from '../model';
 
 export const ELYSIAN_GANGCHON: ResortConstant = {
@@ -18,43 +18,43 @@ export const ELYSIAN_GANGCHON: ResortConstant = {
   slopes: [
     {
       id: 29,
-      PathAsset: PandaSlopPath,
+      PathAsset: PandaPath,
     },
     {
       id: 30,
-      PathAsset: RabbitSlopPath,
+      PathAsset: RabbitPath,
     },
     {
       id: 31,
-      PathAsset: DragonSlopPath,
+      PathAsset: DragonPath,
     },
     {
       id: 32,
-      PathAsset: HorseSlopPath,
+      PathAsset: HorsePath,
     },
     {
       id: 33,
-      PathAsset: PegasusSlopPath,
+      PathAsset: PegasusPath,
     },
     {
       id: 34,
-      PathAsset: ZebraSlopPath,
+      PathAsset: ZebraPath,
     },
     {
       id: 35,
-      PathAsset: DeerSlopPath,
+      PathAsset: DeerPath,
     },
     {
       id: 36,
-      PathAsset: PumaSlopPath,
+      PathAsset: PumaPath,
     },
     {
       id: 37,
-      PathAsset: LeopardSlopPath,
+      PathAsset: LeopardPath,
     },
     {
       id: 38,
-      PathAsset: JaguarSlopPath,
+      PathAsset: JaguarPath,
     },
   ],
   webcams: [

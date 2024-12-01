@@ -1,7 +1,7 @@
 import React from 'react';
 import { cn } from '@/shared/lib';
 
-const PegasusSlopPath = ({ color }: { color?: string }) => {
+const PegasusPath = ({ color }: { color?: string }) => {
   return (
     <svg
       width="100%"
@@ -18,4 +18,4 @@ const PegasusSlopPath = ({ color }: { color?: string }) => {
   );
 };
 
-export default PegasusSlopPath;
+export default PegasusPath;

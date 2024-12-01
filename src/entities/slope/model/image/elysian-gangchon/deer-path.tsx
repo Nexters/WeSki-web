@@ -1,7 +1,7 @@
 import React from 'react';
 import { cn } from '@/shared/lib';
 
-const DeerSlopPath = ({ color }: { color?: string }) => {
+const DeerPath = ({ color }: { color?: string }) => {
   const defaultStrokeColor = 'text-[#447EFF]';
   const strokeColorClass = color ? color.replace('fill-', 'text-') : defaultStrokeColor;
   return (
@@ -34,4 +34,4 @@ const DeerSlopPath = ({ color }: { color?: string }) => {
   );
 };
 
-export default DeerSlopPath;
+export default DeerPath;

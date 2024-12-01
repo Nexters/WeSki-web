@@ -1,7 +1,7 @@
 import React from 'react';
 import { cn } from '@/shared/lib';
 
-const DragonSlopPath = ({ color }: { color?: string }) => {
+const DragonPath = ({ color }: { color?: string }) => {
   return (
     <svg
       width="100%"
@@ -18,4 +18,4 @@ const DragonSlopPath = ({ color }: { color?: string }) => {
   );
 };
 
-export default DragonSlopPath;
+export default DragonPath;

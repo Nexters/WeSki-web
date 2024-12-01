@@ -1,7 +1,7 @@
 import React from 'react';
 import { cn } from '@/shared/lib';
 
-const ThinkyouBridgeSlopPath = ({ color }: { color?: string }) => {
+const ThinkyouBridgePath = ({ color }: { color?: string }) => {
   return (
     <svg
       width="100%"
@@ -18,4 +18,4 @@ const ThinkyouBridgeSlopPath = ({ color }: { color?: string }) => {
   );
 };
 
-export default ThinkyouBridgeSlopPath;
+export default ThinkyouBridgePath;

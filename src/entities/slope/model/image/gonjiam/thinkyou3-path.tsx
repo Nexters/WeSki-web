@@ -1,7 +1,7 @@
 import React from 'react';
 import { cn } from '@/shared/lib';
 
-const Thinkyou3SlopPath = ({ color }: { color?: string }) => {
+const Thinkyou3Path = ({ color }: { color?: string }) => {
   return (
     <svg
       width="100%"
@@ -18,4 +18,4 @@ const Thinkyou3SlopPath = ({ color }: { color?: string }) => {
   );
 };
 
-export default Thinkyou3SlopPath;
+export default Thinkyou3Path;

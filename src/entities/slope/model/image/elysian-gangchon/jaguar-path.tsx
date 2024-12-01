@@ -1,7 +1,7 @@
 import React from 'react';
 import { cn } from '@/shared/lib';
 
-const JaguarSlopPath = ({ color }: { color?: string }) => {
+const JaguarPath = ({ color }: { color?: string }) => {
   return (
     <svg
       width="100%"
@@ -18,4 +18,4 @@ const JaguarSlopPath = ({ color }: { color?: string }) => {
   );
 };
 
-export default JaguarSlopPath;
+export default JaguarPath;

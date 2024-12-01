@@ -1,7 +1,7 @@
 import React from 'react';
 import { cn } from '@/shared/lib';
 
-const WhisenSlopPath = ({ color }: { color?: string }) => {
+const WhisenPath = ({ color }: { color?: string }) => {
   return (
     <svg
       width="100%"
@@ -18,4 +18,4 @@ const WhisenSlopPath = ({ color }: { color?: string }) => {
   );
 };
 
-export default WhisenSlopPath;
+export default WhisenPath;

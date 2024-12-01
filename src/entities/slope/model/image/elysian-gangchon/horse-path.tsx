@@ -1,7 +1,7 @@
 import React from 'react';
 import { cn } from '@/shared/lib';
 
-const HorseSlopPath = ({ color }: { color?: string }) => {
+const HorsePath = ({ color }: { color?: string }) => {
   const defaultStrokeColor = 'text-[#447EFF]';
   const strokeColorClass = color ? color.replace('fill-', 'text-') : defaultStrokeColor;
 
@@ -31,4 +31,4 @@ const HorseSlopPath = ({ color }: { color?: string }) => {
   );
 };
 
-export default HorseSlopPath;
+export default HorsePath;

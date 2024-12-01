@@ -1,16 +1,16 @@
 'use client';
 
 import GonjiamMap from '@public/maps/gonjiam.png';
-import CNP1SlopPath from '../image/gonjiam/cnp1-slop-path';
-import CNP2SlopPath from '../image/gonjiam/cnp2-slop-path';
-import Gram1SlopPath from '../image/gonjiam/gram1-slop-path';
-import Gram2SlopPath from '../image/gonjiam/gram2-slop-path';
-import ThinkyouBridgeSlopPath from '../image/gonjiam/thinkyou-bridge-slop';
-import Thinkyou1SlopPath from '../image/gonjiam/thinkyou1-slop-path';
-import Thinkyou2SlopPath from '../image/gonjiam/thinkyou2-slop-path';
-import Thinkyou3SlopPath from '../image/gonjiam/thinkyou3-slop-path';
-import WhisenSlopPath from '../image/gonjiam/whisen-slop-path';
-import WhynotSlopPath from '../image/gonjiam/whynot-slop-path';
+import CNP1Path from '../image/gonjiam/cnp1-path';
+import CNP2Path from '../image/gonjiam/cnp2-path';
+import Gram1Path from '../image/gonjiam/gram1-path';
+import Gram2Path from '../image/gonjiam/gram2-path';
+import ThinkyouBridgePath from '../image/gonjiam/thinkyou-bridge-path';
+import Thinkyou1Path from '../image/gonjiam/thinkyou1-path';
+import Thinkyou2Path from '../image/gonjiam/thinkyou2-path';
+import Thinkyou3Path from '../image/gonjiam/thinkyou3-path';
+import WhisenPath from '../image/gonjiam/whisen-path';
+import WhynotPath from '../image/gonjiam/whynot-path';
 import type { ResortConstant } from '../model';
 
 export const GONJIAM: ResortConstant = {
@@ -18,43 +18,43 @@ export const GONJIAM: ResortConstant = {
   slopes: [
     {
       id: 9,
-      PathAsset: WhisenSlopPath,
+      PathAsset: WhisenPath,
     },
     {
       id: 10,
-      PathAsset: WhynotSlopPath,
+      PathAsset: WhynotPath,
     },
     {
       id: 11,
-      PathAsset: Gram1SlopPath,
+      PathAsset: Gram1Path,
     },
     {
       id: 12,
-      PathAsset: Gram2SlopPath,
+      PathAsset: Gram2Path,
     },
     {
       id: 13,
-      PathAsset: CNP1SlopPath,
+      PathAsset: CNP1Path,
     },
     {
       id: 14,
-      PathAsset: CNP2SlopPath,
+      PathAsset: CNP2Path,
     },
     {
       id: 15,
-      PathAsset: Thinkyou1SlopPath,
+      PathAsset: Thinkyou1Path,
     },
     {
       id: 16,
-      PathAsset: Thinkyou2SlopPath,
+      PathAsset: Thinkyou2Path,
     },
     {
       id: 17,
-      PathAsset: Thinkyou3SlopPath,
+      PathAsset: Thinkyou3Path,
     },
     {
       id: 18,
-      PathAsset: ThinkyouBridgeSlopPath,
+      PathAsset: ThinkyouBridgePath,
     },
   ],
   webcams: [

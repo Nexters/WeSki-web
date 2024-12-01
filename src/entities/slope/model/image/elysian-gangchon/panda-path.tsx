@@ -1,7 +1,7 @@
 import React from 'react';
 import { cn } from '@/shared/lib';
 
-const PandaSlopPath = ({ color }: { color?: string }) => {
+const PandaPath = ({ color }: { color?: string }) => {
   return (
     <svg
       width="100%"
@@ -18,4 +18,4 @@ const PandaSlopPath = ({ color }: { color?: string }) => {
   );
 };
 
-export default PandaSlopPath;
+export default PandaPath;

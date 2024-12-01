@@ -1,7 +1,7 @@
 import React from 'react';
 import { cn } from '@/shared/lib';
 
-const LeopardSlopPath = ({ color }: { color?: string }) => {
+const LeopardPath = ({ color }: { color?: string }) => {
   return (
     <svg
       width="100%"
@@ -18,4 +18,4 @@ const LeopardSlopPath = ({ color }: { color?: string }) => {
   );
 };
 
-export default LeopardSlopPath;
+export default LeopardPath;

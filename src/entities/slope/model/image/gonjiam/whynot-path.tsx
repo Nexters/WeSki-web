@@ -1,7 +1,7 @@
 import React from 'react';
 import { cn } from '@/shared/lib';
 
-const WhynotSlopPath = ({ color }: { color?: string }) => {
+const WhynotPath = ({ color }: { color?: string }) => {
   return (
     <svg
       width="100%"
@@ -18,4 +18,4 @@ const WhynotSlopPath = ({ color }: { color?: string }) => {
   );
 };
 
-export default WhynotSlopPath;
+export default WhynotPath;

@@ -1,7 +1,7 @@
 import React from 'react';
 import { cn } from '@/shared/lib';
 
-const ZebraSlopPath = ({ color }: { color?: string }) => {
+const ZebraPath = ({ color }: { color?: string }) => {
   return (
     <svg
       width="100%"
@@ -18,4 +18,4 @@ const ZebraSlopPath = ({ color }: { color?: string }) => {
   );
 };
 
-export default ZebraSlopPath;
+export default ZebraPath;

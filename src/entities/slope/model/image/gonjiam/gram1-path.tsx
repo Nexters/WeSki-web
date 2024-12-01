@@ -1,7 +1,7 @@
 import React from 'react';
 import { cn } from '@/shared/lib';
 
-const Gram1SlopPath = ({ color }: { color?: string }) => {
+const Gram1Path = ({ color }: { color?: string }) => {
   return (
     <svg
       width="100%"
@@ -18,4 +18,4 @@ const Gram1SlopPath = ({ color }: { color?: string }) => {
   );
 };
 
-export default Gram1SlopPath;
+export default Gram1Path;

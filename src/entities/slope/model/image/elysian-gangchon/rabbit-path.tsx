@@ -1,7 +1,7 @@
 import React from 'react';
 import { cn } from '@/shared/lib';
 
-const RabbitSlopPath = ({ color }: { color?: string }) => {
+const RabbitPath = ({ color }: { color?: string }) => {
   return (
     <svg
       width="100%"
@@ -18,4 +18,4 @@ const RabbitSlopPath = ({ color }: { color?: string }) => {
   );
 };
 
-export default RabbitSlopPath;
+export default RabbitPath;

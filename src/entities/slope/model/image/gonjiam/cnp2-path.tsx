@@ -1,7 +1,7 @@
 import React from 'react';
 import { cn } from '@/shared/lib';
 
-const CNP2SlopPath = ({ color }: { color?: string }) => {
+const CNP2Path = ({ color }: { color?: string }) => {
   return (
     <svg
       width="100%"
@@ -18,4 +18,4 @@ const CNP2SlopPath = ({ color }: { color?: string }) => {
   );
 };
 
-export default CNP2SlopPath;
+export default CNP2Path;
