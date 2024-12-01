@@ -1,7 +1,7 @@
 import React from 'react';
 import { cn } from '@/shared/lib';
 
-const Apollo2Path = ({ color }: { color?: string }) => {
+const Apollo5Path = ({ color }: { color?: string }) => {
   return (
     <svg
       width="100%"
@@ -18,4 +18,4 @@ const Apollo2Path = ({ color }: { color?: string }) => {
   );
 };
 
-export default Apollo2Path;
+export default Apollo5Path;

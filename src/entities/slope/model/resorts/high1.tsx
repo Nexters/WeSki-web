@@ -5,6 +5,7 @@ import Apollo1Path from '../image/high1/apollo1-path';
 import Apollo2Path from '../image/high1/apollo2-path';
 import Apollo3Path from '../image/high1/apollo3-path';
 import Apollo4Path from '../image/high1/apollo4-path';
+import Apollo5Path from '../image/high1/apollo5-path';
 import Apollo6Path from '../image/high1/apollo6-path';
 import Athena2Path from '../image/high1/athena2-path';
 import Athena3Path from '../image/high1/athena3-path';
@@ -78,10 +79,10 @@ export const HIGH1: ResortConstant = {
       id: 88,
       PathAsset: Apollo4Path,
     },
-    // {
-    //   id: 89,
-    //   PathAsset: Apollo5Path,
-    // },
+    {
+      id: 89,
+      PathAsset: Apollo5Path,
+    },
     {
       id: 90,
       PathAsset: Apollo6Path,
