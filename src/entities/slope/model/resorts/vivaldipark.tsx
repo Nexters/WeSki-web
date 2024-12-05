@@ -25,7 +25,11 @@ export const VIVALDIPARK: ResortConstant = {
     },
     {
       id: 23,
-      PathAsset: Slope.TechnoPath,
+      PathAsset: Slope.Techno1Path,
+    },
+    {
+      id: 24,
+      PathAsset: Slope.Techno2Path,
     },
     {
       id: 25,

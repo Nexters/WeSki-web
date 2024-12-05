@@ -19,10 +19,10 @@ export const PHOENIX: ResortConstant = {
       id: 59,
       PathAsset: Slope.Hawk2Path,
     },
-    // {
-    //   id: 60,
-    //   PathAsset: Slope.DodoPath,
-    // },
+    {
+      id: 60,
+      PathAsset: Slope.DodoPath,
+    },
     {
       id: 61,
       PathAsset: Slope.KiwiPath,
@@ -76,13 +76,13 @@ export const PHOENIX: ResortConstant = {
     {
       id: 1,
       key: '호크,스패로우',
-      position: [82, 76],
+      position: [82, 78],
       scale: 1,
     },
     {
       id: 2,
       key: '도도',
-      position: [78, 48],
+      position: [75, 45],
       scale: 1,
     },
     {
@@ -94,19 +94,19 @@ export const PHOENIX: ResortConstant = {
     {
       id: 4,
       key: '베이스',
-      position: [82, 38],
+      position: [86, 38],
       scale: 1,
     },
     {
       id: 5,
       key: '펭귄',
-      position: [45, 50],
+      position: [78, 28],
       scale: 1,
     },
     {
       id: 6,
       key: '스노우 빌리지',
-      position: [82, 65],
+      position: [80, 65],
       scale: 1,
     },
   ],

@@ -1,5 +1,6 @@
 export { default as ChampionPath } from './champion-path';
 export { default as DiggyPath } from './diggy-path';
+export { default as DodoPath } from './dodo-path';
 export { default as DukePath } from './duke-path';
 export { default as ExtremeParkPath } from './extreme-park-path';
 export { default as FantasyPath } from './fantasy-path';
