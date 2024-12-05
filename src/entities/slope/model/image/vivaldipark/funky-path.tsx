@@ -1,7 +1,7 @@
 import React from 'react';
 import { cn } from '@/shared/lib';
 
-const FunkySlopPath = ({ color }: { color?: string }) => {
+const FunkyPath = ({ color }: { color?: string }) => {
   return (
     <svg
       width="100%"
@@ -18,4 +18,4 @@ const FunkySlopPath = ({ color }: { color?: string }) => {
   );
 };
 
-export default FunkySlopPath;
+export default FunkyPath;

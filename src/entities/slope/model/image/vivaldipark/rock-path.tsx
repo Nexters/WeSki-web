@@ -1,7 +1,7 @@
 import React from 'react';
 import { cn } from '@/shared/lib';
 
-const RockSlopPath = ({ color }: { color?: string }) => {
+const RockPath = ({ color }: { color?: string }) => {
   return (
     <svg
       width="100%"
@@ -18,4 +18,4 @@ const RockSlopPath = ({ color }: { color?: string }) => {
   );
 };
 
-export default RockSlopPath;
+export default RockPath;

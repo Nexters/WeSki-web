@@ -1,7 +1,7 @@
 import React from 'react';
 import { cn } from '@/shared/lib';
 
-const HiphopSlopPath = ({ color }: { color?: string }) => {
+const HiphopPath = ({ color }: { color?: string }) => {
   return (
     <svg
       width="100%"
@@ -18,4 +18,4 @@ const HiphopSlopPath = ({ color }: { color?: string }) => {
   );
 };
 
-export default HiphopSlopPath;
+export default HiphopPath;

@@ -1,7 +1,7 @@
 import React from 'react';
 import { cn } from '@/shared/lib';
 
-const JazzSlopPath = ({ color }: { color?: string }) => {
+const JazzPath = ({ color }: { color?: string }) => {
   return (
     <svg
       width="100%"
@@ -18,4 +18,4 @@ const JazzSlopPath = ({ color }: { color?: string }) => {
   );
 };
 
-export default JazzSlopPath;
+export default JazzPath;

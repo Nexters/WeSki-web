@@ -1,7 +1,7 @@
 import React from 'react';
 import { cn } from '@/shared/lib';
 
-const ReggaeSlopPath = ({ color }: { color?: string }) => {
+const ReggaePath = ({ color }: { color?: string }) => {
   return (
     <svg
       width="100%"
@@ -18,4 +18,4 @@ const ReggaeSlopPath = ({ color }: { color?: string }) => {
   );
 };
 
-export default ReggaeSlopPath;
+export default ReggaePath;

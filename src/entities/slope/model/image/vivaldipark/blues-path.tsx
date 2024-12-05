@@ -1,7 +1,7 @@
 import React from 'react';
 import { cn } from '@/shared/lib';
 
-const BluesSlopPath = ({ color }: { color?: string }) => {
+const BluesPath = ({ color }: { color?: string }) => {
   return (
     <svg
       width="100%"
@@ -18,4 +18,4 @@ const BluesSlopPath = ({ color }: { color?: string }) => {
   );
 };
 
-export default BluesSlopPath;
+export default BluesPath;
