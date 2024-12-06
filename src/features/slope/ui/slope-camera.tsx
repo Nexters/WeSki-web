@@ -48,7 +48,7 @@ const SlopeCamera = ({
     setOpenCamera();
 
     if (!url) {
-      postAppMessage('선택한 웹캠은 아직 준비중 이에요', isWebview, (message) =>
+      postAppMessage('showToast', '선택한 웹캠은 아직 준비중 이에요', isWebview, (message) =>
         toast(
           <>
             <NeutralFace /> {message}

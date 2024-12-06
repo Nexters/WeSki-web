@@ -1,7 +1,7 @@
 'use client';
 
 import { useQuery } from '@tanstack/react-query';
-import { useMemo } from 'react';
+import { useLayoutEffect, useMemo, useRef } from 'react';
 import SlopeStatusHeader from '@/widgets/header/ui/slope-status-header';
 import SlopeStatusTime from '@/widgets/header/ui/slope-status-time';
 import useMapPinch from '@/features/slope/hooks/useMapPinch';
@@ -12,9 +12,11 @@ import { slopeApi } from '@/entities/slope';
 import type { Slope } from '@/entities/slope/model';
 import { RESORT_DOMAIN } from '@/entities/slope/model';
 import { cn } from '@/shared/lib';
+import postAppMessage from '@/shared/lib/postAppMessage';
 
 const SlopeStatusPage = ({ resortId }: { resortId: number }) => {
   const { ref, style, containerRef } = useMapPinch();
+  const mainRef = useRef<HTMLElement>(null);
 
   const { data: slopeRawData } = useQuery(slopeApi.slopeQueries.slope(resortId ?? 0));
   const key = ResortData.find((resort) => resort.id === resortId)
@@ -49,10 +51,15 @@ const SlopeStatusPage = ({ resortId }: { resortId: number }) => {
     [slopeRawData]
   );
 
+  useLayoutEffect(() => {
+    if (!mainRef.current) return;
+    postAppMessage('setHeight', mainRef.current?.offsetHeight.toString(), true, () => {});
+  }, [slopeRawData]);
+
   if (!slopes) return;
 
   return (
-    <main className={cn('mb-3 w-full')}>
+    <main className={cn('mb-3 w-full')} ref={mainRef}>
       <SlopeStatusHeader />
       <section className={cn('relative mx-[20px] overflow-hidden')} ref={containerRef}>
         <SlopeMap

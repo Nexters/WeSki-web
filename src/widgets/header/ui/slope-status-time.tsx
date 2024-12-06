@@ -18,7 +18,6 @@ type SlopeStatusTimeProps = {
 };
 
 const SlopeStatusTime = ({ times }: SlopeStatusTimeProps) => {
-  console.log(times);
   return (
     <div
       className={cn(

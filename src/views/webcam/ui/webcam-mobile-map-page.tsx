@@ -1,7 +1,7 @@
 'use client';
 
 import { useQuery } from '@tanstack/react-query';
-import React, { useCallback, useState } from 'react';
+import React, { useCallback, useEffect, useRef, useState } from 'react';
 import { WebcamMap, WebcamSlopeList } from '@/widgets/webcam/ui';
 import useMapPinch from '@/features/slope/hooks/useMapPinch';
 import calculateWebcamPosition from '@/features/slope/lib/calculateWebcamPosition';
@@ -10,6 +10,7 @@ import { slopeApi } from '@/entities/slope';
 import type { Slope, Webcam } from '@/entities/slope/model';
 import { RESORT_DOMAIN, type Position } from '@/entities/slope/model';
 import { cn } from '@/shared/lib';
+import postAppMessage from '@/shared/lib/postAppMessage';
 
 const WebCamMobileMapPage = ({ resortId }: { resortId?: number }) => {
   const { data: slopeRawData } = useQuery(slopeApi.slopeQueries.slope(resortId ?? 0));
@@ -32,6 +33,7 @@ const WebCamMobileMapPage = ({ resortId }: { resortId?: number }) => {
       ...RESORT_DOMAIN[key].webcams.find((webcamConstant) => webcamConstant.id === webcam.number),
     })) as Webcam[];
 
+  const mainRef = useRef<HTMLDivElement>(null);
   const [cameraPositions, setCameraPositions] = useState<{
     [key: number]: Position;
   }>({});
@@ -55,10 +57,15 @@ const WebCamMobileMapPage = ({ resortId }: { resortId?: number }) => {
     api.start({ scale: scale, x: boundedX, y: boundedY });
   };
 
+  useEffect(() => {
+    if (!mainRef.current) return;
+    postAppMessage('setHeight', mainRef.current?.offsetHeight.toString(), true, () => {});
+  }, [slopeRawData]);
+
   if (!slopes || !webcams) return;
 
   return (
-    <main className={cn('w-full')}>
+    <main className={cn('w-full')} ref={mainRef}>
       <WebcamMap
         ref={ref}
         style={style}
