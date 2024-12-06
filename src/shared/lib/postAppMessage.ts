@@ -16,7 +16,7 @@ declare global {
   }
 }
 
-const postAppMessage = (method: AppMessageMethod, message: string, isWebview: boolean, showToast: (message: string) => void) => {
+const postAppMessage = (method: AppMessageMethod, message: string, isWebview: boolean, callback: (message: string) => void) => {
   const userAgent = navigator.userAgent.toLowerCase();
   const android = userAgent.match(/android/i);
   const iphone = userAgent.match(/iphone/i);
@@ -33,7 +33,7 @@ const postAppMessage = (method: AppMessageMethod, message: string, isWebview: bo
       return window.webkit.messageHandlers.weski.postMessage({ method: method, message: message });
     }
   }
-  return showToast(message);
+  return callback(message);
 }
 
 export default postAppMessage;
