@@ -12,3 +12,6 @@ export { default as SunIcon } from './weather/sun';
 export { default as SnowRainIcon } from './weather/snow-rain';
 export { default as FogIcon } from './weather/fog';
 export { default as VoteIcon } from './vote';
+export { default as MenuIcon } from './menu';
+export { default as MessageIcon } from './message';
+export { default as MailIcon } from './mail';

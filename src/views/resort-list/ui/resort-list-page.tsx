@@ -21,7 +21,7 @@ const ResortListPage = () => {
 
   return (
     <div className={cn('size-full bg-gradient-to-b from-[rgba(141,163,221,0.2)] to-transparent')}>
-      <Header />
+      <Header hasMenuButton />
       <ResortList resorts={resorts} />
     </div>
   );

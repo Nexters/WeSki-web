@@ -1,8 +1,15 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import logo from '@public/assets/logo.svg';
 import ShareDialog from '@/features/resort-detail/ui/share-dialog';
-import { ChevronLeftIcon, ShareIcon } from '@/shared/icons';
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from '@/features/resort-detail/ui/share-dropdown';
+import { ChevronLeftIcon, MailIcon, MenuIcon, MessageIcon, ShareIcon } from '@/shared/icons';
 import { cn } from '@/shared/lib';
 
 interface HeaderProps {
@@ -10,9 +17,16 @@ interface HeaderProps {
   resortName?: string;
   hasBackButton?: boolean;
   hasShareButton?: boolean;
+  hasMenuButton?: boolean;
 }
 
-const Header = ({ resortId, resortName, hasBackButton, hasShareButton }: HeaderProps) => {
+const Header = ({
+  resortId,
+  resortName,
+  hasBackButton,
+  hasShareButton,
+  hasMenuButton,
+}: HeaderProps) => {
   const router = useRouter();
 
   return (
@@ -40,6 +54,37 @@ const Header = ({ resortId, resortName, hasBackButton, hasShareButton }: HeaderP
           }
           name={resortName}
         />
+      )}
+      {hasMenuButton && (
+        <div className={cn('absolute right-7 top-1/2 -translate-y-1/2')}>
+          <DropdownMenu>
+            <DropdownMenuTrigger>
+              <MenuIcon />
+            </DropdownMenuTrigger>
+            <DropdownMenuContent>
+              <DropdownMenuItem>
+                <Link
+                  href="https://lizzie00.notion.site/weski?pvs=4"
+                  target="_blank"
+                  className={cn('flex items-center gap-1')}
+                >
+                  <MessageIcon />
+                  <p className={cn('py-1')}>서비스 소개보기</p>
+                </Link>
+              </DropdownMenuItem>
+              <DropdownMenuItem>
+                <Link
+                  href="https://joey.team/block?block_id=oPWTFUezsWA61tdpDRoD&id=SoD0lftsYVQBUT65Hcpgp9mIBzj2"
+                  target="_blank"
+                  className={cn('flex items-center gap-1')}
+                >
+                  <MailIcon />
+                  <p className={cn('py-1')}>버그 제보하기</p>
+                </Link>
+              </DropdownMenuItem>
+            </DropdownMenuContent>
+          </DropdownMenu>
+        </div>
       )}
     </div>
   );
