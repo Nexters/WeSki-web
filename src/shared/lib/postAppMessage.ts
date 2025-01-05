@@ -1,10 +1,11 @@
-type AppMessageMethod = 'showToast' | 'setHeight';
+type AppMessageMethod = 'showToast' | 'setHeight' | 'openUrl';
 
 declare global {
   interface Window {
     Android: {
       showToast: (message: string) => void;
       setHeight: (message: string) => void;
+      openUrl: (message: string) => void;
     };
     webkit: {
       messageHandlers: {
@@ -28,6 +29,8 @@ const postAppMessage = (method: AppMessageMethod, message: string, isWebview: bo
           return window.Android.showToast(message);
         case 'setHeight':
           return window.Android.setHeight(message);
+        case 'openUrl':
+          return window.Android.openUrl(message);
       }
     } else if (iphone !== null) {
       return window.webkit.messageHandlers.weski.postMessage({ method: method, message: message });
