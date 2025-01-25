@@ -24,7 +24,7 @@ interface SlopeWebcamProps {
 
 const SlopeCamera = ({
   isWebview = false,
-  webcam: { scale, name, position, url, id },
+  webcam: { scale, name, position, url, id, isExternal },
   webcamScale,
   isOpen,
   containerRef,
@@ -45,8 +45,6 @@ const SlopeCamera = ({
   }, [id, updateCameraPosition, cameraRef]);
 
   const openVideo = () => {
-    setOpenCamera();
-
     if (!url) {
       postAppMessage('showToast', '선택한 웹캠은 아직 준비중 이에요', isWebview, (message) =>
         toast(
@@ -55,6 +53,13 @@ const SlopeCamera = ({
           </>
         )
       );
+      return;
+    }
+
+    if (isExternal) {
+      postAppMessage('openUrl', url, isWebview, () => window.open(url, '_blank'));
+    } else {
+      setOpenCamera();
     }
   };
 
