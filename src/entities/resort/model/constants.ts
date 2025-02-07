@@ -100,4 +100,22 @@ export const ResortData: ResortInfo[] = [
       homepage: 'https://www.o2resort.com/SKI/basicInfo.jsp',
     },
   },
+  {
+    id: 12,
+    name: '알펜시아',
+    map: 'alpensia',
+    url: {
+      bus: 'https://skibus.purplebus.co.kr/Ap/',
+      homepage: 'https://www.alpensia.com/ski/introduction-slope.do?lang=ko',
+    },
+  },
+  {
+    id: 13,
+    name: '오크밸리',
+    map: 'oakvalley',
+    url: {
+      bus: 'https://oakvalley.co.kr/customer-service/notice/1034888',
+      homepage: 'https://oakvalley.co.kr/ski/introduction/realtime#ski-hall',
+    },
+  },
 ];
