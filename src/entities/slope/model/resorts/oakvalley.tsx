@@ -8,41 +8,41 @@ export const OAKVALLEY: ResortConstant = {
   MapComponent: MapImage,
   slopes: [
     {
-      id: 0,
-      PathAsset: Slope.GSlopePath,
-    },
-    {
-      id: 0,
+      id: 161,
       PathAsset: Slope.ISlopePath,
     },
     {
-      id: 0,
+      id: 162,
       PathAsset: Slope.FSlopePath,
+    },
+    {
+      id: 163,
+      PathAsset: Slope.GSlopePath,
     },
   ],
   webcams: [
     {
       id: 1,
-      key: '',
-      position: [0, 0],
+      key: '스노우파크 옥탑',
+      position: [74, 70],
       scale: 1,
     },
     {
       id: 2,
-      key: '',
-      position: [0, 0],
+      key: 'F 슬로프 전경',
+      position: [42, 45],
       scale: 1,
     },
     {
       id: 3,
-      key: '',
-      position: [0, 0],
+      key: 'G 슬로프 전경',
+      position: [44, 75],
       scale: 1,
     },
     {
       id: 4,
-      key: '',
-      position: [0, 0],
+      key: 'I 슬로프 전경',
+      position: [64, 40],
       scale: 1,
     },
   ],
