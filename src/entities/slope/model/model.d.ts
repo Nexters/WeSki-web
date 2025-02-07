@@ -17,6 +17,7 @@ export type WebcamRaw = {
   number: number;
   description: string;
   url: string;
+  isExternal?: boolean;
 };
 
 export type SlopeResponse = {
