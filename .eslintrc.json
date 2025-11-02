@@ -8,6 +8,34 @@
     "@typescript-eslint/consistent-type-imports": "error", // type 가져오기 경우 import type { Type } from 'module' 사용
     "@typescript-eslint/no-unused-expressions": "off", // 사용하지 않는 표현식 허용
     "import/no-internal-modules": "off", // 내부 모듈 사용 허용 (fsd index 파일을 사용하기 위함)
-    "@typescript-eslint/no-require-imports": "off"
+    "@typescript-eslint/no-require-imports": "off",
+    "import/order": [
+      "error",
+      {
+        "groups": [
+          "builtin",
+          "external",
+          "internal",
+          "parent",
+          "sibling",
+          "index",
+          "object",
+          "type"
+        ],
+        "pathGroups": [
+          {
+            "pattern": "@/**",
+            "group": "internal",
+            "position": "after"
+          }
+        ],
+        "pathGroupsExcludedImportTypes": ["type"],
+        "newlines-between": "always",
+        "alphabetize": {
+          "order": "asc",
+          "caseInsensitive": true
+        }
+      }
+    ]
   }
 }
