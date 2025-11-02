@@ -70,7 +70,7 @@ export async function generateMetadata({ params }: { params: { id: string } }): 
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="ko">
       <body>
         <Providers>{children}</Providers>
         <Toaster position="bottom-center" />
