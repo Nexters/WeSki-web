@@ -1,4 +1,4 @@
-type AppMessageMethod = 'showToast' | 'setHeight' | 'openUrl';
+type AppMessageMethod = 'showToast' | 'setHeight' | 'openUrl' | 'showVideoUrl';
 
 declare global {
   interface Window {
@@ -6,18 +6,24 @@ declare global {
       showToast: (message: string) => void;
       setHeight: (message: string) => void;
       openUrl: (message: string) => void;
+      showVideoUrl: (message: string) => void;
     };
     webkit: {
       messageHandlers: {
         weski: {
-          postMessage: ({ method, message }: { method: AppMessageMethod, message: string }) => void;
+          postMessage: ({ method, message }: { method: AppMessageMethod; message: string }) => void;
         };
       };
     };
   }
 }
 
-const postAppMessage = (method: AppMessageMethod, message: string, isWebview: boolean, callback: (message: string) => void) => {
+const postAppMessage = (
+  method: AppMessageMethod,
+  message: string,
+  isWebview: boolean,
+  callback: (message: string) => void
+) => {
   const userAgent = navigator.userAgent.toLowerCase();
   const android = userAgent.match(/android/i);
   const iphone = userAgent.match(/iphone/i);
@@ -31,12 +37,19 @@ const postAppMessage = (method: AppMessageMethod, message: string, isWebview: bo
           return window.Android.setHeight(message);
         case 'openUrl':
           return window.Android.openUrl(message);
+        case 'showVideoUrl':
+          return window.Android.showVideoUrl(message);
       }
     } else if (iphone !== null) {
-      return window.webkit.messageHandlers.weski.postMessage({ method: method, message: message });
+      if (method !== 'showVideoUrl') {
+        return window.webkit.messageHandlers.weski.postMessage({
+          method: method,
+          message: message,
+        });
+      }
     }
   }
   return callback(message);
-}
+};
 
 export default postAppMessage;
