@@ -1,4 +1,5 @@
 import { queryOptions } from '@tanstack/react-query';
+
 import { getResorts } from '../get-resort';
 import { getVote } from '../get-vote';
 

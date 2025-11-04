@@ -1,6 +1,7 @@
 import { useSpring } from '@react-spring/web';
 import { createUseGesture, dragAction, pinchAction } from '@use-gesture/react';
 import { useRef, useState } from 'react';
+
 import { getBoundedPositions } from '@/shared/lib';
 
 const useGesture = createUseGesture([pinchAction, dragAction]);

@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
+
 import logo from '@public/assets/logo.svg';
 import snow from '@public/assets/snow.png';
 import android from '@public/downloads/android.png';

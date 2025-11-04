@@ -1,6 +1,7 @@
 'use client';
 
 import VivaldiparkMap from '@public/maps/vivaldipark.png';
+
 import * as Slope from '../image/vivaldipark';
 import type { ResortConstant } from '../model';
 

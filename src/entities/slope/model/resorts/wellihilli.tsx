@@ -1,6 +1,7 @@
 'use client';
 
 import WellihilliMap from '@public/maps/wellihilli.png';
+
 import * as Slope from '../image/wellihilli';
 import type { ResortConstant } from '../model';
 

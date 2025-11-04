@@ -1,6 +1,7 @@
 'use client';
 
 import MapImage from '@public/maps/eden.png';
+
 import * as Slope from '../image/eden';
 import type { ResortConstant } from '../model';
 

@@ -2,17 +2,19 @@
 
 import { useQuery } from '@tanstack/react-query';
 import { useLayoutEffect, useMemo, useRef } from 'react';
-import SlopeStatusHeader from '@/widgets/header/ui/slope-status-header';
-import SlopeStatusTime from '@/widgets/header/ui/slope-status-time';
+
+import { ResortData } from '@/entities/resort';
+import { slopeApi } from '@/entities/slope';
+import { RESORT_DOMAIN } from '@/entities/slope/model';
+import type { Slope } from '@/entities/slope/model';
 import useMapPinch from '@/features/slope/hooks/useMapPinch';
 import SlopeMap from '@/features/slope/ui/slope-map';
 import SlopeStatusList from '@/features/slope/ui/slope-status-list';
-import { ResortData } from '@/entities/resort';
-import { slopeApi } from '@/entities/slope';
-import type { Slope } from '@/entities/slope/model';
-import { RESORT_DOMAIN } from '@/entities/slope/model';
 import { cn } from '@/shared/lib';
 import postAppMessage from '@/shared/lib/postAppMessage';
+import SlopeStatusHeader from '@/widgets/header/ui/slope-status-header';
+import SlopeStatusTime from '@/widgets/header/ui/slope-status-time';
+
 
 const SlopeStatusPage = ({ resortId }: { resortId: number }) => {
   const { ref, style, containerRef } = useMapPinch();

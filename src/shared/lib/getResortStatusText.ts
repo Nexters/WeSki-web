@@ -13,3 +13,5 @@ export const getResortStatusText = (status: string, openingDate: string, openSlo
     return '개장일이 곧 공개될 예정이에요'
   }
 }
+
+

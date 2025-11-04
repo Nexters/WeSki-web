@@ -1,10 +1,13 @@
 import React from 'react';
+
 import type { Slope } from '@/entities/slope';
 import LevelChip from '@/entities/slope/ui/level-chip';
 import CheckIcon from '@/shared/icons/check';
 import CloseIcon from '@/shared/icons/close';
 import { cn } from '@/shared/lib';
+
 import useSlopeStore from '../hooks/useSlopeStore';
+
 
 interface SlopeStatusListProps {
   resortId: number;

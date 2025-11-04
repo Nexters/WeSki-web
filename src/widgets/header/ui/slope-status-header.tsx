@@ -1,7 +1,9 @@
 import React from 'react';
+
 import CircleInfo from '@/shared/icons/circle-info';
 import { cn } from '@/shared/lib';
 import { Tooltip } from '@/shared/ui/tooltip';
+
 import { getFormattedYesterday } from '../lib/getFormattedYesterday';
 
 const SlopeStatusHeader = () => {

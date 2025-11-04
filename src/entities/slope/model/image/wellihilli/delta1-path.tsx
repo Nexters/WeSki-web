@@ -1,4 +1,5 @@
 import React from 'react';
+
 import { cn } from '@/shared/lib';
 
 const Delta1Path = ({ color }: { color?: string }) => {

@@ -1,6 +1,7 @@
 'use client';
 
 import ElysianGangchonMap from '@public/maps/elysian-gangchon.png';
+
 import * as Slope from '../image/elysian-gangchon';
 import type { ResortConstant } from '../model';
 

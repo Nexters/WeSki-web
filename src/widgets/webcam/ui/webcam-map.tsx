@@ -1,11 +1,13 @@
 import type { SpringValue } from '@react-spring/web';
-import type { ComponentType } from 'react';
 import React, { forwardRef } from 'react';
+import type { ComponentType } from 'react';
+
+import type { Position, Slope, Webcam } from '@/entities/slope/model';
 import useSlopeStore from '@/features/slope/hooks/useSlopeStore';
 import SlopeCamera from '@/features/slope/ui/slope-camera';
 import SlopeMap from '@/features/slope/ui/slope-map';
-import type { Position, Slope, Webcam } from '@/entities/slope/model';
 import { cn } from '@/shared/lib';
+
 
 interface WebcamMapProps {
   isWebview?: boolean;

@@ -1,6 +1,7 @@
 import type { Weather } from '@/entities/resort/model';
 import { CloudIcon, FogIcon, RainIcon, SnowIcon, SnowRainIcon, SunIcon } from '@/shared/icons';
 
+
 interface WeatherIconProps {
   className?: string;
   weather: Weather;

@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import { createPortal } from 'react-dom';
 import { toast } from 'sonner';
+
 import type { Position, Webcam } from '@/entities/slope/model';
 import ArrowRightIcon from '@/shared/icons/arrow-right';
 import NeutralFace from '@/shared/icons/neutral-face';
@@ -8,9 +9,12 @@ import { cn } from '@/shared/lib';
 import postAppMessage from '@/shared/lib/postAppMessage';
 import CameraButton from '@/shared/ui/cam-button';
 import { Tooltip } from '@/shared/ui/tooltip';
+
 import useSlopeStore from '../hooks/useSlopeStore';
 import calculateWebcamScaleRatio from '../lib/calculateWebcamScale';
+
 import SlopeVideo from './slope-video';
+
 
 interface SlopeWebcamProps {
   isWebview?: boolean;
@@ -59,7 +63,11 @@ const SlopeCamera = ({
     if (isExternal) {
       postAppMessage('openUrl', url, isWebview, () => window.open(url, '_blank'));
     } else {
-      setOpenCamera();
+      if (isWebview) {
+        postAppMessage('showVideoUrl', url, isWebview, setOpenCamera);
+      } else {
+        setOpenCamera();
+      }
     }
   };
 

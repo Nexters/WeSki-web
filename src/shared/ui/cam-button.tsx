@@ -1,4 +1,5 @@
 import React, { forwardRef } from 'react';
+
 import CameraIcon from '../icons/camera';
 import { cn } from '../lib';
 

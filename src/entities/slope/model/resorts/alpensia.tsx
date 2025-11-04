@@ -1,6 +1,7 @@
 'use client';
 
 import MapImage from '@public/maps/alpensia.png';
+
 import * as Slope from '../image/alpensia';
 import type { ResortConstant } from '../model';
 

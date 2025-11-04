@@ -1,6 +1,7 @@
 import { useQuery } from '@tanstack/react-query';
 import { useCallback, useState } from 'react';
 import { toast } from 'sonner';
+
 import { resortApi } from '@/entities/resort';
 import { usePostVote } from '@/entities/resort/api/use-post-vote';
 import { CheckIcon, CloseIcon } from '@/shared/icons';
@@ -15,6 +16,7 @@ import {
   DialogTitle,
   DialogTrigger,
 } from '@/shared/ui/dialog';
+
 import { formatDate } from '../lib/formatDate';
 import { canVote, getVoteData, saveVoteData } from '../lib/vote';
 

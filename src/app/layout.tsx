@@ -1,9 +1,11 @@
 import '@/app/globals.css';
 
 import type { Metadata } from 'next';
+
 import { ResortData } from '@/entities/resort';
 import KakaoScript from '@/shared/lib/kakao-script';
 import { Toaster } from '@/shared/ui/toaster';
+
 import Providers from './_providers';
 
 export async function generateMetadata({ params }: { params: { id: string } }): Promise<Metadata> {

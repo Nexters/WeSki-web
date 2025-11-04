@@ -1,11 +1,14 @@
 import { useRouter } from 'next/navigation';
-import WeatherIcon from '@/features/resort/ui/weather-icon';
+
 import type { Resort } from '@/entities/resort';
+import WeatherIcon from '@/features/resort/ui/weather-icon';
 import { cn } from '@/shared/lib';
+import { getResortStatusText } from '@/shared/lib/getResortStatusText';
 import { getWeatherFromDescription } from '@/shared/lib/getWeatherFromDescription';
 import Card from '@/shared/ui/card';
-import { getResortStatusText } from '../lib/getResortStatusText';
+
 import WeeklyWeather from './weekly-weather';
+
 
 const ResortCard = ({
   resortId,
