@@ -2,10 +2,11 @@
 
 import { useQuery } from '@tanstack/react-query';
 import { useEffect } from 'react';
-import Header from '@/widgets/header/ui/header';
-import ResortList from '@/widgets/resort/ui/resort-list';
+
 import { resortApi } from '@/entities/resort';
 import { cn } from '@/shared/lib';
+import Header from '@/widgets/header/ui/header';
+import ResortList from '@/widgets/resort/ui/resort-list';
 
 const ResortListPage = () => {
   const { data: resorts } = useQuery(resortApi.resortQueries.list());

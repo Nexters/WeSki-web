@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import { useCallback } from 'react';
 import { toast } from 'sonner';
+
 import logo from '@public/assets/logo.svg';
 import snow from '@public/assets/snow.png';
 import share1 from '@public/shares/share_01.png';

@@ -1,7 +1,8 @@
-import WeatherIcon from '@/features/resort/ui/weather-icon';
 import type { SummarizedWeeklyWeather as WeeklyWeatherType } from '@/entities/resort';
+import WeatherIcon from '@/features/resort/ui/weather-icon';
 import { cn } from '@/shared/lib';
 import { getWeatherFromDescription } from '@/shared/lib/getWeatherFromDescription';
+
 
 interface WeeklyWeatherProps extends WeeklyWeatherType {
   isToday: boolean;

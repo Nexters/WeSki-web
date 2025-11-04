@@ -1,11 +1,13 @@
 'use client';
 
 import React from 'react';
-import useSlopeStore from '@/features/slope/hooks/useSlopeStore';
+
 import type { Slope, Webcam } from '@/entities/slope/model';
 import LevelChip from '@/entities/slope/ui/level-chip';
+import useSlopeStore from '@/features/slope/hooks/useSlopeStore';
 import { cn } from '@/shared/lib';
 import CameraButton from '@/shared/ui/cam-button';
+
 
 interface WebcamSlopeListProps {
   className?: string;

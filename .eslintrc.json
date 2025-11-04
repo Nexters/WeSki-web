@@ -1,8 +1,15 @@
 {
   "parser": "@typescript-eslint/parser",
-  "extends": ["next", "prettier", "plugin:@typescript-eslint/recommended", "@feature-sliced"],
-  "plugins": ["@typescript-eslint", "unused-imports"],
-
+  "extends": [
+    "next",
+    "prettier",
+    "plugin:@typescript-eslint/recommended",
+    "@feature-sliced"
+  ],
+  "plugins": [
+    "@typescript-eslint",
+    "unused-imports"
+  ],
   "rules": {
     "unused-imports/no-unused-imports": "error", // 사용하지 않는 import 제거
     "@typescript-eslint/consistent-type-imports": "error", // type 가져오기 경우 import type { Type } from 'module' 사용
@@ -19,8 +26,7 @@
           "parent",
           "sibling",
           "index",
-          "object",
-          "type"
+          "object"
         ],
         "pathGroups": [
           {
@@ -29,12 +35,8 @@
             "position": "after"
           }
         ],
-        "pathGroupsExcludedImportTypes": ["type"],
-        "newlines-between": "always",
-        "alphabetize": {
-          "order": "asc",
-          "caseInsensitive": true
-        }
+        "distinctGroup": false,
+        "newlines-between": "always"
       }
     ]
   }

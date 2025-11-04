@@ -1,4 +1,5 @@
 import { queryOptions } from '@tanstack/react-query';
+
 import { getSlope } from '../get-slope';
 
 export const slopeQueries = {

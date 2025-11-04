@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import { createPortal } from 'react-dom';
 import { toast } from 'sonner';
 
+import type { Position, Webcam } from '@/entities/slope/model';
 import ArrowRightIcon from '@/shared/icons/arrow-right';
 import NeutralFace from '@/shared/icons/neutral-face';
 import { cn } from '@/shared/lib';
@@ -14,7 +15,6 @@ import calculateWebcamScaleRatio from '../lib/calculateWebcamScale';
 
 import SlopeVideo from './slope-video';
 
-import type { Position, Webcam } from '@/entities/slope/model';
 
 interface SlopeWebcamProps {
   isWebview?: boolean;

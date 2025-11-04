@@ -1,14 +1,17 @@
 import Link from 'next/link';
+
 // eslint-disable-next-line boundaries/element-types
-import { getResortStatusText } from '@/widgets/resort/lib/getResortStatusText';
-import WeatherIcon from '@/features/resort/ui/weather-icon';
-import VoteDialog from '@/features/resort-detail/ui/vote-dialog';
 import type { Resort, Url } from '@/entities/resort';
+import VoteDialog from '@/features/resort-detail/ui/vote-dialog';
+import WeatherIcon from '@/features/resort/ui/weather-icon';
 import { BusIcon, LiftIcon, VoteIcon } from '@/shared/icons';
 import { cn } from '@/shared/lib';
+import { getResortStatusText } from '@/shared/lib/getResortStatusText';
 import { getWeatherFromDescription } from '@/shared/lib/getWeatherFromDescription';
 import Card from '@/shared/ui/card';
+
 import { ResortSummaryActionList } from '../model/constants';
+
 import ResortSummaryAction from './resort-summary-action';
 
 const ResortSummary = ({

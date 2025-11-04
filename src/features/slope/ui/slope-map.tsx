@@ -1,11 +1,14 @@
 import { animated } from '@react-spring/web';
 import Image, { type StaticImageData } from 'next/image';
-import type { ComponentType } from 'react';
 import React, { forwardRef } from 'react';
+import type { ComponentType } from 'react';
+
 import type { Slope } from '@/entities/slope/model';
 import { cn } from '@/shared/lib';
+
 import type useMapPinch from '../hooks/useMapPinch';
 import useSlopeStore from '../hooks/useSlopeStore';
+
 
 interface SlopeMapProps {
   children?: React.ReactNode;

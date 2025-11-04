@@ -1,6 +1,7 @@
 'use client';
 
 import MujuMap from '@public/maps/muju.png';
+
 import * as Slope from '../image/muju';
 import type { ResortConstant } from '../model';
 

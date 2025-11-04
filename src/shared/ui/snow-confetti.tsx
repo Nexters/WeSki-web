@@ -2,6 +2,7 @@ import { loadSnowPreset } from '@tsparticles/preset-snow';
 import Particles, { initParticlesEngine } from '@tsparticles/react';
 import { loadImageShape } from '@tsparticles/shape-image';
 import { useEffect, useState } from 'react';
+
 import { cn } from '../lib';
 
 export const SnowConfetti = () => {

@@ -3,6 +3,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { GoogleAnalytics } from 'nextjs-google-analytics';
+
 import left from '@public/downloads/left.png';
 import android from '@public/downloads/right-android.png';
 import ios from '@public/downloads/right-ios.png';

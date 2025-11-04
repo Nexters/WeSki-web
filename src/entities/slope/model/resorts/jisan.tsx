@@ -1,6 +1,7 @@
 'use client';
 
 import MapImage from '@public/maps/jisan.png';
+
 import * as Slope from '../image/jisan';
 import type { ResortConstant } from '../model';
 

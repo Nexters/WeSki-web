@@ -1,4 +1,5 @@
 import React, { forwardRef } from 'react';
+
 import CloseIcon from '../icons/close';
 import { cn } from '../lib';
 

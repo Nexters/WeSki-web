@@ -2,26 +2,26 @@
 
 import { useQuery } from '@tanstack/react-query';
 import Image from 'next/image';
-import { useState, useCallback, useEffect } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import { toast } from 'sonner';
+
 import blind1 from '@public/blinds/blind_01.png';
-import { Header } from '@/widgets/header/ui';
-import { ResortContentTabList } from '@/widgets/resort-detail/model/constants';
-import ResortSummary from '@/widgets/resort-detail/ui/resort-summary';
-import { WebcamMap, WebcamSlopeList } from '@/widgets/webcam/ui';
+import { type ResortInfo, resortApi, ResortData } from '@/entities/resort';
+import { usePostVote } from '@/entities/resort/api/use-post-vote';
+import { slopeApi } from '@/entities/slope';
+import { RESORT_DOMAIN } from '@/entities/slope/model';
+import type { Position, Slope, Webcam } from '@/entities/slope/model';
 import { formatDate } from '@/features/resort-detail/lib/formatDate';
 import { canVote, getVoteData, saveVoteData } from '@/features/resort-detail/lib/vote';
 import AppDownloadDialog from '@/features/resort-detail/ui/app-download-dialog';
 import useMapPinch from '@/features/slope/hooks/useMapPinch';
 import calculateWebcamPosition from '@/features/slope/lib/calculateWebcamPosition';
-import { type ResortInfo, ResortData } from '@/entities/resort';
-import { resortApi } from '@/entities/resort';
-import { usePostVote } from '@/entities/resort/api/use-post-vote';
-import { slopeApi } from '@/entities/slope';
-import { RESORT_DOMAIN } from '@/entities/slope/model';
-import type { Position, Slope, Webcam } from '@/entities/slope/model';
 import CheckIcon from '@/shared/icons/check';
 import { cn } from '@/shared/lib';
+import { Header } from '@/widgets/header/ui';
+import { ResortContentTabList } from '@/widgets/resort-detail/model/constants';
+import ResortSummary from '@/widgets/resort-detail/ui/resort-summary';
+import { WebcamMap, WebcamSlopeList } from '@/widgets/webcam/ui';
 
 const ResortDetailPage = ({ params }: { params: { resortId: string } }) => {
   const resortInfo = ResortData.find((resort) => resort.id === +params?.resortId) as ResortInfo;

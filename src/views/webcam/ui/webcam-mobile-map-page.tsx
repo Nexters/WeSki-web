@@ -2,15 +2,17 @@
 
 import { useQuery } from '@tanstack/react-query';
 import React, { useCallback, useEffect, useRef, useState } from 'react';
-import { WebcamMap, WebcamSlopeList } from '@/widgets/webcam/ui';
-import useMapPinch from '@/features/slope/hooks/useMapPinch';
-import calculateWebcamPosition from '@/features/slope/lib/calculateWebcamPosition';
+
 import { ResortData } from '@/entities/resort';
 import { slopeApi } from '@/entities/slope';
-import type { Slope, Webcam } from '@/entities/slope/model';
 import { RESORT_DOMAIN, type Position } from '@/entities/slope/model';
+import type { Slope, Webcam } from '@/entities/slope/model';
+import useMapPinch from '@/features/slope/hooks/useMapPinch';
+import calculateWebcamPosition from '@/features/slope/lib/calculateWebcamPosition';
 import { cn } from '@/shared/lib';
 import postAppMessage from '@/shared/lib/postAppMessage';
+import { WebcamMap, WebcamSlopeList } from '@/widgets/webcam/ui';
+
 
 const WebCamMobileMapPage = ({ resortId }: { resortId?: number }) => {
   const { data: slopeRawData } = useQuery(slopeApi.slopeQueries.slope(resortId ?? 0));

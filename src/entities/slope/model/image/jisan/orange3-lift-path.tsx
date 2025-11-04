@@ -1,4 +1,5 @@
 import React from 'react';
+
 import { cn } from '@/shared/lib';
 
 const Orange3LiftPath = ({ color }: { color?: string }) => {

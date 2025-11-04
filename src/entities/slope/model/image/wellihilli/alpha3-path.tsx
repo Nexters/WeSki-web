@@ -1,4 +1,5 @@
 import React from 'react';
+
 import { cn } from '@/shared/lib';
 
 const Alpha3Path = ({ color }: { color?: string }) => {

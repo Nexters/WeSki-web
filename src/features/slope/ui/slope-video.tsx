@@ -1,8 +1,10 @@
 import Hls from 'hls.js';
 import React, { useEffect, useRef } from 'react';
+
 import { cn } from '@/shared/lib';
 import CloseButton from '@/shared/ui/close-button';
 import Loading from '@/shared/ui/loading';
+
 import useTimer from '../hooks/useTimer';
 
 interface SlopeVideoProps {

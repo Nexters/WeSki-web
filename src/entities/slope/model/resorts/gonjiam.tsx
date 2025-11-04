@@ -1,6 +1,7 @@
 'use client';
 
 import GonjiamMap from '@public/maps/gonjiam.png';
+
 import * as Slope from '../image/gonjiam';
 import type { ResortConstant } from '../model';
 

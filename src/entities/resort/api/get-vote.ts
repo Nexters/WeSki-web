@@ -1,4 +1,5 @@
 import { apiClient } from '@/shared/api/base';
+
 import type { Vote } from '../model';
 
 export const getVote = async (resortId: number): Promise<Vote> => {

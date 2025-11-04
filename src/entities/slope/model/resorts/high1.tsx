@@ -1,6 +1,7 @@
 'use client';
 
 import High1Map from '@public/maps/high1.png';
+
 import * as Slope from '../image/high1';
 import type { ResortConstant } from '../model';
 

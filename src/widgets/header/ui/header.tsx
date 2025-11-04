@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
+
 import logo from '@public/assets/logo.svg';
 import ShareDialog from '@/features/resort-detail/ui/share-dialog';
 import {

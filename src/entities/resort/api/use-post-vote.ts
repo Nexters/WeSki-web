@@ -1,4 +1,5 @@
 import { useMutation, useQueryClient } from '@tanstack/react-query';
+
 import { resortApi } from '..';
 
 export const usePostVote = (resortId: number) => {
