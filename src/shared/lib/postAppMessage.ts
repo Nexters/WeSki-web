@@ -41,12 +41,10 @@ const postAppMessage = (
           return window.Android.showVideoUrl(message);
       }
     } else if (iphone !== null) {
-      if (method !== 'showVideoUrl') {
-        return window.webkit.messageHandlers.weski.postMessage({
-          method: method,
-          message: message,
-        });
-      }
+      return window.webkit.messageHandlers.weski.postMessage({
+        method: method,
+        message: message,
+      });
     }
   }
   return callback(message);
