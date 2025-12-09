@@ -10,6 +10,10 @@ export type ResortInfo = {
   name: string;
   map: string;
   url: Url;
+  metadata?: {
+    title: string;
+    description: string;
+  };
 };
 
 export type Vote = {
@@ -20,18 +24,18 @@ export type Vote = {
 };
 
 export type WeatherResponse = {
-  resortId: number,
+  resortId: number;
   currentWeather: {
-    temperature: number,
-    maxTemperature: number,
-    minTemperature: number,
-    feelsLike: number,
-    description: string,
-    condition: string
-  },
-  hourlyWeather: [],
-  weeklyWeather: WeeklyWeather[]
-}
+    temperature: number;
+    maxTemperature: number;
+    minTemperature: number;
+    feelsLike: number;
+    description: string;
+    condition: string;
+  };
+  hourlyWeather: [];
+  weeklyWeather: WeeklyWeather[];
+};
 
 export type WeeklyWeather = {
   day: string;
@@ -50,15 +54,15 @@ export type SummarizedWeeklyWeather = {
 };
 
 export type Resort = {
-  resortId: number,
-  name: string,
-  status: string,
-  openingDate: string,
-  closingDate: string,
-  openSlopes: number,
+  resortId: number;
+  name: string;
+  status: string;
+  openingDate: string;
+  closingDate: string;
+  openSlopes: number;
   currentWeather: {
-    temperature: number,
-    description: string
-  },
-  weeklyWeather: SummarizedWeeklyWeather[]
-}
+    temperature: number;
+    description: string;
+  };
+  weeklyWeather: SummarizedWeeklyWeather[];
+};
