@@ -76,13 +76,13 @@ export const PHOENIX: ResortConstant = {
   webcams: [
     {
       id: 1,
-      key: '호크,스패로우',
+      key: '스노우 빌리지',
       position: [82, 78],
       scale: 1,
     },
     {
       id: 2,
-      key: '도도',
+      key: '펭귄',
       position: [75, 45],
       scale: 1,
     },
@@ -94,19 +94,25 @@ export const PHOENIX: ResortConstant = {
     },
     {
       id: 4,
-      key: '베이스',
+      key: '도도',
       position: [86, 38],
       scale: 1,
     },
     {
       id: 5,
-      key: '펭귄',
-      position: [78, 28],
+      key: '몽블랑 광장',
+      position: [8, 54],
       scale: 1,
     },
     {
       id: 6,
-      key: '스노우 빌리지',
+      key: '호크/스패로우',
+      position: [58, 78],
+      scale: 1,
+    },
+    {
+      id: 7,
+      key: '베이스',
       position: [80, 65],
       scale: 1,
     },
