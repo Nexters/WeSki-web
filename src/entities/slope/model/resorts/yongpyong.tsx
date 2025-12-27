@@ -92,14 +92,14 @@ export const YONGPYONG: ResortConstant = {
   webcams: [
     {
       id: 1,
-      key: '발왕산 스카이워크',
-      position: [3, 53],
+      key: '레인보우 정상',
+      position: [17, 65],
       scale: 2,
     },
     {
       id: 2,
-      key: '발왕산 천년주목숲길',
-      position: [11, 54],
+      key: '골드 슬로프 정상',
+      position: [22, 30],
       scale: 2,
     },
     {
@@ -110,8 +110,8 @@ export const YONGPYONG: ResortConstant = {
     },
     {
       id: 4,
-      key: '핑크 슬로프',
-      position: [64, 33],
+      key: '골드 슬로프 전경',
+      position: [60, 20],
       scale: 2,
     },
     {
@@ -122,38 +122,8 @@ export const YONGPYONG: ResortConstant = {
     },
     {
       id: 6,
-      key: '골드 슬로프 전경',
-      position: [60, 20],
-      scale: 2,
-    },
-    {
-      id: 7,
-      key: '골드 슬로프 정상',
-      position: [22, 30],
-      scale: 2,
-    },
-    {
-      id: 8,
       key: '베이스전경 / 레드 슬로프',
       position: [77, 32],
-      scale: 2,
-    },
-    {
-      id: 9,
-      key: '레인보우 전경',
-      position: [45, 82],
-      scale: 2,
-    },
-    {
-      id: 10,
-      key: '레인보우 정상',
-      position: [17, 65],
-      scale: 2,
-    },
-    {
-      id: 11,
-      key: '모나 용평 진입로',
-      position: [86, 26],
       scale: 2,
     },
   ],
