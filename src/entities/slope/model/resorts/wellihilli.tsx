@@ -88,7 +88,7 @@ export const WELLIHILLI: ResortConstant = {
     {
       id: 3,
       key: '스키장 전경',
-      position: [78, 35],
+      position: [83, 37],
       scale: 1,
     },
     {

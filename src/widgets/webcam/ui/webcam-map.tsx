@@ -47,8 +47,13 @@ const WebcamMap = forwardRef<HTMLDivElement, WebcamMapProps>(
       const section = e.currentTarget;
       const rect = section.getBoundingClientRect();
 
-      const x = ((e.clientX - rect.left) / rect.width) * 100;
-      const y = ((e.clientY - rect.top) / rect.height) * 100;
+      // 웹캠 아이콘 크기 24px을 퍼센트로 변환
+      const iconWidthPercent = (24 / rect.width) * 100;
+      const iconHeightPercent = (24 / rect.height) * 100;
+
+      // 클릭 위치를 퍼센트로 변환하고, 아이콘 크기의 절반을 빼서 중앙 정렬
+      const x = ((e.clientX - rect.left) / rect.width) * 100 - iconWidthPercent / 2;
+      const y = ((e.clientY - rect.top) / rect.height) * 100 - iconHeightPercent / 2;
 
       console.log({ x, y });
     };
